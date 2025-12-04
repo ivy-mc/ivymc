@@ -1,0 +1,66 @@
+header-footer:
+  enabled: false
+tablist-name-formatting:
+  enabled: false
+scoreboard-teams:
+  enabled: false
+playerlist-objective:
+  enabled: false
+  title: TAB
+  value: ''
+  render-type: INTEGER
+belowname-objective:
+  enabled: false
+  value: '%health%'
+  fancy-value-default: NPC
+  fancy-value: '&c%health%'
+bossbar:
+  enabled: false
+scoreboard:
+  enabled: false
+layout:
+  enabled: false
+ping-spoof:
+  enabled: false
+placeholders:
+  date-format: dd.MM.yyyy
+  time-format: '[HH:mm:ss / h:mm a]'
+  time-offset: 0
+  register-tab-expansion: true
+placeholder-output-replacements: {}
+conditions: {}
+assign-groups-by-permissions: false
+primary-group-finding-list:
+- default
+- owner
+- rank1
+permission-refresh-interval: 1000
+debug: false
+mysql:
+  enabled: false
+per-world-playerlist:
+  enabled: false
+global-playerlist:
+  enabled: true
+  update-latency: false
+  display-others-as-spectators: false
+  display-vanished-players-as-spectators: true
+  isolate-unlisted-servers: false
+  spy-servers:
+  - spyserver1
+use-bukkit-permissions-manager: false
+use-online-uuid-in-tablist: true
+proxy-support:
+  enabled: true
+  type: PLUGIN
+  plugin:
+    name: RedisBungee
+placeholder-refresh-intervals:
+  default-refresh-interval: 1000
+config-version: 2
+components:
+  minimessage-support: true
+  disable-shadow-for-heads: true
+prevent-spectator-effect:
+  enabled: false
+compensate-for-packetevents-bug: false

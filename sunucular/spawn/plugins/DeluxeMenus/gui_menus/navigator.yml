@@ -1,0 +1,223 @@
+menu_title: "&f:offset_-12: :gui-navigator:"
+open_commands:
+  - navigator
+  - warps
+  - warp
+  - darwin
+size: 36
+
+items:
+
+  back:
+    slot: 0
+    material: itemsadder-invisible_item
+    display_name: "&#d6d6d6Go back."
+    click_commands:
+      - "[sound] UI_BUTTON_CLICK"
+      - "[openmenu] menu"
+
+  island1:
+    slot: 1
+    material: itemsadder-invisible_item
+    display_name: "&#edededTravel to &#3b8bc1Private Island"
+    lore:
+      - "&#8a8a8aFly to your own private"
+      - "&#8a8a8aisland, where you could"
+      - "&#8a8a8ado whatever you want!"
+      - ""
+      - "&fꂀ &#83ca16Travel."
+    click_commands:
+      - "[sound] ENTITY_SHULKER_TELEPORT"
+      - "[player] is"
+
+  island2:
+    slot: 2
+    material: itemsadder-invisible_item
+    display_name: "&#edededTravel to &#3b8bc1Private Island"
+    lore:
+      - "&#8a8a8aFly to your own private"
+      - "&#8a8a8aisland, where you could"
+      - "&#8a8a8ado whatever you want!"
+      - ""
+      - "&fꂀ &#83ca16Travel."
+    click_commands:
+      - "[sound] ENTITY_SHULKER_TELEPORT"
+      - "[player] is"
+
+  island3:
+    slot: 3
+    material: itemsadder-invisible_item
+    display_name: "&#edededTravel to &#3b8bc1Private Island"
+    lore:
+      - "&#8a8a8aFly to your own private"
+      - "&#8a8a8aisland, where you could"
+      - "&#8a8a8ado whatever you want!"
+      - ""
+      - "&fꂀ &#83ca16Travel."
+    click_commands:
+      - "[sound] ENTITY_SHULKER_TELEPORT"
+      - "[player] is"
+
+  island4:
+    slot: 10
+    material: itemsadder-invisible_item
+    display_name: "&#edededTravel to &#3b8bc1Private Island"
+    lore:
+      - "&#8a8a8aFly to your own private"
+      - "&#8a8a8aisland, where you could"
+      - "&#8a8a8ado whatever you want!"
+      - ""
+      - "&fꂀ &#83ca16Travel."
+    click_commands:
+      - "[sound] ENTITY_SHULKER_TELEPORT"
+      - "[player] is"
+
+  island5:
+    slot: 11
+    material: itemsadder-invisible_item
+    display_name: "&#edededTravel to &#3b8bc1Private Island"
+    lore:
+      - "&#8a8a8aFly to your own private"
+      - "&#8a8a8aisland, where you could"
+      - "&#8a8a8ado whatever you want!"
+      - ""
+      - "&fꂀ &#83ca16Travel."
+    click_commands:
+      - "[sound] ENTITY_SHULKER_TELEPORT"
+      - "[player] is"
+
+  island6:
+    slot: 12
+    material: itemsadder-invisible_item
+    display_name: "&#edededTravel to &#3b8bc1Private Island"
+    lore:
+      - "&#8a8a8aFly to your own private"
+      - "&#8a8a8aisland, where you could"
+      - "&#8a8a8ado whatever you want!"
+      - ""
+      - "&fꂀ &#83ca16Travel."
+    click_commands:
+      - "[sound] ENTITY_SHULKER_TELEPORT"
+      - "[player] is"
+
+  balloonA_1:
+    slot: 4
+    material: itemsadder-invisible_item
+    display_name: "&#edededTravel to &#5aa64cBalloon Dock A"
+    lore:
+      - "&#8a8a8aNavigate to this dock and"
+      - "&#8a8a8atravel to these adjacent"
+      - "&#8a8a8alocations:"
+      - " &#697d65Spawn Fountain"
+      - " &#697d65The Blacksmith"
+      - " &#697d65The Treasury"
+      - " &#697d65Guild's Domain"
+      - " &#697d65Dungeon Portal"
+      - ""
+      - "&fꂀ &#83ca16Travel."
+    click_commands:
+      - "[sound] ENTITY_SHULKER_TELEPORT"
+      - "[player] spawn docka"
+
+  balloonA_2:
+    slot: 5
+    material: itemsadder-invisible_item
+    display_name: "&#edededTravel to &#5aa64cBalloon Dock A"
+    lore:
+      - "&#8a8a8aNavigate to this dock and"
+      - "&#8a8a8atravel to these adjacent"
+      - "&#8a8a8alocations:"
+      - " &#697d65Spawn Fountain"
+      - " &#697d65The Blacksmith"
+      - " &#697d65The Treasury"
+      - " &#697d65Guild's Domain"
+      - " &#697d65Dungeon Portal"
+      - ""
+      - "&fꂀ &#83ca16Travel."
+    click_commands:
+      - "[sound] ENTITY_SHULKER_TELEPORT"
+      - "[player] spawn docka"
+
+  balloonB_1:
+    slot: 13
+    material: itemsadder-invisible_item
+    display_name: "&#edededTravel to &#d49528Balloon Dock B"
+    lore:
+      - "&#8a8a8aNavigate to this dock and"
+      - "&#8a8a8atravel to these adjacent"
+      - "&#8a8a8alocations:"
+      - " &#756c5dEnchant Center"
+      - " &#756c5dAscension Pedal"
+      - " &#756c5dThe Grotto"
+      - ""
+      - "&fꂀ &#83ca16Travel."
+    click_commands:
+      - "[sound] ENTITY_SHULKER_TELEPORT"
+      - "[player] spawn dockb"
+
+  balloonB_2:
+    slot: 14
+    material: itemsadder-invisible_item
+    display_name: "&#edededTravel to &#d49528Balloon Dock B"
+    lore:
+      - "&#8a8a8aNavigate to this dock and"
+      - "&#8a8a8atravel to these adjacent"
+      - "&#8a8a8alocations:"
+      - " &#756c5dEnchant Center"
+      - " &#756c5dAscension Pedal"
+      - " &#756c5dThe Grotto"
+      - ""
+      - "&fꂀ &#83ca16Travel."
+    click_commands:
+      - "[sound] ENTITY_SHULKER_TELEPORT"
+      - "[player] spawn dockb"
+
+  balloonC_1:
+    slot: 6
+    material: itemsadder-invisible_item
+    display_name: "&#edededTravel to &#b54747Balloon Dock C"
+    lore:
+      - "&#8a8a8aNavigate to this dock and"
+      - "&#8a8a8atravel to these adjacent"
+      - "&#8a8a8alocations:"
+      - " &#735656Town's Hall"
+      - " &#735656Quester's House"
+      - " &#735656The Grotto"
+      - ""
+      - "&fꂀ &#83ca16Travel."
+    click_commands:
+      - "[sound] ENTITY_SHULKER_TELEPORT"
+      - "[player] spawn dockc"
+
+  balloonC_2:
+    slot: 7
+    material: itemsadder-invisible_item
+    display_name: "&#edededTravel to &#b54747Balloon Dock C"
+    lore:
+      - "&#8a8a8aNavigate to this dock and"
+      - "&#8a8a8atravel to these adjacent"
+      - "&#8a8a8alocations:"
+      - " &#735656Town's Hall"
+      - " &#735656Quester's House"
+      - " &#735656The Grotto"
+      - ""
+      - "&fꂀ &#83ca16Travel."
+    click_commands:
+      - "[sound] ENTITY_SHULKER_TELEPORT"
+      - "[player] spawn dockc"
+
+  na_1:
+    slot: 15
+    material: itemsadder-invisible_item
+    display_name: "&#c45c5cUh oh..."
+    lore:
+      - "&#8a8a8aI cannot take you"
+      - "&#8a8a8ahere yet!"
+
+  na_2:
+    slot: 16
+    material: itemsadder-invisible_item
+    display_name: "&#c45c5cUh oh..."
+    lore:
+      - "&#8a8a8aI cannot take you"
+      - "&#8a8a8ahere yet!"

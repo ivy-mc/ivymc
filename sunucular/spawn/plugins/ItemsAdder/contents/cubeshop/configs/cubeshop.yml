@@ -1,0 +1,252 @@
+info:
+  namespace: cubeshop
+font_images:
+  chat_coin:
+    path: cubeshop:chat/coin.png
+    y_position: 10
+    scale_ratio: 13
+    symbol: ᵍ
+  chat_prefix:
+    path: cubeshop:chat/prefix.png
+    y_position: 8
+    scale_ratio: 9
+    symbol: ᵎ
+  gui_categories_blocks:
+    path: cubeshop:gui/categories/blocks.png
+    y_position: 21
+    scale_ratio: 256
+    symbol: ᵏ
+  gui_categories_dyes:
+    path: cubeshop:gui/categories/dyes.png
+    y_position: 21
+    scale_ratio: 256
+    symbol: ᵐ
+  gui_categories_farming:
+    path: cubeshop:gui/categories/farming.png
+    y_position: 21
+    scale_ratio: 256
+    symbol: ᵑ
+  gui_categories_foods:
+    path: cubeshop:gui/categories/foods.png
+    y_position: 21
+    scale_ratio: 256
+    symbol: ᵒ
+  gui_categories_minerals_ores:
+    path: cubeshop:gui/categories/minerals_ores.png
+    y_position: 21
+    scale_ratio: 256
+    symbol: ᵓ
+  gui_categories_miscellaneous:
+    path: cubeshop:gui/categories/miscellaneous.png
+    y_position: 21
+    scale_ratio: 256
+    symbol: ᵔ
+  gui_categories_mob_drops:
+    path: cubeshop:gui/categories/mob_drops.png
+    y_position: 21
+    scale_ratio: 256
+    symbol: ᵕ
+  gui_categories_redstone:
+    path: cubeshop:gui/categories/redstone.png
+    y_position: 21
+    scale_ratio: 256
+    symbol: ᵖ
+  gui_categories_spawner:
+    path: cubeshop:gui/categories/spawner.png
+    y_position: 21
+    scale_ratio: 256
+    symbol: ᵗ
+  gui_buy:
+    path: cubeshop:gui/buy.png
+    y_position: 21
+    scale_ratio: 256
+    symbol: ᵘ
+  gui_buy_stacks:
+    path: cubeshop:gui/buy_stacks.png
+    y_position: 21
+    scale_ratio: 256
+    symbol: ᵙ
+  gui_main:
+    path: cubeshop:gui/main.png
+    y_position: 21
+    scale_ratio: 256
+    symbol: ᵚ
+  gui_sell:
+    path: cubeshop:gui/sell.png
+    y_position: 21
+    scale_ratio: 256
+    symbol: ᵛ
+  gui_sell_stacks:
+    path: cubeshop:gui/sell_stacks.png
+    y_position: 21
+    scale_ratio: 256
+    symbol: ᵜ
+  icon_balance:
+    path: cubeshop:icon/balance.png
+    y_position: 7
+    scale_ratio: 8
+    symbol: ᵝ
+  icon_buy:
+    path: cubeshop:icon/buy.png
+    y_position: 8
+    scale_ratio: 9
+    symbol: ᵞ
+  icon_cancel:
+    path: cubeshop:icon/cancel.png
+    y_position: 7
+    scale_ratio: 8
+    symbol: ᵟ
+  icon_coin:
+    path: cubeshop:icon/coin.png
+    y_position: 11
+    scale_ratio: 16
+    symbol: ᵠ
+  icon_confirm:
+    path: cubeshop:icon/confirm.png
+    y_position: 7
+    scale_ratio: 8
+    symbol: ᵡ
+  icon_equal:
+    path: cubeshop:icon/equal.png
+    y_position: 8
+    scale_ratio: 9
+    symbol: ᵢ
+  icon_minus:
+    path: cubeshop:icon/minus.png
+    y_position: 8
+    scale_ratio: 9
+    symbol: ᵣ
+  icon_mouse:
+    path: cubeshop:icon/mouse.png
+    y_position: 9
+    scale_ratio: 12
+    symbol: ᵤ
+  icon_negative_equal:
+    path: cubeshop:icon/negative_equal.png
+    y_position: 8
+    scale_ratio: 9
+    symbol: ᵥ
+  icon_plus:
+    path: cubeshop:icon/plus.png
+    y_position: 8
+    scale_ratio: 9
+    symbol: ᵦ
+  icon_price:
+    path: cubeshop:icon/price.png
+    y_position: 7
+    scale_ratio: 8
+    symbol: ᵧ
+  icon_sell:
+    path: cubeshop:icon/sell.png
+    y_position: 8
+    scale_ratio: 9
+    symbol: ᵨ
+  misc_empty:
+    path: cubeshop:misc/empty.png
+    y_position: -32768
+    scale_ratio: -10
+    symbol: ᵩ
+  title_category_blocks:
+    path: cubeshop:title/category/blocks.png
+    y_position: 8
+    scale_ratio: 10
+    symbol: ᵪ
+  title_category_dyes:
+    path: cubeshop:title/category/dyes.png
+    y_position: 8
+    scale_ratio: 10
+    symbol: ᵫ
+  title_category_farming:
+    path: cubeshop:title/category/farming.png
+    y_position: 8
+    scale_ratio: 10
+    symbol: ᵬ
+  title_category_foods:
+    path: cubeshop:title/category/foods.png
+    y_position: 8
+    scale_ratio: 10
+    symbol: ᵭ
+  title_category_minerals:
+    path: cubeshop:title/category/minerals.png
+    y_position: 8
+    scale_ratio: 10
+    symbol: ᵮ
+  title_category_miscellaneous:
+    path: cubeshop:title/category/miscellaneous.png
+    y_position: 8
+    scale_ratio: 10
+    symbol: ᵯ
+  title_category_mob_drops:
+    path: cubeshop:title/category/mob_drops.png
+    y_position: 8
+    scale_ratio: 10
+    symbol: ᵰ
+  title_category_redstone:
+    path: cubeshop:title/category/redstone.png
+    y_position: 8
+    scale_ratio: 10
+    symbol: ᵱ
+  title_category_spawner:
+    path: cubeshop:title/category/spawner.png
+    y_position: 8
+    scale_ratio: 10
+    symbol: ᵲ
+  title_blocks:
+    path: cubeshop:title/blocks.png
+    y_position: 8
+    scale_ratio: 10
+    symbol: ᵳ
+  title_dyes:
+    path: cubeshop:title/dyes.png
+    y_position: 8
+    scale_ratio: 10
+    symbol: ᵴ
+  title_farming:
+    path: cubeshop:title/farming.png
+    y_position: 8
+    scale_ratio: 10
+    symbol: ᵵ
+  title_foods:
+    path: cubeshop:title/foods.png
+    y_position: 8
+    scale_ratio: 10
+    symbol: ᵶ
+  title_minerals:
+    path: cubeshop:title/minerals.png
+    y_position: 8
+    scale_ratio: 10
+    symbol: ᵷ
+  title_miscellaneous:
+    path: cubeshop:title/miscellaneous.png
+    y_position: 8
+    scale_ratio: 10
+    symbol: ᵸ
+  title_mob_drops:
+    path: cubeshop:title/mob_drops.png
+    y_position: 8
+    scale_ratio: 10
+    symbol: ᵹ
+  title_redstone:
+    path: cubeshop:title/redstone.png
+    y_position: 8
+    scale_ratio: 10
+    symbol: ᵺ
+  title_spawner:
+    path: cubeshop:title/spawner.png
+    y_position: 8
+    scale_ratio: 10
+    symbol: ᵻ
+minecraft_lang_overwrite:
+  container_inventory:
+    entries:
+      "container.inventory": ""
+    languages:
+      - ALL
+items:
+  air:
+    resource:
+      material: PAPER
+      generate: true
+      model_id: 7548
+      textures:
+      - cubeshop:misc/air

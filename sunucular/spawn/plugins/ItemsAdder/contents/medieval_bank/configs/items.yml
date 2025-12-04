@@ -1,0 +1,13 @@
+info:
+  namespace: medieval_bank
+items:
+  medieval_bank_empty:
+    enabled: true
+    display_name: ""
+    resource:
+      model_id: 8191035
+      material: STICK
+      generate: true
+      textures:
+        - empty.png
+# 09692X74PD1X62N3ABA3L

@@ -1,0 +1,20 @@
+info:
+  namespace: warden_set
+categories:
+  warden_set:
+    enabled: true
+    skip_if_already: false
+    icon: "warden_set:warden_sword"
+    name: Warden Set
+    permission: ia.menu
+    items:
+      - "warden_set:warden_bow"
+      - "warden_set:warden_sword"
+      - "warden_set:warden_shovel"
+      - "warden_set:warden_hoe"
+      - "warden_set:warden_pickaxe"
+      - "warden_set:warden_axe"
+      - "warden_set:warden_helmet"
+      - "warden_set:warden_leggings"
+      - "warden_set:warden_boots"
+      - "warden_set:warden_chestplate"

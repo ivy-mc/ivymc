@@ -1,0 +1,19 @@
+info:
+  namespace: prism_skyblock
+items:
+  
+  settings-enabled:
+    enabled: true
+    resource:
+      generate: false
+      material: BOOK
+      model_id: 64
+      model_path: gui_textures/settings/enabled
+
+  settings-disabled:
+    enabled: true
+    resource:
+      generate: false
+      material: BOOK
+      model_id: 65
+      model_path: gui_textures/settings/disabled

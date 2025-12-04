@@ -1,0 +1,75 @@
+config-version: "43"
+debug: false
+metrics: true
+update-checker: true
+force-locale: "en"
+worlds:
+  absolute-world-folder-path: ""
+  mode: "blacklist"
+  list:
+  - "blacklist_world"
+  settings:
+    _DEFAULT_:
+      enable: true
+      season:
+        enable: true
+        auto-alternation: true
+        duration: 28
+      random-tick-speed: 5
+      min-tick-unit: 300
+      offline-tick:
+        enable: false
+        max-offline-seconds: 1200
+        max-loading-time: 100 #ms
+      crop:
+        mode: "RANDOM_TICK"
+        tick-interval: 1
+        max-per-chunk: -1
+      pot:
+        mode: "SCHEDULED_TICK"
+        tick-interval: 3
+        max-per-chunk: -1
+      sprinkler:
+        mode: "SCHEDULED_TICK"
+        tick-interval: 2
+        max-per-chunk: -1
+    _WORLDS_:
+      world_nether:
+        enable: false
+      world_the_end:
+        enable: false
+mechanics:
+  default-quality-ratio: "17/2/1"
+  scarecrow:
+    enable: true
+    id: "scarecrow"
+    type: "FURNITURE"
+    range: 7
+    protect-chunk: false
+  greenhouse:
+    enable: true
+    id: "greenhouse_glass"
+    type: "BLOCK"
+    range: 5
+  sync-season:
+    enable: false
+    reference: "world"
+  vanilla-farmland:
+    disable-moisture-mechanic: false
+    prevent-trampling: false
+  hologram-offset-correction:
+    crop_stage_death: 0
+  override-vanilla-blocks: []
+other-settings:
+  legacy-color-code-support: true
+  placeholder-register:
+    '{skill-level}': "%levelplugin_farming%"
+  item-detection-order: []
+  protect-original-lore: false
+  double-check: false
+  worldedit-support: false
+  intervene-anti-grief: false
+  async-world-saving: true
+  # Prevents crop stage items from dropping
+  # As some custom block plugins don't know how to handle loot table correctly
+  prevent-dropping-stage-items: true

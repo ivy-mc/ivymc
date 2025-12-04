@@ -1,0 +1,59 @@
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃    HuskTowns Flags Config    ┃
+# ┃    Developed by William278   ┃
+# ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+# ┣╸ This file is for configuring flags. Flag IDs map to a list of permitted operations.
+# ┗╸ Config Help: https://william278.net/docs/husktowns/config-files
+
+# A map of flag IDs to operations that flag permits.Display names of flags correspond to a "town_rule_name_" locale in your messages file.
+flags:
+  explosion_damage:
+  - explosion_damage_terrain
+  - explosion_damage_entity
+  fire_damage:
+  - fire_spread
+  - fire_burn
+  public_farm_access:
+  - player_damage_entity
+  - block_interact
+  - farm_block_place
+  - farm_block_break
+  - place_vehicle
+  - farm_block_interact
+  - break_vehicle
+  monster_spawning:
+  - player_damage_monster
+  - passive_mob_spawn
+  - monster_spawn
+  pvp:
+  - player_damage_player
+  public_build_access:
+  - player_damage_monster
+  - farm_block_interact
+  - place_hanging_entity
+  - ender_pearl_teleport
+  - break_vehicle
+  - block_interact
+  - break_hanging_entity
+  - empty_bucket
+  - start_raid
+  - redstone_interact
+  - entity_interact
+  - block_break
+  - block_place
+  - fill_bucket
+  - player_damage_entity
+  - use_spawn_egg
+  - farm_block_place
+  - place_vehicle
+  - container_open
+  - player_damage_persistent_entity
+  public_container_access:
+  - container_open
+  public_interact_access:
+  - redstone_interact
+  - entity_interact
+  - ender_pearl_teleport
+  - block_interact
+  mob_griefing:
+  - monster_damage_terrain

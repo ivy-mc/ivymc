@@ -1,0 +1,293 @@
+cosmetics:
+  zombie_balloon:
+    enabled: true
+    display_name: "Zombie Balloon"
+    type: BALLOON
+    model:
+      gui: mob_balloons:zombie_balloon
+      normal: mob_balloons:zombie_balloon
+    permission: "hmccosmetics.zombie_balloon"
+    dye:
+      enabled: false
+
+  drowned_balloon:
+    enabled: true
+    display_name: "Drowned Balloon"
+    type: BALLOON
+    model:
+      gui: mob_balloons:drowned_balloon
+      normal: mob_balloons:drowned_balloon
+    permission: "hmccosmetics.drowned_balloon"
+    dye:
+      enabled: false
+
+  husk_balloon:
+    enabled: true
+    display_name: "Husk Balloon"
+    type: BALLOON
+    model:
+      gui: mob_balloons:husk_balloon
+      normal: mob_balloons:husk_balloon
+    permission: "hmccosmetics.husk_balloon"
+    dye:
+      enabled: false
+
+  zombie_villager_balloon:
+    enabled: true
+    display_name: "Zombie Villager Balloon"
+    type: BALLOON
+    model:
+      gui: mob_balloons:zombie_villager_balloon
+      normal: mob_balloons:zombie_villager_balloon
+    permission: "hmccosmetics.zombie_villager_balloon"
+    dye:
+      enabled: false
+
+  skeleton_balloon:
+    enabled: true
+    display_name: "Skeleton Balloon"
+    type: BALLOON
+    model:
+      gui: mob_balloons:skeleton_balloon
+      normal: mob_balloons:skeleton_balloon
+    permission: "hmccosmetics.skeleton_balloon"
+    dye:
+      enabled: false
+
+  bogged_balloon:
+    enabled: true
+    display_name: "Bogged Balloon"
+    type: BALLOON
+    model:
+      gui: mob_balloons:bogged_balloon
+      normal: mob_balloons:bogged_balloon
+    permission: "hmccosmetics.bogged_balloon"
+    dye:
+      enabled: false
+
+  stray_balloon:
+    enabled: true
+    display_name: "Stray Balloon"
+    type: BALLOON
+    model:
+      gui: mob_balloons:stray_balloon
+      normal: mob_balloons:stray_balloon
+    permission: "hmccosmetics.stray_balloon"
+    dye:
+      enabled: false
+
+  wither_skeleton_balloon:
+    enabled: true
+    display_name: "Wither Skeleton Balloon"
+    type: BALLOON
+    model:
+      gui: mob_balloons:wither_skeleton_balloon
+      normal: mob_balloons:wither_skeleton_balloon
+    permission: "hmccosmetics.wither_skeleton_balloon"
+    dye:
+      enabled: false
+
+  enderman_balloon:
+    enabled: true
+    display_name: "Enderman Balloon"
+    type: BALLOON
+    model:
+      gui: mob_balloons:enderman_balloon
+      normal: mob_balloons:enderman_balloon
+    permission: "hmccosmetics.enderman_balloon"
+    dye:
+      enabled: false
+
+  creeper_balloon:
+    enabled: true
+    display_name: "Creeper Balloon"
+    type: BALLOON
+    model:
+      gui: mob_balloons:creeper_balloon
+      normal: mob_balloons:creeper_balloon
+    permission: "hmccosmetics.creeper_balloon"
+    dye:
+      enabled: false
+
+  spider_balloon:
+    enabled: true
+    display_name: "Spider Balloon"
+    type: BALLOON
+    model:
+      gui: mob_balloons:spider_balloon
+      normal: mob_balloons:spider_balloon
+    permission: "hmccosmetics.spider_balloon"
+    dye:
+      enabled: false
+
+  cave_spider_balloon:
+    enabled: true
+    display_name: "Cave Spider Balloon"
+    type: BALLOON
+    model:
+      gui: mob_balloons:cave_spider_balloon
+      normal: mob_balloons:cave_spider_balloon
+    permission: "hmccosmetics.cave_spider_balloon"
+    dye:
+      enabled: false
+
+  ghast_balloon:
+    enabled: true
+    display_name: "Ghast Balloon"
+    type: BALLOON
+    model:
+      gui: mob_balloons:ghast_balloon
+      normal: mob_balloons:ghast_balloon
+    permission: "hmccosmetics.ghast_balloon"
+    dye:
+      enabled: false
+
+  ghastling_balloon:
+    enabled: true
+    display_name: "Ghastling Balloon"
+    type: BALLOON
+    model:
+      gui: mob_balloons:ghastling_balloon
+      normal: mob_balloons:ghastling_balloon
+    permission: "hmccosmetics.ghastling_balloon"
+    dye:
+      enabled: false
+
+  piglin_balloon:
+    enabled: true
+    display_name: "Piglin Balloon"
+    type: BALLOON
+    model:
+      gui: mob_balloons:piglin_balloon
+      normal: mob_balloons:piglin_balloon
+    permission: "hmccosmetics.piglin_balloon"
+    dye:
+      enabled: false
+
+  zombified_piglin_balloon:
+    enabled: true
+    display_name: "Zombified Piglin Balloon"
+    type: BALLOON
+    model:
+      gui: mob_balloons:zombified_piglin_balloon
+      normal: mob_balloons:zombified_piglin_balloon
+    permission: "hmccosmetics.zombified_piglin_balloon"
+    dye:
+      enabled: false
+
+menus:
+  mob_balloons:
+    title: "Mob Balloons"
+    rows: 2
+    items:
+      zombie_balloon:
+        slot: 0
+        cosmetic: zombie_balloon
+        item:
+          material: ZOMBIE_HEAD
+          name: "<white>Zombie Balloon"
+
+      drowned_balloon:
+        slot: 1
+        cosmetic: drowned_balloon
+        item:
+          material: ZOMBIE_HEAD
+          name: "<white>Drowned Balloon"
+
+      husk_balloon:
+        slot: 2
+        cosmetic: husk_balloon
+        item:
+          material: ZOMBIE_HEAD
+          name: "<white>Husk Balloon"
+
+      zombie_villager_balloon:
+        slot: 3
+        cosmetic: zombie_villager_balloon
+        item:
+          material: ZOMBIE_HEAD
+          name: "<white>Zombie Villager Balloon"
+
+      skeleton_balloon:
+        slot: 4
+        cosmetic: skeleton_balloon
+        item:
+          material: SKELETON_SKULL
+          name: "<white>Skeleton Balloon"
+
+      bogged_balloon:
+        slot: 5
+        cosmetic: bogged_balloon
+        item:
+          material: SKELETON_SKULL
+          name: "<white>Bogged Balloon"
+
+      stray_balloon:
+        slot: 6
+        cosmetic: stray_balloon
+        item:
+          material: SKELETON_SKULL
+          name: "<white>Stray Balloon"
+
+      wither_skeleton_balloon:
+        slot: 7
+        cosmetic: wither_skeleton_balloon
+        item:
+          material: WITHER_SKELETON_SKULL
+          name: "<white>Wither Skeleton Balloon"
+
+      enderman_balloon:
+        slot: 9
+        cosmetic: enderman_balloon
+        item:
+          material: PURPLE_WOOL
+          name: "<white>Enderman Balloon"
+
+      creeper_balloon:
+        slot: 10
+        cosmetic: creeper_balloon
+        item:
+          material: LIME_WOOL
+          name: "<white>Creeper Balloon"
+
+      spider_balloon:
+        slot: 11
+        cosmetic: spider_balloon
+        item:
+          material: BLACK_WOOL
+          name: "<white>Spider Balloon"
+
+      cave_spider_balloon:
+        slot: 12
+        cosmetic: cave_spider_balloon
+        item:
+          material: GRAY_WOOL
+          name: "<white>Cave Spider Balloon"
+
+      ghast_balloon:
+        slot: 13
+        cosmetic: ghast_balloon
+        item:
+          material: WHITE_WOOL
+          name: "<white>Ghast Balloon"
+
+      ghastling_balloon:
+        slot: 14
+        cosmetic: ghastling_balloon
+        item:
+          material: LIGHT_GRAY_WOOL
+          name: "<white>Ghastling Balloon"
+
+      piglin_balloon:
+        slot: 15
+        cosmetic: piglin_balloon
+        item:
+          material: GOLD_BLOCK
+          name: "<white>Piglin Balloon"
+
+      zombified_piglin_balloon:
+        slot: 16
+        cosmetic: zombified_piglin_balloon
+        item:
+          material: NETHERITE_BLOCK
+          name: "<white>Zombified Piglin Balloon"

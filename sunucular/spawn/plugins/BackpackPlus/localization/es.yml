@@ -1,0 +1,239 @@
+# Spanish language / Idioma español
+# Translated by: Sopherine(isofix19)
+
+# Message when the backpack starts to be loaded from the database (after player interaction)
+backpack-loading: "#eb0000Cargando mochila..."
+# Message when the backpack has been loaded
+backpack-loaded: "&f¡La mochila cargó correctamente!"
+# Message when the backpack is updating and the player tries to open it
+backpack-updating: "&fActualizando la Mochila..."
+# Message when the backpack could not be loaded
+backpack-loading-error: "&cHubo un problema mientras cargaba la mochila"
+# When a player tries to open a backpack, but it is being used by another player
+backpack-is-used-by-another-player: "&cLa mochila está siendo usada por otro jugador"
+
+# Message when admin changes crafting
+backpack-crafting-change: "&aLa fabricación de la mochila fue cambiada"
+# Message when a player tries to change crafting when it is empty or the same as before
+backpack-crafting-cannot-change: "&cLa fabricación de la mochila no puede cambiarse, está vacío o es el mismo"
+# Message when admin cancels crafting changes
+backpack-crafting-change-cancelled: "&cSe canceló el cambio en la fabricación de la mochila"
+
+# Message after the backpack has been added by the player's backpack view
+# %player% Name of backpack owner
+backpack-added-inventory: "&6Se añadió la mochila del jugador&8: &f%player% &6a tu inventario"
+
+# If a player has no permissions
+command-no-permissions: "&4No tienes permisos para este comando"
+# When a player has a cooldown
+cooldown-message: "#eb0000Espera antes de volver a usar la mochila"
+# When a player is not authorised to open a backpack
+backpack-no-permission-use: "&4No tienes permiso para abrir la mochila"
+# When the player's backpack recharges (using the command)
+loading-in-progress: "&6Carga en progreso... Espera un momento"
+# When players' backpacks could not be loaded
+players-backpack-not-loaded: "&cLa mochila de este jugador no pudo cargar correctamente"
+# When the player does not have any backpack
+player-not-created-backpacks: "&7Este jugador no creó ninguna mochila aún"
+# When the player is offline
+# %player% > Player Name
+player-is-offline: "&7Jugador&8: &f%player% &7está desconectado"
+
+# Message when a player tries to have more backpacks than one (only if option in config is set to true: limit-backpack-per-inventory)
+one-backpack-per-inventory: "&cSolo puedes llevar una mochila"
+
+# Mensaje cuando un jugador intenta tener más mochilas que x(limit-backpack-per-inventory-amount) (solo si la opción en la configuración está establecida en true: limit-backpack-per-inventory).
+multiple-backpack-per-inventory: "&cSolo puedes llevar %amount% mochilas"
+
+
+# Mensaje cuando el jugador intenta poner un objeto en el contenedor cuando está bloqueado
+blocked-backpack-insert-message: "&c¡No puedes poner este artículo aquí!!"
+
+# Message when resourcepack is loaded leave blank if there is to be no message
+resourcepack-loaded: "&6El Resourcepack cargó correctamente"
+# Message when resourcepack fails to load leave blank if there is to be no message
+resourcepack-failed-load: "&6No se pudo cargar el Resourcepack"
+
+# Message if the command is only for the player
+command-only-player: "&c¡Este argumento solo puede usarse por un jugador!"
+# Message if the command is only for the console
+command-only-console: "&c¡Este argumento solo puede usarse en la consola!"
+
+# Message when uuid is invalid
+invalid-uuid: "&cUUID Incorrecta"
+
+# Message when the item was blocked, %item% is the name of the material
+item-has-blocked: "&6Se bloqueó el Item&8: &f%item%"
+
+# Message when the given item is already blocked
+item-already-blocked: "&cEl Item ya está bloqueado&8: &f%item%"
+
+# Message when the material was blocked, %item% is the name of the material
+material-has-blocked: "&6Se bloqueó el material&8: &f%material%"
+# Message when the given material is already blocked
+material-already-blocked: "&cEl material está bloqueado&8: &f%material%"
+# Message when given material is incorrect
+invalid-material: "&cNombre de material invalido&8: &f%material%"
+# Message when player has empty hands
+empty-hand: "&cDebes tener algo en la mano"
+
+# Message when backpack tier is incorrect, %tier% is the given value
+invalid-backpack-tier: "&cNivel de mochila invalido&8: &f%tier%"
+
+# Message when a player adds a backpack, %tier% is the tier of the backpack
+backpack-added: "&6Mochila&8: &f%tier% &6Añadida"
+
+# Message when a backpack was added to a player, %tier% is the tier of the backpack, %player% is the name of the player
+backpack-added-player: "&6Mochila&8: &f%tier%  &6Se añadió a&8: &f%player%"
+# Message when a backpack of the specified tier has not been found
+backpack-tier-not-found: "&cMochila&8: &f%tier% &cno se encontró"
+
+# Message when no players have created backpacks yet or something has gone wrong
+players-not-created-backpacks: "Ningún jugador ha creado una mochila todavía o algo salió mal"
+
+# Message when an unexpected error occurs
+unexpected-error: "&cUn error inesperado ocurrió durante la ejecución del comando, comprobar el error en la consola"
+
+# Message when resourcepack is reloaded with command
+resourcepack-reloaded: "&6El paquete de recursos se ha actualizado y recargado con todos los jugadores"
+
+# A message when a player tries to put an item in a backpack that is not permitted type FILTERED
+filtered-backpack-item-not-allowed: "&cNo puedes poner este objeto en esta mochila"
+
+# Message when a player tries to click a button on a menu, and it has a cooldown
+button-cooldown: "&cDebe esperar otro &f%time% &csegundos antes de volver a hacer clic"
+
+# Message when someone else has already edited the allowed items for this backpack
+allowed-items-gui-has-editor: "&cAlguien ya está editando los artículos permitidos para esta mochila"
+
+# Message when failed to open gui of allowed items
+allowed-items-could-open: "&cNo se pueden abrir los elementos permitidos, compruebe la consola y compruebe la configuración de esta mochila para ver si son correctos"
+
+# Mensaje cuando el jugador no es el dueño de la mochila
+not-owner: "&c¡No eres el dueño de esta mochila!"
+
+# Mensaje cuando un jugador intenta crear una mochila con un contenedor no vacío
+crafting.blocked-filled-container: "&4¡No puedes craftear usando contenedores que no estén vacíos!"
+
+# Configuración de GUI
+#
+# Guía de operadores condicionales:
+# Este plugin soporta expresiones condicionales en texto usando estos formatos:
+#
+# CONDICIONALES ESTÁNDAR: %[(condición)texto]%
+#    - Muestra 'texto' si la condición es verdadera, de lo contrario no muestra nada
+#    - Usado para: paginación, elementos opcionales
+#
+# CONDICIONALES TERNARIOS: %[(condición)texto_verdadero ~: texto_falso]%
+#    - Muestra 'texto_verdadero' si la condición es verdadera, de lo contrario 'texto_falso'
+#    - Usa ~: como separador para evitar conflictos con dos puntos en el texto
+#    - Usado para: indicadores de estado, cambio de tipos
+#
+# EJEMPLOS DE ESTA CONFIGURACIÓN:
+#   Paginación: "%[(max_pages > 1)&cPágina&8: &6%page% &8/ &7%max_pages%]%"
+#   Estado de crafteo: "%[(isCraftable == true)&8[&2&l✔&8] ~: &8[&c&l❌&8]]%"
+#   Habilitar/deshabilitar: "%[(isCraftable == true)deshabilitar ~: habilitar]%"
+#   Cambio de tipo: "%[(type == DEFAULT)FILTRADO ~: POR DEFECTO]%"
+#
+# OPERADORES USADOS EN ESTA CONFIGURACIÓN:
+#   >  (mayor que)         Ejemplo: max_pages > 1
+#   == (igual)             Ejemplo: isCraftable == true, type == DEFAULT
+gui:
+  # Formato del título de GUI de objetos permitidos
+  allowed-items-gui: "&cObjetos permitidos&8: &f%size% &cNivel de mochila&8: &f%tier% %[(max_pages > 1)&cPágina&8: &6%page% &8/ &7%max_pages%]%"
+
+  # Interfaz principal de configuración de mochila
+  backpack-settings-main:
+    title: "&6Nivel&8: &f%tier% &6configuración de mochila"
+    buttons:
+      # Botón de editar crafteo
+      edit-crafting-button:
+        display-name: "&2Clic para cambiar crafteo"
+        lore:
+          - "&fSe puede craftear&8: %[(isCraftable == true)&8[&2&l✔&8] ~: &8[&c&l❌&8]]%"
+          - " "
+          - "&7Clic &f&lBOTÓN IZQUIERDO &7Para editar crafteo"
+          - "&7Clic &f&lSHIFT + BOTÓN DERECHO &7para %[(isCraftable == true)deshabilitar ~: habilitar]% la capacidad de craftear una mochila"
+
+      # Botón de objetos permitidos
+      allowed-items-button:
+        display-name: "&2Clic para editar objetos permitidos"
+        lore:
+          - "&7Los objetos actualmente permitidos para esta mochila son&8: &c%size%"
+          - " "
+          - "&7Clic &f&lBOTÓN IZQUIERDO &7Para abrir la GUI con objetos permitidos"
+          - " "
+          - "&8Incluye estos objetos si la mochila tiene el tipo &fFILTRADO"
+
+      # Botón de cambiar tipo de mochila
+      change-backpack-type-button:
+        display-name: "&2Clic para editar tipo de mochila"
+        lore:
+          - "&7El tipo actual de mochila es&8: &c%type%"
+          - " "
+          - "&7Clic &f&lBOTÓN IZQUIERDO &7Para cambiar el tipo a&8: &f%[(type == DEFAULT)FILTRADO ~: POR DEFECTO]%"
+
+  # GUI de elección de crafteo de mochila
+  backpack-chose-crafting-gui:
+    title: "#0047F7Elige qué mochila quieres cambiar el crafteo"
+    buttons:
+      select-backpack-button:
+        lore:
+          - "&fSe puede craftear&8: %[(isCraftable == true)&8[&2&l✔&8] ~: &8[&c&l❌&8]]%"
+
+  # GUI de mochilas de jugador
+  player-backpacks-gui:
+    title: "&cMochilas de jugador&8: &f%playerName% %[(max_pages > 1)&cPágina&8: &6%page% &8/ &7%max_pages%]%"
+    hover-text:
+      - "&8▪ &fPropietario de mochila&f: &6%owner%"
+      - "&8▪ &fÚltima actualización&f: &a%lastUpdated%"
+      - "&8▪ &fÚltimo jugador&f: &a%lastPlayer%"
+      - "&8▪ &fID de mochila&f: &a%backpackUUID%"
+
+  # Información de GUI de mochila de jugador
+  player-backpack-gui-info:
+    displayName: "&6%playerName%"
+    lore:
+      - "&fMochilas poseídas&8: &6%amount%"
+      - "&7Clic &f&lBOTÓN IZQUIERDO &7Para abrir el menú de mochilas del jugador"
+
+  # GUI de todas las mochilas
+  all-backpack-gui:
+    title: "&cTodos los jugadores con mochilas&8: &f%size% %[(max_pages > 1)&cPágina&8: &6%page% &8/ &7%max_pages%]%"
+
+  # GUI de edición de crafteo
+  crafting-edit-gui:
+    title: "#194d33Estás cambiando el crafteo %crafting%"
+
+# Configuración de objetos NBT
+nbt:
+  nbt-item:
+    displayName: "&fObjeto NBT personalizado"
+    lore:
+      - "&8» &7Nombre del plugin&8: &f%plugin%"
+      - "&8» &7Espacio de nombres&8: &f%namespace%"
+      - "&8» &7Valor del espacio de nombres: &f%value%"
+
+items:
+  # Información de mochila de base de datos
+  # Usado al ver detalles de mochila en interfaces de administrador/base de datos
+  database-backpack-info:
+    lore:
+      - "&8▪ &fPropietario de mochila&8: &6%owner%"   # Muestra quién posee esta mochila
+      - "&8▪ &fId&8: &7%backpackUUID%"               # Identificador único para la mochila
+      - "&8▪ &fÚltima actualización&8: &a%lastUpdate%" # Cuándo fue modificada por última vez
+      - "&8▪ &fÚltimo jugador&8: &a%lastPlayer%"     # Último jugador que interactuó con ella
+      - " "                                      # Línea vacía para espaciado
+      - "&7Clic &f&lBOTÓN IZQUIERDO &7Para abrir la mochila"  # Acción de clic izquierdo
+      - "&7Clic &f&lBOTÓN DERECHO &8&l+ &f&lSHIFT &7Para añadir una mochila a tu inventario"  # Acción clic derecho + shift
+
+  database-backpack-no-settings:
+    display-name: "&c⚠ Mochila sin configurar"
+    lore:
+      - "&8▪ &fPropietario&8: &6%owner%"
+      - "&8▪ &fID&8: &7%backpackUUID%"
+      - "&8▪ &fÚltima actualización&8: &a%lastUpdate%"
+      - "&8▪ &fÚltimo jugador&8: &a%lastPlayer%"
+      - " "
+      - "&c⚠ &7Faltan configuraciones de nivel&8: &e%tier%"
+      - "&c⚠ &7La mochila requiere configuración"

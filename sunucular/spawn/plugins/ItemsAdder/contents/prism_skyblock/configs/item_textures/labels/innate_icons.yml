@@ -1,0 +1,68 @@
+info:
+  namespace: prism_skyblock
+items:
+
+  innate-ambers:
+    enabled: true
+    resource:
+      generate: true
+      material: BLAZE_ROD
+      model_id: 1
+      textures:
+      - labels/innate_icons/ambers
+  innate-divineintervention:
+    enabled: true
+    resource:
+      generate: true
+      material: BLAZE_ROD
+      model_id: 2
+      textures:
+      - labels/innate_icons/divine_intervention
+  innate-sneakypicky:
+    enabled: true
+    resource:
+      generate: true
+      material: BLAZE_ROD
+      model_id: 3
+      textures:
+      - labels/innate_icons/sneaky_picky
+  innate-backstab:
+    enabled: true
+    resource:
+      generate: true
+      material: BLAZE_ROD
+      model_id: 4
+      textures:
+      - labels/innate_icons/backstab
+  innate-firebersker:
+    enabled: true
+    resource:
+      generate: true
+      material: BLAZE_ROD
+      model_id: 5
+      textures:
+      - labels/innate_icons/fire_berserker
+  innate-stun:
+    enabled: true
+    resource:
+      generate: true
+      material: BLAZE_ROD
+      model_id: 6
+      textures:
+      - labels/innate_icons/stun
+  innate-weaken:
+    enabled: true
+    resource:
+      generate: true
+      material: BLAZE_ROD
+      model_id: 7
+      textures:
+      - labels/innate_icons/weaken
+  innate-neptunegift:
+    enabled: true
+    resource:
+      generate: true
+      material: BLAZE_ROD
+      model_id: 8
+      textures:
+      - labels/innate_icons/neptune_gift

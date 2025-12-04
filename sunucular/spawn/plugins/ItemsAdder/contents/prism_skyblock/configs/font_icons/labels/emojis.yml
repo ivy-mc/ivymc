@@ -1,0 +1,98 @@
+info:
+  namespace: prism_skyblock
+font_images:
+  
+  angry:
+    symbol: ꂋ
+    path: labels/emoji/angry.png
+    y_position: 7
+    scale_ratio: 8
+    permission: emoji.basic
+  clown:
+    symbol: ꂌ
+    path: labels/emoji/clown.png
+    y_position: 7
+    scale_ratio: 8
+    permission: emoji.basic
+  devil:
+    symbol: ꂍ
+    path: labels/emoji/devil.png
+    y_position: 7
+    scale_ratio: 8
+    permission: emoji.basic
+  grin:
+    symbol: ꂎ
+    path: labels/emoji/grin.png
+    y_position: 7
+    scale_ratio: 8
+    permission: emoji.basic
+  kiss:
+    symbol: ꂏ
+    path: labels/emoji/kiss.png
+    y_position: 7
+    scale_ratio: 8
+    permission: emoji.basic
+
+
+  nerd:
+    symbol: ꂐ
+    path: labels/emoji/nerd.png
+    y_position: 7
+    scale_ratio: 8
+    permission: emoji.advanced
+  sad:
+    symbol: ꂑ
+    path: labels/emoji/sad.png
+    y_position: 7
+    scale_ratio: 8
+    permission: emoji.advanced
+  scared:
+    symbol: ꂒ
+    path: labels/emoji/scared.png
+    y_position: 7
+    scale_ratio: 8
+    permission: emoji.advanced
+  sick:
+    symbol: ꂓ
+    path: labels/emoji/sick.png
+    y_position: 7
+    scale_ratio: 8
+    permission: emoji.advanced
+  sigh:
+    symbol: ꂔ
+    path: labels/emoji/sigh.png
+    y_position: 7
+    scale_ratio: 8
+    permission: emoji.advanced
+
+
+  surprised:
+    symbol: ꂕ
+    path: labels/emoji/surprised.png
+    y_position: 7
+    scale_ratio: 8
+    permission: emoji.supreme
+  sus:
+    symbol: ꂖ
+    path: labels/emoji/sus.png
+    y_position: 7
+    scale_ratio: 8
+    permission: emoji.supreme
+  tear:
+    symbol: ꂘ
+    path: labels/emoji/tear.png
+    y_position: 7
+    scale_ratio: 8
+    permission: emoji.supreme
+  vomit:
+    symbol: ꂘ
+    path: labels/emoji/vomit.png
+    y_position: 7
+    scale_ratio: 8
+    permission: emoji.supreme
+  stern:
+    symbol: ꂙ
+    path: labels/emoji/stern.png
+    y_position: 7
+    scale_ratio: 8
+    permission: emoji.supreme

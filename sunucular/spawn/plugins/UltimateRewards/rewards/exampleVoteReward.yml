@@ -1,0 +1,104 @@
+#
+# Example config of a vote reward.
+#
+# Decides if rewards will be claimable.
+enabled: true
+#
+# Each type of reward has different specifications.
+# All currently supported types can be found on:
+# https://ultimaterewards.athelion.eu/
+#
+type: vote_reward
+#
+# Reward tag
+#
+tag: Vote Reward
+#
+# (Optional) Permission which player must have to be
+# able to obtain this reward.
+#
+permission: ultimaterewards.exampleVoteReward
+#
+# Required votes to achieve this reward.
+#
+required-votes: 20
+#
+# Notifies players that the reward is currently available
+live-reminder-enabled: true
+# NOTE THAT ITEM & SOUND NAMES ARE SLIGHTLY DIFFERENT BETWEEN >1.12 & 1.13< VERSIONS!
+# SO MAKE SURE YOU ARE USING VALID ITEM NAMES (DEFAULT ONES ARE USED FROM 1.13+ VERSIONS)
+# OTHERWISE, THEY WILL BE REPLACED BY STONE IF AN INVALID NAME IS USED.
+#
+# When the player achieves the required votes,
+# this version of the reward item is displayed in the inventory:
+#
+available-item: "LIME_DYE"
+available-display-name: "&a&lVOTE REWARD"
+available-lore:
+  - "&7You have collected"
+  - "&7enough votes to obtain"
+  - "&7this reward!"
+  - " "
+  - "&b► Click to claim!"
+#
+# Whereas when the player doesn't have enough required votes,
+# this version of the reward item is displayed in the inventory:
+#
+unavailable-item: "RED_DYE"
+unavailable-display-name: "&c&lVOTE REWARD"
+unavailable-lore:
+  - "&7You need to collect"
+  - "&7enough votes to be able to obtain"
+  - "&7this reward!"
+  - " "
+  - "&4► Requires another %requiredVotes% vote(s)"
+#
+# When the player has already claimed this reward:
+#
+claimed-item: "GRAY_DYE"
+claimed-display-name: "&7&lVOTE REWARD"
+claimed-lore:
+  - "&7You have already"
+  - "&7claimed this reward"
+  - "&7for %votes% votes!"
+#
+# When the player doesn't have permission for this reward,
+# the following properties will be shown.
+#
+no-permission-item: BARRIER
+no-permission-display-name: "&c&l&mVOTE REWARD"
+no-permission-lore:
+  - "&c ✕ Locked, requires"
+  - "&c   %permission% permission"
+#
+# Commands list that will be executed after the player
+# obtains this reward.
+# All available actions can be found on
+# https://ultimaterewards.athelion.eu/
+#
+# Format: [] - required value | () - optional value
+#   [<actionType>] (<chance>):<command>
+#
+# Examples:
+#   - [console] 50:give %player% diamond 1
+#       - this command will have a 50%
+#         execution chance due to its property value
+#
+#   - [message] "&aYou have claimed your %type% reward!"
+#       - this action will send the player a message
+#         with the defined content
+#
+# You can also use the random placeholders
+# from randoms.yml file and use them in a command.
+# Example:
+#   - give %player% iron_ingot %exampleRandom%
+#       - the placeholder will be replaced by
+#         a random number from the defined interval in randoms.yml
+#
+actions:
+  - '[console] give %player% diamond 1'
+  - '[console] say %player% claimed their %type% reward!'
+  - '[message] &7You have claimed the vote reward for |&7 20 votes! Keep up the great work.'
+  #  - '[actionbar] &aSuccessfully claimed!' # Action bar can be used only from 1.12 versions!
+  - '[title] &aClaimed'
+  - '[subtitle] &aReward %type%'

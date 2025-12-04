@@ -1,0 +1,376 @@
+n-tarim:
+  name: "&fᵩᵑ"
+  fillItem:
+    material: PAPER
+    model: 7548
+    name: "&f"
+  items:
+    5:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵵ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Tarım kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop farming
+      slot: 4
+      page: 1
+    10:
+      type: special
+      special: BALANCE
+      slot: 49
+      page: 1
+    21:
+      type: item
+      item:
+        material: WHEAT_SEEDS
+        quantity: 1
+      buyPrice: 90
+      sellPrice: 1.2
+      slot: 18
+      page: 1
+    22:
+      type: item
+      item:
+        material: MELON_SEEDS
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.2
+      slot: 19
+      page: 1
+    23:
+      type: item
+      item:
+        material: PUMPKIN_SEEDS
+        quantity: 1
+      buyPrice: 50
+      sellPrice: 0.9
+      slot: 20
+      page: 1
+    24:
+      type: item
+      item:
+        material: BEETROOT_SEEDS
+        quantity: 1
+      buyPrice: 50
+      sellPrice: 0.9
+      slot: 21
+      page: 1
+    25:
+      type: item
+      item:
+        material: COCOA_BEANS
+        quantity: 1
+      buyPrice: 7
+      sellPrice: 1.4
+      slot: 22
+      page: 1
+    26:
+      type: item
+      item:
+        material: NETHER_WART
+        quantity: 1
+      buyPrice: 8
+      sellPrice: 1.8
+      slot: 23
+      page: 1
+    27:
+      type: item
+      item:
+        material: SUGAR
+        quantity: 1
+      buyPrice: 50
+      sellPrice: 2.9
+      slot: 24
+      page: 1
+    28:
+      type: item
+      item:
+        material: SUGAR_CANE
+        quantity: 1
+      buyPrice: 50
+      sellPrice: 0.9
+      slot: 25
+      page: 1
+    29:
+      type: item
+      item:
+        material: CACTUS
+        quantity: 1
+      buyPrice: 150
+      sellPrice: 7.0
+      slot: 26
+      page: 1
+    30:
+      type: item
+      item:
+        material: BAMBOO
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 1.2
+      slot: 27
+      page: 1
+    31:
+      type: item
+      item:
+        material: WHEAT
+        quantity: 1
+      buyPrice: 110
+      sellPrice: 6.0
+      slot: 28
+      page: 1
+    32:
+      type: item
+      item:
+        material: PUMPKIN
+        quantity: 1
+      buyPrice: 100
+      sellPrice: 1.4
+      slot: 29
+      page: 1
+    33:
+      type: item
+      item:
+        material: CARVED_PUMPKIN
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 1.4
+      slot: 30
+      page: 1
+    34:
+      type: item
+      item:
+        material: JACK_O_LANTERN
+        quantity: 1
+      buyPrice: 35
+      sellPrice: -1
+      slot: 31
+      page: 1
+    35:
+      type: item
+      item:
+        material: MELON
+        quantity: 1
+      buyPrice: 135
+      sellPrice: 2.4
+      slot: 32
+      page: 1
+    36:
+      type: item
+      item:
+        material: LILY_PAD
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.8
+      slot: 33
+      page: 1
+    37:
+      type: item
+      item:
+        material: KELP
+        quantity: 1
+      buyPrice: 100
+      sellPrice: 0.6
+      slot: 34
+      page: 1
+    38:
+      type: item
+      item:
+        material: RED_MUSHROOM
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 1.4
+      slot: 35
+      page: 1
+    39:
+      type: item
+      item:
+        material: BROWN_MUSHROOM
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 1.4
+      slot: 36
+      page: 1
+    40:
+      type: item
+      item:
+        material: WARPED_FUNGUS
+        quantity: 1
+      buyPrice: 60
+      sellPrice: 0.2
+      slot: 37
+      page: 1
+    41:
+      type: item
+      item:
+        material: CRIMSON_FUNGUS
+        quantity: 1
+      buyPrice: 60
+      sellPrice: 0.2
+      slot: 38
+      page: 1
+    42:
+      type: item
+      item:
+        material: CHORUS_FRUIT
+        quantity: 1
+      buyPrice: 75
+      sellPrice: 3.2
+      slot: 39
+      page: 1
+    43:
+      type: item
+      item:
+        material: SHULKER_SHELL
+        quantity: 1
+      buyPrice: 1500
+      sellPrice: 4.8
+      slot: 40
+      page: 1
+    44:
+      type: item
+      item:
+        material: CHORUS_PLANT
+        quantity: 1
+      buyPrice: 25
+      sellPrice: 1.8
+      slot: 41
+      page: 1
+    45:
+      type: item
+      item:
+        material: POPPED_CHORUS_FRUIT
+        quantity: 1
+      buyPrice: 75
+      sellPrice: 3.2
+      slot: 42
+      page: 1
+    46:
+      type: item
+      item:
+        material: GLOW_BERRIES
+        quantity: 1
+      buyPrice: 50
+      sellPrice: 3.35
+      slot: 43
+      page: 1
+    47:
+      type: item
+      item:
+        material: CHORUS_FLOWER
+        quantity: 1
+      buyPrice: 25
+      sellPrice: 1.8
+      slot: 44
+      page: 1
+    48:
+      type: item
+      item:
+        material: POPPED_CHORUS_FRUIT
+        quantity: 1
+      buyPrice: 30
+      sellPrice: 1.8
+      slot: 18
+      page: 2
+    49:
+      type: item
+      item:
+        material: VINE
+        quantity: 1
+      buyPrice: 25
+      sellPrice: 1.6
+      slot: 19
+      page: 2
+    50:
+      type: item
+      item:
+        material: GLOW_LICHEN
+        quantity: 1
+      buyPrice: 12.5
+      sellPrice: 1.8
+      slot: 20
+      page: 2
+    51:
+      type: item
+      item:
+        material: HAY_BLOCK
+        quantity: 1
+      buyPrice: 100
+      sellPrice: 60
+      slot: 21
+      page: 2
+    52:
+      type: item
+      item:
+        material: HONEY_BLOCK
+        quantity: 1
+      buyPrice: 60
+      sellPrice: 6
+      slot: 22
+      page: 2
+    53:
+      type: item
+      item:
+        material: HONEYCOMB_BLOCK
+        quantity: 1
+      buyPrice: 60
+      sellPrice: 6
+      slot: 23
+      page: 2
+    54:
+      type: item
+      item:
+        material: HONEYCOMB
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 1.4
+      slot: 24
+      page: 2
+    55:
+      type: item
+      item:
+        material: HONEY_BOTTLE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: -1
+      slot: 25
+      page: 2
+    56:
+      type: item
+      item:
+        material: SUNFLOWER
+        quantity: 1
+      buyPrice: 10.5
+      sellPrice: -1
+      slot: 26
+      page: 2
+    57:
+      type: item
+      item:
+        material: FLINT
+        quantity: 1
+      buyPrice: 5
+      sellPrice: -1
+      slot: 27
+      page: 2
+    58:
+      type: item
+      item:
+        material: DEAD_BUSH
+        quantity: 1
+      buyPrice: 10.5
+      sellPrice: -1
+      slot: 28
+      page: 2
+    59:
+      type: special
+      special: BALANCE
+      slot: 49
+      page: 2

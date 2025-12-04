@@ -1,0 +1,60 @@
+info:
+  namespace: prism_skyblock
+items:
+
+  factions-warrior:
+    enabled: true
+    resource:
+      generate: false
+      material: STRING
+      model_id: 20
+      model_path: gui_textures/factions/warrior
+  factions-marksman:
+    enabled: true
+    resource:
+      generate: false
+      material: STRING
+      model_id: 21
+      model_path: gui_textures/factions/marksman
+  factions-witch:
+    enabled: true
+    resource:
+      generate: false
+      material: STRING
+      model_id: 22
+      model_path: gui_textures/factions/witch
+  factions-human:
+    enabled: true
+    resource:
+      generate: false
+      material: STRING
+      model_id: 27
+      model_path: gui_textures/factions/human
+  factions-warriorportrait:
+    enabled: true
+    resource:
+      generate: false
+      material: STRING
+      model_id: 23
+      model_path: gui_textures/factions/warrior_portrait
+  factions-marksmanportrait:
+    enabled: true
+    resource:
+      generate: false
+      material: STRING
+      model_id: 24
+      model_path: gui_textures/factions/marksman_portrait
+  factions-witchportrait:
+    enabled: true
+    resource:
+      generate: false
+      material: STRING
+      model_id: 25
+      model_path: gui_textures/factions/witch_portrait
+  factions-humanportrait:
+    enabled: true
+    resource:
+      generate: false
+      material: STRING
+      model_id: 26
+      model_path: gui_textures/factions/human_portrait

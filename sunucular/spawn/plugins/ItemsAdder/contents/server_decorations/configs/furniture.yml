@@ -1,0 +1,116 @@
+info:
+  namespace: server_decorations
+
+furniture:
+  small_wooden_crate:
+    display_name: "Small Wooden Crate"
+    resource:
+      model_id: 10001
+      model_path: blocks/small_wooden_crate
+    behaviors:
+      furniture:
+        seats: 0
+        solid: true
+        rotation: true
+        small: false
+        placeable_on:
+          - ALL
+    drop:
+      item: server_decorations:small_wooden_crate
+
+  middle_wooden_crate:
+    display_name: "Middle Wooden Crate"
+    resource:
+      model_id: 10002
+      model_path: blocks/middle_wooden_crate
+    behaviors:
+      furniture:
+        seats: 0
+        solid: true
+        rotation: true
+    drop:
+      item: server_decorations:middle_wooden_crate
+
+  big_wooden_crate:
+    display_name: "Big Wooden Crate"
+    resource:
+      model_id: 10003
+      model_path: blocks/big_wooden_crate
+    behaviors:
+      furniture:
+        solid: true
+        rotation: true
+    drop:
+      item: server_decorations:big_wooden_crate
+
+  sign_spawn:
+    display_name: "Spawn Sign"
+    resource:
+      model_id: 10004
+      model_path: blocks/sign_spawn
+    behaviors:
+      furniture:
+        solid: false
+        rotation: true
+    drop:
+      item: server_decorations:sign_spawn
+
+  sign_shop:
+    display_name: "Shop Sign"
+    resource:
+      model_id: 10005
+      model_path: blocks/sign_shop
+    behaviors:
+      furniture:
+        solid: false
+        rotation: true
+    drop:
+      item: server_decorations:sign_shop
+
+  sign_quests:
+    display_name: "Quests Sign"
+    resource:
+      model_id: 10006
+      model_path: blocks/sign_quests
+    behaviors:
+      furniture:
+        solid: false
+        rotation: true
+    drop:
+      item: server_decorations:sign_quests
+
+  sign_pvp:
+    display_name: "PvP Sign"
+    resource:
+      model_id: 10007
+      model_path: blocks/sign_pvp
+    behaviors:
+      furniture:
+        solid: false
+        rotation: true
+    drop:
+      item: server_decorations:sign_pvp
+
+  sign_minigames:
+    display_name: "Minigames Sign"
+    resource:
+      model_id: 10008
+      model_path: blocks/sign_minigames
+    behaviors:
+      furniture:
+        solid: false
+        rotation: true
+    drop:
+      item: server_decorations:sign_minigames
+
+  sign_logging_site:
+    display_name: "Logging Site Sign"
+    resource:
+      model_id: 10009
+      model_path: blocks/sign_logging_site
+    behaviors:
+      furniture:
+        solid: false
+        rotation: true
+    drop:
+      item: server_decorations:sign_logging_site

@@ -1,0 +1,121 @@
+# Thanks <3
+
+debug:
+  enabled: false
+  permission: hub.debug
+messages:
+  success-message: <#69d9ff><b>Lobiye</b> başarıyla bağlandın!
+  already-connected-message: <#ff614d>Zaten lobidesin!
+  connection-in-progress-message: <#ff9c59>Bağlanılıyor...
+  server-disconnected-message: <#ff614d>Lobi sunucusu şu anda çevrimdışı!
+  connection-cancelled-message: <#ff614d>Bağlantı iptal edildi.
+system-messages:
+  players-only-command-message: <#ff9c59>Bu komut sadece oyuncular tarafından kullanılabilir!
+  no-lobby-found-message: <#ff614d>Üzgünüm, seni yönlendirebileceğim bir lobi bulunamadı.
+base-hub-command: hub
+aliases:
+- lobby
+- lobi
+- spawn
+hide-hub-command-on-lobby: ^(?!.*).$
+auto-select:
+  on-join: true
+  on-server-kick: true
+lobbies:
+- name: spawn
+  filter: (?i)^lobby.*
+  permission: ''
+  priority: 0
+  commands:
+    base:
+      standalone: true
+      subcommand: false
+      hide-on: ^(?!.*).$
+  autojoin: true
+  overwrite-messages:
+    success-message: <#69d9ff>Lobiye başarıyla bağlandın!
+    server-disconnected-message: <#ff614d>Lobi sunucusu şu anda kapalı!
+placeholder:
+  server:
+    example: lobby-1
+    key: server
+    enabled: true
+  server-player-count:
+    example: '0'
+    key: server-player-count
+    enabled: true
+  lobby:
+    example: lobby
+    key: lobby
+    enabled: true
+  player:
+    example: OyuncuAdi
+    key: player
+    enabled: true
+  lobby-permission:
+    example: hub.user
+    key: lobby-permission
+    enabled: true
+  server-host:
+    example: 127.0.0.1
+    key: server-host
+    enabled: false
+  server-port:
+    example: '25565'
+    key: server-port
+    enabled: false
+  server-player-per-player-username:
+    example: apitoken
+    key: server-player-%i-username
+    enabled: false
+    placeholder: '%i'
+  server-player-per-player-uuid:
+    example: f9de374c-cb78-4c5c-aa2f-4a53ae981f9d
+    key: server-player-%1-uuid
+    enabled: false
+    placeholder: '%i'
+  lobby-filter:
+    example: (?i)^lobby.*
+    key: lobby-filter
+    enabled: false
+  lobby-require-permission:
+    example: 'true'
+    key: lobby-require-permission
+    enabled: false
+  lobby-priority:
+    example: '0'
+    key: lobby-priority
+    enabled: false
+  lobby-command-per-command-standalone:
+    example: 'true'
+    key: lobby-command-%s-standalone
+    enabled: false
+  lobby-command-per-command-subcommand:
+    example: 'true'
+    key: lobby-command-%s-subcommand
+    enabled: false
+  lobby-command-per-command-hide-on:
+    example: ^(?!.*).$
+    key: lobby-command-%s-hide-on
+    enabled: false
+  lobby-autojoin:
+    example: 'true'
+    key: lobby-autojoin
+    enabled: false
+  player-uuid:
+    example: c5eb5df7-b7a9-4919-a9bc-7f59c8bee980
+    key: player-uuid
+    enabled: false
+finder:
+  start-duration: 20
+  increment-duration: 20
+  max-duration: 200
+  refresh-interval-in-ticks: 40
+update-checker:
+  enabled: true
+  notification: hub.update
+  check-interval-in-min: 360
+  notification-message: |
+    Yeni bir güncelleme mevcut! En son sürüm: <latest>
+    Şu anki sürümün: <current>
+    İndir: https://modrinth.com/plugin/hub/version/<latest>

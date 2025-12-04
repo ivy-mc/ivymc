@@ -1,0 +1,16 @@
+info:
+  namespace: prism_skyblock
+font_images:
+  
+  currency-coin:
+    symbol: ꀾ
+    path: labels/currency/coin.png
+    y_position: 8
+    scale_ratio: 10
+    permission: somerandom.perm
+  currency-ruby:
+    symbol: ꀿ
+    path: labels/currency/ruby.png
+    y_position: 8
+    scale_ratio: 10
+    permission: somerandom.perm

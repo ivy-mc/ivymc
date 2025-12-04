@@ -1,0 +1,168 @@
+config-version: "38"
+
+
+reload:
+  enable: true
+  permission: "customfishing.command.reload"
+  usage:
+  - "/customfishing reload"
+  - "/cfishing reload"
+
+sellfish:
+  enable: true
+  permission: "customfishing.sellfish"
+  usage:
+  - "/sellfish"
+
+fishingbag:
+  enable: true
+  permission: "fishingbag.user"
+  usage:
+  - "/fishingbag"
+
+get_item:
+  enable: true
+  permission: "customfishing.command.getitem"
+  usage:
+  - "/customfishing items get"
+  - "/cfishing items get"
+
+give_item:
+  enable: true
+  permission: "customfishing.command.giveitem"
+  usage:
+  - "/customfishing items give"
+  - "/cfishing items give"
+
+give_item_by_uuid:
+  enable: true
+  permission: "customfishing.command.giveitem"
+  usage:
+  - "/customfishing items give-by-uuid"
+  - "/cfishing items give-by-uuid"
+
+import_item:
+  enable: true
+  permission: "customfishing.command.importitem"
+  usage:
+  - "/customfishing items import"
+  - "/cfishing items import"
+
+stop_competition:
+  enable: true
+  permission: "customfishing.command.competition"
+  usage:
+  - "/customfishing competition stop"
+  - "/cfishing competition stop"
+
+end_competition:
+  enable: true
+  permission: "customfishing.command.competition"
+  usage:
+  - "/customfishing competition end"
+  - "/cfishing competition end"
+
+start_competition:
+  enable: true
+  permission: "customfishing.command.competition"
+  usage:
+  - "/customfishing competition start"
+  - "/cfishing competition start"
+
+open_market:
+  enable: true
+  permission: "customfishing.command.open.market"
+  usage:
+  - "/customfishing open market"
+  - "/cfishing open market"
+
+open_bag:
+  enable: true
+  permission: "customfishing.command.open.bag"
+  usage:
+  - "/customfishing open bag"
+  - "/cfishing open bag"
+
+edit_online_bag:
+  enable: true
+  permission: "customfishing.command.edit.bag"
+  usage:
+  - "/customfishing fishingbag edit-online"
+  - "/cfishing fishingbag edit-online"
+
+edit_offline_bag:
+  enable: true
+  permission: "customfishing.command.edit.bag"
+  usage:
+  - "/customfishing fishingbag edit-offline"
+  - "/cfishing fishingbag edit-offline"
+
+data_unlock:
+  enable: true
+  permission: "customfishing.command.data"
+  usage:
+  - "/customfishing data unlock"
+  - "/cfishing data unlock"
+
+data_export:
+  enable: true
+  permission: "customfishing.command.data"
+  usage:
+  - "/customfishing data export"
+  - "/cfishing data export"
+
+data_import:
+  enable: true
+  permission: "customfishing.command.data"
+  usage:
+  - "/customfishing data import"
+  - "/cfishing data import"
+
+statistics_set:
+  enable: true
+  permission: "customfishing.command.statistics"
+  usage:
+  - "/customfishing statistics set"
+  - "/cfishing statistics set"
+
+statistics_reset:
+  enable: true
+  permission: "customfishing.command.statistics"
+  usage:
+  - "/customfishing statistics reset"
+  - "/cfishing statistics reset"
+
+statistics_query:
+  enable: true
+  permission: "customfishing.command.statistics"
+  usage:
+  - "/customfishing statistics query"
+  - "/cfishing statistics query"
+
+statistics_add:
+  enable: true
+  permission: "customfishing.command.statistics"
+  usage:
+  - "/customfishing statistics add"
+  - "/cfishing statistics add"
+
+debug_loot:
+  enable: true
+  permission: "customfishing.command.debug"
+  usage:
+  - "/customfishing debug loot"
+  - "/cfishing debug loot"
+
+debug_biome:
+  enable: true
+  permission: "customfishing.command.debug"
+  usage:
+  - "/customfishing debug biome"
+  - "/cfishing debug biome"
+
+debug_snbt:
+  enable: true
+  permission: "customfishing.command.debug"
+  usage:
+  - "/customfishing debug snbt"
+  - "/cfishing debug snbt"

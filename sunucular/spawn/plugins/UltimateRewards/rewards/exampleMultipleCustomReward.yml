@@ -1,0 +1,133 @@
+#
+# Example config of a multiple custom reward.
+#
+# Decides if rewards will be claimable
+enabled: false
+#
+# Each type of reward has different specifications.
+# All currently supported types can be found on:
+# https://ultimaterewards.athelion.eu/
+#
+# Note that MULTIPLE_CUSTOM_REWARD will work only with
+# PlaceholderAPI installed
+#
+type: multiple_custom_reward
+#
+# Reward tag
+#
+tag: Multiple Custom Reward
+# List of rewards that player needs to
+# claim before this reward
+#required-rewards:
+#  - exampleCustomReward
+# Expression is used to determine if player can claim this reward.
+# Returns true/false depending on the condition
+#
+# In this case, when player has 20 mob kills, he
+# can claim this reward
+requirements:
+  1:
+    expression: "%statistic_kill_entity:SKELETON% >= 30"
+    remaining-expression: "30 - %statistic_kill_entity:SKELETON%"
+  2:
+    expression: "%statistic_kill_entity:SPIDER% >= 50"
+    remaining-expression: "50 - %statistic_kill_entity:SPIDER%"
+
+#
+# (Optional) Permission which player must have to be
+# able to obtain this reward.
+#
+permission: ultimaterewards.exampleMultipleCustomReward
+# Notifies players that the reward is currently available
+live-reminder-enabled: true
+#
+# When player has this permission,
+# following properties will be shown.
+#
+# When the reward is currently claimable:
+available-item: "LIME_DYE"
+available-display-name: "&a&lMULTIPLE CUSTOM REWARD"
+available-lore:
+  - "&7You need to meet"
+  - "&7following requirements:"
+  - " "
+  - " &f• Kill 30 Skeletons &a✓"
+  - " &f• Kill 50 Spiders &a✓"
+  - " "
+  - "&b► Click to claim!"
+#
+# Whereas player doesn't have enough required kills,
+# this version of reward item is displayed in inventory:
+#
+unavailable-item: "RED_DYE"
+unavailable-display-name: "&c&lMULTIPLE CUSTOM REWARD"
+unavailable-lore:
+  - "&7You need to meet"
+  - "&7following requirements:"
+  - " "
+  - " &f• Kill 30 Skeletons &4(%amount_1% left)"
+  - " &f• Kill 50 Spiders &4(%amount_2% left)"
+  - " "
+#
+# When player already claimed this reward:
+#
+claimed-item: "GRAY_DYE"
+claimed-display-name: "&7&lMULTIPLE CUSTOM REWARD"
+claimed-lore:
+  - "&7You need to meet"
+  - "&7following requirements:"
+  - " "
+  - " &f• Kill 30 Skeletons &a✓"
+  - " &f• Kill 50 Spiders &a✓"
+  - " "
+  - "&7✓ Already claimed"
+#
+# Player doesn't have claimed required rewards,
+# following properties will be shown.
+#
+not-reached-item: BARRIER
+not-reached-display-name: "&c&l&mMULTIPLE CUSTOM REWARD"
+not-reached-lore:
+  - "&c ✕ You need to unlock & claim following reward(s):"
+  - "&c   %requiredRewards%"
+#
+# Player doesn't have permission for this reward,
+# following properties will be shown.
+#
+no-permission-item: BARRIER
+no-permission-display-name: "&c&l&mMULTIPLE CUSTOM REWARD"
+no-permission-lore:
+  - "&c ✕ Locked, requires"
+  - "&c   %permission% permission"
+#
+# Commands list that will be executed after player
+# obtains this reward.
+# All available actions can be found on
+# https://ultimaterewards.athelion.eu/
+#
+# Format: () - optional value | [] - required value
+#   [<actionType>] (<chance>):<command>
+#
+# Examples:
+#   - [console] 50:give %player% diamond 1
+#       - this command will have 50%
+#         execution chance due his property value
+#
+#   - [message] "&aYou have claimed your %type% reward!"
+#       - this action will send player a message
+#         with defined content
+#
+# You can also use the random placeholders
+# from randoms.yml file and use it in command.
+# Example:
+#   - give %player% iron_ingot %exampleRandom%
+#       - placeholder will be replaced by
+#         random number from defined interval in randoms.yml
+#
+actions:
+  - '[console] give %player% diamond_sword 1'
+  - '[console] say %player% claimed his %type% reward!'
+  - '[message] &7You have claimed custom reward for |&7 20 monster kills!'
+  #  - '[actionbar] &aSuccessfully claimed!' # Action bar can be used only from 1.12 versions!
+  - '[title] &aClaimed'
+  - '[subtitle] &aReward %type%'

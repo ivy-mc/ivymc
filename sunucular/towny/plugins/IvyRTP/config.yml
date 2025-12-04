@@ -1,0 +1,55 @@
+# ============================================
+#           IvyRTP Konfigürasyon
+# ============================================
+# Sunucular arası RTP sistemi
+# Plugin modu: spawn veya towny
+# ============================================
+
+# ============================================
+# PLUGIN MODU
+# ============================================
+# spawn  = Spawn sunucusunda (RTP komutu verir, oyuncuyu gönderir)
+# towny  = Towny sunucusunda (RTP komutunu dinler, BetterRTP çalıştırır)
+mode: 'towny'
+
+# ============================================
+# REDIS BAĞLANTISI
+# ============================================
+redis:
+  host: 'localhost'          # Redis sunucu adresi
+  port: 6379                 # Redis portu
+  password: ''               # Şifre (yoksa boş bırak)
+  kanal: 'ivyrtp-kanal'      # Pub/Sub kanal adı
+  timeout: 5000              # Bağlantı zaman aşımı (ms)
+
+# ============================================
+# SPAWN MOD AYARLARI
+# ============================================
+# Sadece mode: 'spawn' ise geçerlidir
+spawn:
+  # Oyuncu hangi sunucuya gönderilsin?
+  hedef-sunucu: 'towny'
+
+# ============================================
+# TOWNY MOD AYARLARI
+# ============================================
+# Sadece mode: 'towny' ise geçerlidir
+towny:
+  # Oyuncu Towny'ye bağlandıktan sonra kaç saniye beklensin?
+  baglanti-bekleme: 3
+
+# ============================================
+# NOT: RTP Bölgeleri Yönetimi
+# ============================================
+# RTP bölgeleri artık rtp.yml dosyasında saklanır ve
+# aşağıdaki komutlarla dinamik olarak yönetilir:
+#
+# /ivyrtp create <id> <görünen-isim> <betterrtp-komut> <cooldown>
+# /ivyrtp remove <id>
+# /ivyrtp edit <id> <parametre> <değer>
+# /ivyrtp action add <id> <aksiyon>
+# /ivyrtp action remove <id> <index>
+# /ivyrtp action edit <id> <index> <yeni-aksiyon>
+# /ivyrtp rtp <id> <oyuncu>
+#
+# Örnek kullanımlar rtp.yml dosyasına bakınız.

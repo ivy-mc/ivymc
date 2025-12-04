@@ -1,0 +1,99 @@
+# global group
+global-group:
+  list: []
+  conditions: {}
+  sub-groups:
+    loots_in_water:
+      conditions:
+        in-water: true
+        environment:
+          - normal
+        '!rod':
+          - magical_rod
+      list:
+        - 'vanilla:+60'
+      sub-groups:
+        ocean_fish:
+          conditions:
+            biome:
+              - minecraft:ocean
+              - minecraft:deep_ocean
+              - minecraft:cold_ocean
+              - minecraft:deep_cold_ocean
+              - minecraft:frozen_ocean
+              - minecraft:deep_frozen_ocean
+              - minecraft:lukewarm_ocean
+              - minecraft:deep_lukewarm_ocean
+              - minecraft:warm_ocean
+          list:
+            # decrease the chance of getting rubbish when fishing in ocean
+            - 'group_for_each:ocean&no_star:+15'
+          sub-groups:
+            warm_ocean_fish:
+              conditions:
+                biome:
+                  - minecraft:lukewarm_ocean
+                  - minecraft:deep_lukewarm_ocean
+                  - minecraft:warm_ocean
+              list:
+                - 'group_for_each:warm_ocean&no_star:+15'
+        river_fish:
+          conditions:
+            '!biome':
+              - minecraft:ocean
+              - minecraft:deep_ocean
+              - minecraft:cold_ocean
+              - minecraft:deep_cold_ocean
+              - minecraft:frozen_ocean
+              - minecraft:deep_frozen_ocean
+              - minecraft:lukewarm_ocean
+              - minecraft:deep_lukewarm_ocean
+              - minecraft:warm_ocean
+          list:
+            - 'group_for_each:river&no_star:+15'
+          sub-groups:
+            swamp_fish:
+              list:
+                - 'group_for_each:river&no_star:+15'
+              conditions:
+                biome:
+                  - minecraft:swamp
+                  - minecraft:mangrove_swamp
+            cave_fish:
+              conditions:
+                ypos:
+                  - -64~0
+              list:
+                - 'group_for_each:river&no_star:+9'
+        # Skeletons might appear if player holds the bone_rod and fish at night
+        skeleton_group:
+          conditions:
+            rod:
+              - bone_rod
+            time:
+              - 14000~22000
+          list:
+            - 'skeleton:+30'
+    loots_in_lava:
+      conditions:
+        in-lava: true
+      list: []
+      sub-groups:
+        world_loots:
+          conditions:
+            environment:
+              - normal
+          list: []
+        nether_loots:
+          conditions:
+            environment:
+              - nether
+          list:
+            - 'group_for_each:loots_in_lava&no_star:+15'
+          sub-groups:
+            skeleton_group:
+              conditions:
+                rod:
+                  - bone_rod
+              list:
+                - 'wither_skeleton:+30'

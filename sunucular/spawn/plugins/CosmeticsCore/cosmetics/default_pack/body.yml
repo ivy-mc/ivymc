@@ -1,0 +1,82 @@
+cosmetics:
+  # Example backpack created with CustomModelData
+  leather_backpack:
+    enabled: true
+    display_name: "Leather Backpack"
+    type: BODY_ITEM
+    model:
+      gui: potion:300001
+      normal: potion:300001
+      normal_2: potion:310001
+      self: potion:300002
+      self_2: potion:310002
+    dye:
+      enabled: true
+      default: "#542900"
+
+  # Example body item item created with CustomModelData
+  red_parrot:
+    enabled: true
+    display_name: "Red Parrot"
+    type: BODY_ITEM
+    model:
+      gui: potion:400003
+      normal: potion:400003
+      normal_2: potion:410003
+      self: potion:400004
+      self_2: potion:410004
+    dye:
+      enabled: false
+    pitch_self_hide:
+      run: 3
+      walk: -2
+
+  squirrel_tail:
+    enabled: true
+    display_name: "Squirrel Tail"
+    type: BODY_ITEM
+    model:
+      gui: potion:400008
+      normal: potion:400008
+      normal_2: potion:410008
+      self: potion:400009
+      self_2: potion:410009
+    dye:
+      enabled: false
+
+  bee_nest:
+    enabled: true
+    display_name: "Bee Nest"
+    type: BODY_ITEM
+    model:
+      gui: potion:400010
+      normal: potion:400010
+      normal_2: potion:410010
+      self: potion:400011
+      self_2: potion:410011
+    dye:
+      enabled: false
+
+  backpack:
+    enabled: true
+    display_name: "Backpack"
+    type: BODY_ITEM
+    model:
+      gui: potion:400012
+      normal: potion:400012
+      normal_2: potion:410012
+      self: potion:410013
+      self_2: potion:410013
+    dye:
+      enabled: false
+
+  # Example custom body item created with ItemsAdder entities (supports also animated ItemsAdder entities models)
+  wings_enderdragon:
+    enabled: true
+    display_name: "Enderdragon Wings"
+    type: BODY_ENTITY
+    model:
+      gui: dragon_head
+      normal: cosmetics:wings_enderdragon
+    dye:
+      enabled: false

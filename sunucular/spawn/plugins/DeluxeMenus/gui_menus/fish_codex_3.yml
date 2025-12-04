@@ -1,0 +1,197 @@
+
+open_command: fishcodex3
+
+size: 54
+
+menu_title: '&f%img_offset_-8%%img_fish_codex%'
+
+open_requirement:
+  requirements:
+    permission:
+      type: has permission
+      permission: deluxemenus.admin
+      deny_commands:
+        - '[message] &cYou don''t have permission to do that!'
+
+items:
+  'anglerfish':
+    material: itemsadder-anglerfish
+    slot: 10
+    display_name: "&fAnglerfish"
+    lore:
+      - "&7ᴛʏᴘᴇ: &aᴏᴠᴇʀᴡᴏʀʟᴅ"
+      - ""
+      - "&7ʙɪᴏᴍᴇ: &fʀɪᴠᴇʀ"
+      - "&7ꜱɪᴢᴇ: &f20-30ᴄᴍ"
+  'ashmaw':
+    material: itemsadder-ashmaw
+    slot: 11
+    display_name: "&fAshmaw"
+    lore:
+      - "&7ᴛʏᴘᴇ: &cɴᴇᴛʜᴇʀ"
+      - ""
+      - "&7ꜱɪᴢᴇ: &f60-90ᴄᴍ"
+  'soulfin':
+    material: itemsadder-soulfin
+    slot: 12
+    display_name: "&fSoulfin"
+    lore:
+      - "&7ᴛʏᴘᴇ: &cɴᴇᴛʜᴇʀ"
+      - ""
+      - "&7ꜱɪᴢᴇ: &f150-200ᴄᴍ"
+  'blightscale':
+    material: itemsadder-blightscale
+    slot: 13
+    display_name: "&fBlightscale"
+    lore:
+      - "&7ᴛʏᴘᴇ: &cɴᴇᴛʜᴇʀ"
+      - ""
+      - "&7ꜱɪᴢᴇ: &f70-110ᴄᴍ"
+  'bone_dart':
+    material: itemsadder-bone_dart
+    slot: 14
+    display_name: "&fBone Dart"
+    lore:
+      - "&7ᴛʏᴘᴇ: &cɴᴇᴛʜᴇʀ"
+      - ""
+      - "&7ꜱɪᴢᴇ: &f25-40ᴄᴍ"
+  'cinder_pike':
+    material: itemsadder-cinder_pike
+    slot: 15
+    display_name: "&fCinder Pike"
+    lore:
+      - "&7ᴛʏᴘᴇ: &cɴᴇᴛʜᴇʀ"
+      - ""
+      - "&7ꜱɪᴢᴇ: &f80-120ᴄᴍ"
+  'ember_carp':
+    material: itemsadder-ember_carp
+    slot: 16
+    display_name: "&fEmber Carp"
+    lore:
+      - "&7ᴛʏᴘᴇ: &cɴᴇᴛʜᴇʀ"
+      - ""
+      - "&7ꜱɪᴢᴇ: &f40-70ᴄᴍ"
+  'glowsnap':
+    material: itemsadder-glowsnap
+    slot: 19
+    display_name: "&fGlowsnap"
+    lore:
+      - "&7ᴛʏᴘᴇ: &cɴᴇᴛʜᴇʀ"
+      - ""
+      - "&7ꜱɪᴢᴇ: &f30-50ᴄᴍ"
+  'glowtail':
+    material: itemsadder-glowtail
+    slot: 20
+    display_name: "&fGlowtail"
+    lore:
+      - "&7ᴛʏᴘᴇ: &cɴᴇᴛʜᴇʀ"
+      - ""
+      - "&7ꜱɪᴢᴇ: &f20-35ᴄᴍ"
+  'hellpuffer':
+    material: itemsadder-hellpuffer
+    slot: 21
+    display_name: "&fHellpuffer"
+    lore:
+      - "&7ᴛʏᴘᴇ: &cɴᴇᴛʜᴇʀ"
+      - ""
+      - "&7ꜱɪᴢᴇ: &f25-45ᴄᴍ"
+  'hellstripe':
+    material: itemsadder-hellstripe
+    slot: 22
+    display_name: "&fHellstripe"
+    lore:
+      - "&7ᴛʏᴘᴇ: &cɴᴇᴛʜᴇʀ"
+      - ""
+      - "&7ꜱɪᴢᴇ: &f50-80ᴄᴍ"
+  'lava_lantern':
+    material: itemsadder-lava_lantern
+    slot: 23
+    display_name: "&fLava Lantern"
+    lore:
+      - "&7ᴛʏᴘᴇ: &cɴᴇᴛʜᴇʀ"
+      - ""
+      - "&7ꜱɪᴢᴇ: &f35-55ᴄᴍ"
+  'magma_belly':
+    material: itemsadder-magma_belly
+    slot: 24
+    display_name: "&fMagma Belly"
+    lore:
+      - "&7ᴛʏᴘᴇ: &cɴᴇᴛʜᴇʀ"
+      - ""
+      - "&7ꜱɪᴢᴇ: &f50-80ᴄᴍ"
+  'nether_ray':
+    material: itemsadder-nether_ray
+    slot: 25
+    display_name: "&fNether Ray"
+    lore:
+      - "&7ᴛʏᴘᴇ: &cɴᴇᴛʜᴇʀ"
+      - ""
+      - "&7ꜱɪᴢᴇ: &f80-120ᴄᴍ"
+  'rustfin':
+    material: itemsadder-rustfin
+    slot: 28
+    display_name: "&fRustfin"
+    lore:
+      - "&7ᴛʏᴘᴇ: &cɴᴇᴛʜᴇʀ"
+      - ""
+      - "&7ꜱɪᴢᴇ: &f25-40ᴄᴍ"
+  'spore_jelly':
+    material: itemsadder-spore_jelly
+    slot: 29
+    display_name: "&fSpore Jelly"
+    lore:
+      - "&7ᴛʏᴘᴇ: &cɴᴇᴛʜᴇʀ"
+      - ""
+      - "&7ꜱɪᴢᴇ: &f15-25ᴄᴍ"
+  'warped_eel':
+    material: itemsadder-warped_eel
+    slot: 30
+    display_name: "&fWarped Eel"
+    lore:
+      - "&7ᴛʏᴘᴇ: &cɴᴇᴛʜᴇʀ"
+      - ""
+      - "&7ꜱɪᴢᴇ: &f60-90ᴄᴍ"
+  'moltenjaw':
+    material: itemsadder-moltenjaw
+    slot: 31
+    display_name: "&fMoltenjaw"
+    lore:
+      - "&7ᴛʏᴘᴇ: &cɴᴇᴛʜᴇʀ"
+      - ""
+      - "&7ꜱɪᴢᴇ: &f25-55ᴄᴍ"
+  'close':
+    material: itemsadder-invisible_item
+    slots:
+      - 40
+    display_name: "&fClose"
+    left_click_commands:
+    - '[close]'
+    - '[sound] ENTITY_ITEM_PICKUP'
+    right_click_commands:
+    - '[close]'
+    - '[sound] ENTITY_ITEM_PICKUP'
+  'next':
+    material: itemsadder-invisible_item
+    slots:
+      - 41
+      - 42
+    display_name: "&fNext page"
+    left_click_commands:
+    - '[openguimenu] fish_codex'
+    - '[sound] ENTITY_ITEM_PICKUP'
+    right_click_commands:
+    - '[openguimenu] fish_codex'
+    - '[sound] ENTITY_ITEM_PICKUP'
+  'previous':
+    material: itemsadder-invisible_item
+    slots:
+      - 39
+      - 38
+    display_name: "&fPrevious page"
+    left_click_commands:
+    - '[openguimenu] fish_codex_2'
+    - '[sound] ENTITY_ITEM_PICKUP'
+    right_click_commands:
+    - '[openguimenu] fish_codex_2'
+    - '[sound] ENTITY_ITEM_PICKUP'
+sweet: true

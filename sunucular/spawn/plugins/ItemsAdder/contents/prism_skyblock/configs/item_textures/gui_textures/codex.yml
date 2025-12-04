@@ -1,0 +1,30 @@
+info:
+  namespace: prism_skyblock
+items:
+
+  codex-undiscovered:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 68
+      textures:
+      - interface/gui_textures/codex/undiscovered
+
+  codex-draedon:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 69
+      textures:
+      - interface/gui_textures/codex/draedon
+
+  codex-locked:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 70
+      textures:
+      - interface/gui_textures/codex/locked

@@ -1,0 +1,48 @@
+info:
+  namespace: prism_skyblock
+font_images:
+  
+  tag-skill:
+    symbol: ꀈ
+    path: labels/tags/skills.png
+    y_position: 7
+    scale_ratio: 8
+    permission: somerandom.perm
+  tag-unlocked:
+    symbol: ꀉ
+    path: labels/tags/unlocked.png
+    y_position: 7
+    scale_ratio: 8
+    permission: somerandom.perm
+  tag-current:
+    symbol: ꀋ
+    path: labels/tags/current.png
+    y_position: 7
+    scale_ratio: 8
+    permission: somerandom.perm
+  tag-locked:
+    symbol: ꀌ
+    path: labels/tags/locked.png
+    y_position: 7
+    scale_ratio: 8
+    permission: somerandom.perm
+  tag-online:
+    symbol: ꀛ
+    path: labels/tags/online.png
+    y_position: 7
+    scale_ratio: 8
+    permission: somerandom.perm
+  tag-offline:
+    symbol: ꀜ
+    path: labels/tags/offline.png
+    y_position: 7
+    scale_ratio: 8
+    permission: somerandom.perm
+
+
+  lore-seperator:
+    symbol: ꀡ
+    path: labels/tags/seperator.png
+    y_position: 3
+    scale_ratio: 4
+    permission: somerandom.perm

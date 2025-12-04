@@ -1,0 +1,54 @@
+info:
+  namespace: prism_skyblock
+font_images:
+  
+  rank-player:
+    symbol: ꁇ
+    path: labels/ranks/player.png
+    y_position: 7
+    scale_ratio: 7
+    permission: somerandom.perm
+
+  rank-vip:
+    symbol: ꁀ
+    path: labels/ranks/vip.png
+    y_position: 7
+    scale_ratio: 7
+    permission: somerandom.perm
+  rank-mvp:
+    symbol: ꁁ
+    path: labels/ranks/mvp.png
+    y_position: 7
+    scale_ratio: 7
+    permission: somerandom.perm
+  rank-hero:
+    symbol: ꁂ
+    path: labels/ranks/hero.png
+    y_position: 7
+    scale_ratio: 7
+    permission: somerandom.perm
+
+  rank-helper:
+    symbol: ꁃ
+    path: labels/ranks/helper.png
+    y_position: 7
+    scale_ratio: 7
+    permission: somerandom.perm
+  rank-mod:
+    symbol: ꁄ
+    path: labels/ranks/mod.png
+    y_position: 7
+    scale_ratio: 7
+    permission: somerandom.perm
+  rank-admin:
+    symbol: ꁅ
+    path: labels/ranks/admin.png
+    y_position: 7
+    scale_ratio: 7
+    permission: somerandom.perm
+  rank-owner:
+    symbol: ꁆ
+    path: labels/ranks/owner.png
+    y_position: 7
+    scale_ratio: 7
+    permission: somerandom.perm

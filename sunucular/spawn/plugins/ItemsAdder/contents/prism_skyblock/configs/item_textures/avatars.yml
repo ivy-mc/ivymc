@@ -1,0 +1,54 @@
+info:
+  namespace: prism_skyblock
+items:
+    
+  item_player_head:
+    enabled: true
+    resource:
+      generate: false
+      material: PLAYER_HEAD
+      model_path: item/player_head
+      model_id: 10
+  ui_avatar_profile:
+    enabled: true
+    resource:
+      generate: false
+      material: PLAYER_HEAD
+      model_path: ui/avatar_profile
+      model_id: 11
+  ui_island:
+    enabled: true
+    resource:
+      generate: false
+      material: PLAYER_HEAD
+      model_path: ui/player_profile
+      model_id: 12
+  player_profile_menu:
+    enabled: true
+    resource:
+      generate: false
+      material: PLAYER_HEAD
+      model_path: ui/player_profile_menu
+      model_id: 13
+  menu_avatar:
+    enabled: true
+    resource:
+      generate: false
+      material: PLAYER_HEAD
+      model_path: ui/avatar
+      model_id: 14
+  ui_avatar_profile_new:
+    enabled: true
+    resource:
+      generate: false
+      material: PLAYER_HEAD
+      model_path: ui/avatar_profile_new
+      model_id: 15
+      
+  ui_bigger_head:
+    enabled: true
+    resource:
+      generate: false
+      material: PLAYER_HEAD
+      model_path: ui/bigger_head
+      model_id: 16

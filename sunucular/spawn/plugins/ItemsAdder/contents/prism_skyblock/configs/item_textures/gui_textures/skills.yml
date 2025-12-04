@@ -1,0 +1,195 @@
+info:
+  namespace: prism_skyblock
+items:
+  
+
+  level-locked:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 5
+      textures:
+      - interface/gui_textures/skills/level_locked
+
+  level-current:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 6
+      textures:
+      - interface/gui_textures/skills/level_current
+
+  level-unlocked:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 7
+      textures:
+      - interface/gui_textures/skills/level_unlocked
+
+
+  button-ability:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 8
+      textures:
+      - interface/gui_textures/skills/button_ability
+
+  button-rank:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 9
+      textures:
+      - interface/gui_textures/skills/button_rank
+
+  button-xp:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 10
+      textures:
+      - interface/gui_textures/skills/button_xp
+
+  button-nextpage:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 11
+      textures:
+      - interface/gui_textures/skills/next_page
+
+  button-previouspage:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 12
+      textures:
+      - interface/gui_textures/skills/previous_page
+
+  button-back:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 13
+      textures:
+      - interface/gui_textures/skills/back
+
+  button-sort:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 14
+      textures:
+      - interface/gui_textures/skills/button_sort
+
+  button-ability-locked:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 15
+      textures:
+      - interface/gui_textures/skills/button_ability_locked
+
+  button-ability-unlocked:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 16
+      textures:
+      - interface/gui_textures/skills/button_ability_unlocked
+
+
+  skill-farming:
+    enabled: true
+    resource:
+      generate: true
+      material: BONE
+      model_id: 1
+      textures:
+      - interface/gui_textures/skills/skill_farming
+
+  skill-mining:
+    enabled: true
+    resource:
+      generate: true
+      material: BONE
+      model_id: 2
+      textures:
+      - interface/gui_textures/skills/skill_mining
+
+  skill-alchemy:
+    enabled: true
+    resource:
+      generate: true
+      material: BONE
+      model_id: 3
+      textures:
+      - interface/gui_textures/skills/skill_alchemy
+
+  skill-archery:
+    enabled: true
+    resource:
+      generate: true
+      material: BONE
+      model_id: 4
+      textures:
+      - interface/gui_textures/skills/skill_archery
+
+  skill-fighting:
+    enabled: true
+    resource:
+      generate: true
+      material: BONE
+      model_id: 5
+      textures:
+      - interface/gui_textures/skills/skill_fighting
+
+  skill-fishing:
+    enabled: true
+    resource:
+      generate: true
+      material: BONE
+      model_id: 6
+      textures:
+      - interface/gui_textures/skills/skill_fishing
+
+  skill-foraging:
+    enabled: true
+    resource:
+      generate: true
+      material: BONE
+      model_id: 7
+      textures:
+      - interface/gui_textures/skills/skill_foraging
+
+  skill-enchant:
+    enabled: true
+    resource:
+      generate: true
+      material: BONE
+      model_id: 8
+      textures:
+      - interface/gui_textures/skills/skill_enchant
+
+  skill-defense:
+    enabled: true
+    resource:
+      generate: true
+      material: BONE
+      model_id: 9
+      textures:
+      - interface/gui_textures/skills/skill_defense

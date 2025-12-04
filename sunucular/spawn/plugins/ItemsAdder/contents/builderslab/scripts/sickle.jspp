@@ -1,0 +1,52 @@
+import "org.bukkit.Material";
+import "org.bukkit.event.block.BlockBreakEvent";
+import "org.bukkit.Particle";
+import "java.util.Collection";
+import "java.util.HashMap";
+import "org.bukkit.GameMode";
+import "org.bukkit.inventory.meta.Damageable";
+
+void decrementDurability(ItemStack item, CustomStack customStack, Player player) {
+    var meta = (Damageable) item.getItemMeta();
+    if (meta.getDamage() + 1 >= customStack.getMaxDurability()){
+        playSound(player.getLocation(), "minecraft:entity.item.break");
+        player.getWorld().spawnParticle(Particle.ITEM, player.getLocation().add(0, 1.0, 0), 15, 0.2, 0.2, 0.2, 0.1, item);
+        item.setAmount(0);
+    } else {
+        meta.setDamage(meta.getDamage() + 1);
+        item.setItemMeta(meta);
+    }   
+}
+
+boolean isCrop(Material type) {
+    return type == Material.WHEAT ||
+           type == Material.CARROTS ||
+           type == Material.POTATOES ||
+           type == Material.BEETROOTS;
+}
+
+if ($event instanceof BlockBreakEvent breakEvent) {
+    var block = breakEvent.getBlock();
+    if (!isCrop(block.getType())) return;
+    
+    playParticle(block.getLocation().add(0.5, 0.5, 0.5), "minecraft:sweep_attack", 1);
+    playSound(block.getLocation(), "minecraft:entity.player.attack.sweep");
+
+    int radius = 1;
+    for (int x = -radius; x <= radius; x++) {
+        for (int z = -radius; z <= radius; z++) {
+            var nearby = block.getRelative(x, 0, z);
+            if (isCrop(nearby.getType()) && CustomCrop.byAlreadyPlaced(nearby) == null) {
+                Collection<ItemStack> drops = nearby.getDrops();
+                nearby.setType(Material.AIR);
+
+                for (ItemStack drop : drops) {
+                    HashMap<Integer, ItemStack> leftover = $player.getInventory().addItem(drop);
+                    leftover.values().forEach(item -> block.getWorld().dropItemNaturally(nearby.getLocation(), item));
+                }
+            }
+        }
+    }
+
+    if ($player.getGameMode() != GameMode.CREATIVE) decrementDurability($itemStack, $customStack, $player);
+}

@@ -1,0 +1,44 @@
+info:
+  namespace: prism_skyblock
+font_images:
+  
+  healthbar-draedon:
+    symbol: "\uFFF1"
+    path: interface/onscreen_ui/draedon_healthbar.png
+    y_position: 17
+    scale_ratio: 50
+    permission: somerandom.perm
+
+  maintitle:
+    symbol: ꁧ
+    path: title.png
+    y_position: 17
+    scale_ratio: 32
+    permission: somerandom.perm
+
+  bannertitle:
+    symbol: ꁰ
+    path: title.png
+    y_position: 20
+    scale_ratio: 32
+    permission: somerandom.perm
+
+  esc_banner:
+    symbol: ꁮ
+    path: esc_banner.png
+    y_position: 10
+    scale_ratio: 74
+    permission: somerandom.perm
+
+  loadingbackground:
+    symbol: ꁯ
+    path: loadingbackground.png
+    y_position: 150
+    scale_ratio: 1000
+    permission: somerandom.perm
+  loading:
+    symbol: ꁱ
+    path: loading.png
+    y_position: 1
+    scale_ratio: 100
+    permission: somerandom.perm

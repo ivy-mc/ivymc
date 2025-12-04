@@ -1,0 +1,573 @@
+info:
+  namespace: bc
+items:
+  candlesconce_gold:
+    display_name: "3 Candle Gold Wall Sconce - Light Level 15"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: sconce/candlesconce_gold.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 15
+        solid: false
+        placeable_on:
+          walls: true
+          ceiling: false
+          floor: false
+  candlesconce_silver:
+    display_name: "3 Candle Silver Wall Sconce - Light Level 15"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: sconce/candlesconce_silver.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 15
+        solid: false
+        placeable_on:
+          walls: true
+          ceiling: false
+          floor: false
+  candlesconce_iron:
+    display_name: "3 Candle Iron Wall Sconce - Light Level 15"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: sconce/candlesconce_iron.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 15
+        solid: false
+        placeable_on:
+          walls: true
+          ceiling: false
+          floor: false
+  candlesconce_goldblue:
+    display_name: "3 Blue Candle Gold Wall Sconce - Light Level 15"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: sconce/candlesconce_goldblue.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 15
+        solid: false
+        placeable_on:
+          walls: true
+          ceiling: false
+          floor: false
+  candlesconce_silverblue:
+    display_name: "3 Blue Candle Silver Wall Sconce - Light Level 15"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: sconce/candlesconce_silverblue.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 15
+        solid: false
+        placeable_on:
+          walls: true
+          ceiling: false
+          floor: false
+  candlesconce_ironblue:
+    display_name: "3 Blue Candle Iron Wall Sconce - Light Level 15"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: sconce/candlesconce_ironblue.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 15
+        solid: false
+        placeable_on:
+          walls: true
+          ceiling: false
+          floor: false
+  candlesconce_goldred:
+    display_name: "3 Red Candle Gold Wall Sconce - Light Level 15"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: sconce/candlesconce_goldred.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 15
+        solid: false
+        placeable_on:
+          walls: true
+          ceiling: false
+          floor: false
+  candlesconce_silverred:
+    display_name: "3 Red Candle Silver Wall Sconce - Light Level 15"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: sconce/candlesconce_silverred.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 15
+        solid: false
+        placeable_on:
+          walls: true
+          ceiling: false
+          floor: false
+  candlesconce_ironred:
+    display_name: "3 Red Candle Iron Wall Sconce - Light Level 15"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: sconce/candlesconce_ironred.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 15
+        solid: false
+        placeable_on:
+          walls: true
+          ceiling: false
+          floor: false
+  tall:
+    display_name: "3 Tall Table Candles- Light Level 12"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: table/tall.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 12
+        solid: false
+        placeable_on:
+          walls: false
+          ceiling: false
+          floor: true
+  tallcyan:
+    display_name: "3 Tall Cyan Table Candles- Light Level 12"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: table/tallcyan.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 12
+        solid: false
+        placeable_on:
+          walls: false
+          ceiling: false
+          floor: true
+  tallpink:
+    display_name: "3 Tall Pink Table Candles- Light Level 12"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: table/tallpink.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 12
+        solid: false
+        placeable_on:
+          walls: false
+          ceiling: false
+          floor: true
+  tallpurple:
+    display_name: "3 Tall Purple Table Candles- Light Level 12"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: table/tallpurple.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 12
+        solid: false
+        placeable_on:
+          walls: false
+          ceiling: false
+          floor: true
+  tallmag:
+    display_name: "3 Tall Magenta Table Candles- Light Level 12"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: table/tallmag.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 12
+        solid: false
+        placeable_on:
+          walls: false
+          ceiling: false
+          floor: true
+  tallgray:
+    display_name: "3 Tall Light Gray Table Candles- Light Level 12"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: table/tallgray.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 12
+        solid: false
+        placeable_on:
+          walls: false
+          ceiling: false
+          floor: true
+  tallor:
+    display_name: "3 Tall Orange Table Candles- Light Level 12"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: table/tallor.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 12
+        solid: false
+        placeable_on:
+          walls: false
+          ceiling: false
+          floor: true
+  shortcrimson:
+    display_name: "3 Crimson Votive Candles- Light Level 10"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: table/shortcrimson.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 10
+        solid: false
+        placeable_on:
+          walls: false
+          ceiling: false
+          floor: true
+  shortwarped:
+    display_name: "3 Warped Votive Candles- Light Level 10"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: table/shortwarped.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 10
+        solid: false
+        placeable_on:
+          walls: false
+          ceiling: false
+          floor: true
+  candle_four_candles:
+    display_name: "4 Table Candles- Light Level 10"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: table/candle_four_candles.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 10
+        solid: false
+        placeable_on:
+          walls: false
+          ceiling: false
+          floor: true
+  ylcandle_four_candles:
+    display_name: "4 Yellow Table Candles- Light Level 10"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: table/ylcandle_four_candles.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 10
+        solid: false
+        placeable_on:
+          walls: false
+          ceiling: false
+          floor: true
+  whcandle_four_candles:
+    display_name: "4 White Table Candles- Light Level 10"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: table/whcandle_four_candles.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 10
+        solid: false
+        placeable_on:
+          walls: false
+          ceiling: false
+          floor: true
+  lbcandle_four_candles:
+    display_name: "4 Light Blue Table Candles- Light Level 10"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: table/lbcandle_four_candles.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 10
+        solid: false
+        placeable_on:
+          walls: false
+          ceiling: false
+          floor: true
+  grcandle_four_candles:
+    display_name: "4 Green Table Candles- Light Level 10"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: table/grcandle_four_candles.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 10
+        solid: false
+        placeable_on:
+          walls: false
+          ceiling: false
+          floor: true
+  gracandle_four_candles:
+    display_name: "4 Gray Table Candles- Light Level 10"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: table/gracandle_four_candles.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 10
+        solid: false
+        placeable_on:
+          walls: false
+          ceiling: false
+          floor: true
+  rdcandle_four_candles:
+    display_name: "4 Red Table Candles- Light Level 10"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: table/rdcandle_four_candles.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 10
+        solid: false
+        placeable_on:
+          walls: false
+          ceiling: false
+          floor: true
+  shortsculk:
+    display_name: "3 Sculk Catalyst Votive Candles- Light Level 10"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: table/shortsculk.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 10
+        solid: false
+        placeable_on:
+          walls: false
+          ceiling: false
+          floor: true
+  shortmush:
+    display_name: "3 Red Mushroom Votive Candles- Light Level 10"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: table/shortmush.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 10
+        solid: false
+        placeable_on:
+          walls: false
+          ceiling: false
+          floor: true
+  shortbee:
+    display_name: "2 Bee Candles- Light Level 8"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: table/shortbee.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 8
+        solid: false
+        placeable_on:
+          walls: false
+          ceiling: false
+          floor: true
+  shortcreep:
+    display_name: "2 Creeper Candles- Light Level 8"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: table/shortcreep.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 8
+        solid: false
+        placeable_on:
+          walls: false
+          ceiling: false
+          floor: true
+  shortskel:
+    display_name: "2 Skelly Candles- Light Level 8"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: table/shortskel.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 8
+        solid: false
+        placeable_on:
+          walls: false
+          ceiling: false
+          floor: true
+  pump:
+    display_name: "Multi Wick Pumpkin Candle- Light Level 8"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: table/pump.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 8
+        solid: false
+        placeable_on:
+          walls: false
+          ceiling: false
+          floor: true
+  melon:
+    display_name: "Multi Wick Melon Candle- Light Level 8"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: table/melon.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 8
+        solid: false
+        placeable_on:
+          walls: false
+          ceiling: false
+          floor: true
+  torchblk:
+    display_name: " Black Candle Wall Torch - Light Level 9"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: sconce/torchblk.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 9
+        solid: false
+        placeable_on:
+          walls: true
+          ceiling: false
+          floor: false
+  torchbl:
+    display_name: " Blue Candle Wall Torch - Light Level 9"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: sconce/torchbl.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 9
+        solid: false
+        placeable_on:
+          walls: true
+          ceiling: false
+          floor: false
+  torchwht:
+    display_name: " White Candle Wall Torch - Light Level 9"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: sconce/torchwht.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 9
+        solid: false
+        placeable_on:
+          walls: true
+          ceiling: false
+          floor: false
+  torchpu:
+    display_name: " Purple Candle Wall Torch - Light Level 9"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: sconce/torchpu.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 9
+        solid: false
+        placeable_on:
+          walls: true
+          ceiling: false
+          floor: false
+  torchlm:
+    display_name: " Lime Candle Wall Torch - Light Level 9"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: sconce/torchlm.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 9
+        solid: false
+        placeable_on:
+          walls: true
+          ceiling: false
+          floor: false
+  torchpu:
+    display_name: " Purple Candle Wall Torch - Light Level 9"
+    resource: 
+      material: PAPER
+      generate: false
+      model_path: sconce/torchpu.json
+    behaviours:
+      furniture:
+        entity: item_frame
+        light_level: 9
+        solid: false
+        placeable_on:
+          walls: true
+          ceiling: false
+          floor: false

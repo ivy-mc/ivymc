@@ -1,0 +1,41 @@
+{
+    "providers": [
+        {
+         "type": "bitmap",
+         "file": "icons:respackopts/items.png",
+         "ascent": 9,
+         "height": 10,
+         "chars": [
+			"\uDBC2\uDC50\uDBC2\uDC51\uDBC2\uDC52\uDBC2\uDC53\uDBC2\uDC54",
+            "\uDBC2\uDC55\uDBC2\uDC56\uDBC2\uDC57\uDBC2\uDC58\uDBC2\uDC59",
+            "\uDBC2\uDC5A\uDBC2\uDC5B\uDBC2\uDC5C\uDBC2\uDC5D\uDBC2\uDC5E",
+            "\uDBC2\uDC5F\uDBC2\uDC60\uDBC2\uDC61\uDBC2\uDC62\uDBC2\uDC63",
+            "\uDBC2\uDC64\uDBC2\uDC65\uDBC2\uDC66\uDBC2\uDC67\uDBC2\uDC68"
+            ]
+        },
+        {
+         "type": "bitmap",
+         "file": "icons:respackopts/menus.png",
+         "ascent": 12,
+         "height": 16,
+         "chars": [
+			"\uDBC2\uDC69\uDBC2\uDC6A\uDBC2\uDC6B\uDBC2\uDC6C\uDBC2\uDC6D",
+            "\uDBC2\uDC6E\uDBC2\uDC6F\uDBC2\uDC70\uDBC2\uDC71\uDBC2\uDC72",
+            "\uDBC2\uDC73\uDBC2\uDC74\uDBC2\uDC75\uDBC2\uDC76\uDBC2\uDC77",
+            "\uDBC2\uDC78\uDBC2\uDC79\uDBC2\uDC7A\uDBC2\uDC7B\uDBC2\uDC7C",
+            "\uDBC2\uDC7D\uDBC2\uDC7E\uDBC2\uDC7F\uDBC2\uDC80\uDBC2\uDC81",
+            "\uDBC2\uDC82\uDBC2\uDC83\uDBC2\uDC84\uDBC2\uDC85\uDBC2\uDC86"
+            ]
+        },
+        {
+         "type": "bitmap",
+         "file": "icons:respackopts/addons.png",
+         "ascent": 12,
+         "height": 16,
+         "chars": [
+			"\uDBC2\uDC87\uDBC2\uDC88\uDBC2\uDC89\uDBC2\uDC8A",
+            "\uDBC2\uDC8B\uDBC2\uDC8C\uDBC2\uDC8D\uDBC2\uDC8E"
+            ]
+        }
+    ]
+}

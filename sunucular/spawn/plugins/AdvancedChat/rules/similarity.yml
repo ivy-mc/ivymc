@@ -1,0 +1,11 @@
+# Bypass permission: advancedchat.bypass.rule.similarity
+enabled: false
+conditions:
+  - '%message_similarity% > 90 : %allow%'
+effects:
+  - 'CANCEL_EVENT'
+  - 'MESSAGE:&c&l(!) &c%player name%, do not send similar messages.'
+  - 'STOP_ABILITIES'
+  # - 'CONSOLE_COMMAND:warn %player name% spam' # you could also warn the player here
+
+#EEVapUV3l1RRVmTWlUa0sEcvNjWHxmRWhEZrJVVKxWVGplbTR0dMV1UUdUVzYkUZR1QF9kN

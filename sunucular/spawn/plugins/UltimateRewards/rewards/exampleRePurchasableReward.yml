@@ -1,0 +1,142 @@
+#
+# Example config of a re-purchasable reward.
+#
+# Decides if rewards will be claimable.
+enabled: true
+#
+# Each type of reward has different specifications.
+# All currently supported types can be found on:
+# https://ultimaterewards.athelion.eu/
+#
+type: re_purchasable_reward
+#
+# Reward tag
+#
+tag: Re-Purchasable Reward
+#
+# (Optional) Permission which player must have to be
+# able to obtain this reward.
+#
+permission: ultimaterewards.exampleRePurchasableReward
+# When will the reward be available again
+# after claiming (number is in hours - 24 hours)
+cooldown: 24
+#
+# Format which will be used to show the
+# general cooldown of this reward.
+#
+cooldown-general-format: "%hours% hours"
+#
+# Format of the cooldown that will be displayed
+# when using the %cooldown% placeholder in reward GUIs.
+#
+cooldown-format: '%hours%:%minutes%:%seconds%'
+# Make the reward available for the player
+# after their first join on the server.
+available-after-first-join: false
+# Notifies players that the reward is currently available
+live-reminder-enabled: true
+#
+# Which economy plugin to use.
+# Available options:
+#   Experience - will use player exp
+#   Vault
+#   TokenManager
+#   PlayerPoints
+#
+economy: Experience
+#
+# Required balance to buy this reward.
+#
+price: 160 # 160 experience = 10 levels (table with levels you can find here:
+#                                        https://minecraft.fandom.com/wiki/Experience#Leveling_up)
+#
+# NOTE THAT ITEM & SOUND NAMES ARE SLIGHTLY DIFFERENT BETWEEN >1.12 & 1.13< VERSIONS!
+# SO MAKE SURE YOU ARE USING VALID ITEM NAMES (DEFAULT ONE ARE USED FROM 1.13+ VERSIONS)
+# OTHERWISE WILL BE REPLACED BY STONE IF INVALID NAME IS IN USE.
+#
+# When player achieves the required amount of money,
+# this version of reward item is displayed in the inventory:
+#
+available-item: "LIME_DYE"
+available-display-name: "&a&lRE-PURCHASABLE REWARD"
+available-lore:
+  - "&7You have enough experience"
+  - "&7to obtain this reward!"
+  - " "
+  - "&7Can be obtained every &f%cooldown%"
+  - " "
+  - "&7Contains:"
+  - "&e 12x Gold Ingot"
+  - "&e 32x Carrot"
+  - " "
+  - "&b► Click to claim for %amount% EXP"
+#
+# Whereas the player doesn't have enough required balance,
+# this version of reward item is displayed in the inventory:
+#
+unavailable-item: "RED_DYE"
+unavailable-display-name: "&c&lRE-PURCHASABLE REWARD"
+unavailable-lore:
+  - "&7You need to collect"
+  - "&7enough experience to be able obtain"
+  - "&7this reward!"
+  - " "
+  - "&7Contains:"
+  - "&7 12x Gold Ingot"
+  - "&7 32x Carrot"
+  - " "
+  - "&4► Requires another %amount% EXP"
+#
+# When the player has already claimed this reward:
+#
+claimed-item: "GRAY_DYE"
+claimed-display-name: "&C&lRE-PURCHASABLE REWARD"
+claimed-lore:
+  - "&cContains:"
+  - "&c &m12x Gold Ingot"
+  - "&c &m32x Carrot"
+  - " "
+  - "&c You can purchase it for &4%amount% EXP"
+  - "&c again in &4%cooldown%"
+#
+# When the player doesn't have permission for this reward,
+# the following properties will be shown.
+#
+no-permission-item: BARRIER
+no-permission-display-name: "&c&l&mRE-PURCHASABLE REWARD"
+no-permission-lore:
+  - "&c ✕ Locked, requires"
+  - "&c   %permission% permission"
+#
+# Commands list that will be executed after the player
+# obtains this reward.
+# All available actions can be found at
+# https://ultimaterewards.athelion.eu/
+#
+# Format: () - optional value | [] - required value
+#   [<actionType>] (<chance>):<command>
+#
+# Examples:
+#   - [console] 50:give %player% diamond 1
+#       - this command will have a 50%
+#         execution chance due to its property value
+#
+#   - [message] "&aYou have claimed your %type% reward!"
+#       - this action will send the player a message
+#         with the defined content
+#
+# You can also use the random placeholders
+# from the randoms.yml file and use them in commands.
+# Example:
+#   - give %player% iron_ingot %exampleRandom%
+#       - the placeholder will be replaced by
+#         a random number from the defined interval in randoms.yml
+#
+actions:
+  - '[console] give %player% carrot 32'
+  - '[console] give %player% gold_ingot 12'
+  - '[console] say %player% claimed his %type% reward!'
+  #  - '[actionbar] &aSuccessfully claimed!' # MenuAction bar can be used only from 1.12 versions!
+  - '[title] &aClaimed'
+  - '[subtitle] &aReward %type%'

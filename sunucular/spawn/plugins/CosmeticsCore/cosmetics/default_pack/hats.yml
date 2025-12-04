@@ -1,0 +1,45 @@
+cosmetics:
+
+  # Example hat item created with CustomModelData
+  snow_fox_sleeping:
+    enabled: true
+    display_name: "Snow Fox Sleeping"
+    type: HAT
+    model:
+      gui: potion:400005
+      normal: potion:400005
+    dye:
+      enabled: false
+
+  # Example manually created hat with CustomModelData
+  cowboy_hat:
+    enabled: true
+    display_name: "Cowboy Hat"
+    type: HAT
+    model:
+      gui: potion:300003
+      normal: potion:300003
+    dye:
+      enabled: true
+
+  # Example manually created hat with CustomModelData
+  chef_hat:
+    enabled: true
+    display_name: "Chef Hat"
+    type: HAT
+    model:
+      gui: potion:400006
+      normal: potion:400006
+    dye:
+      enabled: false
+  
+  # Example manually created hat with CustomModelData
+  witch_hat:
+    enabled: true
+    display_name: "Witch Hat"
+    type: HAT
+    model:
+      gui: potion:400007
+      normal: potion:400007
+    dye:
+      enabled: true

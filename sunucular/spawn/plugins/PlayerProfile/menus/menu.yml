@@ -1,0 +1,163 @@
+title: :b10::profile_gui::b34::b34::b66::profile_prefix::b10::b34:&9%owner%
+default: true
+permission: playerprofile.menus.menu
+rows: 4
+layout:
+- 'hHsKR    '
+- 'cB       '
+- 'lC       '
+- bgSTT   O
+icons:
+  s:
+    display: '&9Change Status'
+    amount: 1
+    item-adder: air
+    lore:
+    - '&7Current:'
+    - '&e"%playerprofile_status%"'
+    unbreakable: false
+    glow: false
+    hide-attributes: true
+    actions:
+    - 'player: profile change-status'
+  K:
+    display: '&fBalance: &6%cmi_user_balance%'
+    amount: 1
+    item-adder: player_head_gui
+    lore:
+    - '&7Coming soon..'
+    unbreakable: false
+    glow: false
+    hide-attributes: true
+  G:
+    display: '&6Clan: %simpleclans_tag_label%'
+    amount: 1
+    item-adder: air
+    lore: []
+    unbreakable: false
+    glow: false
+    hide-attributes: true
+    actions:
+    - ''
+    - ''
+  R:
+    display: '&6Info Player'
+    amount: 1
+    item-adder: air
+    lore:
+    - '&fPing:&6 %cmi_user_ping%'
+    - '&fCountry:&6 %cmi_user_country%'
+    - '&fTime:&6 %cmi_user_playtime_hours%h'
+    - '&fWorld:&6 %cmi_user_world_formatted%'
+    - '&fMuted:&6 %cmi_user_muted%'
+    unbreakable: false
+    glow: false
+    hide-attributes: true
+  
+  T:
+    display: '&aSend TPA to player'
+    amount: 1
+    item-adder: air
+    lore: []
+    unbreakable: false
+    glow: false
+    hide-attributes: true
+    actions:
+    - cmi tpa %owner%
+  H: # Hat Cosmetic
+    material: air
+    display: '&f'
+    lore: []
+    unbreakable: false
+    glow: false
+    hide-attributes: true
+    custom-model-data: 0
+    type: HAT
+  B: # BackPack/Bag Cosmetic
+    material: air
+    display: '&f'
+    lore: []
+    unbreakable: false
+    glow: false
+    hide-attributes: true
+    custom-model-data: 0
+    type: BACKPACK
+  C: # Off_Hand/Cane Cosmetic
+    material: air
+    display: '&f'
+    lore: []
+    unbreakable: false
+    glow: false
+    hide-attributes: true
+    custom-model-data: 0
+    type: OFF_HAND
+  g: # Balloon Cosmetic
+    material: air
+    display: '&f'
+    lore: []
+    unbreakable: false
+    glow: false
+    hide-attributes: true
+    custom-model-data: 0
+    type: BALLOON
+  S: # Spray Cosmetic
+    material: air
+    display: '&f'
+    lore: []
+    unbreakable: false
+    glow: false
+    hide-attributes: true
+    custom-model-data: 0
+    type: SPRAY
+  h: # helmet Equipment
+    material: air
+    display: '&f'
+    lore: []
+    unbreakable: false
+    glow: false
+    hide-attributes: true
+    custom-model-data: 0
+    type: HELMET
+  c: # chestplate Equipment
+    material: air
+    display: '&f'
+    lore: []
+    unbreakable: false
+    glow: false
+    hide-attributes: true
+    custom-model-data: 0
+    type: CHEST_PLATE
+  l: # leggings Equipment
+    material: air
+    display: '&f'
+    lore: []
+    unbreakable: false
+    glow: false
+    hide-attributes: true
+    custom-model-data: 0
+    type: LEGGINGS
+  b: # boots Equipment
+    material: air
+    display: '&f'
+    lore: []
+    unbreakable: false
+    glow: false
+    hide-attributes: true
+    custom-model-data: 0
+    type: BOOTS
+  O: # Online/Offline Status
+    online:
+      display: '&aOnline'
+      item-adder: online
+      lore: []
+      unbreakable: false
+      glow: true
+      hide-attributes: true
+    offline:
+      display: '&cOffline'
+      item-adder: offline
+      lore: []
+      unbreakable: false
+      glow: false
+      hide-attributes: true
+    type: STATUS

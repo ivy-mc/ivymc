@@ -1,0 +1,190 @@
+prefix: "<aqua>AdvancedChat</aqua> "
+
+messages:
+  recipientOffline: "%prefix%<red>Oyuncu çevrimiçi değil!</red>"
+  reload: "%prefix%<green>Eklenti yeniden yüklendi!</green>"
+  noPermission: "%prefix%<red>Bu komutu kullanmak için yetkin yok!</red>"
+  playerCommandOnly: "%prefix%<red>Bu komut konsoldan kullanılamaz!</red>"
+  chatColor:
+    colorSet: "%prefix%<green>Sohbet rengini %color_name% olarak ayarladın</green>"
+    colorRemove: "%prefix%<green>Sohbet rengini kaldırdın</green>"
+  nameColor:
+    colorSet: "%prefix%<green>İsim rengini %color_name% olarak ayarladın</green>"
+    colorRemove: "%prefix%<green>İsim rengini kaldırdın</green>"
+  chatTags:
+    tagSet: "%prefix%<green>Sohbet etiketini %tag% olarak ayarladın"
+    tagRemove: "%prefix%<green>Sohbet etiketini kaldırdın</green>"
+  clear:
+    onClear: "<green>Sohbet %player_name% tarafından temizlendi</green>"
+  msg:
+    empty: "%prefix%<red>Mesaj boş olamaz!</red>"
+    yourself: "%prefix%<red>Kendine mesaj gönderemezsin!</red>"
+    targetOffline: "%prefix%<red>Oyuncu çevrimiçi değil!</red>"
+    outgoing: "<red>Sen </red><dark_gray>>> </dark_gray><red>%recipient_name% (%recipient_server%)</red><dark_gray> >> </dark_gray><gray>%message%</gray>"
+    incoming: "<red>%sender_name% (%sender_server%)</red><dark_gray>>> </dark_gray><red>Sen</red><dark_gray> >> </dark_gray><gray>%message%</gray>"
+  reply:
+    noReply: "%prefix%<red>Cevap verilecek bir kullanıcı yok!</red>"
+  ignore:
+    yourself: "%prefix%<red>Kendini yok sayamazsın!</red>"
+    on: "%prefix%<green>%player_name% oyuncusunu yok sayıyorsun</green>"
+    off: "%prefix%<red>%player_name% oyuncusunu yok saymayı bıraktın</red>"
+    onRecipient: "%prefix%<green>%recipient_name% adına %player_name% yok sayıldı</green>"
+    offRecipient: "%prefix%<red>%recipient_name% adına %player_name% yok sayılmaktan çıkarıldı</red>"
+    onAll: "%prefix%<green>Tüm oyuncuları yok sayıyorsun"
+    offAll: "%prefix%<green>Tüm oyuncuları yok saymayı bıraktın"
+    onAllRecipient: "%prefix%<green>%recipient_name% adına tüm oyuncular yok sayıldı"
+    offAllRecipient: "%prefix%<red>%recipient_name% adına tüm oyuncular yok sayılmaktan çıkarıldı"
+    notIgnored: "%prefix%<red>%player_name% yok sayılmamış!</red>"
+    notIgnoredRecipient: "%prefix%<red>%recipient_name%, %player_name% oyuncusunu yok saymıyor!</red>"
+    notIgnoredAll: "%prefix%<red>Tüm oyuncuları yok saymıyorsun!</red>"
+    notIgnoredAllRecipient: "%prefix%<red>%recipient_name% tüm oyuncuları yok saymıyor!</red>"
+    ignorelist:
+      listFormat:
+        - 'Tüm oyuncular yok sayılıyor: %ignored_all%'
+        - '<green>Yok Sayılan Oyuncular:'
+        - '%player_list%'
+      playerFormat:
+        - '<gray>- </gray><white>%player_name%'
+  spy:
+    yourself: "%prefix%<red>Kendini casuslayamazsın!</red>"
+    on: "%prefix%<green>Artık %player_name% için tüm özel mesajları takip ediyorsun</green>"
+    off: "%prefix%<green>%player_name% için özel mesajları takip etmeyi bıraktın</green>"
+    onRecipient: "%prefix%<green>%recipient_name%, %player_name% oyuncusunu takip ediyor</green>"
+    offRecipient: "%prefix%<red>%recipient_name%, %player_name% oyuncusunu takip etmeyi bıraktı</red>"
+    onAll: "%prefix%<green>Artık tüm özel mesajları takip ediyorsun</green>"
+    offAll: "%prefix%<red>Artık özel mesajları takip etmiyorsun</red>"
+    onAllRecipient: "%prefix%<green>%recipient_name% artık tüm özel mesajları takip ediyor</green>"
+    offAllRecipient: "%prefix%<red>%recipient_name% artık tüm özel mesajları takip etmiyor</red>"
+    notSpying: "%prefix%<red>%player_name% üzerinde casusluk yapmıyorsun!</red>"
+    notSpyingRecipient: "%prefix%<red>%recipient_name%, %player_name% üzerinde casusluk yapmıyor!</red>"
+    notSpyingAll: "%prefix%<red>Tüm özel mesajları takip etmiyorsun!</red>"
+    notSpyingAllRecipient: "%prefix%<red>%recipient_name%, tüm özel mesajları takip etmiyor!</red>"
+    incoming: "<yellow>CASUS: <red>%sender_name% </red><dark_gray>>> </dark_gray><red>%player_name%</red><dark_gray> >> </dark_gray><gray>%message%</gray>"
+    spylist:
+      listFormat:
+        - 'Tüm oyuncular takip ediliyor: %spy_all%'
+        - '<green>Takip Edilen Oyuncular:'
+        - '%player_list%'
+      playerFormat:
+        - '<gray>- </gray><white>%player_name%'
+  commandSpy:
+    on: "%prefix%<green>Artık komutları takip ediyorsun</green>"
+    off: "%prefix%<red>Artık komutları takip etmiyorsun</red>"
+    onRecipient: "%prefix%<green>%recipient_name% artık komutları takip ediyor</green>"
+    offRecipient: "%prefix%<red>%recipient_name% komutları takip etmeyi bıraktı</red>"
+    incoming: "<yellow>KOMUT CASUSU <red>%player_name% </red><dark_gray>kullandı </dark_gray><gray>/%command%</gray>"
+  channel:
+    invalid: "%prefix%<red>%channel_id% kanalı mevcut değil</red>"
+    noPermissionJoin: "%prefix%<red>Bu kanala katılmak için yetkin yok!</red>"
+    noPermissionLeave: "%prefix%<red>Bu kanaldan çıkmak için yetkin yok!</red>"
+    alreadyJoined: "%prefix%<red>Zaten bu kanaldasın!</red>"
+    alreadyJoinedRecipient: "%prefix%<red>Hedef zaten bu kanalda!</red>"
+    join: "%prefix%<green>%channel_name% kanalına katıldın!</green>"
+    joinRecipient: "%prefix%<green>%recipient_name% adlı oyuncuyu %channel_name% kanalına aldın!</green>"
+    leave: "%prefix%<green>%channel_name% kanalından ayrıldın!</green>"
+    leaveRecipient: "%prefix%<green>%recipient_name% adlı oyuncuyu %channel_name% kanalından çıkardın!</green>"
+    noChannel: "%prefix%<red>Herhangi bir kanalda değilsin!</red>"
+    noChannelRecipient: "%prefix%<red>Hedef herhangi bir kanalda değil!</red>"
+    info:
+      - "<gray>Kanal:</gray> <yellow>%advancedchat_channel_name% (%advancedchat_channel_id%)"
+      - "<gray>Renk:</gray> <yellow>%advancedchat_channel_color%color"
+      - "<gray>Her Zaman Görünür:</gray> <yellow>%advancedchat_channel_always_visible%"
+      - "<gray>Aynı Dünya:</gray> <yellow>%advancedchat_same_world%"
+      - "<gray>Sunucular Arası:</gray> <yellow>%advancedchat_cross_server%"
+      - "<gray>Menzil:</gray> <yellow>%advancedchat_channel_range%"
+      - "<gray>Öncelik:</gray> <yellow>%advancedchat_channel_priority%"
+    offAutoJoin: "%prefix%<red>Otomatik katılma kapatıldı!</red>"
+    offAutoJoinRecipient: "%prefix%<red>%recipient_name% için otomatik katılma kapatıldı!</red>"
+    onAutoJoin: "%prefix%<green>Otomatik katılma etkin!</green>"
+    onAutoJoinRecipient: "%prefix%<green>%recipient_name% için otomatik katılma etkin!</green>"
+    disable:
+      already: "%prefix%<red>%channel_id% kanalı zaten devre dışı</red>"
+      success: "%prefix%<green>%channel_id% kanalı devre dışı bırakıldı</green>"
+      message: "%prefix%<red>%channel_id% kanalı devre dışı</red>"
+    enable:
+      already: "%prefix%<red>%channel_id% kanalı zaten etkin</red>"
+      success: "%prefix%<green>%channel_id% kanalı etkinleştirildi</green>"
+  channels:
+    listFormat:
+      - '<green>Kullanılabilir Kanallar:'
+      - '%channel_list%'
+    channelFormat:
+      - '<gray>- </gray><white>%channel_name%'
+  warn:
+    messageUser: "<red>%reason% sebebiyle uyarıldın</red>"
+    messageStaff: "<red><bold>[Uyarı] </bold><red>%player% şu sebeple uyarıldı: %reason%</red>"
+  alert:
+    messageStaff: "<red><bold>[Uyarı] </bold><red>%reason%</red>"
+  channelSpy:
+    on: "%prefix%<green>Artık %channel_name% kanalındaki mesajları takip ediyorsun</green>"
+    off: "%prefix%<red>%channel_name% kanalındaki mesajları takip etmeyi bıraktın</red>"
+    onRecipient: "%prefix%<green>%recipient_name% artık %channel_name% kanalını takip ediyor</green>"
+    offRecipient: "%prefix%<green>%recipient_name% artık %channel_name% kanalını takip etmiyor</green>"
+    onAll: "%prefix%<green>Artık tüm kanalları takip ediyorsun</green>"
+    offAll: "%prefix%<red>Tüm kanalları takip etmeyi bıraktın</red>"
+    onAllRecipient: "%prefix%<green>%recipient_name% artık tüm kanalları takip ediyor</green>"
+    offAllRecipient: "%prefix%<red>%recipient_name% artık tüm kanalları takip etmiyor</red>"
+    notSpying: "%prefix%<red>%channel_name% kanalını takip etmiyorsun!</red>"
+    notSpyingRecipient: "%prefix%<red>%recipient_name%, %channel_name% kanalını takip etmiyor!</red>"
+    notSpyingAll: "%prefix%<red>Tüm kanalları takip etmiyorsun!</red>"
+    notSpyingAllRecipient: "%prefix%<red>%recipient_name% tüm kanalları takip etmiyor!</red>"
+    incoming: "<yellow>KANAL CASUSU <green>[%channel_name%]</green>: <red>%sender_name% </red><dark_gray>>> </dark_gray><gray>%message%</gray>"
+    spylist:
+      listFormat:
+        - 'Tüm kanallar takip ediliyor: %spy_all%'
+        - '<green>Takip Edilen Kanallar:'
+        - '%channel_list%'
+      channelFormat:
+        - '<gray>- </gray><white>%channel_name%'
+  hideChat:
+    start: "%prefix%<green>Artık tüm sohbet mesajlarını gizliyorsun</green>"
+    stop: "%prefix%<red>Artık sohbet mesajlarını gizlemiyorsun</red>"
+  disableChat:
+    start: "%prefix%<red>Sohbet devre dışı</red>"
+    stop: "%prefix%<green>Sohbet artık etkin</green>"
+    message: "%prefix%<red>Sohbet devre dışı!</red>"
+  hideAnnouncements:
+    start: "%prefix%<green>Tüm duyuru mesajlarını gizliyorsun</green>"
+    stop: "%prefix%<red>Duyuru mesajlarını artık gizlemiyorsun</red>"
+  announceConfig:
+    invalid: "%prefix%<red>Geçersiz duyuru: %announcement%!</red>"
+
+commands:
+  info:
+    - "<gray>Sohbet Rengi:</gray> <yellow>%advancedchat_color%"
+    - "<gray>Sohbet Formatı:</gray> <yellow>%advancedchat_format%"
+    - "<gray>Kanal:</gray> <yellow>%advancedchat_channel%"
+    - "<gray>İzinli Kanallar:</gray> <yellow>%advancedchat_channels%"
+    - "<gray>Etiket:</gray> <yellow>%advancedchat_tag%"
+    - "<gray>Yok Sayılan Oyuncular:</gray> <yellow>%advancedchat_ignored_list%"
+    - "<gray>Herkesi Yok Sayma:</gray> <yellow>%advancedchat_ignored_all%"
+    - ""
+    - "<gray>Renk Kullanabilir:</gray> <yellow>%advancedchat_use_colors%"
+    - "<gray>Sihirli Renk (&k):</gray> <yellow>%advancedchat_use_magic%"
+    - "<gray>/msg Kullanabilir:</gray> <yellow>%advancedchat_command_msg%"
+    - "<gray>/ignore Kullanabilir:</gray> <yellow>%advancedchat_command_ignore%"
+    - "<gray>/unignore Kullanabilir:</gray> <yellow>%advancedchat_command_unignore%"
+    - "<gray>/reply Kullanabilir:</gray> <yellow>%advancedchat_command_reply%"
+    - "<gray>/channels Kullanabilir:</gray> <yellow>%advancedchat_command_channels%"
+    - "<gray>IgnoreAll Baypas:</gray> <yellow>%advancedchat_bypass_ignore_all%"
+    - "<gray>Bahsetme Kullanabilir:</gray> <yellow>%advancedchat_use_mention%"
+    - "<gray>Bahsedilebilir:</gray> <yellow>%advancedchat_allow_mentioned%"
+    - "<gray>Sohbet Gizleme:</gray> <yellow>%advancedchat_hide_chat%"
+    - "<gray>Duyuru Gizleme:</gray> <yellow>%advancedchat_hide_announcements%"
+  commands:
+    listFormat:
+      - "<yellow>Özel Komutlar:</yellow>"
+      - "%command_list%"
+    commandFormat:
+      - "<red>%command_name%</red> <gray>-</gray> <gold>%command_desc%</gold>"
+
+chatMotd: # Leave empty to disable
+  - " "
+  - "%player_head_8_1%"
+  - "%player_head_8_2%                   <gold>Hoş geldin <white>%player_name%</white>"
+  - "%player_head_8_3% <yellow>Bize katıldığın için teşekkürler, Macera başlıyor!</yellow>"
+  - "%player_head_8_4%"
+  - "%player_head_8_5%           <green><bold>| WEBSITE</bold>: <white>/site</white></green>"
+  - "%player_head_8_6%           <gold><bold>| MAGAZA</bold>:  <white>/magaza</white></gold>"
+  - "%player_head_8_7%           <aqua><bold>| DISCORD</bold>: <white>/discord</white></aqua>"
+  - "%player_head_8_8%"

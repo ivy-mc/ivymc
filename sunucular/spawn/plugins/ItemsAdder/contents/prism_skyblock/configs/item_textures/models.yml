@@ -1,0 +1,77 @@
+info:
+  namespace: prism_skyblock
+items:
+  
+  model-chest:
+    enabled: true
+    resource:
+      generate: false
+      material: BLAZE_POWDER
+      model_path: models/mystery_box
+      model_id: 2
+    behaviours:
+      furniture:
+        entity: item_display
+        solid: true
+        opposite_direction: true
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        display_transformation:
+          adjust_legacy_model: item_frame
+  
+  model-dungeonchest1:
+    enabled: true
+    resource:
+      generate: false
+      material: BLAZE_POWDER
+      model_path: models/normal_chest
+      model_id: 3
+    behaviours:
+      furniture:
+        entity: item_display
+        solid: true
+        opposite_direction: true
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        display_transformation:
+          adjust_legacy_model: item_frame
+  model-dungeonchest2:
+    enabled: true
+    resource:
+      generate: false
+      material: BLAZE_POWDER
+      model_path: models/medium_chest
+      model_id: 4
+    behaviours:
+      furniture:
+        entity: item_display
+        solid: true
+        opposite_direction: true
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        display_transformation:
+          adjust_legacy_model: item_frame
+  model-dungeonchest3:
+    enabled: true
+    resource:
+      generate: false
+      material: BLAZE_POWDER
+      model_path: models/premium_chest
+      model_id: 5
+    behaviours:
+      furniture:
+        entity: item_display
+        solid: true
+        opposite_direction: true
+        placeable_on:
+          floor: true
+          ceiling: false
+          walls: false
+        display_transformation:
+          adjust_legacy_model: item_frame

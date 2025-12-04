@@ -1,0 +1,236 @@
+# Wiadomość, gdy plecak zaczyna być ładowany z bazy danych (po interakcji gracza)
+backpack-loading: "#eb0000Trwa ładowanie plecaka..."
+# Wiadomość, gdy plecak został załadowany
+backpack-loaded: "&fPlecak został załadowany"
+# Wiadomość, gdy plecak jest aktualizowany, a gracz próbuje go otworzyć
+backpack-updating: "&fAktualizacja plecaka w trakcie"
+# Wiadomość, gdy nie można załadować plecaka
+backpack-loading-error: "&cWystąpił problem podczas ładowania plecaka"
+# Gdy gracz próbuje otworzyć plecak, ale jest używany przez innego gracza
+backpack-is-used-by-another-player: "&cPlecak jest używany przez innego gracza"
+
+# Wiadomość, gdy administrator zmienia craftowanie
+backpack-crafting-change: "&aCraftowanie plecaka zostało zmienione"
+# Wiadomość, gdy gracz próbuje zmienić craftowanie, gdy jest puste lub takie samo jak wcześniej
+backpack-crafting-cannot-change: "&cCraftowanie plecaka nie może być zmienione, być może jest puste lub jest takie samo"
+# Wiadomość, gdy administrator anuluje zmiany craftowania
+backpack-crafting-change-cancelled: "&cZmiany craftowania plecaka zostały anulowane"
+
+# Wiadomość po dodaniu plecaka przez widok plecaka gracza
+# %player% Nazwa właściciela plecaka
+backpack-added-inventory: "&6Dodano plecak gracza&8: &f%player% &6do twojego inwentarza"
+
+# Gdy gracz nie ma uprawnień
+command-no-permissions: "&4Nie masz uprawnień do użycia tej komendy"
+# Gdy gracz ma czas odnowy
+cooldown-message: "#eb0000Musisz poczekać przed ponownym użyciem"
+# Gdy gracz nie ma uprawnień do otwarcia plecaka
+backpack-no-permission-use: "&4Nie masz uprawnień do otwarcia plecaka"
+# Gdy plecak gracza się przeładowuje (używając komendy)
+loading-in-progress: "&6Trwa ładowanie... proszę czekać chwilę"
+# Gdy plecaki graczy nie mogą być załadowane
+players-backpack-not-loaded: "&cPlecaki graczy nie mogą być załadowane"
+# Gdy gracz nie ma żadnych plecaków
+player-not-created-backpacks: "&7Ten gracz nie stworzył jeszcze żadnych plecaków"
+# Gdy gracz jest offline
+# %player% > Nazwa Gracza
+player-is-offline: "&7Gracz&8: &f%player% &7 jest offline"
+
+# Wiadomość, gdy gracz próbuje mieć więcej niż jeden plecak (tylko jeśli opcja w konfiguracji jest ustawiona na true: limit-backpack-per-inventory)
+one-backpack-per-inventory: "&cMożesz nosić tylko jeden plecak"
+
+# Wiadomość wyświetlana, gdy gracz próbuje mieć więcej plecaków niż x(limit-backpack-per-inventory-amount) (tylko jeśli opcja w konfiguracji jest ustawiona na true: limit-backpack-per-inventory).
+multiple-backpack-per-inventory: "&cMożesz nosić tylko %amount% plecaków"
+
+
+# Wiadomość, gdy gracz próbuje umieścić przedmiot w zablokowanym pojemniku.
+blocked-backpack-insert-message: "&cNie możesz umieścić tego przedmiotu tutaj!"
+
+# Wiadomość po załadowaniu pakietu zasobów, zostaw puste, jeśli nie ma być żadnego Wiadomośću
+resourcepack-loaded: "&6Resourcepack został załadowany"
+# Wiadomość, gdy pakiet zasobów nie zostanie załadowany, zostaw puste, jeśli nie ma być Wiadomośću
+resourcepack-failed-load: "&6Nie udało się załadować resourcepack"
+
+# Wiadomość, jeśli polecenie dotyczy tylko gracza
+command-only-player: "&cTo polecenie może użyć tylko gracz!"
+# Wiadomość, jeśli polecenie jest przeznaczone tylko dla konsoli
+command-only-console: "&cTo polecenie możesz użyć tylko przez konsolę!"
+
+# Wiadomość, gdy uuid jest nieprawidłowy
+invalid-uuid: "&cNiepoprawne UUID"
+
+# Wiadomość o zablokowaniu elementu, %item% to nazwa materiału.
+item-has-blocked: "&6Przedmiot&8: &f%item% został zablokowany"
+
+# Wiadomość, gdy dany materiał jest już zablokowany
+item-already-blocked: "&cPrzedmiot&8: &f%item% jest już zablokowany"
+
+# Wiadomość o zablokowaniu materiału, %item% to nazwa materiału.
+material-has-blocked: "&6Materiał&8: &f%material% został zablokowany"
+# Wiadomość, gdy dany materiał jest już zablokowany
+material-already-blocked: "&cMateriał&8: &f%material% jest już zablokowany"
+# Wiadomość, gdy podany materiał jest nieprawidłowy
+invalid-material: "&cNiepoprawny materiał&8: &f%material%"
+# Wiadomość, gdy gracz ma puste ręce
+empty-hand: "&cMusisz mieć coś w ręce"
+
+# Wiadomość, gdy tier plecaka jest nieprawidłowy, %tier% jest podaną wartością
+invalid-backpack-tier: "&cNiepoprawny tier plecaka&8: &f%tier%"
+
+# Wiadomość, gdy gracz dodaje sobie plecak, %tier% to tier plecaka.
+backpack-added: "&6Plecak&8: &f%tier% &6Został dodany"
+
+# Wiadomość o dodaniu plecaka do gracza, %tier% to poziom plecaka, %player% to nazwa gracza.
+backpack-added-player: "&6Plecak&8: &f%tier%  &6Został dodany do gracza&8: &f%player%"
+# Wiadomość, gdy nie znaleziono plecaka określonego tieru
+backpack-tier-not-found: "&cPlecak&8: &f%tier% &cnie został znaleziony!"
+
+# Wiadomość, gdy żaden gracz nie stworzył jeszcze plecaka lub coś poszło nie tak.
+players-not-created-backpacks: "&cŻaden gracz nie stworzył jeszcze plecaka lub coś poszło nie tak."
+
+# Wiadomość w przypadku wystąpienia nieoczekiwanego błędu
+unexpected-error: "&cWystąpił nieoczekiwany błąd podczas wykonywania polecenia, sprawdź błędy w konsoli."
+
+# Wiadomość po przeładowaniu pakietu zasobów za pomocą polecenia
+resourcepack-reloaded: "&6Resourcepack został zaktualizowany i przeładowany u wszystkich graczy"
+
+# Wiadomość, gdy gracz próbuje umieścić w plecaku niedozwolony przedmiot typu FILTERED
+filtered-backpack-item-not-allowed: "&cTego przedmiotu nie można umieścić w tym plecaku"
+
+# Wiadomość, gdy gracz próbuje kliknąć przycisk w menu, który ma czas odnowienia
+button-cooldown: "&cPrzed ponownym kliknięciem należy odczekać kolejne &f%time% &csekund"
+
+# Wiadomość, gdy ktoś inny edytował już dozwolone przedmioty dla tego plecaka
+allowed-items-gui-has-editor: "&cKtoś już edytuje dozwolone przedmioty dla tego plecaka"
+
+# Wiadomość, gdy nie udało się otworzyć menu dozwolonych przedmiotów dla plecaka
+allowed-items-could-open: "&cNie można otworzyć dozwolonych przedmiotów, sprawdź konsolę i konfigurację tego plecaka, aby sprawdzić, czy są poprawne"
+
+# Wiadomość, kiedy gracz nie jest właścicielem plecaka
+not-owner: "&cNie jesteś właścicielem tego plecaka!"
+
+# Komunikat, gdy gracz próbuje utworzyć plecak z niepustym pojemnikiem.
+crafting.blocked-filled-container: "&4Nie możesz craftować z użyciem niepustych pojemników!"
+
+# Konfiguracja GUI
+#
+# Przewodnik po operatorach warunkowych:
+# Ten plugin obsługuje wyrażenia warunkowe w tekście używając tych formatów:
+#
+# WARUNKI STANDARDOWE: %[(warunek)tekst]%
+#    - Pokazuje 'tekst' jeśli warunek jest prawdziwy, w przeciwnym razie nic
+#    - Używane do: paginacji, opcjonalnych elementów
+#
+# WARUNKI TERNARY: %[(warunek)tekst_prawda ~: tekst_fałsz]%
+#    - Pokazuje 'tekst_prawda' jeśli warunek prawdziwy, w przeciwnym razie 'tekst_fałsz'
+#    - Używa ~: jako separator aby uniknąć konfliktów z dwukropkami
+#    - Używane do: wskaźników statusu, przełączania typów
+#
+# PRZYKŁADY Z TEJ KONFIGURACJI:
+#   Paginacja: "%[(max_pages > 1)&cStrona&8: &6%page% &8/ &7%max_pages%]%"
+#   Status craftingu: "%[(isCraftable == true)&8[&2&l✔&8] ~: &8[&c&l❌&8]]%"
+#   Włącz/wyłącz: "%[(isCraftable == true)wyłączyć ~: włączyć]%"
+#   Przełączanie typu: "%[(type == DEFAULT)FILTROWANY ~: DOMYŚLNY]%"
+#
+# OPERATORY UŻYWANE W TEJ KONFIGURACJI:
+#   >  (większe niż)      Przykład: max_pages > 1
+#   == (równe)            Przykład: isCraftable == true, type == DEFAULT
+gui:
+  # Format tytułu GUI dozwolonych przedmiotów
+  allowed-items-gui: "&cDozwolone przedmioty&8: &f%size% &cPoziom plecaka&8: &f%tier% %[(max_pages > 1)&cStrona&8: &6%page% &8/ &7%max_pages%]%"
+
+  # Główny interfejs ustawień plecaka
+  backpack-settings-main:
+    title: "&6Poziom&8: &f%tier% &6ustawienia plecaka"
+    buttons:
+      # Przycisk edycji craftingu
+      edit-crafting-button:
+        display-name: "&2Kliknij aby zmienić crafting"
+        lore:
+          - "&fMożna craftować&8: %[(isCraftable == true)&8[&2&l✔&8] ~: &8[&c&l❌&8]]%"
+          - " "
+          - "&7Kliknij &f&lLPM &7aby edytować crafting"
+          - "&7Kliknij &f&lSHIFT + PPM &7aby %[(isCraftable == true)wyłączyć ~: włączyć]% możliwość craftowania plecaka"
+
+      # Przycisk dozwolonych przedmiotów
+      allowed-items-button:
+        display-name: "&2Kliknij aby edytować dozwolone przedmioty"
+        lore:
+          - "&7Aktualnie dozwolone przedmioty dla tego plecaka to&8: &c%size%"
+          - " "
+          - "&7Kliknij &f&lLPM &7aby otworzyć GUI z dozwolonymi przedmiotami"
+          - " "
+          - "&8Zawiera te przedmioty jeśli plecak ma typ &fFILTROWANY"
+
+      # Przycisk zmiany typu plecaka
+      change-backpack-type-button:
+        display-name: "&2Kliknij aby edytować typ plecaka"
+        lore:
+          - "&7Aktualny typ plecaka to&8: &c%type%"
+          - " "
+          - "&7Kliknij &f&lLPM &7aby zmienić typ na&8: &f%[(type == DEFAULT)FILTROWANY ~: DOMYŚLNY]%"
+
+  # GUI wyboru craftingu plecaka
+  backpack-chose-crafting-gui:
+    title: "#0047F7Wybierz który plecak chcesz zmienić crafting"
+    buttons:
+      select-backpack-button:
+        lore:
+          - "&fMożna craftować&8: %[(isCraftable == true)&8[&2&l✔&8] ~: &8[&c&l❌&8]]%"
+
+  # GUI plecaków gracza
+  player-backpacks-gui:
+    title: "&cPlecaki gracza&8: &f%playerName% %[(max_pages > 1)&cStrona&8: &6%page% &8/ &7%max_pages%]%"
+    hover-text:
+      - "&8▪ &fWłaściciel plecaka&f: &6%owner%"
+      - "&8▪ &fOstatnia aktualizacja&f: &a%lastUpdated%"
+      - "&8▪ &fOstatni gracz&f: &a%lastPlayer%"
+      - "&8▪ &fID plecaka&f: &a%backpackUUID%"
+
+  # Informacje GUI plecaka gracza
+  player-backpack-gui-info:
+    displayName: "&6%playerName%"
+    lore:
+      - "&fPosiadane plecaki&8: &6%amount%"
+      - "&7Kliknij &f&lLPM &7aby otworzyć menu plecaków gracza"
+
+  # GUI wszystkich plecaków
+  all-backpack-gui:
+    title: "&cWszyscy gracze z plecakami&8: &f%size% %[(max_pages > 1)&cStrona&8: &6%page% &8/ &7%max_pages%]%"
+
+  # GUI edycji craftingu
+  crafting-edit-gui:
+    title: "#194d33Zmieniasz crafting %crafting%"
+
+# Konfiguracja przedmiotów NBT
+nbt:
+  nbt-item:
+    displayName: "&fNiestandardowy przedmiot NBT"
+    lore:
+      - "&8» &7Nazwa pluginu&8: &f%plugin%"
+      - "&8» &7Przestrzeń nazw&8: &f%namespace%"
+      - "&8» &7Wartość przestrzeni nazw: &f%value%"
+
+items:
+  # Wyświetlanie informacji o plecaku z bazy danych
+  # Używane przy przeglądaniu szczegółów plecaka w interfejsach admin/bazy danych
+  database-backpack-info:
+    lore:
+      - "&8▪ &fWłaściciel plecaka&8: &6%owner%"       # Pokazuje kto posiada ten plecak
+      - "&8▪ &fId&8: &7%backpackUUID%"               # Unikalny identyfikator plecaka
+      - "&8▪ &fOstatnia aktualizacja&8: &a%lastUpdate%" # Kiedy plecak był ostatnio modyfikowany
+      - "&8▪ &fOstatni gracz&8: &a%lastPlayer%"      # Ostatni gracz który z nim wchodził w interakcję
+      - " "                                      # Pusta linia dla odstępu
+      - "&7Kliknij &f&lLPM &7aby otworzyć plecak"  # Akcja lewego przycisku myszy
+      - "&7Kliknij &f&lPPM &8&l+ &f&lSHIFT &7aby dodać plecak do ekwipunku"  # Akcja prawego przycisku + shift
+
+  database-backpack-no-settings:
+    display-name: "&c⚠ Nieskonfigurowany Plecak"
+    lore:
+      - "&8▪ &fWłaściciel&8: &6%owner%"
+      - "&8▪ &fID&8: &7%backpackUUID%"
+      - "&8▪ &fOstatnia Aktualizacja&8: &a%lastUpdate%"
+      - "&8▪ &fOstatni Gracz&8: &a%lastPlayer%"
+      - " "
+      - "&c⚠ &7Brakuje ustawień dla tieru&8: &e%tier%"
+      - "&c⚠ &7Plecak wymaga konfiguracji"

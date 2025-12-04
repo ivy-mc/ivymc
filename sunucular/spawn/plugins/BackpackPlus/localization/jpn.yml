@@ -1,0 +1,236 @@
+# データベースからバックパックの読み込みが開始されたときのメッセージ（プレイヤーのインタラクション後）
+backpack-loading: "#eb0000バックパックの読み込み中..."
+# バックパックの読み込みが完了したときのメッセージ
+backpack-loaded: "&fバックパックが読み込まれました"
+# バックパックが更新中であり、プレイヤーが開こうとするときのメッセージ
+backpack-updating: "&fバックパックの更新中"
+# バックパックの読み込み中に問題が発生したときのメッセージ
+backpack-loading-error: "&cバックパックの読み込み中に問題が発生しました"
+# プレイヤーが別のプレイヤーによって使用されているバックパックを開こうとしたときのメッセージ
+backpack-is-used-by-another-player: "&cバックパックは他のプレイヤーによって使用されています"
+
+# 管理者がクラフトを変更したときのメッセージ
+backpack-crafting-change: "&aバックパックのクラフトが変更されました"
+# プレイヤーが空であるか以前と同じであるときにクラフトを変更しようとしたときのメッセージ
+backpack-crafting-cannot-change: "&cバックパックのクラフトを変更できません。空であるか以前と同じかもしれません"
+# 管理者がクラフトの変更をキャンセルしたときのメッセージ
+backpack-crafting-change-cancelled: "&cバックパックのクラフトの変更がキャンセルされました"
+
+# プレイヤーのバックパックビューによってバックパックが追加された後のメッセージ
+# %player% バックパックの所有者の名前
+backpack-added-inventory: "&6プレイヤーのバックパックが追加されました&8: &f%player% &6あなたのインベントリに"
+
+# プレイヤーが権限を持っていないときのメッセージ
+command-no-permissions: "&4このコマンドを使用する権限がありません"
+# プレイヤーがクールダウン中のときのメッセージ
+cooldown-message: "#eb0000再度使用する前に待機する必要があります"
+# プレイヤーがバックパックを開く権限がないときのメッセージ
+backpack-no-permission-use: "&4バックパックを開く権限がありません"
+# コマンドを使用してプレイヤーのバックパックが再充電されているときのメッセージ
+loading-in-progress: "&6読み込み中...しばらくお待ちください"
+# プレイヤーのバックパックを読み込めなかったときのメッセージ
+players-backpack-not-loaded: "&cプレイヤーのバックパックを読み込めませんでした"
+# プレイヤーがバックパックを持っていないときのメッセージ
+player-not-created-backpacks: "&7このプレイヤーはまだバックパックを作成していません"
+# プレイヤーがオフラインのときのメッセージ
+# %player% > プレイヤーの名前
+player-is-offline: "&7プレイヤー&8: &f%player% &7はオフラインです"
+
+# プレイヤーが1つ以上のバックパックを持とうとしたときのメッセージ（オプションがtrueに設定されている場合のみ：inventory-per-backpack-limit）
+one-backpack-per-inventory: "&c1つのバックパックしか持てません"
+
+# プレイヤーが x(limit-backpack-per-inventory-amount) 個を超えるバックパックを持とうとしたときのメッセージ（設定のオプションが true に設定されている場合のみ：limit-backpack-per-inventory）。
+multiple-backpack-per-inventory: "&c%amount% 個のバックパックしか持てません"
+
+
+# コンテナがロックされているときにアイテムを入れようとしたときのメッセージ
+blocked-backpack-insert-message: "&cこのアイテムはここに置けません！"
+
+# リソースパックがロードされたときのメッセージ メッセージを表示しない場合は空白にする。
+resourcepack-loaded: "&6リソースパックがロードされました"
+# resourcepackのロードに失敗した場合のメッセージ メッセージがない場合は空白にしてください。
+resourcepack-failed-load: "&6リソースパックのロードに失敗しました"
+
+# コマンドが選手だけの場合のメッセージ
+command-only-player: "&cこの引数は選手のみが使用できる！"
+# コマンドがコンソールだけの場合のメッセージ
+command-only-console: "&cこの引数はコンソールでのみ使用できる！"
+
+# uuidが無効な場合のメッセージ
+invalid-uuid: "&c不正なUUID"
+
+# アイテムがブロックされたときのメッセージ、%item%は素材名
+item-has-blocked: "&6アイテムがブロックされました&8: &f%item%"
+
+# アイテムがすでにブロックされている場合のメッセージ
+item-already-blocked: "&cアイテムはすでにブロックされています&8: &f%item%"
+
+# 素材がブロックされたときのメッセージ、%item%は素材名
+material-has-blocked: "&6素材がブロックされました&8: &f%material%"
+# 与えられた素材がすでにブロックされている場合のメッセージ
+material-already-blocked: "&cすでにブロックされている素材&8: &f%material%"
+# 与えられた素材が正しくない場合のメッセージ
+invalid-material: "&c無効な材料名&8: &f%material%."
+# 手札がないときのメッセージ
+empty-hand: "&c手に何かを持っているに違いない"
+
+# バックパックのティアが正しくない場合のメッセージ。
+invalid-backpack-tier: "&c無効なバックパック Tier&8: &f%tier%"
+
+# プレイヤーがバックパックを追加したときのメッセージ、%tier%はバックパックのティアです。
+backpack-added: "&6バックパック&8: &f%tier% &6追加"
+
+# tier%はバックパックのティア、%player%はプレイヤーの名前。
+backpack-added-player: "&6バックパック&8: &f%tier% &6プレイヤーに追加&8: &f%player%。"
+# 指定した層のバックパックが見つからなかった場合のメッセージ
+backpack-tier-not-found: "&cリュックサック8：f%tierが見つかりません。"
+
+# 選手がまだバックパックを作成していない場合、または何か問題が発生した場合のメッセージ
+players-not-created-backpacks: "&c選手がまだバックパックを作成していないか、何かが間違っている"
+
+# 予期せぬエラーが発生した場合のメッセージ
+unexpected-error: "&cコマンド実行中に予期せぬエラーが発生しました。"
+
+# コマンドでリソースパックがリロードされたときのメッセージ
+resourcepack-reloaded: "&6コマンドでリソースパックがリロードされたときのメッセージ"
+
+# 許可されていないアイテムをバックパックに入れようとしたときのメッセージ。
+filtered-backpack-item-not-allowed: "&cこのバックパックにこのアイテムを入れることはできません。"
+
+# メニュー上のボタンをクリックしようとしたときに、クールダウンがある場合のメッセージ
+button-cooldown: "&cもう一度クリックする前に、さらに &f%time% &c秒待つ必要があります。"
+
+# 誰かがこのバックパックの許可されたアイテムを既に編集している場合のメッセージ
+allowed-items-gui-has-editor: "&cこのバックパックで使用できるアイテムは、すでに誰かが編集しています。"
+
+# 許可された項目のGUIを開くのに失敗したときのメッセージ
+allowed-items-could-open: "&cコンソールをチェックし、このバックパックのコンフィグが正しいかどうか確認してください。"
+
+# メッセージ：プレイヤーがこのバックパックの所有者ではない場合
+not-owner: "&cあなたはこのバックパックの所有者ではありません！"
+
+# プレイヤーが空でないコンテナでバックパックを作成しようとしたときのメッセージ
+crafting.blocked-filled-container: "&4中身の入った容器を使ってクラフトすることはできません！"
+
+# GUI設定
+#
+# 条件演算子ガイド：
+# このプラグインは以下の形式でテキスト内の条件式をサポートします：
+#
+# 標準条件：%[(条件)テキスト]%
+#    - 条件が真の場合'テキスト'を表示、そうでなければ何も表示しない
+#    - 用途：ページネーション、オプション要素
+#
+# 三項条件：%[(条件)真のテキスト ~: 偽のテキスト]%
+#    - 条件が真の場合'真のテキスト'を表示、そうでなければ'偽のテキスト'を表示
+#    - テキスト内のコロンとの競合を避けるため ~: をセパレータとして使用
+#    - 用途：ステータス表示、タイプ切り替え
+#
+# この設定の例：
+#   ページネーション："%[(max_pages > 1)&cページ&8: &6%page% &8/ &7%max_pages%]%"
+#   クラフト状況："%[(isCraftable == true)&8[&2&l✔&8] ~: &8[&c&l❌&8]]%"
+#   有効/無効："%[(isCraftable == true)無効化 ~: 有効化]%"
+#   タイプ切り替え："%[(type == DEFAULT)フィルター ~: デフォルト]%"
+#
+# この設定で使用される演算子：
+#   >  (より大きい)        例：max_pages > 1
+#   == (等しい)            例：isCraftable == true, type == DEFAULT
+gui:
+  # 許可アイテムGUIのタイトル形式
+  allowed-items-gui: "&c許可アイテム&8: &f%size% &cバックパックレベル&8: &f%tier% %[(max_pages > 1)&cページ&8: &6%page% &8/ &7%max_pages%]%"
+
+  # バックパック設定メインインターフェース
+  backpack-settings-main:
+    title: "&6レベル&8: &f%tier% &6バックパック設定"
+    buttons:
+      # クラフト編集ボタン
+      edit-crafting-button:
+        display-name: "&2クリックしてクラフトを変更"
+        lore:
+          - "&fクラフト可能&8: %[(isCraftable == true)&8[&2&l✔&8] ~: &8[&c&l❌&8]]%"
+          - " "
+          - "&7&f&l左クリック &7でクラフトを編集"
+          - "&7&f&lSHIFT + 右クリック &7でバックパックをクラフトする機能を%[(isCraftable == true)無効化 ~: 有効化]%"
+
+      # 許可アイテムボタン
+      allowed-items-button:
+        display-name: "&2クリックして許可アイテムを編集"
+        lore:
+          - "&7このバックパックで現在許可されているアイテム&8: &c%size%"
+          - " "
+          - "&7&f&l左クリック &7で許可アイテムGUIを開く"
+          - " "
+          - "&8バックパックが &fフィルター &8タイプの場合、これらのアイテムが含まれます"
+
+      # バックパックタイプ変更ボタン
+      change-backpack-type-button:
+        display-name: "&2クリックしてバックパックタイプを編集"
+        lore:
+          - "&7現在のバックパックタイプ&8: &c%type%"
+          - " "
+          - "&7&f&l左クリック &7でタイプを変更&8: &f%[(type == DEFAULT)フィルター ~: デフォルト]%"
+
+  # バックパッククラフト選択GUI
+  backpack-chose-crafting-gui:
+    title: "#0047F7クラフトを変更したいバックパックを選択してください"
+    buttons:
+      select-backpack-button:
+        lore:
+          - "&fクラフト可能&8: %[(isCraftable == true)&8[&2&l✔&8] ~: &8[&c&l❌&8]]%"
+
+  # プレイヤーバックパックGUI
+  player-backpacks-gui:
+    title: "&cプレイヤーバックパック&8: &f%playerName% %[(max_pages > 1)&cページ&8: &6%page% &8/ &7%max_pages%]%"
+    hover-text:
+      - "&8▪ &fバックパック所有者&f: &6%owner%"
+      - "&8▪ &f最終更新&f: &a%lastUpdated%"
+      - "&8▪ &f最終プレイヤー&f: &a%lastPlayer%"
+      - "&8▪ &fバックパックID&f: &a%backpackUUID%"
+
+  # プレイヤーバックパックGUI情報
+  player-backpack-gui-info:
+    displayName: "&6%playerName%"
+    lore:
+      - "&f所有バックパック&8: &6%amount%"
+      - "&7&f&l左クリック &7でプレイヤーバックパックメニューを開く"
+
+  # 全バックパックGUI
+  all-backpack-gui:
+    title: "&cバックパックを持つ全プレイヤー&8: &f%size% %[(max_pages > 1)&cページ&8: &6%page% &8/ &7%max_pages%]%"
+
+  # クラフト編集GUI
+  crafting-edit-gui:
+    title: "#194d33クラフト %crafting% を変更中です"
+
+# NBTアイテム設定
+nbt:
+  nbt-item:
+    displayName: "&fカスタムNBTアイテム"
+    lore:
+      - "&8» &7プラグイン名&8: &f%plugin%"
+      - "&8» &7名前空間&8: &f%namespace%"
+      - "&8» &7名前空間値: &f%value%"
+
+items:
+  # データベースバックパック情報表示
+  # 管理者/データベースインターフェースでバックパック詳細を表示する際に使用
+  database-backpack-info:
+    lore:
+      - "&8▪ &fバックパック所有者&8: &6%owner%"       # このバックパックの所有者を表示
+      - "&8▪ &fId&8: &7%backpackUUID%"              # バックパックの一意識別子
+      - "&8▪ &f最終更新&8: &a%lastUpdate%"          # バックパックが最後に変更された時刻
+      - "&8▪ &f最終プレイヤー&8: &a%lastPlayer%"     # 最後に操作したプレイヤー
+      - " "                                     # 間隔用の空行
+      - "&7&f&l左クリック &7でバックパックを開く"  # 左クリック動作
+      - "&7&f&l右クリック &8&l+ &f&lSHIFT &7でバックパックをインベントリに追加"  # 右クリック+Shift動作
+
+  database-backpack-no-settings:
+    display-name: "&c⚠ 未設定のバックパック"
+    lore:
+      - "&8▪ &f所有者&8: &6%owner%"
+      - "&8▪ &fID&8: &7%backpackUUID%"
+      - "&8▪ &f最終更新&8: &a%lastUpdate%"
+      - "&8▪ &f最後のプレイヤー&8: &a%lastPlayer%"
+      - " "
+      - "&c⚠ &7ティア設定が不足&8: &e%tier%"
+      - "&c⚠ &7バックパックには設定が必要です"

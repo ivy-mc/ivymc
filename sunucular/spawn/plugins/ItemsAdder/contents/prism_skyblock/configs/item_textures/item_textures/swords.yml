@@ -1,0 +1,73 @@
+info:
+  namespace: prism_skyblock
+items:
+  
+  sword-cobalt:
+    enabled: true   
+    resource:
+      generate: true
+      material: IRON_SWORD
+      model_id: 1
+      textures:
+      - item_texture/swords/cobalt.png
+  sword-mithril:
+    enabled: true   
+    resource:
+      generate: true
+      material: IRON_SWORD
+      model_id: 2
+      textures:
+      - item_texture/swords/mithril.png
+  sword-soulblade:
+    enabled: true   
+    resource:
+      generate: true
+      material: IRON_SWORD
+      model_id: 3
+      textures:
+      - item_texture/swords/soulblade.png
+
+  sword-hextech:
+    enabled: true   
+    resource:
+      generate: true
+      material: IRON_SWORD
+      model_id: 4
+      textures:
+      - item_texture/swords/hextech.png
+
+  sword-warden:
+    enabled: true   
+    resource:
+      generate: true
+      material: IRON_SWORD
+      model_id: 5
+      textures:
+      - item_texture/swords/warden.png
+
+  sword-soulnetherite:
+    enabled: true   
+    resource:
+      generate: true
+      material: IRON_SWORD
+      model_id: 6
+      textures:
+      - item_texture/swords/soul_netherite_sword.png
+
+  sword-gildednetherite:
+    enabled: true   
+    resource:
+      generate: true
+      material: IRON_SWORD
+      model_id: 7
+      textures:
+      - item_texture/swords/gilded_netherite_sword.png
+
+  sword-hextech-ascended:
+    enabled: true   
+    resource:
+      generate: true
+      material: IRON_SWORD
+      model_id: 8
+      textures:
+      - item_texture/swords/hextech_ascended.png

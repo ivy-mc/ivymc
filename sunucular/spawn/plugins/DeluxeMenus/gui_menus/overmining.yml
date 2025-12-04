@@ -1,0 +1,49 @@
+menu_title: ':offset_-16::overmining:'
+open_command: overmining
+size: 27
+open_requirement:
+  requirements:
+    permission:
+      type: has permission
+      permission: deluxemenus.admin
+      deny_commands:
+        - '[message] &cYou don''t have permission to do that!'
+
+items:
+  'Overworld':
+    material: PAPER
+    model_data: 10023
+    slots: 
+    - 1
+    - 2
+    - 3
+    - 10
+    - 11
+    - 12
+    - 19
+    - 20
+    - 21
+    display_name: "&6&lOverworld"
+    lore:
+       - "&7Teleport me to this world"
+    click_commands:
+       - '[player] Your command'
+
+  'Mining':
+    material: PAPER
+    model_data: 10023
+    slots: 
+    - 5
+    - 6
+    - 7
+    - 14
+    - 15
+    - 16
+    - 23
+    - 24
+    - 25
+    display_name: "&6&lMining World"
+    lore:
+       - "&7Teleport me to this world"
+    click_commands:
+       - '[player] Your command'

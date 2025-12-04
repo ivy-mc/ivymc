@@ -1,0 +1,24 @@
+info:
+  namespace: nii_medievalpack
+
+items:
+  medievalpack_work_place:
+    display_name: "Work Place"
+    permission: medievalpack.decoration_blocks.medievalpack_work_place
+    resource:
+      generate: false
+      material: BARRIER
+      model_path: blocks/decoration_blocks/medievalpack_work_place
+    behaviours:
+      furniture:
+        fixed_rotation: false
+        small: false
+        solid: true
+        placeable_on:
+          floor: true
+          ceiling: true
+          walls: true
+        hitbox:
+          height: 1
+          length: 1
+          width: 1

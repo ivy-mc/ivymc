@@ -1,0 +1,773 @@
+cesitli:
+  name: "&fᵩᵔ"
+  fillItem:
+    material: PAPER
+    model: 7548
+    name: "&f"
+  items:
+    1:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵳ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Bloklar kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop bloklar
+      slot: 0
+      page: 1
+    2:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵷ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Mineraller & Cevherler"
+          - "#C0C0C0kategorisindeki tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop maden
+      slot: 1
+      page: 1
+    3:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵹ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Mob Düşüşleri kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop mob_drop
+      slot: 2
+      page: 1
+    4:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵶ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Yiyecekler kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop yiyecekler
+      slot: 3
+      page: 1
+    5:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵵ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Tarım kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop tarim
+      slot: 4
+      page: 1
+    6:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵴ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Boyalar kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop boyalar
+      slot: 5
+      page: 1
+    7:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵺ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Redstone kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop odunlar
+      slot: 6
+      page: 1
+    8:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵻ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Spawner kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop baliklar
+      slot: 7
+      page: 1
+    9:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵸ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Çeşitli kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop cesitli
+      slot: 8
+      page: 1
+    10:
+      type: special
+      special: BALANCE
+      slot: 49
+      page: 1
+    11:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵳ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Bloklar kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop bloklar
+      slot: 0
+      page: 2
+    12:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵷ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Mineraller & Cevherler"
+          - "#C0C0C0kategorisindeki tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop maden
+      slot: 1
+      page: 2
+    13:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵹ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Mob Düşüşleri kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop mob_drop
+      slot: 2
+      page: 2
+    14:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵶ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Yiyecekler kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop yiyecekler
+      slot: 3
+      page: 2
+    15:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵵ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Tarım kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop tarim
+      slot: 4
+      page: 2
+    16:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵴ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Boyalar kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop boyalar
+      slot: 5
+      page: 2
+    17:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵺ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Redstone kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop odunlar
+      slot: 6
+      page: 2
+    18:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵻ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Spawner kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop baliklar
+      slot: 7
+      page: 2
+    19:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵸ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Çeşitli kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop cesitli
+      slot: 8
+      page: 2
+    20:
+      type: special
+      special: BALANCE
+      slot: 49
+      page: 2
+    21:
+      type: item
+      item:
+        material: BEACON
+        quantity: 1
+      buyPrice: 50000
+      sellPrice: 150
+      slot: 18
+      page: 1
+    22:
+      type: item
+      item:
+        material: SPYGLASS
+        quantity: 1
+      buyPrice: 5000
+      sellPrice: -1
+      slot: 19
+      page: 1
+    23:
+      type: item
+      item:
+        material: RECOVERY_COMPASS
+        quantity: 1
+      buyPrice: 7500
+      sellPrice: -1
+      slot: 20
+      page: 1
+    24:
+      type: item
+      item:
+        material: ELYTRA
+        quantity: 1
+      buyPrice: 100000
+      sellPrice: -1
+      slot: 21
+      page: 1
+    25:
+      type: item
+      item:
+        material: EXPERIENCE_BOTTLE
+        quantity: 1
+      buyPrice: 300
+      sellPrice: -1
+      slot: 22
+      page: 1
+    26:
+      type: item
+      item:
+        material: NAME_TAG
+        quantity: 1
+      buyPrice: 2500
+      sellPrice: -1
+      slot: 23
+      page: 1
+    27:
+      type: item
+      item:
+        material: DIAMOND_HORSE_ARMOR
+        quantity: 1
+      buyPrice: 10000
+      sellPrice: -1
+      slot: 24
+      page: 1
+    28:
+      type: item
+      item:
+        material: GOLDEN_HORSE_ARMOR
+        quantity: 1
+      buyPrice: 7500
+      sellPrice: -1
+      slot: 25
+      page: 1
+    29:
+      type: item
+      item:
+        material: IRON_HORSE_ARMOR
+        quantity: 1
+      buyPrice: 5000
+      sellPrice: -1
+      slot: 26
+      page: 1
+    30:
+      type: item
+      item:
+        material: LEATHER_HORSE_ARMOR
+        quantity: 1
+      buyPrice: 3000
+      sellPrice: -1
+      slot: 27
+      page: 1
+    31:
+      type: item
+      item:
+        material: ARMOR_STAND
+        quantity: 1
+      buyPrice: 1500
+      sellPrice: -1
+      slot: 28
+      page: 1
+    32:
+      type: item
+      item:
+        material: SADDLE
+        quantity: 1
+      buyPrice: 3000
+      sellPrice: -1
+      slot: 29
+      page: 1
+    33:
+      type: item
+      item:
+        material: LEAD
+        quantity: 1
+      buyPrice: 2000
+      sellPrice: -1
+      slot: 30
+      page: 1
+    34:
+      type: item
+      item:
+        material: FIREWORK_STAR
+        quantity: 1
+      buyPrice: 750
+      sellPrice: -1
+      slot: 31
+      page: 1
+    35:
+      type: item
+      item:
+        material: WARPED_FUNGUS_ON_A_STICK
+        quantity: 1
+      buyPrice: 800
+      sellPrice: -1
+      slot: 32
+      page: 1
+    36:
+      type: item
+      item:
+        material: FISHING_ROD
+        quantity: 1
+      buyPrice: 120
+      sellPrice: -1
+      slot: 33
+      page: 1
+    37:
+      type: item
+      item:
+        material: CARROT_ON_A_STICK
+        quantity: 1
+      buyPrice: 800
+      sellPrice: -1
+      slot: 34
+      page: 1
+    38:
+      type: item
+      item:
+        material: SHULKER_BOX
+        quantity: 1
+      buyPrice: 5000
+      sellPrice: -1
+      slot: 35
+      page: 1
+    39:
+      type: item
+      item:
+        material: HEART_OF_THE_SEA
+        quantity: 1
+      buyPrice: 10000
+      sellPrice: -1
+      slot: 36
+      page: 1
+    40:
+      type: item
+      item:
+        material: NAUTILUS_SHELL
+        quantity: 1
+      buyPrice: 10000
+      sellPrice: -1
+      slot: 37
+      page: 1
+    41:
+      type: item
+      item:
+        material: NETHER_STAR
+        quantity: 1
+      buyPrice: 40000
+      sellPrice: -1
+      slot: 38
+      page: 1
+    42:
+      type: item
+      item:
+        material: TURTLE_SCUTE
+        quantity: 1
+      buyPrice: 1000
+      sellPrice: -1
+      slot: 39
+      page: 1
+    43:
+      type: item
+      item:
+        material: GLASS_BOTTLE
+        quantity: 1
+      buyPrice: 25
+      sellPrice: -1
+      slot: 40
+      page: 1
+    44:
+      type: item
+      item:
+        material: BUCKET
+        quantity: 1
+      buyPrice: 15
+      sellPrice: -1
+      slot: 41
+      page: 1
+    45:
+      type: item
+      item:
+        material: WATER_BUCKET
+        quantity: 1
+      buyPrice: 20
+      sellPrice: -1
+      slot: 42
+      page: 1
+    46:
+      type: item
+      item:
+        material: LAVA_BUCKET
+        quantity: 1
+      buyPrice: 20
+      sellPrice: -1
+      slot: 43
+      page: 1
+    47:
+      type: item
+      item:
+        material: MILK_BUCKET
+        quantity: 1
+      buyPrice: 600
+      sellPrice: 0.66
+      slot: 44
+      page: 1
+    48:
+      type: item
+      item:
+        material: POWDER_SNOW_BUCKET
+        quantity: 1
+      buyPrice: 600
+      sellPrice: 0.66
+      slot: 18
+      page: 2
+    49:
+      type: item
+      item:
+        material: SALMON_BUCKET
+        quantity: 1
+      buyPrice: 1200
+      sellPrice: -1
+      slot: 19
+      page: 2
+    50:
+      type: item
+      item:
+        material: COD_BUCKET
+        quantity: 1
+      buyPrice: 1200
+      sellPrice: -1
+      slot: 20
+      page: 2
+    51:
+      type: item
+      item:
+        material: TROPICAL_FISH_BUCKET
+        quantity: 1
+      buyPrice: 1200
+      sellPrice: -1
+      slot: 21
+      page: 2
+    52:
+      type: item
+      item:
+        material: AXOLOTL_BUCKET
+        quantity: 1
+      buyPrice: 1200
+      sellPrice: -1
+      slot: 22
+      page: 2
+    53:
+      type: item
+      item:
+        material: PUFFERFISH_BUCKET
+        quantity: 1
+      buyPrice: 1200
+      sellPrice: -1
+      slot: 23
+      page: 2
+    54:
+      type: item
+      item:
+        material: TADPOLE_BUCKET
+        quantity: 1
+      buyPrice: 1200
+      sellPrice: -1
+      slot: 24
+      page: 2
+    55:
+      type: item
+      item:
+        material: SENTRY_ARMOR_TRIM_SMITHING_TEMPLATE
+        quantity: 1
+      buyPrice: 45000
+      sellPrice: -1
+      slot: 25
+      page: 2
+    56:
+      type: item
+      item:
+        material: VEX_ARMOR_TRIM_SMITHING_TEMPLATE
+        quantity: 1
+      buyPrice: 45000
+      sellPrice: -1
+      slot: 26
+      page: 2
+    57:
+      type: item
+      item:
+        material: WILD_ARMOR_TRIM_SMITHING_TEMPLATE
+        quantity: 1
+      buyPrice: 45000
+      sellPrice: -1
+      slot: 27
+      page: 2
+    58:
+      type: item
+      item:
+        material: COAST_ARMOR_TRIM_SMITHING_TEMPLATE
+        quantity: 1
+      buyPrice: 45000
+      sellPrice: -1
+      slot: 28
+      page: 2
+    59:
+      type: item
+      item:
+        material: DUNE_ARMOR_TRIM_SMITHING_TEMPLATE
+        quantity: 1
+      buyPrice: 45000
+      sellPrice: -1
+      slot: 29
+      page: 2
+    60:
+      type: item
+      item:
+        material: WAYFINDER_ARMOR_TRIM_SMITHING_TEMPLATE
+        quantity: 1
+      buyPrice: 45000
+      sellPrice: -1
+      slot: 30
+      page: 2
+    61:
+      type: item
+      item:
+        material: RAISER_ARMOR_TRIM_SMITHING_TEMPLATE
+        quantity: 1
+      buyPrice: 45000
+      sellPrice: -1
+      slot: 31
+      page: 2
+    62:
+      type: item
+      item:
+        material: SHAPER_ARMOR_TRIM_SMITHING_TEMPLATE
+        quantity: 1
+      buyPrice: 45000
+      sellPrice: -1
+      slot: 32
+      page: 2
+    63:
+      type: item
+      item:
+        material: HOST_ARMOR_TRIM_SMITHING_TEMPLATE
+        quantity: 1
+      buyPrice: 45000
+      sellPrice: -1
+      slot: 33
+      page: 2
+    64:
+      type: item
+      item:
+        material: WARD_ARMOR_TRIM_SMITHING_TEMPLATE
+        quantity: 1
+      buyPrice: 45000
+      sellPrice: -1
+      slot: 34
+      page: 2
+    65:
+      type: item
+      item:
+        material: SILENCE_ARMOR_TRIM_SMITHING_TEMPLATE
+        quantity: 1
+      buyPrice: 45000
+      sellPrice: -1
+      slot: 35
+      page: 2
+    66:
+      type: item
+      item:
+        material: TIDE_ARMOR_TRIM_SMITHING_TEMPLATE
+        quantity: 1
+      buyPrice: 45000
+      sellPrice: -1
+      slot: 36
+      page: 2
+    67:
+      type: item
+      item:
+        material: SNOUT_ARMOR_TRIM_SMITHING_TEMPLATE
+        quantity: 1
+      buyPrice: 45000
+      sellPrice: -1
+      slot: 37
+      page: 2
+    68:
+      type: item
+      item:
+        material: RIB_ARMOR_TRIM_SMITHING_TEMPLATE
+        quantity: 1
+      buyPrice: 45000
+      sellPrice: -1
+      slot: 38
+      page: 2
+    69:
+      type: item
+      item:
+        material: EYE_ARMOR_TRIM_SMITHING_TEMPLATE
+        quantity: 1
+      buyPrice: 45000
+      sellPrice: -1
+      slot: 39
+      page: 2
+    70:
+      type: item
+      item:
+        material: SPIRE_ARMOR_TRIM_SMITHING_TEMPLATE
+        quantity: 1
+      buyPrice: 45000
+      sellPrice: -1
+      slot: 40
+      page: 2

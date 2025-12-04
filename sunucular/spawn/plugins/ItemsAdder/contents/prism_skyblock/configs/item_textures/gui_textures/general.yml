@@ -1,0 +1,19 @@
+info:
+  namespace: prism_skyblock
+items:
+  
+
+  general-page_forward:
+    enabled: true
+    resource:
+      generate: false
+      material: BOOK
+      model_id: 71
+      model_path: gui_textures/page_forward
+  general-page_backward:
+    enabled: true
+    resource:
+      generate: false
+      material: BOOK
+      model_id: 72
+      model_path: gui_textures/page_backward

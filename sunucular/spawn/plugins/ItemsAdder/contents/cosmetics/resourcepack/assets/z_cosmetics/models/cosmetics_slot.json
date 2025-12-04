@@ -1,0 +1,1 @@
+{"parent":"minecraft:item/generated","textures":{"layer0":"z_cosmetics:cosmetics_slot"},"gui_light":"front","display":{"gui":{"translation":[5,-23,0],"scale":[4,4,4]}}}

@@ -1,0 +1,39 @@
+Messages:
+  eventIsNotEnabled: '&cThat event is not enabled.'
+  commandInterruptError: '&cUse &7/ce interrupt <event> (optional)<player>'
+  commandInterruptCorrect: '&aActions of event &7%event% &ainterrupted.'
+  commandInterruptCorrectPlayer: '&aActions of event &7%event% &ainterrupted for player
+    &7%player%&a.'
+  commandItemError: '&cUse &7/ce item <save/remove> <name>'
+  savedItemDoesNotExists: '&cThat saved item doesn''t exists.'
+  savedItemRemoved: '&aItem &7%name% &aremoved.'
+  mustHaveItemInHand: '&cYou must have an item on your hand.'
+  savedItemAlreadyExists: '&cA saved item with that name already exists.'
+  savedItemAdded: '&aItem &7%name% &asaved.'
+  commandCallCorrectPlayer: '&aEvent &7%event% &asuccessfully executed for player
+    &7%player%&a.'
+  playerNotOnline: '&cThat player is not online.'
+  debugEnabledPlayer: '&aDebug now enabled for event &7%event% &aand player &7%player%&a!'
+  debugDisabledPlayer: '&aDebug disabled for event &7%event% &aand player &7%player%&a!'
+  eventDataResetForAllPlayers: '&aData reset for &eall players &aon event &e%event%&a!'
+  eventDataResetAllForAllPlayers: '&aAll player data reset.'
+  commandCallError: '&cUse &7/ce call <event> (optional)%variable1%=<value1>;%variableN%=<valueN>'
+  commandCallInvalidEvent: '&cYou can only execute a CALL event.'
+  commandCallCorrect: '&aEvent &7%event% &asuccessfully executed.'
+  commandCallFailed: '&cEvent &7%event% &ccould not be executed. Maybe a format error?'
+  placeholderAPICooldownReady: Ready!
+  placeholderAPICooldownNameError: No event with that name!
+  eventDataResetAll: '&aAll data reset for player &e%player%&a!'
+  eventDataReset: '&aData reset for player &e%player% &aon event &e%event%&a!'
+  commandDebugError: '&cUse &7/ce debug <event>'
+  debugEnabled: '&aDebug now enabled for event &7%event%&a!'
+  debugDisabled: '&aDebug disabled for event &7%event%&a!'
+  onlyPlayerCommand: '&cThis command can be only used by a player.'
+  playerDoesNotExists: '&cThat player doesn''''t have any data.'
+Config:
+  item_meta_variable_enabled: false
+  experimental:
+    variable_replacement: false
+  debug_actions: true
+  register_commands: []
+  data_save_time: 5

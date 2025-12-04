@@ -1,0 +1,87 @@
+info:
+  namespace: daily_rewards
+font_images:
+  daily_rewards_ui:
+    permission: "menu2.admin"
+    show_in_gui: false
+    suggest_in_command: false
+    path: "daily_rewards/daily_reward_ui.png"
+    y_position: 48
+    scale_ratio: 256
+
+items:
+  icon_daily_gift_unclaimed:
+    display_name: "&fUnclaimed"
+    resource:
+      material: BRICK
+      generate: true
+      model_id: 40000
+      textures:
+      - daily_rewards/unopened_box
+  icon_daily_gift_claimed:
+    display_name: "&fclaimed"
+    resource:
+      material: BRICK
+      generate: true
+      model_id: 40001
+      textures:
+      - daily_rewards/opened_box
+  icon_daily_gift_missed:
+    display_name: "&fMissed"
+    resource:
+      material: BRICK
+      generate: true
+      model_id: 40002
+      textures:
+      - daily_rewards/missed_box
+  icon_daily_gift_ready:
+    display_name: "&fReady"
+    resource:
+      material: BRICK
+      generate: true
+      model_id: 40003
+      textures:
+      - daily_rewards/ready_box
+  icon_daily_rare_reward:
+    display_name: "&fRare"
+    resource:
+      material: BRICK
+      generate: true
+      model_id: 40004
+      textures:
+      - daily_rewards/daily_rare_reward
+  icon_daily_legendary_reward:
+    display_name: "&fLegendary"
+    resource:
+      material: BRICK
+      generate: true
+      model_id: 40005
+      textures:
+      - daily_rewards/daily_legendary_reward
+  daily_reward_previous:
+    display_name: "&fLegendary"
+    resource:
+      material: BRICK
+      generate: true
+      model_id: 40006
+      textures:
+      - daily_rewards/daily_reward_previous
+  daily_reward_next:
+    display_name: "&fLegendary"
+    resource:
+      material: BRICK
+      generate: true
+      model_id: 40007
+      textures:
+      - daily_rewards/daily_reward_next
+  not_ready_box:
+    display_name: "&fLegendary"
+    resource:
+      material: BRICK
+      generate: true
+      model_id: 40008
+      textures:
+      - daily_rewards/not_ready_box
+  
+
+#e533b8bddc26436aba5e09962bdf824d

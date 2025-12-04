@@ -1,0 +1,52 @@
+#
+#     _     _ _       _                            ______                               _
+#    (_)   (_) |  _  (_)              _           (_____ \                             | |
+#    | |   | |_| |_|_| |___  _____ _| |_ _____    _____) )_____ _ _  _ _ _____  ____ __| |  ___
+#    | |   | | (_   _) |    \(____ (_   _) ___ |  |  __  /| ___ |  |  | (____ |/ ___) _  |/___)
+#    | |___| | | | |_| | | | / /_\_ | | |_| ____| | |  \ \|____|  |  | / /_\ | |  ( (_| |___ |
+#    \_____/ \_) \__)_|_|_|_\_|  |_|  \__)_____)  |_|   |_|_____)\___/\_|  |_|_|   \____(___/
+#
+#   Schedules & Timers Configuration
+#   Wiki: https://ultimaterewards.athelion.eu/configuration/schedules-and-timers
+#
+
+schedules:
+  daily_reward:
+    enabled: false
+    type: fixed
+    time: '12:00'
+    days:
+    - MONDAY
+    - WEDNESDAY
+    - FRIDAY
+    actions:
+    - '[console] say Daily reward executed!'
+  
+  xp:
+    enabled: false
+    type: repeatable
+    interval: 300
+    actions:
+      commands:
+      - '[console] xp give %player% 5'
+      - '[message] &aYou have received 5 Level XP!'
+    variants:
+      double_xp:
+        permission: ultimaterewards.doublexp
+        actions:
+        - '[console] xp give %player% 10'
+        - '[message] &aYou have received 10 Level XP!'
+  
+  hourly_announcement:
+    enabled: false
+    type: repeatable
+    interval: 3600
+    actions:
+    - '[console] broadcast A new challenge has started!'
+  
+  midnight_reset:
+    enabled: false
+    type: fixed
+    time: 00:00
+    actions:
+    - '[console] say Midnight reset triggered!'

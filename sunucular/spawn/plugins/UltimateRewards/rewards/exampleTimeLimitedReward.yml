@@ -1,0 +1,139 @@
+#
+# Example config of a time limited reward.
+#
+# Decides if rewards will be claimable
+enabled: true
+#
+# Each type of reward has different specifications.
+# All currently supported types can be found on:
+# https://ultimaterewards.athelion.eu/
+#
+type: time_limited_reward
+#
+# Reward tag
+#
+tag: Time Limited Reward
+#
+# Date from which the reward is available
+# Format: <HOURS>:<MINUTES> <DAY>.<MONTH>.<YEAR>
+#
+starting-date: "18:00 04.03.2023"
+#
+# The date by which the reward can be collected
+# Format: <HOURS>:<MINUTES> <DAY>.<MONTH>.<YEAR>
+#
+ending-date: "20:00 31.12.2025"
+
+# If set to true, reward will be removed from GUI
+# after player claims it
+disappear: false
+# Notifies players that the reward is currently available
+live-reminder-enabled: true
+#
+# (Optional) Permission which player must have to be
+# able to obtain this reward.
+#
+permission: ultimaterewards.exampleTimeLimitedReward
+#
+# Date format which will be used
+# in the reward lore:
+#
+date-format: "HH:mm MM.dd.yyyy"
+#
+# When player has this permission,
+# following properties will be shown.
+#
+# NOTE THAT ITEM & SOUND NAMES ARE SLIGHTLY DIFFERENT BETWEEN >1.12 & 1.13< VERSIONS!
+# SO MAKE SURE YOU ARE USING VALID ITEM NAMES (DEFAULT ONE ARE USED FROM 1.13+ VERSIONS)
+# OTHERWISE WILL BE REPLACED BY STONE IF INVALID NAME IS IN USE.
+#
+# When the reward is currently claimable:
+available-item: CHEST_MINECART
+available-display-name: '&a&lTIME LIMITED REWARD'
+available-lore:
+  - '&fReward is available'
+  - '&f from: &2%startingDate%'
+  - '&f to: &4%endingDate%'
+  - ' '
+  - '&7Contains:'
+  - '&e ➪ 3x Diamond'
+  - '&e ➪ 16x Experience bottle'
+  - ' '
+  - '&b► Click to claim'
+# When the reward is already claimed by player:
+claimed-item: MINECART
+claimed-display-name: "&7&lTIME LIMITED REWARD"
+claimed-lore:
+  - '&7Reward was already'
+  - '&7claimed.'
+# When the reward isn't available for claiming
+unavailable-item: MINECART
+unavailable-display-name: "&4&lTIME LIMITED REWARD"
+unavailable-lore:
+  - '&cReward could be collected'
+  - '&cby %endingDate%'
+#
+# In the other hand when player doesn't have this permission,
+# following properties will be shown.
+#
+no-permission-item: BARRIER
+no-permission-display-name: "&c&l&mTIME LIMITED REWARD"
+no-permission-lore:
+  - "&c ✕ Locked, requires"
+  - "&c   %permission% permission"
+#
+# Commands list that will be executed after player
+# obtains this reward.
+# All available actions can be found on
+# https://ultimaterewards.athelion.eu/
+#
+# Format: () - optional value | [] - required value
+#   [<actionType>] (<chance>):<command>
+#
+# Examples:
+#   - [console] 50:give %player% diamond 1
+#       - this command will have 50%
+#         execution chance due his property value
+#
+#   - [message] "&aYou have claimed your %type% reward!"
+#       - this action will send player a message
+#         with defined content
+#
+# You can also use the random placeholders
+# from randoms.yml file and use it in command.
+# Example:
+#   - give %player% iron_ingot %exampleRandom%
+#       - placeholder will be replaced by
+#         random number from defined interval in randoms.yml
+#
+actions:
+  - '[console] give %player% diamond 3'
+  - '[console] give %player% experience_bottle 16'
+  - '[message] &6Enjoy the rewards, %player%!'
+#
+# Variants for this reward can be added here,
+# if you don't want any, delete the variants section
+#
+# Which variant will be available for player depends on permission
+# You can add as many variants you want
+#
+variants:
+  premium:
+    permission: ultimaterewards.timeLimitedReward.premium
+    available-display-name: "&6&lPREMIUM TIME LIMITED REWARD"
+    available-lore:
+      - '&fReward is available'
+      - '&f from: &2%startingDate%'
+      - '&f to: &4%endingDate%'
+      - ' '
+      - '&7Contains:'
+      - '&e ➪ 6x Diamond'
+      - '&e ➪ 32x Experience Bottle'
+      - ' '
+      - '&6► Click to claim premium version'
+      - '&6   of the reward'
+    actions:
+      - '[console] give %player% diamond 6'
+      - '[console] give %player% experience_bottle 32'
+      - '[firework] colors:{FF0000;00FF00;0000FF},type:BALL_LARGE,power:3'
+      - '[message] &6Enjoy the rewards, %player%!'

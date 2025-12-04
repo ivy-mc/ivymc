@@ -1,0 +1,1171 @@
+menu_title: '&f:offset_-18: %img_stats_menu%'
+size: 54
+inventory_type: CHEST
+
+items:
+  # Skull - Ana oyuncu kafası (Slot 11) - CustomModelData 100 ile büyük texture
+  skull:
+    material: 'head-%player_name%'
+    slot: 11
+    model_data: 100
+    display_name: '&f%player_name%'
+    lore:
+      - '&7Meslek: &e%auraskills_jobs_count%&7/&e%auraskills_jobs_limit%'
+      - '%auraskills_jobs_list_formatted%'
+      - '&7Daha fazla meslek için &e/rank'
+  
+  # Skull(1) - Sağ üst (Slot 12) - Boş alan (büyük kafa texture'ın parçası)
+  skull_1:
+    material: 'AIR'
+    slot: 12
+    display_name: '&f%player_name%'
+    lore:
+      - '&7Meslek: &e%auraskills_jobs_count%&7/&e%auraskills_jobs_limit%'
+      - '&7Meslekler: &e%auraskills_jobs_list_formatted%'
+      - '&7Daha fazla meslek için &e/rank'
+  
+  # Skull(2) - Sol alt (Slot 20) - Boş alan (büyük kafa texture'ın parçası)
+  skull_2:
+    material: 'AIR'
+    slot: 20
+    display_name: '&f%player_name%'
+    lore:
+      - '&7Meslek: &e%auraskills_jobs_count%&7/&e%auraskills_jobs_limit%'
+      - '&7Meslekler: &e%auraskills_jobs_list_formatted%'
+      - '&7Daha fazla meslek için &e/rank'
+  
+  # Skull(3) - Sağ alt (Slot 21) - Boş alan (büyük kafa texture'ın parçası)
+  skull_3:
+    material: 'AIR'
+    slot: 21
+    display_name: '&f%player_name%'
+    lore:
+      - '&7Meslek: &e%auraskills_jobs_count%&7/&e%auraskills_jobs_limit%'
+      - '&7Meslekler: &e%auraskills_jobs_list_formatted%'
+      - '&7Daha fazla meslek için &e/rank'
+  
+  # ==========================================
+  # MESLEKLER SİSTEMİ (11 Meslek)
+  # ==========================================
+  
+  # ========== ÇİFTÇİ (FARMING) - Slot 14 ==========
+  job_farming_active:
+    material: 'itemsadder-spectra_aurelium_skills:skill_farming'
+    slot: 14
+    priority: 1
+    view_requirement:
+      requirements:
+        has_job:
+          type: string contains
+          input: '%auraskills_jobs_list%'
+          output: 'farming'
+    display_name: '&aÇiftçi'
+    lore:
+      - '&7Sağ Tıkla: &eMeslek menüsünü aç'
+      - '&7Sol Tıkla: &cMeslekten çık'
+      - ''
+      - '&aDurumu: &2Aktif'
+    right_click_commands:
+      - '[player] farming'
+      - '[close]'
+    left_click_commands:
+      - '[console] sk jobs remove farming %player_name%'
+      - '[console] lp user %player_name% permission settemp meslek.cooldown true 12h'
+      - '[message] &e&l⚠ MESLEK DEĞİŞİKLİĞİ'
+      - '[message] &7Çiftçi mesleğinden çıktınız!'
+      - '[message] &7Yeni bir meslek seçmek için &e12 saat &7beklemelisiniz.'
+      - '[message] &a✓ &7Değişiklik onaylandı.'
+      - '[close]'
+  
+  job_farming_locked:
+    material: 'itemsadder-spectra_aurelium_skills:skill_farming'
+    slot: 14
+    priority: 3
+    view_requirement:
+      requirements:
+        slot_full:
+          type: '>='
+          input: '%auraskills_jobs_count%'
+          output: '%auraskills_jobs_limit%'
+        no_job:
+          type: "!string contains"
+          input: '%auraskills_jobs_list%'
+          output: 'farming'
+    display_name: '&cÇiftçi'
+    lore:
+      - '&7Sağ Tıkla: &eMeslege giriş yap'
+      - ''
+      - '&cMeslek slotunuz dolu!'
+      - '&7Daha fazla slot için &e/rank'
+    enchantments:
+      - 'DIG_SPEED;1'
+    item_flags:
+      - 'HIDE_ENCHANTS'
+  
+  job_farming_cooldown:
+    material: 'itemsadder-spectra_aurelium_skills:skill_farming'
+    slot: 14
+    priority: 2
+    view_requirement:
+      requirements:
+        has_cooldown:
+          type: string equals
+          input: '%luckperms_has_permission_meslek.cooldown%'
+          output: 'yes'
+    display_name: '&cÇiftçi &7(Kilitli)'
+    lore:
+      - '&cBu mesleğe giremezsiniz!'
+      - ''
+      - '&7Son meslek değişikliğinizden sonra'
+      - '&7bekleme süreniz devam ediyor.'
+      - ''
+      - '&e⏱ Cooldown aktif'
+    enchantments:
+      - 'DIG_SPEED;1'
+    item_flags:
+      - 'HIDE_ENCHANTS'
+  
+  job_farming_available:
+    material: 'itemsadder-spectra_aurelium_skills:skill_farming'
+    slot: 14
+    priority: 4
+    view_requirement:
+      requirements:
+        slot_available:
+          type: '<'
+          input: '%auraskills_jobs_count%'
+          output: '%auraskills_jobs_limit%'
+        no_job:
+          type: "!string contains"
+          input: '%auraskills_jobs_list%'
+          output: 'farming'
+    display_name: '&eÇiftçi'
+    lore:
+      - '&7Sağ Tıkla: &eMeslege giriş yap'
+      - ''
+      - '&7Bu mesleğe katılabilirsin!'
+    right_click_commands:
+      - '[console] sk jobs add farming %player_name%'
+      - '[message] &a✓ Çiftçi mesleğine katıldınız!'
+      - '[close]'
+      - '[console] dm open meslek %player_name% 5'
+  
+  # ========== ODUNCU (FORAGING) - Slot 15 ==========
+  job_foraging_active:
+    material: 'itemsadder-spectra_aurelium_skills:skill_foraging'
+    slot: 15
+    priority: 1
+    view_requirement:
+      requirements:
+        has_job:
+          type: string contains
+          input: '%auraskills_jobs_list%'
+          output: 'foraging'
+    display_name: '&aOduncu'
+    lore:
+      - '&7Sağ Tıkla: &eMeslek menüsünü aç'
+      - '&7Sol Tıkla: &cMeslekten çık'
+      - ''
+      - '&aDurumu: &2Aktif'
+    right_click_commands:
+      - '[player] foraging'
+      - '[close]'
+    left_click_commands:
+      - '[console] sk jobs remove foraging %player_name%'
+      - '[console] lp user %player_name% permission settemp meslek.cooldown true 12h'
+      - '[message] &e&l⚠ MESLEK DEĞİŞİKLİĞİ'
+      - '[message] &7Oduncu mesleğinden çıktınız!'
+      - '[message] &7Yeni bir meslek seçmek için &e12 saat &7beklemelisiniz.'
+      - '[message] &a✓ &7Değişiklik onaylandı.'
+      - '[close]'
+  
+  job_foraging_locked:
+    material: 'itemsadder-spectra_aurelium_skills:skill_foraging'
+    slot: 15
+    priority: 3
+    view_requirement:
+      requirements:
+        slot_full:
+          type: '>='
+          input: '%auraskills_jobs_count%'
+          output: '%auraskills_jobs_limit%'
+        no_job:
+          type: "!string contains"
+          input: '%auraskills_jobs_list%'
+          output: 'foraging'
+    display_name: '&cOduncu'
+    lore:
+      - '&7Sağ Tıkla: &eMeslege giriş yap'
+      - ''
+      - '&cMeslek slotunuz dolu!'
+      - '&7Daha fazla slot için &e/rank'
+    enchantments:
+      - 'DIG_SPEED;1'
+    item_flags:
+      - 'HIDE_ENCHANTS'
+  
+  job_foraging_cooldown:
+    material: 'itemsadder-spectra_aurelium_skills:skill_foraging'
+    slot: 15
+    priority: 2
+    view_requirement:
+      requirements:
+        has_cooldown:
+          type: string equals
+          input: '%luckperms_has_permission_meslek.cooldown%'
+          output: 'yes'
+    display_name: '&cOduncu &7(Kilitli)'
+    lore:
+      - '&cBu mesleğe giremezsiniz!'
+      - ''
+      - '&7Son meslek değişikliğinizden sonra'
+      - '&7bekleme süreniz devam ediyor.'
+      - ''
+      - '&e⏱ Cooldown aktif'
+    enchantments:
+      - 'DIG_SPEED;1'
+    item_flags:
+      - 'HIDE_ENCHANTS'
+  
+  job_foraging_available:
+    material: 'itemsadder-spectra_aurelium_skills:skill_foraging'
+    slot: 15
+    priority: 4
+    view_requirement:
+      requirements:
+        slot_available:
+          type: '<'
+          input: '%auraskills_jobs_count%'
+          output: '%auraskills_jobs_limit%'
+        no_job:
+          type: "!string contains"
+          input: '%auraskills_jobs_list%'
+          output: 'foraging'
+    display_name: '&eOduncu'
+    lore:
+      - '&7Sağ Tıkla: &eMeslege giriş yap'
+      - ''
+      - '&7Bu mesleğe katılabilirsin!'
+    right_click_commands:
+      - '[console] sk jobs add foraging %player_name%'
+      - '[message] &a✓ Oduncu mesleğine katıldınız!'
+      - '[close]'
+      - '[console] dm open meslek %player_name% 5'
+  
+  # ========== BALIKCI (FISHING) - Slot 16 ==========
+  job_fishing_active:
+    material: 'itemsadder-spectra_aurelium_skills:skill_fishing'
+    slot: 16
+    priority: 1
+    view_requirement:
+      requirements:
+        has_job:
+          type: string contains
+          input: '%auraskills_jobs_list%'
+          output: 'fishing'
+    display_name: '&aBalıkçı'
+    lore:
+      - '&7Sağ Tıkla: &eMeslek menüsünü aç'
+      - '&7Sol Tıkla: &cMeslekten çık'
+      - ''
+      - '&aDurumu: &2Aktif'
+    right_click_commands:
+      - '[player] fishing'
+      - '[close]'
+    left_click_commands:
+      - '[console] sk jobs remove fishing %player_name%'
+      - '[console] lp user %player_name% permission settemp meslek.cooldown true 12h'
+      - '[message] &e&l⚠ MESLEK DEĞİŞİKLİĞİ'
+      - '[message] &7Balıkçı mesleğinden çıktınız!'
+      - '[message] &7Yeni bir meslek seçmek için &e12 saat &7beklemelisiniz.'
+      - '[message] &a✓ &7Değişiklik onaylandı.'
+      - '[close]'
+  
+  job_fishing_locked:
+    material: 'itemsadder-spectra_aurelium_skills:skill_fishing'
+    slot: 16
+    priority: 3
+    view_requirement:
+      requirements:
+        slot_full:
+          type: '>='
+          input: '%auraskills_jobs_count%'
+          output: '%auraskills_jobs_limit%'
+        no_job:
+          type: "!string contains"
+          input: '%auraskills_jobs_list%'
+          output: 'fishing'
+    display_name: '&cBalıkçı'
+    lore:
+      - '&7Sağ Tıkla: &eMeslege giriş yap'
+      - ''
+      - '&cMeslek slotunuz dolu!'
+      - '&7Daha fazla slot için &e/rank'
+    enchantments:
+      - 'DIG_SPEED;1'
+    item_flags:
+      - 'HIDE_ENCHANTS'
+  
+  job_fishing_cooldown:
+    material: 'itemsadder-spectra_aurelium_skills:skill_fishing'
+    slot: 16
+    priority: 2
+    view_requirement:
+      requirements:
+        has_cooldown:
+          type: string equals
+          input: '%luckperms_has_permission_meslek.cooldown%'
+          output: 'yes'
+    display_name: '&cBalıkçı &7(Kilitli)'
+    lore:
+      - '&cBu mesleğe giremezsiniz!'
+      - ''
+      - '&7Son meslek değişikliğinizden sonra'
+      - '&7bekleme süreniz devam ediyor.'
+      - ''
+      - '&e⏱ Cooldown aktif'
+    enchantments:
+      - 'DIG_SPEED;1'
+    item_flags:
+      - 'HIDE_ENCHANTS'
+  
+  job_fishing_available:
+    material: 'itemsadder-spectra_aurelium_skills:skill_fishing'
+    slot: 16
+    priority: 4
+    view_requirement:
+      requirements:
+        slot_available:
+          type: '<'
+          input: '%auraskills_jobs_count%'
+          output: '%auraskills_jobs_limit%'
+        no_job:
+          type: "!string contains"
+          input: '%auraskills_jobs_list%'
+          output: 'fishing'
+    display_name: '&eBalıkçı'
+    lore:
+      - '&7Sağ Tıkla: &eMeslege giriş yap'
+      - ''
+      - '&7Bu mesleğe katılabilirsin!'
+    right_click_commands:
+      - '[console] sk jobs add fishing %player_name%'
+      - '[message] &a✓ Balıkçı mesleğine katıldınız!'
+      - '[close]'
+      - '[console] dm open meslek %player_name% 5'
+  
+  # ========== OKÇU (ARCHERY) - Slot 23 ==========
+  job_archery_active:
+    material: 'itemsadder-spectra_aurelium_skills:skill_archery'
+    slot: 23
+    priority: 1
+    view_requirement:
+      requirements:
+        has_job:
+          type: string contains
+          input: '%auraskills_jobs_list%'
+          output: 'archery'
+    display_name: '&aOkçu'
+    lore:
+      - '&7Sağ Tıkla: &eMeslek menüsünü aç'
+      - '&7Sol Tıkla: &cMeslekten çık'
+      - ''
+      - '&aDurumu: &2Aktif'
+    right_click_commands:
+      - '[player] archery'
+      - '[close]'
+    left_click_commands:
+      - '[console] sk jobs remove archery %player_name%'
+      - '[console] lp user %player_name% permission settemp meslek.cooldown true 12h'
+      - '[message] &e&l⚠ MESLEK DEĞİŞİKLİĞİ'
+      - '[message] &7Okçu mesleğinden çıktınız!'
+      - '[message] &7Yeni bir meslek seçmek için &e12 saat &7beklemelisiniz.'
+      - '[message] &a✓ &7Değişiklik onaylandı.'
+      - '[close]'
+  
+  job_archery_locked:
+    material: 'itemsadder-spectra_aurelium_skills:skill_archery'
+    slot: 23
+    priority: 3
+    view_requirement:
+      requirements:
+        slot_full:
+          type: '>='
+          input: '%auraskills_jobs_count%'
+          output: '%auraskills_jobs_limit%'
+        no_job:
+          type: "!string contains"
+          input: '%auraskills_jobs_list%'
+          output: 'archery'
+    display_name: '&cOkçu'
+    lore:
+      - '&7Sağ Tıkla: &eMeslege giriş yap'
+      - ''
+      - '&cMeslek slotunuz dolu!'
+      - '&7Daha fazla slot için &e/rank'
+    enchantments:
+      - 'DIG_SPEED;1'
+    item_flags:
+      - 'HIDE_ENCHANTS'
+  
+  job_archery_cooldown:
+    material: 'itemsadder-spectra_aurelium_skills:skill_archery'
+    slot: 23
+    priority: 2
+    view_requirement:
+      requirements:
+        has_cooldown:
+          type: string equals
+          input: '%luckperms_has_permission_meslek.cooldown%'
+          output: 'yes'
+    display_name: '&cOkçu &7(Kilitli)'
+    lore:
+      - '&cBu mesleğe giremezsiniz!'
+      - ''
+      - '&7Son meslek değişikliğinizden sonra'
+      - '&7bekleme süreniz devam ediyor.'
+      - ''
+      - '&e⏱ Cooldown aktif'
+    enchantments:
+      - 'DIG_SPEED;1'
+    item_flags:
+      - 'HIDE_ENCHANTS'
+  
+  job_archery_available:
+    material: 'itemsadder-spectra_aurelium_skills:skill_archery'
+    slot: 23
+    priority: 4
+    view_requirement:
+      requirements:
+        slot_available:
+          type: '<'
+          input: '%auraskills_jobs_count%'
+          output: '%auraskills_jobs_limit%'
+        no_job:
+          type: "!string contains"
+          input: '%auraskills_jobs_list%'
+          output: 'archery'
+    display_name: '&eOkçu'
+    lore:
+      - '&7Sağ Tıkla: &eMeslege giriş yap'
+      - ''
+      - '&7Bu mesleğe katılabilirsin!'
+    right_click_commands:
+      - '[console] sk jobs add archery %player_name%'
+      - '[message] &a✓ Okçu mesleğine katıldınız!'
+      - '[close]'
+      - '[console] dm open meslek %player_name% 5'
+  
+  # ========== SAVUNMACI (DEFENSE) - Slot 24 ==========
+  job_defence_active:
+    material: 'itemsadder-spectra_aurelium_skills:skill_defence'
+    slot: 24
+    priority: 1
+    view_requirement:
+      requirements:
+        has_job:
+          type: string contains
+          input: '%auraskills_jobs_list%'
+          output: 'defense'
+    display_name: '&aSavunmacı'
+    lore:
+      - '&7Sağ Tıkla: &eMeslek menüsünü aç'
+      - '&7Sol Tıkla: &cMeslekten çık'
+      - ''
+      - '&aDurumu: &2Aktif'
+    right_click_commands:
+      - '[player] defense'
+      - '[close]'
+    left_click_commands:
+      - '[console] sk jobs remove defense %player_name%'
+      - '[console] lp user %player_name% permission settemp meslek.cooldown true 12h'
+      - '[message] &e&l⚠ MESLEK DEĞİŞİKLİĞİ'
+      - '[message] &7Savunmacı mesleğinden çıktınız!'
+      - '[message] &7Yeni bir meslek seçmek için &e12 saat &7beklemelisiniz.'
+      - '[message] &a✓ &7Değişiklik onaylandı.'
+      - '[close]'
+  
+  job_defence_locked:
+    material: 'itemsadder-spectra_aurelium_skills:skill_defence'
+    slot: 24
+    priority: 3
+    view_requirement:
+      requirements:
+        slot_full:
+          type: '>='
+          input: '%auraskills_jobs_count%'
+          output: '%auraskills_jobs_limit%'
+        no_job:
+          type: "!string contains"
+          input: '%auraskills_jobs_list%'
+          output: 'defense'
+    display_name: '&cSavunmacı'
+    lore:
+      - '&7Sağ Tıkla: &eMeslege giriş yap'
+      - ''
+      - '&cMeslek slotunuz dolu!'
+      - '&7Daha fazla slot için &e/rank'
+    enchantments:
+      - 'DIG_SPEED;1'
+    item_flags:
+      - 'HIDE_ENCHANTS'
+  
+  job_defence_cooldown:
+    material: 'itemsadder-spectra_aurelium_skills:skill_defence'
+    slot: 24
+    priority: 2
+    view_requirement:
+      requirements:
+        has_cooldown:
+          type: string equals
+          input: '%luckperms_has_permission_meslek.cooldown%'
+          output: 'yes'
+    display_name: '&cSavunmacı &7(Kilitli)'
+    lore:
+      - '&cBu mesleğe giremezsiniz!'
+      - ''
+      - '&7Son meslek değişikliğinizden sonra'
+      - '&7bekleme süreniz devam ediyor.'
+      - ''
+      - '&e⏱ Cooldown aktif'
+    enchantments:
+      - 'DIG_SPEED;1'
+    item_flags:
+      - 'HIDE_ENCHANTS'
+  
+  job_defence_available:
+    material: 'itemsadder-spectra_aurelium_skills:skill_defence'
+    slot: 24
+    priority: 4
+    view_requirement:
+      requirements:
+        slot_available:
+          type: '<'
+          input: '%auraskills_jobs_count%'
+          output: '%auraskills_jobs_limit%'
+        no_job:
+          type: "!string contains"
+          input: '%auraskills_jobs_list%'
+          output: 'defense'
+    display_name: '&eSavunmacı'
+    lore:
+      - '&7Sağ Tıkla: &eMeslege giriş yap'
+      - ''
+      - '&7Bu mesleğe katılabilirsin!'
+    right_click_commands:
+      - '[console] sk jobs add defense %player_name%'
+      - '[message] &a✓ Savunmacı mesleğine katıldınız!'
+      - '[close]'
+      - '[console] dm open meslek %player_name% 5'
+  
+  # ========== YERBİLİMCİ (EXCAVATION) - Slot 25 ==========
+  job_excavation_active:
+    material: 'itemsadder-spectra_aurelium_skills:skill_excavation'
+    slot: 25
+    priority: 1
+    view_requirement:
+      requirements:
+        has_job:
+          type: string contains
+          input: '%auraskills_jobs_list%'
+          output: 'excavation'
+    display_name: '&aYerbilimci'
+    lore:
+      - '&7Sağ Tıkla: &eMeslek menüsünü aç'
+      - '&7Sol Tıkla: &cMeslekten çık'
+      - ''
+      - '&aDurumu: &2Aktif'
+    right_click_commands:
+      - '[player] excavation'
+      - '[close]'
+    left_click_commands:
+      - '[console] sk jobs remove excavation %player_name%'
+      - '[console] lp user %player_name% permission settemp meslek.cooldown true 12h'
+      - '[message] &e&l⚠ MESLEK DEĞİŞİKLİĞİ'
+      - '[message] &7Yerbilimci mesleğinden çıktınız!'
+      - '[message] &7Yeni bir meslek seçmek için &e12 saat &7beklemelisiniz.'
+      - '[message] &a✓ &7Değişiklik onaylandı.'
+      - '[close]'
+  
+  job_excavation_locked:
+    material: 'itemsadder-spectra_aurelium_skills:skill_excavation'
+    slot: 25
+    priority: 3
+    view_requirement:
+      requirements:
+        slot_full:
+          type: '>='
+          input: '%auraskills_jobs_count%'
+          output: '%auraskills_jobs_limit%'
+        no_job:
+          type: "!string contains"
+          input: '%auraskills_jobs_list%'
+          output: 'excavation'
+    display_name: '&cYerbilimci'
+    lore:
+      - '&7Sağ Tıkla: &eMeslege giriş yap'
+      - ''
+      - '&cMeslek slotunuz dolu!'
+      - '&7Daha fazla slot için &e/rank'
+    enchantments:
+      - 'DIG_SPEED;1'
+    item_flags:
+      - 'HIDE_ENCHANTS'
+  
+  job_excavation_cooldown:
+    material: 'itemsadder-spectra_aurelium_skills:skill_excavation'
+    slot: 25
+    priority: 2
+    view_requirement:
+      requirements:
+        has_cooldown:
+          type: string equals
+          input: '%luckperms_has_permission_meslek.cooldown%'
+          output: 'yes'
+    display_name: '&cYerbilimci &7(Kilitli)'
+    lore:
+      - '&cBu mesleğe giremezsiniz!'
+      - ''
+      - '&7Son meslek değişikliğinizden sonra'
+      - '&7bekleme süreniz devam ediyor.'
+      - ''
+      - '&e⏱ Cooldown aktif'
+    enchantments:
+      - 'DIG_SPEED;1'
+    item_flags:
+      - 'HIDE_ENCHANTS'
+  
+  job_excavation_available:
+    material: 'itemsadder-spectra_aurelium_skills:skill_excavation'
+    slot: 25
+    priority: 4
+    view_requirement:
+      requirements:
+        slot_available:
+          type: '<'
+          input: '%auraskills_jobs_count%'
+          output: '%auraskills_jobs_limit%'
+        no_job:
+          type: "!string contains"
+          input: '%auraskills_jobs_list%'
+          output: 'excavation'
+    display_name: '&eYerbilimci'
+    lore:
+      - '&7Sağ Tıkla: &eMeslege giriş yap'
+      - ''
+      - '&7Bu mesleğe katılabilirsin!'
+    right_click_commands:
+      - '[console] sk jobs add excavation %player_name%'
+      - '[message] &a✓ Yerbilimci mesleğine katıldınız!'
+      - '[close]'
+      - '[console] dm open meslek %player_name% 5'
+  
+  # ========== ÇEVİK (AGILITY) - Slot 32 ==========
+  job_agility_active:
+    material: 'itemsadder-spectra_aurelium_skills:skill_agility'
+    slot: 32
+    priority: 1
+    view_requirement:
+      requirements:
+        has_job:
+          type: string contains
+          input: '%auraskills_jobs_list%'
+          output: 'agility'
+    display_name: '&aÇevik'
+    lore:
+      - '&7Sağ Tıkla: &eMeslek menüsünü aç'
+      - '&7Sol Tıkla: &cMeslekten çık'
+      - ''
+      - '&aDurumu: &2Aktif'
+    right_click_commands:
+      - '[player] agility'
+      - '[close]'
+    left_click_commands:
+      - '[console] sk jobs remove agility %player_name%'
+      - '[console] lp user %player_name% permission settemp meslek.cooldown true 12h'
+      - '[message] &e&l⚠ MESLEK DEĞİŞİKLİĞİ'
+      - '[message] &7Çevik mesleğinden çıktınız!'
+      - '[message] &7Yeni bir meslek seçmek için &e12 saat &7beklemelisiniz.'
+      - '[message] &a✓ &7Değişiklik onaylandı.'
+      - '[close]'
+  
+  job_agility_locked:
+    material: 'itemsadder-spectra_aurelium_skills:skill_agility'
+    slot: 32
+    priority: 3
+    view_requirement:
+      requirements:
+        slot_full:
+          type: '>='
+          input: '%auraskills_jobs_count%'
+          output: '%auraskills_jobs_limit%'
+        no_job:
+          type: "!string contains"
+          input: '%auraskills_jobs_list%'
+          output: 'agility'
+    display_name: '&cÇevik'
+    lore:
+      - '&7Sağ Tıkla: &eMeslege giriş yap'
+      - ''
+      - '&cMeslek slotunuz dolu!'
+      - '&7Daha fazla slot için &e/rank'
+    enchantments:
+      - 'DIG_SPEED;1'
+    item_flags:
+      - 'HIDE_ENCHANTS'
+  
+  job_agility_cooldown:
+    material: 'itemsadder-spectra_aurelium_skills:skill_agility'
+    slot: 32
+    priority: 2
+    view_requirement:
+      requirements:
+        has_cooldown:
+          type: string equals
+          input: '%luckperms_has_permission_meslek.cooldown%'
+          output: 'yes'
+    display_name: '&cÇevik &7(Kilitli)'
+    lore:
+      - '&cBu mesleğe giremezsiniz!'
+      - ''
+      - '&7Son meslek değişikliğinizden sonra'
+      - '&7bekleme süreniz devam ediyor.'
+      - ''
+      - '&e⏱ Cooldown aktif'
+    enchantments:
+      - 'DIG_SPEED;1'
+    item_flags:
+      - 'HIDE_ENCHANTS'
+  
+  job_agility_available:
+    material: 'itemsadder-spectra_aurelium_skills:skill_agility'
+    slot: 32
+    priority: 4
+    view_requirement:
+      requirements:
+        slot_available:
+          type: '<'
+          input: '%auraskills_jobs_count%'
+          output: '%auraskills_jobs_limit%'
+        no_job:
+          type: "!string contains"
+          input: '%auraskills_jobs_list%'
+          output: 'agility'
+    display_name: '&eÇevik'
+    lore:
+      - '&7Sağ Tıkla: &eMeslege giriş yap'
+      - ''
+      - '&7Bu mesleğe katılabilirsin!'
+    right_click_commands:
+      - '[console] sk jobs add agility %player_name%'
+      - '[message] &a✓ Çevik mesleğine katıldınız!'
+      - '[close]'
+      - '[console] dm open meslek %player_name% 5'
+  
+  # ========== SAVAŞÇI (FIGHTING) - Slot 33 ==========
+  job_fighting_active:
+    material: 'itemsadder-spectra_aurelium_skills:skill_fighting'
+    slot: 33
+    priority: 1
+    view_requirement:
+      requirements:
+        has_job:
+          type: string contains
+          input: '%auraskills_jobs_list%'
+          output: 'fighting'
+    display_name: '&aSavaşçı'
+    lore:
+      - '&7Sağ Tıkla: &eMeslek menüsünü aç'
+      - '&7Sol Tıkla: &cMeslekten çık'
+      - ''
+      - '&aDurumu: &2Aktif'
+    right_click_commands:
+      - '[player] fighting'
+      - '[close]'
+    left_click_commands:
+      - '[console] sk jobs remove fighting %player_name%'
+      - '[console] lp user %player_name% permission settemp meslek.cooldown true 12h'
+      - '[message] &e&l⚠ MESLEK DEĞİŞİKLİĞİ'
+      - '[message] &7Savaşçı mesleğinden çıktınız!'
+      - '[message] &7Yeni bir meslek seçmek için &e12 saat &7beklemelisiniz.'
+      - '[message] &a✓ &7Değişiklik onaylandı.'
+      - '[close]'
+  
+  job_fighting_locked:
+    material: 'itemsadder-spectra_aurelium_skills:skill_fighting'
+    slot: 33
+    priority: 3
+    view_requirement:
+      requirements:
+        slot_full:
+          type: '>='
+          input: '%auraskills_jobs_count%'
+          output: '%auraskills_jobs_limit%'
+        no_job:
+          type: "!string contains"
+          input: '%auraskills_jobs_list%'
+          output: 'fighting'
+    display_name: '&cSavaşçı'
+    lore:
+      - '&7Sağ Tıkla: &eMeslege giriş yap'
+      - ''
+      - '&cMeslek slotunuz dolu!'
+      - '&7Daha fazla slot için &e/rank'
+    enchantments:
+      - 'DIG_SPEED;1'
+    item_flags:
+      - 'HIDE_ENCHANTS'
+  
+  job_fighting_cooldown:
+    material: 'itemsadder-spectra_aurelium_skills:skill_fighting'
+    slot: 33
+    priority: 2
+    view_requirement:
+      requirements:
+        has_cooldown:
+          type: string equals
+          input: '%luckperms_has_permission_meslek.cooldown%'
+          output: 'yes'
+    display_name: '&cSavaşçı &7(Kilitli)'
+    lore:
+      - '&cBu mesleğe giremezsiniz!'
+      - ''
+      - '&7Son meslek değişikliğinizden sonra'
+      - '&7bekleme süreniz devam ediyor.'
+      - ''
+      - '&e⏱ Cooldown aktif'
+    enchantments:
+      - 'DIG_SPEED;1'
+    item_flags:
+      - 'HIDE_ENCHANTS'
+  
+  job_fighting_available:
+    material: 'itemsadder-spectra_aurelium_skills:skill_fighting'
+    slot: 33
+    priority: 4
+    view_requirement:
+      requirements:
+        slot_available:
+          type: '<'
+          input: '%auraskills_jobs_count%'
+          output: '%auraskills_jobs_limit%'
+        no_job:
+          type: "!string contains"
+          input: '%auraskills_jobs_list%'
+          output: 'fighting'
+    display_name: '&eSavaşçı'
+    lore:
+      - '&7Sağ Tıkla: &eMeslege giriş yap'
+      - ''
+      - '&7Bu mesleğe katılabilirsin!'
+    right_click_commands:
+      - '[console] sk jobs add fighting %player_name%'
+      - '[message] &a✓ Savaşçı mesleğine katıldınız!'
+      - '[close]'
+      - '[console] dm open meslek %player_name% 5'
+  
+  # ========== BÜYÜCÜ (ENCHANTING) - Slot 34 ==========
+  job_enchanting_active:
+    material: 'itemsadder-spectra_aurelium_skills:skill_enchanting'
+    slot: 34
+    priority: 1
+    view_requirement:
+      requirements:
+        has_job:
+          type: string contains
+          input: '%auraskills_jobs_list%'
+          output: 'enchanting'
+    display_name: '&aBüyücü'
+    lore:
+      - '&7Sağ Tıkla: &eMeslek menüsünü aç'
+      - '&7Sol Tıkla: &cMeslekten çık'
+      - ''
+      - '&aDurumu: &2Aktif'
+    right_click_commands:
+      - '[player] enchanting'
+      - '[close]'
+    left_click_commands:
+      - '[console] sk jobs remove enchanting %player_name%'
+      - '[console] lp user %player_name% permission settemp meslek.cooldown true 12h'
+      - '[message] &e&l⚠ MESLEK DEĞİŞİKLİĞİ'
+      - '[message] &7Büyücü mesleğinden çıktınız!'
+      - '[message] &7Yeni bir meslek seçmek için &e12 saat &7beklemelisiniz.'
+      - '[message] &a✓ &7Değişiklik onaylandı.'
+      - '[close]'
+  
+  job_enchanting_locked:
+    material: 'itemsadder-spectra_aurelium_skills:skill_enchanting'
+    slot: 34
+    priority: 3
+    view_requirement:
+      requirements:
+        slot_full:
+          type: '>='
+          input: '%auraskills_jobs_count%'
+          output: '%auraskills_jobs_limit%'
+        no_job:
+          type: "!string contains"
+          input: '%auraskills_jobs_list%'
+          output: 'enchanting'
+    display_name: '&cBüyücü'
+    lore:
+      - '&7Sağ Tıkla: &eMeslege giriş yap'
+      - ''
+      - '&cMeslek slotunuz dolu!'
+      - '&7Daha fazla slot için &e/rank'
+    enchantments:
+      - 'DIG_SPEED;1'
+    item_flags:
+      - 'HIDE_ENCHANTS'
+  
+  job_enchanting_cooldown:
+    material: 'itemsadder-spectra_aurelium_skills:skill_enchanting'
+    slot: 34
+    priority: 2
+    view_requirement:
+      requirements:
+        has_cooldown:
+          type: string equals
+          input: '%luckperms_has_permission_meslek.cooldown%'
+          output: 'yes'
+    display_name: '&cBüyücü &7(Kilitli)'
+    lore:
+      - '&cBu mesleğe giremezsiniz!'
+      - ''
+      - '&7Son meslek değişikliğinizden sonra'
+      - '&7bekleme süreniz devam ediyor.'
+      - ''
+      - '&e⏱ Cooldown aktif'
+    enchantments:
+      - 'DIG_SPEED;1'
+    item_flags:
+      - 'HIDE_ENCHANTS'
+  
+  job_enchanting_available:
+    material: 'itemsadder-spectra_aurelium_skills:skill_enchanting'
+    slot: 34
+    priority: 4
+    view_requirement:
+      requirements:
+        slot_available:
+          type: '<'
+          input: '%auraskills_jobs_count%'
+          output: '%auraskills_jobs_limit%'
+        no_job:
+          type: "!string contains"
+          input: '%auraskills_jobs_list%'
+          output: 'enchanting'
+    display_name: '&eBüyücü'
+    lore:
+      - '&7Sağ Tıkla: &eMeslege giriş yap'
+      - ''
+      - '&7Bu mesleğe katılabilirsin!'
+    right_click_commands:
+      - '[console] sk jobs add enchanting %player_name%'
+      - '[message] &a✓ Büyücü mesleğine katıldınız!'
+      - '[close]'
+      - '[console] dm open meslek %player_name% 5'
+  
+  # ========== SİMYACI (ALCHEMY) - Slot 41 ==========
+  job_alchemy_active:
+    material: 'itemsadder-spectra_aurelium_skills:skill_alchemy'
+    slot: 41
+    priority: 1
+    view_requirement:
+      requirements:
+        has_job:
+          type: string contains
+          input: '%auraskills_jobs_list%'
+          output: 'alchemy'
+    display_name: '&aSimyacı'
+    lore:
+      - '&7Sağ Tıkla: &eMeslek menüsünü aç'
+      - '&7Sol Tıkla: &cMeslekten çık'
+      - ''
+      - '&aDurumu: &2Aktif'
+    right_click_commands:
+      - '[player] alchemy'
+      - '[close]'
+    left_click_commands:
+      - '[console] sk jobs remove alchemy %player_name%'
+      - '[console] lp user %player_name% permission settemp meslek.cooldown true 12h'
+      - '[message] &e&l⚠ MESLEK DEĞİŞİKLİĞİ'
+      - '[message] &7Simyacı mesleğinden çıktınız!'
+      - '[message] &7Yeni bir meslek seçmek için &e12 saat &7beklemelisiniz.'
+      - '[message] &a✓ &7Değişiklik onaylandı.'
+      - '[close]'
+  
+  job_alchemy_locked:
+    material: 'itemsadder-spectra_aurelium_skills:skill_alchemy'
+    slot: 41
+    priority: 3
+    view_requirement:
+      requirements:
+        slot_full:
+          type: '>='
+          input: '%auraskills_jobs_count%'
+          output: '%auraskills_jobs_limit%'
+        no_job:
+          type: "!string contains"
+          input: '%auraskills_jobs_list%'
+          output: 'alchemy'
+    display_name: '&cSimyacı'
+    lore:
+      - '&7Sağ Tıkla: &eMeslege giriş yap'
+      - ''
+      - '&cMeslek slotunuz dolu!'
+      - '&7Daha fazla slot için &e/rank'
+    enchantments:
+      - 'DIG_SPEED;1'
+    item_flags:
+      - 'HIDE_ENCHANTS'
+  
+  job_alchemy_cooldown:
+    material: 'itemsadder-spectra_aurelium_skills:skill_alchemy'
+    slot: 41
+    priority: 2
+    view_requirement:
+      requirements:
+        has_cooldown:
+          type: string equals
+          input: '%luckperms_has_permission_meslek.cooldown%'
+          output: 'yes'
+    display_name: '&cSimyacı &7(Kilitli)'
+    lore:
+      - '&cBu mesleğe giremezsiniz!'
+      - ''
+      - '&7Son meslek değişikliğinizden sonra'
+      - '&7bekleme süreniz devam ediyor.'
+      - ''
+      - '&e⏱ Cooldown aktif'
+    enchantments:
+      - 'DIG_SPEED;1'
+    item_flags:
+      - 'HIDE_ENCHANTS'
+  
+  job_alchemy_available:
+    material: 'itemsadder-spectra_aurelium_skills:skill_alchemy'
+    slot: 41
+    priority: 4
+    view_requirement:
+      requirements:
+        slot_available:
+          type: '<'
+          input: '%auraskills_jobs_count%'
+          output: '%auraskills_jobs_limit%'
+        no_job:
+          type: "!string contains"
+          input: '%auraskills_jobs_list%'
+          output: 'alchemy'
+    display_name: '&eSimyacı'
+    lore:
+      - '&7Sağ Tıkla: &eMeslege giriş yap'
+      - ''
+      - '&7Bu mesleğe katılabilirsin!'
+    right_click_commands:
+      - '[console] sk jobs add alchemy %player_name%'
+      - '[message] &a✓ Simyacı mesleğine katıldınız!'
+      - '[close]'
+      - '[console] dm open meslek %player_name% 5'
+  
+  # ========== MADENCİ (MINING) - Slot 42 ==========
+  job_mining_active:
+    material: 'itemsadder-spectra_aurelium_skills:skill_mining'
+    slot: 42
+    priority: 1
+    view_requirement:
+      requirements:
+        has_job:
+          type: string contains
+          input: '%auraskills_jobs_list%'
+          output: 'mining'
+    display_name: '&aMadenci'
+    lore:
+      - '&7Sağ Tıkla: &eMeslek menüsünü aç'
+      - '&7Sol Tıkla: &cMeslekten çık'
+      - ''
+      - '&aDurumu: &2Aktif'
+    right_click_commands:
+      - '[player] mining'
+      - '[close]'
+    left_click_commands:
+      - '[console] sk jobs remove mining %player_name%'
+      - '[console] lp user %player_name% permission settemp meslek.cooldown true 12h'
+      - '[message] &e&l⚠ MESLEK DEĞİŞİKLİĞİ'
+      - '[message] &7Madenci mesleğinden çıktınız!'
+      - '[message] &7Yeni bir meslek seçmek için &e12 saat &7beklemelisiniz.'
+      - '[message] &a✓ &7Değişiklik onaylandı.'
+      - '[close]'
+  
+  job_mining_locked:
+    material: 'itemsadder-spectra_aurelium_skills:skill_mining'
+    slot: 42
+    priority: 3
+    view_requirement:
+      requirements:
+        slot_full:
+          type: '>='
+          input: '%auraskills_jobs_count%'
+          output: '%auraskills_jobs_limit%'
+        no_job:
+          type: "!string contains"
+          input: '%auraskills_jobs_list%'
+          output: 'mining'
+    display_name: '&cMadenci'
+    lore:
+      - '&7Sağ Tıkla: &eMeslege giriş yap'
+      - ''
+      - '&cMeslek slotunuz dolu!'
+      - '&7Daha fazla slot için &e/rank'
+    enchantments:
+      - 'DIG_SPEED;1'
+    item_flags:
+      - 'HIDE_ENCHANTS'
+  
+  job_mining_cooldown:
+    material: 'itemsadder-spectra_aurelium_skills:skill_mining'
+    slot: 42
+    priority: 2
+    view_requirement:
+      requirements:
+        has_cooldown:
+          type: string equals
+          input: '%luckperms_has_permission_meslek.cooldown%'
+          output: 'yes'
+    display_name: '&cMadenci &7(Kilitli)'
+    lore:
+      - '&cBu mesleğe giremezsiniz!'
+      - ''
+      - '&7Son meslek değişikliğinizden sonra'
+      - '&7bekleme süreniz devam ediyor.'
+      - ''
+      - '&e⏱ Cooldown aktif'
+    enchantments:
+      - 'DIG_SPEED;1'
+    item_flags:
+      - 'HIDE_ENCHANTS'
+  
+  job_mining_available:
+    material: 'itemsadder-spectra_aurelium_skills:skill_mining'
+    slot: 42
+    priority: 4
+    view_requirement:
+      requirements:
+        slot_available:
+          type: '<'
+          input: '%auraskills_jobs_count%'
+          output: '%auraskills_jobs_limit%'
+        no_job:
+          type: "!string contains"
+          input: '%auraskills_jobs_list%'
+          output: 'mining'
+    display_name: '&eMadenci'
+    lore:
+      - '&7Sağ Tıkla: &eMeslege giriş yap'
+      - ''
+      - '&7Bu mesleğe katılabilirsin!'
+    right_click_commands:
+      - '[console] sk jobs add mining %player_name%'
+      - '[message] &a✓ Madenci mesleğine katıldınız!'
+      - '[close]'
+      - '[console] dm open meslek %player_name% 5'

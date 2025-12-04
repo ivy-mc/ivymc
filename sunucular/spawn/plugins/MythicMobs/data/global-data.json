@@ -1,0 +1,44 @@
+{
+  "entries": {
+    "skinchange": {
+      "value": "scenes_quests",
+      "expirationTime": 0,
+      "type": "String"
+    },
+    "backpackcb1e41e4-f24b-4423-a1fd-997454948d68": {
+      "value": "guard_armor",
+      "expirationTime": 0,
+      "type": "String"
+    },
+    "hatcb1e41e4-f24b-4423-a1fd-997454948d68": {
+      "value": "guard_armor",
+      "expirationTime": 0,
+      "type": "String"
+    },
+    "leftitemcb1e41e4-f24b-4423-a1fd-997454948d68": {
+      "value": "guard_armor",
+      "expirationTime": 0,
+      "type": "String"
+    },
+    "rightitemcb1e41e4-f24b-4423-a1fd-997454948d68": {
+      "value": "guard_armor",
+      "expirationTime": 0,
+      "type": "String"
+    },
+    "leftpantcb1e41e4-f24b-4423-a1fd-997454948d68": {
+      "value": "guard_armor",
+      "expirationTime": 0,
+      "type": "String"
+    },
+    "rightpantcb1e41e4-f24b-4423-a1fd-997454948d68": {
+      "value": "guard_armor",
+      "expirationTime": 0,
+      "type": "String"
+    },
+    "hat8a155bb9-9d1c-4592-b620-20d7102cc23f": {
+      "value": "straw_hat",
+      "expirationTime": 0,
+      "type": "String"
+    }
+  }
+}

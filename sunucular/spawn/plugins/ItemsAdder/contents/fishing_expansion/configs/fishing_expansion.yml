@@ -1,0 +1,628 @@
+info:
+  namespace: fishing_expansion
+categories:
+  fishing_expansion:
+    enabled: true
+    icon: "fishing_expansion:trout"
+    name: "Fishing Expansion"
+    items:
+      - "fishing_expansion:trout"
+      - "fishing_expansion:sardine"
+      - "fishing_expansion:pike"
+      - "fishing_expansion:perch"
+      - "fishing_expansion:mackerel"
+      - "fishing_expansion:herring"
+      - "fishing_expansion:catfish"
+      - "fishing_expansion:carp"
+      - "fishing_expansion:bass"
+      - "fishing_expansion:trigger_fish"
+      - "fishing_expansion:surgeonfish"
+      - "fishing_expansion:parrotfish"
+      - "fishing_expansion:moray_eel"
+      - "fishing_expansion:lion_fish"
+      - "fishing_expansion:damsel_fish"
+      - "fishing_expansion:butterflyfish"
+      - "fishing_expansion:angelfish"
+      - "fishing_expansion:snail"
+      - "fishing_expansion:mussel"
+      - "fishing_expansion:freshwater_sponge"
+      - "fishing_expansion:crayfish"
+      - "fishing_expansion:crab"
+      - "fishing_expansion:clam"
+      - "fishing_expansion:amphipod"
+      - "fishing_expansion:wahoo"
+      - "fishing_expansion:tuna"
+      - "fishing_expansion:sword_fish"
+      - "fishing_expansion:snook"
+      - "fishing_expansion:snapper"
+      - "fishing_expansion:redfish"
+      - "fishing_expansion:marlin"
+      - "fishing_expansion:grouper"
+      - "fishing_expansion:barracuda"
+      - "fishing_expansion:viper_fish"
+      - "fishing_expansion:vampire_squid"
+      - "fishing_expansion:lanternfish"
+      - "fishing_expansion:gulper_eel"
+      - "fishing_expansion:giant_isopod"
+      - "fishing_expansion:dumbo_octopus"
+      - "fishing_expansion:dragon_fish"
+      - "fishing_expansion:blobfish"
+      - "fishing_expansion:barreleye_fish"
+      - "fishing_expansion:anglerfish"
+      - "fishing_expansion:ashmaw"
+      - "fishing_expansion:soulfin"
+      - "fishing_expansion:blightscale"
+      - "fishing_expansion:bone_dart"
+      - "fishing_expansion:cinder_pike"
+      - "fishing_expansion:ember_carp"
+      - "fishing_expansion:glowsnap"
+      - "fishing_expansion:glowtail"
+      - "fishing_expansion:hellpuffer"
+      - "fishing_expansion:hellstripe"
+      - "fishing_expansion:lava_lantern"
+      - "fishing_expansion:magma_belly"
+      - "fishing_expansion:nether_ray"
+      - "fishing_expansion:rustfin"
+      - "fishing_expansion:spore_jelly"
+      - "fishing_expansion:warped_eel"
+      - "fishing_expansion:moltenjaw"
+      - "fishing_expansion:nautilus_bait"
+      - "fishing_expansion:bobber_bait"
+      - "fishing_expansion:ender_bait"
+      - "fishing_expansion:iridescent_bait"
+      - "fishing_expansion:sea_heart_bait"
+      - "fishing_expansion:gelatin_bait"
+      - "fishing_expansion:copper_bait"
+      - "fishing_expansion:trident_bait"
+      - "fishing_expansion:slime_bait"
+      - "fishing_expansion:magma_bait"
+      - "fishing_expansion:copper_fishing_rod"
+      - "fishing_expansion:iron_fishing_rod"
+      - "fishing_expansion:golden_fishing_rod"
+      - "fishing_expansion:diamond_fishing_rod"
+      - "fishing_expansion:netherite_fishing_rod"
+items:
+  trout:
+    name: Trout
+    resource:
+      material: COD
+      generate: true
+      texture: trout
+      model_id: 485192
+  sardine:
+    name: Sardine
+    resource:
+      material: COD
+      generate: true
+      texture: sardine
+      model_id: 485193
+  pike:
+    name: Pike
+    resource:
+      material: COD
+      generate: true
+      texture: sardine
+      model_id: 485194
+  perch:
+    name: Perch
+    resource:
+      material: COD
+      generate: true
+      texture: perch
+      model_id: 485195
+  mackerel:
+    name: Mackerel
+    resource:
+      material: COD
+      generate: true
+      texture: mackerel
+      model_id: 485196
+  herring:
+    name: Herring
+    resource:
+      material: COD
+      generate: true
+      texture: herring
+      model_id: 485197
+  catfish:
+    name: Catfish
+    resource:
+      material: COD
+      generate: true
+      texture: catfish
+      model_id: 485198
+  carp:
+    name: Carp
+    resource:
+      material: COD
+      generate: true
+      texture: carp
+      model_id: 485199
+  bass:
+    name: Bass
+    resource:
+      material: COD
+      generate: true
+      texture: bass
+      model_id: 485200
+  trigger_fish:
+    name: Trigger Fish
+    resource:
+      material: COD
+      generate: true
+      texture: trigger_fish
+      model_id: 485201
+  surgeonfish:
+    name: Surgeonfish
+    resource:
+      material: COD
+      generate: true
+      texture: surgeonfish
+      model_id: 485202
+  parrotfish:
+    name: Parrotfish
+    resource:
+      material: COD
+      generate: true
+      texture: parrotfish
+      model_id: 485203
+  moray_eel:
+    name: Moray Eel
+    resource:
+      material: COD
+      generate: true
+      texture: moray_eel
+      model_id: 485204
+  lion_fish:
+    name: Lion Fish
+    resource:
+      material: COD
+      generate: true
+      texture: lion_fish
+      model_id: 485205
+  damsel_fish:
+    name: Damsel Fish
+    resource:
+      material: COD
+      generate: true
+      texture: damsel_fish
+      model_id: 485206
+  butterflyfish:
+    name: Butterflyfish
+    resource:
+      material: COD
+      generate: true
+      texture: butterflyfish
+      model_id: 485207
+  angelfish:
+    name: Angelfish
+    resource:
+      material: COD
+      generate: true
+      texture: angelfish
+      model_id: 485208
+  snail:
+    name: Snail
+    resource:
+      material: COD
+      generate: true
+      texture: snail
+      model_id: 485209
+  mussel:
+    name: Mussel
+    resource:
+      material: COD
+      generate: true
+      texture: mussel
+      model_id: 485210
+  freshwater_sponge:
+    name: Freshwater Sponge
+    resource:
+      material: COD
+      generate: true
+      texture: freshwater_sponge
+      model_id: 485211
+  crayfish:
+    name: Crayfish
+    resource:
+      material: COD
+      generate: true
+      texture: crayfish
+      model_id: 485212
+  crab:
+    name: Crab
+    resource:
+      material: COD
+      generate: true
+      texture: crab
+      model_id: 485213
+  clam:
+    name: Clam
+    resource:
+      material: COD
+      generate: true
+      texture: clam
+      model_id: 485214
+  amphipod:
+    name: Amphipod
+    resource:
+      material: COD
+      generate: true
+      texture: amphipod
+      model_id: 485215
+  wahoo:
+    name: Wahoo
+    resource:
+      material: COD
+      generate: true
+      texture: wahoo
+      model_id: 485216
+  tuna:
+    name: Tuna
+    resource:
+      material: COD
+      generate: true
+      texture: tuna
+      model_id: 485217
+  sword_fish:
+    name: Sword Fish
+    resource:
+      material: COD
+      generate: true
+      texture: sword_fish
+      model_id: 485218
+  snook:
+    name: Snook
+    resource:
+      material: COD
+      generate: true
+      texture: snook
+      model_id: 485219
+  snapper:
+    name: Snapper
+    resource:
+      material: COD
+      generate: true
+      texture: snapper
+      model_id: 485220
+  redfish:
+    name: Redfish
+    resource:
+      material: COD
+      generate: true
+      texture: redfish
+      model_id: 485221
+  marlin:
+    name: Marlin
+    resource:
+      material: COD
+      generate: true
+      texture: marlin
+      model_id: 485222
+  grouper:
+    name: Grouper
+    resource:
+      material: COD
+      generate: true
+      texture: grouper
+      model_id: 485223
+  barracuda:
+    name: Barracuda
+    resource:
+      material: COD
+      generate: true
+      texture: barracuda
+      model_id: 485224
+  viper_fish:
+    name: Viper Fish
+    resource:
+      material: COD
+      generate: true
+      texture: viper_fish
+      model_id: 485225
+  vampire_squid:
+    name: Vampire Squid
+    resource:
+      material: COD
+      generate: true
+      texture: vampire_squid
+      model_id: 485227
+  lanternfish:
+    name: Lanternfish
+    resource:
+      material: COD
+      generate: true
+      texture: lanternfish
+      model_id: 485228
+  gulper_eel:
+    name: Gulper Eel
+    resource:
+      material: COD
+      generate: true
+      texture: gulper_eel
+      model_id: 485229
+  giant_isopod:
+    name: Giant Isopod
+    resource:
+      material: COD
+      generate: true
+      texture: giant_isopod
+      model_id: 485230
+  dumbo_octopus:
+    name: Dumbo Octopus
+    resource:
+      material: COD
+      generate: true
+      texture: dumbo_octopus
+      model_id: 485231
+  dragon_fish:
+    name: Dragon Fish
+    resource:
+      material: COD
+      generate: true
+      texture: dragon_fish
+      model_id: 485232
+  blobfish:
+    name: Blobfish
+    resource:
+      material: COD
+      generate: true
+      texture: blobfish
+      model_id: 485233
+  barreleye_fish:
+    name: Barreleye Fish
+    resource:
+      material: COD
+      generate: true
+      texture: barreleye_fish
+      model_id: 485234
+  anglerfish:
+    name: Anglerfish
+    resource:
+      material: COD
+      generate: true
+      texture: anglerfish
+      model_id: 485235
+  ashmaw:
+    name: Ashmaw
+    resource:
+      material: COD
+      generate: true
+      texture: ashmaw
+      model_id: 485236
+  soulfin:
+    name: Soulfin
+    resource:
+      material: COD
+      generate: true
+      texture: soulfin
+      model_id: 485237
+  blightscale:
+    name: Blightscale
+    resource:
+      material: COD
+      generate: true
+      texture: blightscale
+      model_id: 485238
+  bone_dart:
+    name: Bone Dart
+    resource:
+      material: COD
+      generate: true
+      texture: bone_dart
+      model_id: 485239
+  cinder_pike:
+    name: Cinder Pike
+    resource:
+      material: COD
+      generate: true
+      texture: cinder_pike
+      model_id: 485240
+  ember_carp:
+    name: Ember Carp
+    resource:
+      material: COD
+      generate: true
+      texture: ember_carp
+      model_id: 485241
+  glowsnap:
+    name: Glowsnap
+    resource:
+      material: COD
+      generate: true
+      texture: glowsnap
+      model_id: 485242
+  glowtail:
+    name: Glowtail
+    resource:
+      material: COD
+      generate: true
+      texture: glowtail
+      model_id: 485243
+  hellpuffer:
+    name: Hellpuffer
+    resource:
+      material: COD
+      generate: true
+      texture: hellpuffer
+      model_id: 485244
+  hellstripe:
+    name: Hellstripe
+    resource:
+      material: COD
+      generate: true
+      texture: hellstripe
+      model_id: 485245
+  lava_lantern:
+    name: Lava Lantern
+    resource:
+      material: COD
+      generate: true
+      texture: lava_lantern
+      model_id: 485246
+  magma_belly:
+    name: Magma Belly
+    resource:
+      material: COD
+      generate: true
+      texture: magma_belly
+      model_id: 485247
+  nether_ray:
+    name: Nether Ray
+    resource:
+      material: COD
+      generate: true
+      texture: nether_ray
+      model_id: 485248
+  rustfin:
+    name: Rustfin
+    resource:
+      material: COD
+      generate: true
+      texture: rustfin
+      model_id: 485249
+  spore_jelly:
+    name: Spore Jelly
+    resource:
+      material: COD
+      generate: true
+      texture: spore_jelly
+      model_id: 485250
+  warped_eel:
+    name: Warped Eel
+    resource:
+      material: COD
+      generate: true
+      texture: warped_eel
+      model_id: 485251
+  moltenjaw:
+    name: Moltenjaw
+    resource:
+      material: COD
+      generate: true
+      texture: moltenjaw
+      model_id: 485252
+  nautilus_bait:
+    name: Nautilus Bait
+    resource:
+      material: PAPER
+      generate: true
+      texture: nautilus_bait
+      model_id: 1272
+  bobber_bait:
+    name: Bobber Bait
+    resource:
+      material: PAPER
+      generate: true
+      texture: bobber_bait
+      model_id: 1273
+  ender_bait:
+    name: Ender Bait
+    resource:
+      material: PAPER
+      generate: true
+      texture: ender_bait
+      model_id: 1274
+  iridescent_bait:
+    name: Iridescent Bait
+    resource:
+      material: PAPER
+      generate: true
+      texture: iridescent_bait
+      model_id: 1275
+  sea_heart_bait:
+    name: Sea Heart Bait
+    resource:
+      material: PAPER
+      generate: true
+      texture: sea_heart_bait
+      model_id: 1276
+  gelatin_bait:
+    name: Gelatin Bait
+    resource:
+      material: PAPER
+      generate: true
+      texture: gelatin_bait
+      model_id: 1277
+  copper_bait:
+    name: Copper Bait
+    resource:
+      material: PAPER
+      generate: true
+      texture: copper_bait
+      model_id: 1278
+  trident_bait:
+    name: Trident Bait
+    resource:
+      material: PAPER
+      generate: true
+      texture: trident_bait
+      model_id: 1279
+  slime_bait:
+    name: Slime Bait
+    resource:
+      material: PAPER
+      generate: true
+      texture: slime_bait
+      model_id: 1280
+  magma_bait:
+    name: Magma Bait
+    resource:
+      material: PAPER
+      generate: true
+      texture: magma_bait
+      model_id: 1281
+  magma_bait:
+    name: Magma Bait
+    resource:
+      material: PAPER
+      generate: true
+      texture: magma_bait
+      model_id: 1281
+  copper_fishing_rod:
+    name: Copper Fishing Rod
+    resource:
+      material: FISHING_ROD
+      generate: true
+      texture: copper_fishing_rod
+      model_id: 1000
+  iron_fishing_rod:
+    name: Iron Fishing Rod
+    resource:
+      material: FISHING_ROD
+      generate: true
+      texture: iron_fishing_rod
+      model_id: 1001
+  golden_fishing_rod:
+    name: Golden Fishing Rod
+    resource:
+      material: FISHING_ROD
+      generate: true
+      texture: golden_fishing_rod
+      model_id: 1004
+  diamond_fishing_rod:
+    name: Diamond Fishing Rod
+    resource:
+      material: FISHING_ROD
+      generate: true
+      texture: diamond_fishing_rod
+      model_id: 1002
+  netherite_fishing_rod:
+    name: Netherite Fishing Rod
+    resource:
+      material: FISHING_ROD
+      generate: true
+      texture: netherite_fishing_rod
+      model_id: 1003
+  invisible_item:
+    name: Invisible Item
+    resource:
+      material: PAPER
+      generate: true
+      texture: invisible_item
+font_images:
+  fish_codex:
+    show_in_gui: true
+    path: "fish_codex.png"
+    scale_ratio: 256
+    y_position: 19

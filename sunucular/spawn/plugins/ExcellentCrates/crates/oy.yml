@@ -1,0 +1,1153 @@
+Name: Oy Kasasi
+Permission_Required: false
+Opening:
+  Cooldown: 0
+Key:
+  Ids:
+  - vote_key
+  # Sets whether or not keys are required to open this crate.
+  Required: true
+Block:
+  Locations:
+  - 161.0,114.0,17.0,0.0,0.0,Lobby
+  Pushback:
+    Enabled: false
+  Hologram:
+    Enabled: true
+    Template: vote
+    Y_Offset: 0.0
+  Effect:
+    Model: HELIX
+    Particle:
+      Name: CHERRY_LEAVES
+  Positions: []
+Milestones:
+  Repeatable: false
+Rewards:
+  List:
+    redstone:
+      Name: '&aRedstone'
+      Chance: 50.0
+      Rarity: common
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:redstone"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:redstone"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    golden_carrot:
+      Name: '&aGolden Carrot'
+      Chance: 50.0
+      Rarity: common
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:golden_carrot"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:golden_carrot"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    lapis_lazuli:
+      Name: '&aLapis Lazuli'
+      Chance: 50.0
+      Rarity: common
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:lapis_lazuli"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:lapis_lazuli"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    emerald:
+      Name: '&aEmerald'
+      Chance: 50.0
+      Rarity: common
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:emerald"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:emerald"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    diamond:
+      Name: '&aDiamond'
+      Chance: 50.0
+      Rarity: common
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:diamond"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:diamond"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    gold:
+      Name: '&aGold'
+      Chance: 50.0
+      Rarity: common
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:gold_ingot"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:gold_ingot"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    iron:
+      Name: '&aIron'
+      Chance: 50.0
+      Rarity: common
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:iron_ingot"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:iron_ingot"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    ender_pearl:
+      Name: '&aEnder Pearl'
+      Chance: 50.0
+      Rarity: common
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:ender_pearl"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:ender_pearl"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    nether_wart:
+      Name: '&aNether Wart'
+      Chance: 40.0
+      Rarity: common
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:nether_wart"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:nether_wart"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    ghast_tear:
+      Name: '&aGhast Tear'
+      Chance: 40.0
+      Rarity: common
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:ghast_tear"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:ghast_tear"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    magma_cream:
+      Name: '&aMagma Cream'
+      Chance: 40.0
+      Rarity: common
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:magma_cream"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:magma_cream"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    glistering_melon:
+      Name: '&aGlistering Melon'
+      Chance: 40.0
+      Rarity: common
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:glistering_melon_slice"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:glistering_melon_slice"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    fermented_spider_eye:
+      Name: '&aFermented Spider Eye'
+      Chance: 40.0
+      Rarity: common
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:fermented_spider_eye"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:fermented_spider_eye"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    gunpowder:
+      Name: '&aGunpowder'
+      Chance: 40.0
+      Rarity: common
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:gunpowder"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:gunpowder"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    xp_bottle:
+      Name: '&aXp Bottle'
+      Chance: 35.0
+      Rarity: common
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:experience_bottle"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:experience_bottle"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    blaze_rod:
+      Name: '&aBlaze Rod'
+      Chance: 35.0
+      Rarity: common
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:blaze_rod"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:blaze_rod"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    golden_apple:
+      Name: '&aGolden Apple'
+      Chance: 30.0
+      Rarity: common
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:golden_apple"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:golden_apple"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    vote_fortune_axe:
+      Name: '&aVote Fortune Axe'
+      Chance: 20.0
+      Rarity: uncommon
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:diamond_axe"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:diamond_axe"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    vote_silk_axe:
+      Name: '&aVote Silk Axe'
+      Chance: 20.0
+      Rarity: uncommon
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:diamond_axe"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:diamond_axe"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    vote_fortune_hoe:
+      Name: '&aVote Fortune Hoe'
+      Chance: 20.0
+      Rarity: uncommon
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:diamond_hoe"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:diamond_hoe"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    vote_silk_hoe:
+      Name: '&aVote Silk Hoe'
+      Chance: 20.0
+      Rarity: uncommon
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:diamond_hoe"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:diamond_hoe"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    vote_fortune_pickaxe:
+      Name: '&aVote Fortune Pickaxe'
+      Chance: 20.0
+      Rarity: uncommon
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:diamond_pickaxe"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:diamond_pickaxe"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    vote_silk_pickaxe:
+      Name: '&aVote Silk Pickaxe'
+      Chance: 20.0
+      Rarity: uncommon
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:diamond_pickaxe"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:diamond_pickaxe"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    vote_fortune_shovel:
+      Name: '&aVote Fortune Shovel'
+      Chance: 20.0
+      Rarity: uncommon
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:diamond_shovel"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:diamond_shovel"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    vote_silk_shovel:
+      Name: '&aVote Silk Shovel'
+      Chance: 20.0
+      Rarity: uncommon
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:diamond_shovel"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:diamond_shovel"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    shulker_shell:
+      Name: '&aShulker Shell'
+      Chance: 15.0
+      Rarity: rare
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:shulker_shell"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:shulker_shell"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    vote_boots:
+      Name: '&aVote Boots'
+      Chance: 15.0
+      Rarity: rare
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:diamond_boots"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:diamond_boots"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    vote_chestplate:
+      Name: '&aVote Chestplate'
+      Chance: 15.0
+      Rarity: rare
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:diamond_chestplate"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:diamond_chestplate"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    vote_helmet:
+      Name: '&aVote Helmet'
+      Chance: 15.0
+      Rarity: rare
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:diamond_helmet"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:diamond_helmet"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    vote_leggings:
+      Name: '&aVote Leggings'
+      Chance: 15.0
+      Rarity: rare
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:diamond_leggings"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:diamond_leggings"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    vote_sword:
+      Name: '&aVote Sword'
+      Chance: 15.0
+      Rarity: rare
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:diamond_sword"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:diamond_sword"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    vote_shield:
+      Name: '&aVote Shield'
+      Chance: 15.0
+      Rarity: rare
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:shield"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:shield"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    nether_star:
+      Name: '&aNether Star'
+      Chance: 5.0
+      Rarity: legendary
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:nether_star"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:nether_star"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    totem:
+      Name: '&aTotem'
+      Chance: 5.0
+      Rarity: legendary
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:totem_of_undying"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:totem_of_undying"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    vote_trident:
+      Name: '&aVote Trident'
+      Chance: 5.0
+      Rarity: legendary
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:trident"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:trident"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    vote_turtle_shell:
+      Name: '&aVote Turtle Shell'
+      Chance: 5.0
+      Rarity: legendary
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:turtle_helmet"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:turtle_helmet"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    enchanted_golden_apple:
+      Name: '&aEnchanted Golden Apple'
+      Chance: 5.0
+      Rarity: legendary
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:enchanted_golden_apple"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:enchanted_golden_apple"}'
+            DataVersion: 4438
+      Custom_Preview: false
+Last_Opener: 5ntm
+Last_Reward: '&aBlaze Rod'
+_dataver: 600
+ItemProvider:
+  Type: VANILLA
+  Tag:
+    Value: '{count:1,id:"minecraft:ender_chest"}'
+    DataVersion: 4438
+Preview:
+  Enabled: true
+  Id: default
+Animation:
+  Enabled: true
+  Id: roulette
+Description: []
+ItemStackable: true

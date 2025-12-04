@@ -1,0 +1,2626 @@
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+
+## ERROR PREVENTION ##
+
+lrd_brewery_errorprevention:
+  TargetConditions:
+  - onground true
+  - mobsInRadius{t=ANY;r=1;a=1} orelsecast lrd_brewery_errorprevention_moving
+  Skills:
+  - remove @self
+  - dropitem{i=<caster.name>} @selflocation{yo=0.5}
+
+lrd_brewery_errorprevention_moving:
+  Conditions:
+  - ismoving true
+  Skills:
+  - setblock{m=AIR;md=0} @selflocation{yo=0.5}
+  - dropitem{i=<caster.name>} @selflocation{yo=0.5}
+  - remove @self
+
+lrd_brewery_spawn:
+  Conditions:
+  - onblock{m=barrier} castinstead lrd_brewery_spawn_deny
+  TargetConditions:
+  - blocktype{m=air} orelsecast lrd_brewery_spawn_deny
+  Skills:
+  - sound{s=littleroom_brewerypack:boiler_land;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>;delay=5} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_land;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>;delay=5} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_land;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>;delay=5} @self ?mythicmobtype{t=lrd_distiller}
+  - teleport{spreadh=0;spreadv=0} @origin{centered=true}
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self
+  - setvar{var=caster.holding;val=empty;type=STRING} @self
+  - setvar{var=caster.recipe;val=none;type=STRING} @self
+  - setowner @pir{r=6;sort=NEAREST;limit=1}
+  - setblock{m=BARRIER;md=0} @selflocation
+
+lrd_brewery_spawn_deny:
+  Skills:
+  - dropitem{i=<caster.name>} @selflocation{yo=0.5}
+  - remove @self
+
+
+## SPAWNING DIRECTION ##
+
+lrd_brewery_check_owner_direction_south:
+  TargetConditions:
+  - yaw{y=-45to45;c=false}
+  Skills:
+  - setrotation{relative=false;yaw=180} @self
+  
+lrd_brewery_check_owner_direction_north:
+  TargetConditions:
+  - (yaw{y=135to180;c=false} || yaw{y=-135to-180;c=false})
+  Skills:
+  - setrotation{relative=false;yaw=0} @self
+  
+lrd_brewery_check_owner_direction_west:
+  TargetConditions:
+  - yaw{y=45to135;c=false}
+  Skills:
+  - setrotation{relative=false;yaw=-90} @self
+  
+lrd_brewery_check_owner_direction_east:
+  TargetConditions:
+  - yaw{y=-45to-135;c=false}
+  Skills:
+  - setrotation{relative=false;yaw=90} @self
+  
+  
+  
+## brewery PLACE ##
+
+lrd_brewery_place_boiler:
+  TargetConditions:
+  - altitude{a=<0.1} true
+  Skills:
+  - playanimation{audience=SELF;animation=0} @self
+  - consumeslot{} @self
+  - summon{t=lrd_boiler;os=true}
+  
+lrd_brewery_place_fermenter:
+  Skills:
+  - teleport{spreadh=0;spreadv=0} @origin{centered=true}
+  - playanimation{audience=SELF;animation=0} @self
+  - consumeslot{} @self
+  - summon{t=lrd_fermenter;os=true}
+
+lrd_brewery_place_distiller:
+  Skills:
+  - teleport{spreadh=0;spreadv=0} @origin{centered=true}
+  - playanimation{audience=SELF;animation=0} @self
+  - consumeslot{} @self
+  - summon{t=lrd_distiller;os=true}
+
+
+
+## brewery REMOVE ##
+
+lrd_brewery_remove_boiler:
+  Skills:
+  - e:p{p=falling_honey;a=15;hs=.5;vs=.5;y=0.5} @self
+  - e:p{p=block;m=anvil;a=15;hs=.5;vs=.5;y=0.5} @self
+  - sound{s=block.wood.break} @self
+  - setblock{m=AIR;md=0} @selflocation
+  - dropitem{i=lrd_boiler} @selflocation
+  - dropitem{i=<caster.var.slot1>} @selflocation
+  - dropitem{i=<caster.var.slot2>} @selflocation
+  - signal{s=NOPARENT} @children
+
+lrd_brewery_remove_fermenter:
+  Skills:
+  - e:p{p=falling_honey;a=15;hs=.5;vs=.5;y=0.5} @self
+  - e:p{p=block;m=oak_planks;a=15;hs=.5;vs=.5;y=0.5} @self
+  - sound{s=block.wood.break} @self
+  - setblock{m=AIR;md=0} @selflocation
+  - dropitem{i=lrd_fermenter} @selflocation
+  - dropitem{i=<caster.var.slot1>} @selflocation
+  - dropitem{i=<caster.var.slot2>} @selflocation
+  - signal{s=NOPARENT} @children
+
+lrd_brewery_remove_distiller:
+  Skills:
+  - e:p{p=falling_honey;a=15;hs=.5;vs=.5;y=0.5} @self
+  - e:p{p=block;m=copper_block;a=15;hs=.5;vs=.5;y=0.5} @self
+  - sound{s=block.wood.break} @self
+  - setblock{m=AIR;md=0} @selflocation
+  - dropitem{i=lrd_distiller} @selflocation
+  - dropitem{i=<caster.var.slot1>} @selflocation
+  - dropitem{i=<caster.var.slot2>} @selflocation
+  - signal{s=NOPARENT} @children
+
+
+## brewery INTERACT ##
+
+## boiler ##
+
+lrd_brewery_working_boiler:
+  Conditions:
+  - varequals{var=caster.working;val=true}
+  Skills:
+  - e:p{p=poof;a=1;hs=.1;vs=.1;d=true;dir=0,1,0;s=0.1;cd=0.25} @selflocation{y=1.5}
+  #- message{m="<&nl><&nl><&nl>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Recipe<&co> <caster.var.recipe>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Worktime<&co> <caster.var.worktime>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Working<&co> <caster.var.working>";cd=1} @everyone
+  - variableadd{var=caster.worktime;amount=1;cd=1} @self      #add time to worktime every second#
+
+## fermenter ##
+
+lrd_brewery_working_fermenter:
+  Conditions:
+  - varequals{var=caster.working;val=true}
+  Skills:
+  #- message{m="<&nl><&nl><&nl>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Recipe<&co> <caster.var.recipe>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Worktime<&co> <caster.var.worktime>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Working<&co> <caster.var.working>";cd=1} @everyone
+  - variableadd{var=caster.worktime;amount=1;cd=1} @self      #add time to worktime every second#
+
+## boiler ##
+
+lrd_brewery_working_distiller:
+  Conditions:
+  - varequals{var=caster.working;val=true}
+  Skills:
+  #- message{m="<&nl><&nl><&nl>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Recipe<&co> <caster.var.recipe>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Worktime<&co> <caster.var.worktime>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Working<&co> <caster.var.working>";cd=1} @everyone
+  - variableadd{var=caster.worktime;amount=1;cd=1} @self      #add time to worktime every second#
+
+  
+### ADD ITEM ###
+
+lrd_brewery_add_item:
+  Cooldown: 1
+  TriggerConditions:
+  - holding{m=air} false
+  - holding{m=lrd_*} castinstead lrd_brewery_add_mythicitem_slot1
+  Conditions:
+  - offgcd true
+  - varequals{var=caster.holding;val=empty} true             #checks if machine is holding recipe item#
+  - varequals{var=caster.working;val=true} false              #check if machine is working#
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_item_slot_2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=<trigger.held.item>;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_item_slot_2:
+  TriggerConditions:
+  - holding{m=air} false
+  - holding{m=lrd_*} castinstead lrd_brewery_add_mythicitem_slot2
+  Conditions:
+  - offgcd true
+  - varequals{var=caster.working;val=true} false              #check if machine is working#
+  - varequals{var=caster.slot2;val=empty} true
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=<trigger.held.item>;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+
+## TAKE ITEM ##
+
+lrd_brewery_take_item:
+  TriggerConditions:
+  - holding{m=air} true
+  Conditions:
+  - offgcd true
+  - varequals{var=caster.working;val=true} false              #check if machine is working#
+  - varequals{var=caster.slot2;val=empty} castinstead lrd_brewery_take_item_slot_1
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  #- equip{item=<caster.var.slot2> HAND}
+  - giveitem{i=<caster.var.slot2>;fl=true} @trigger     #drops item from slot 2#
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self      #reset slot 2#
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+lrd_brewery_take_item_slot_1:
+  TriggerConditions:
+  - holding{m=air} true
+  Conditions:
+  - offgcd true
+  - varequals{var=caster.working;val=true} false              #check if machine is working#
+  - varequals{var=caster.slot1;val=empty} castinstead lrd_brewery_take_finished_recipe
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - remove @children{conditions=[ - mythicmobtype{t=lrd_BLANK_DISPLAY_SLOT_1} true]}
+  #- equip{item=<caster.var.slot1> HAND}
+  - giveitem{i=<caster.var.slot1>;fl=true} @trigger     #drops item from slot 1#
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      #reset slot 1#
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+lrd_brewery_take_finished_recipe:
+  Cooldown: 1
+  Conditions:
+  - offgcd true
+  - varequals{var=caster.holding;val=empty} false             #checks if machine is holding recipe item#
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self{conditions=[ - mythicmobtype{t=lrd_distiller} false]}
+  - state{s=take} @self{conditions=[ - mythicmobtype{t=lrd_distiller} true]}
+  #- equip{item=<caster.var.holding> HAND}
+  - giveitem{i=<caster.var.holding>;fl=true} @trigger   #drops recipe item#
+  - setvar{var=caster.holding;val=empty;type=STRING} @self    #resets the machine holding item#
+  - remove @children                                          #removes display recipe item#
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+
+
+
+# CHECK RECIPES #
+
+
+# RECIPE HINT SKILLS (Added to fix missing skill errors) #
+
+lrd_brewery_boiler_recipehint:
+  Skills:
+  - message{m="&6[Boiler] &fProcessing ingredients..."} @trigger
+
+lrd_brewery_recipehint_tea:
+  Conditions:
+  - mythicmobtype{t=lrd_boiler} true
+  - varequals{var=caster.slot1;val=OAK_LEAVES} true
+  - varequals{var=caster.slot2;val=empty} true
+  - varequals{var=caster.working;val=true} false
+  Skills:
+  - message{m="&a[Recipe Hint] &fTea - Oak Leaves in Boiler"} @trigger
+
+  
+  
+lrd_brewery_check_current_recipe:
+  Skills:
+  - delay 1
+  - skill{s=lrd_brewery_boiler_recipehint} @pir{r=4}
+  - skill{s=lrd_brewery_tea_recipe} @self                    #checks tea recipe#
+  - skill{s=lrd_brewery_blacktea_recipe} @self
+  - skill{s=lrd_brewery_greentea_recipe} @self
+  - skill{s=lrd_brewery_oolongtea_recipe} @self
+  - skill{s=lrd_brewery_chai_recipe} @self
+  - skill{s=lrd_brewery_herbaltea_recipe} @self
+  - skill{s=lrd_brewery_rooibostea_recipe} @self
+  - skill{s=lrd_brewery_whitetea_recipe} @self
+  - skill{s=lrd_brewery_blossomtea_recipe} @self
+  - skill{s=lrd_brewery_lilactea_recipe} @self
+  - skill{s=lrd_brewery_rosehiptea_recipe} @self
+  - skill{s=lrd_brewery_withertea_recipe} @self
+  - skill{s=lrd_brewery_dandeliontea_recipe} @self
+  - skill{s=lrd_brewery_wheatbeer_recipe} @self
+  - skill{s=lrd_brewery_meadowmead_recipe} @self
+  - skill{s=lrd_brewery_moonshine_recipe} @self
+  - skill{s=lrd_brewery_potatovodka_recipe} @self
+  - skill{s=lrd_brewery_applevodka_recipe} @self
+  - skill{s=lrd_brewery_redwine_recipe} @self
+  - skill{s=lrd_brewery_whitewine_recipe} @self
+  - skill{s=lrd_brewery_melonwine_recipe} @self
+  - skill{s=lrd_brewery_applewine_recipe} @self
+  - skill{s=lrd_brewery_pumpkinwine_recipe} @self
+  - skill{s=lrd_brewery_sweetvermouth_recipe} @self
+  - skill{s=lrd_brewery_dryvermouth_recipe} @self
+  - skill{s=lrd_brewery_melonvermouth_recipe} @self
+  - skill{s=lrd_brewery_applevermouth_recipe} @self
+  - skill{s=lrd_brewery_pumpkinvermouth_recipe} @self
+  - skill{s=lrd_brewery_applecider_recipe} @self
+  - skill{s=lrd_brewery_meloncider_recipe} @self
+  - skill{s=lrd_brewery_sweetberrycider_recipe} @self
+  - skill{s=lrd_brewery_applebrandy_recipe} @self
+  - skill{s=lrd_brewery_melonbrandy_recipe} @self
+  - skill{s=lrd_brewery_sweetberrybrandy_recipe} @self
+  - skill{s=lrd_brewery_netherwartwine_recipe} @self
+  - skill{s=lrd_brewery_torchedwhiskey_recipe} @self
+  - skill{s=lrd_brewery_gin_recipe} @self
+  - skill{s=lrd_brewery_cavegin_recipe} @self
+  - skill{s=lrd_brewery_tequila_recipe} @self
+  - skill{s=lrd_brewery_absinthe_recipe} @self
+  - skill{s=lrd_brewery_rum_recipe} @self
+  - skill{s=lrd_brewery_bourbon_recipe} @self
+
+
+# RECIPES #
+
+  ### TEA ###
+ # "lrd_tea" #
+  
+lrd_brewery_tea_recipe:
+  Skills:
+  - skill{s=lrd_brewery_recipehint_tea} @pir{r=5}
+  - skill{s=lrd_brewery_start_recipe_lrd_tea} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_tea} @self
+  
+  
+lrd_brewery_start_recipe_lrd_tea:
+  Conditions:
+  - mythicmobtype{t=lrd_boiler} true                          #check if machine is boiler#
+  - varequals{var=caster.slot1;val=OAK_LEAVES} true           #check if slot 1 is recipe#
+  - varequals{var=caster.slot2;val=empty} true                #check if slot 2 is recipe#
+  - varequals{var=caster.working;val=true} false              #check if machine is working#
+  Skills:
+  - brightness{b=15;s=15} @self                               #sets boiler brightness#
+  - tint{m=lrd_boiler;c=e58b6a} @self                         #tint boiler to orange#
+  - setvar{var=caster.recipe;val=tea;type=STRING} @self       #set the recipe of the machine#
+  - setvar{var=caster.working;val=true;type=STRING} @self     #set machine to working#
+  - state{s=interact} @self                                   #play interact animation#
+  - state{s=working} @self                     #set working animation#
+
+lrd_brewery_finish_recipe_lrd_tea:
+  Conditions:
+  - varequals{var=caster.recipe;val=tea} true                 #check if recipe is recipe#
+  - variableInRange{var=caster.worktime;val=>120} true         #checks worktime is long enough#
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_tea} @forward{f=1;yo=1.5;lp=true}            #places the recipe display item#
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      #set the recipe of the machine#
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      #reset slot 1#
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self      #reset slot 2#
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self      #reset worktime#
+  - setvar{var=caster.working;val=false;type=STRING} @self    #reset working#
+  - setvar{var=caster.holding;val=lrd_tea;type=STRING} @self  #sets holding item to current recipe#
+  - brightness{b=-1;s=-1} @self                               #sets boiler brightness#
+  - tint{m=lrd_boiler;c=ffffff} @self                         #tint boiler to orange#
+  - state{s=working;r=true} @self                        #sets idle back to idle#
+  
+
+  ### BLACK TEA ###
+  # "lrd_blacktea" #
+  
+lrd_brewery_blacktea_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_blacktea} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_blacktea} @self
+  
+  
+lrd_brewery_start_recipe_lrd_blacktea:
+  Conditions:
+  - mythicmobtype{t=lrd_boiler} true  
+  - varequals{var=caster.slot1;val=DARK_OAK_LEAVES} true      
+  - varequals{var=caster.slot2;val=empty} true                
+  - varequals{var=caster.working;val=true} false              
+  Skills:
+  - brightness{b=15;s=15} @self                               
+  - tint{m=lrd_boiler;c=e58b6a} @self                         
+  - setvar{var=caster.recipe;val=blacktea;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=interact} @self                                  
+  - state{s=working} @self                     
+
+lrd_brewery_finish_recipe_lrd_blacktea:
+  Conditions:
+  - varequals{var=caster.recipe;val=blacktea} true                
+  - variableInRange{var=caster.worktime;val=>120} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_blacktea} @forward{f=1;yo=1.5;lp=true}       
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_blacktea;type=STRING} @self  
+  - brightness{b=-1;s=-1} @self                               
+  - tint{m=lrd_boiler;c=ffffff} @self                         
+  - state{s=working;r=true} @self            
+  
+  
+  ### GREEN TEA ###
+  # "lrd_greentea" #
+  
+lrd_brewery_greentea_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_greentea} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_greentea} @self
+  
+  
+lrd_brewery_start_recipe_lrd_greentea:
+  Conditions:
+  - mythicmobtype{t=lrd_boiler} true  
+  - varequals{var=caster.slot1;val=SPRUCE_LEAVES} true      
+  - varequals{var=caster.slot2;val=empty} true                
+  - varequals{var=caster.working;val=true} false              
+  Skills:
+  - brightness{b=15;s=15} @self                               
+  - tint{m=lrd_boiler;c=e58b6a} @self                         
+  - setvar{var=caster.recipe;val=greentea;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=interact} @self                                  
+  - state{s=working} @self                     
+
+lrd_brewery_finish_recipe_lrd_greentea:
+  Conditions:
+  - varequals{var=caster.recipe;val=greentea} true                
+  - variableInRange{var=caster.worktime;val=>120} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_greentea} @forward{f=1;yo=1.5;lp=true}       
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_greentea;type=STRING} @self  
+  - brightness{b=-1;s=-1} @self                               
+  - tint{m=lrd_boiler;c=ffffff} @self                         
+  - state{s=working;r=true} @self      
+  
+  
+  ### OOLONG TEA ###
+  # "lrd_oolongtea" #
+  
+lrd_brewery_oolongtea_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_oolongtea} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_oolongtea} @self
+  
+  
+lrd_brewery_start_recipe_lrd_oolongtea:
+  Conditions:
+  - mythicmobtype{t=lrd_boiler} true  
+  - varequals{var=caster.slot1;val=AZALEA_LEAVES} true      
+  - varequals{var=caster.slot2;val=empty} true                
+  - varequals{var=caster.working;val=true} false              
+  Skills:
+  - brightness{b=15;s=15} @self                               
+  - tint{m=lrd_boiler;c=e58b6a} @self                         
+  - setvar{var=caster.recipe;val=oolongtea;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=interact} @self                                  
+  - state{s=working} @self                     
+
+lrd_brewery_finish_recipe_lrd_oolongtea:
+  Conditions:
+  - varequals{var=caster.recipe;val=oolongtea} true                
+  - variableInRange{var=caster.worktime;val=>120} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_oolongtea} @forward{f=1;yo=1.5;lp=true}       
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_oolongtea;type=STRING} @self  
+  - brightness{b=-1;s=-1} @self                               
+  - tint{m=lrd_boiler;c=ffffff} @self                         
+  - state{s=working;r=true} @self        
+  
+  
+  ### CHAI ###
+  # "lrd_chai" #
+  
+lrd_brewery_chai_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_chai} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_chai} @self
+  
+  
+lrd_brewery_start_recipe_lrd_chai:
+  Conditions:
+  - mythicmobtype{t=lrd_boiler} true  
+  - varequals{var=caster.slot1;val=MANGROVE_LEAVES} true      
+  - varequals{var=caster.slot2;val=empty} true                
+  - varequals{var=caster.working;val=true} false              
+  Skills:
+  - brightness{b=15;s=15} @self                               
+  - tint{m=lrd_boiler;c=e58b6a} @self                         
+  - setvar{var=caster.recipe;val=chai;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=interact} @self                                  
+  - state{s=working} @self                     
+
+lrd_brewery_finish_recipe_lrd_chai:
+  Conditions:
+  - varequals{var=caster.recipe;val=chai} true                
+  - variableInRange{var=caster.worktime;val=>120} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_chai} @forward{f=1;yo=1.5;lp=true}       
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_chai;type=STRING} @self  
+  - brightness{b=-1;s=-1} @self                               
+  - tint{m=lrd_boiler;c=ffffff} @self                         
+  - state{s=working;r=true} @self      
+  
+  
+  ### HERBAL TEA ###
+  # "lrd_herbaltea" #
+  
+lrd_brewery_herbaltea_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_herbaltea} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_herbaltea} @self
+  
+  
+lrd_brewery_start_recipe_lrd_herbaltea:
+  Conditions:
+  - mythicmobtype{t=lrd_boiler} true  
+  - varequals{var=caster.slot1;val=BIRCH_LEAVES} true      
+  - varequals{var=caster.slot2;val=empty} true                
+  - varequals{var=caster.working;val=true} false              
+  Skills:
+  - brightness{b=15;s=15} @self                               
+  - tint{m=lrd_boiler;c=e58b6a} @self                         
+  - setvar{var=caster.recipe;val=herbaltea;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=interact} @self                                  
+  - state{s=working} @self                     
+
+lrd_brewery_finish_recipe_lrd_herbaltea:
+  Conditions:
+  - varequals{var=caster.recipe;val=herbaltea} true                
+  - variableInRange{var=caster.worktime;val=>120} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_herbaltea} @forward{f=1;yo=1.5;lp=true}       
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_herbaltea;type=STRING} @self  
+  - brightness{b=-1;s=-1} @self                               
+  - tint{m=lrd_boiler;c=ffffff} @self                         
+  - state{s=working;r=true} @self        
+  
+  
+  ### ROOIBOS TEA ###
+  # "lrd_rooibostea" #
+  
+lrd_brewery_rooibostea_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_rooibostea} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_rooibostea} @self
+  
+  
+lrd_brewery_start_recipe_lrd_rooibostea:
+  Conditions:
+  - mythicmobtype{t=lrd_boiler} true  
+  - varequals{var=caster.slot1;val=JUNGLE_LEAVES} true      
+  - varequals{var=caster.slot2;val=empty} true                
+  - varequals{var=caster.working;val=true} false              
+  Skills:
+  - brightness{b=15;s=15} @self                               
+  - tint{m=lrd_boiler;c=e58b6a} @self                         
+  - setvar{var=caster.recipe;val=rooibostea;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=interact} @self                                  
+  - state{s=working} @self                     
+
+lrd_brewery_finish_recipe_lrd_rooibostea:
+  Conditions:
+  - varequals{var=caster.recipe;val=rooibostea} true                
+  - variableInRange{var=caster.worktime;val=>120} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_rooibostea} @forward{f=1;yo=1.5;lp=true}       
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_rooibostea;type=STRING} @self  
+  - brightness{b=-1;s=-1} @self                               
+  - tint{m=lrd_boiler;c=ffffff} @self                         
+  - state{s=working;r=true} @self  
+  
+  
+  ### WHITE TEA ###
+  # "lrd_whitetea" #
+  
+lrd_brewery_whitetea_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_whitetea} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_whitetea} @self
+  
+  
+lrd_brewery_start_recipe_lrd_whitetea:
+  Conditions:
+  - mythicmobtype{t=lrd_boiler} true  
+  - varequals{var=caster.slot1;val=ACACIA_LEAVES} true      
+  - varequals{var=caster.slot2;val=empty} true                
+  - varequals{var=caster.working;val=true} false              
+  Skills:
+  - brightness{b=15;s=15} @self                               
+  - tint{m=lrd_boiler;c=e58b6a} @self                         
+  - setvar{var=caster.recipe;val=whitetea;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=interact} @self                                  
+  - state{s=working} @self                     
+
+lrd_brewery_finish_recipe_lrd_whitetea:
+  Conditions:
+  - varequals{var=caster.recipe;val=whitetea} true                
+  - variableInRange{var=caster.worktime;val=>120} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_whitetea} @forward{f=1;yo=1.5;lp=true}       
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_whitetea;type=STRING} @self  
+  - brightness{b=-1;s=-1} @self                               
+  - tint{m=lrd_boiler;c=ffffff} @self                         
+  - state{s=working;r=true} @self  
+  
+  
+  ### BLOSSOM TEA ###
+  # "lrd_blossomtea" #
+  
+lrd_brewery_blossomtea_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_blossomtea} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_blossomtea} @self
+  
+  
+lrd_brewery_start_recipe_lrd_blossomtea:
+  Conditions:
+  - mythicmobtype{t=lrd_boiler} true  
+  - varequals{var=caster.slot1;val=CHERRY_LEAVES} true      
+  - varequals{var=caster.slot2;val=empty} true                
+  - varequals{var=caster.working;val=true} false              
+  Skills:
+  - brightness{b=15;s=15} @self                               
+  - tint{m=lrd_boiler;c=e58b6a} @self                         
+  - setvar{var=caster.recipe;val=blossomtea;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=interact} @self                                  
+  - state{s=working} @self                     
+
+lrd_brewery_finish_recipe_lrd_blossomtea:
+  Conditions:
+  - varequals{var=caster.recipe;val=blossomtea} true                
+  - variableInRange{var=caster.worktime;val=>120} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_blossomtea} @forward{f=1;yo=1.5;lp=true}       
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_blossomtea;type=STRING} @self  
+  - brightness{b=-1;s=-1} @self                               
+  - tint{m=lrd_boiler;c=ffffff} @self                         
+  - state{s=working;r=true} @self 
+  
+  
+  ### LILAC TEA ###
+  # "lrd_lilactea" #
+  
+lrd_brewery_lilactea_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_lilactea} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_lilactea} @self
+  
+  
+lrd_brewery_start_recipe_lrd_lilactea:
+  Conditions:
+  - mythicmobtype{t=lrd_boiler} true  
+  - varequals{var=caster.slot1;val=LILAC} true      
+  - varequals{var=caster.slot2;val=empty} true                
+  - varequals{var=caster.working;val=true} false              
+  Skills:
+  - brightness{b=15;s=15} @self                               
+  - tint{m=lrd_boiler;c=e58b6a} @self                         
+  - setvar{var=caster.recipe;val=lilactea;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=interact} @self                                  
+  - state{s=working} @self                     
+
+lrd_brewery_finish_recipe_lrd_lilactea:
+  Conditions:
+  - varequals{var=caster.recipe;val=lilactea} true                
+  - variableInRange{var=caster.worktime;val=>120} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_lilactea} @forward{f=1;yo=1.5;lp=true}       
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_lilactea;type=STRING} @self  
+  - brightness{b=-1;s=-1} @self                               
+  - tint{m=lrd_boiler;c=ffffff} @self                         
+  - state{s=working;r=true} @self 
+  
+  
+  ### ROSEHIP TEA ###
+  # "lrd_rosehiptea" #
+  
+lrd_brewery_rosehiptea_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_rosehiptea} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_rosehiptea} @self
+  
+  
+lrd_brewery_start_recipe_lrd_rosehiptea:
+  Conditions:
+  - mythicmobtype{t=lrd_boiler} true  
+  - varequals{var=caster.slot1;val=ROSE_BUSH} true      
+  - varequals{var=caster.slot2;val=empty} true                
+  - varequals{var=caster.working;val=true} false              
+  Skills:
+  - brightness{b=15;s=15} @self                               
+  - tint{m=lrd_boiler;c=e58b6a} @self                         
+  - setvar{var=caster.recipe;val=rosehiptea;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=interact} @self                                  
+  - state{s=working} @self                     
+
+lrd_brewery_finish_recipe_lrd_rosehiptea:
+  Conditions:
+  - varequals{var=caster.recipe;val=rosehiptea} true                
+  - variableInRange{var=caster.worktime;val=>120} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_rosehiptea} @forward{f=1;yo=1.5;lp=true}       
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_rosehiptea;type=STRING} @self  
+  - brightness{b=-1;s=-1} @self                               
+  - tint{m=lrd_boiler;c=ffffff} @self                         
+  - state{s=working;r=true} @self 
+  
+  
+  ### WITHER TEA ###
+  # "lrd_withertea" #
+  
+lrd_brewery_withertea_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_withertea} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_withertea} @self
+  
+  
+lrd_brewery_start_recipe_lrd_withertea:
+  Conditions:
+  - mythicmobtype{t=lrd_boiler} true  
+  - varequals{var=caster.slot1;val=WITHER_ROSE} true      
+  - varequals{var=caster.slot2;val=empty} true                
+  - varequals{var=caster.working;val=true} false              
+  Skills:
+  - brightness{b=15;s=15} @self                               
+  - tint{m=lrd_boiler;c=e58b6a} @self                         
+  - setvar{var=caster.recipe;val=withertea;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=interact} @self                                  
+  - state{s=working} @self                     
+
+lrd_brewery_finish_recipe_lrd_withertea:
+  Conditions:
+  - varequals{var=caster.recipe;val=withertea} true                
+  - variableInRange{var=caster.worktime;val=>120} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_withertea} @forward{f=1;yo=1.5;lp=true}       
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_withertea;type=STRING} @self  
+  - brightness{b=-1;s=-1} @self                               
+  - tint{m=lrd_boiler;c=ffffff} @self                         
+  - state{s=working;r=true} @self 
+  
+  
+  ### DANDELION TEA ###
+  # "lrd_dandeliontea" #
+  
+lrd_brewery_dandeliontea_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_dandeliontea} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_dandeliontea} @self
+  
+  
+lrd_brewery_start_recipe_lrd_dandeliontea:
+  Conditions:
+  - mythicmobtype{t=lrd_boiler} true  
+  - varequals{var=caster.slot1;val=DANDELION} true      
+  - varequals{var=caster.slot2;val=empty} true                
+  - varequals{var=caster.working;val=true} false              
+  Skills:
+  - brightness{b=15;s=15} @self                               
+  - tint{m=lrd_boiler;c=e58b6a} @self                         
+  - setvar{var=caster.recipe;val=dandeliontea;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=interact} @self                                  
+  - state{s=working} @self                     
+
+lrd_brewery_finish_recipe_lrd_dandeliontea:
+  Conditions:
+  - varequals{var=caster.recipe;val=dandeliontea} true                
+  - variableInRange{var=caster.worktime;val=>120} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_dandeliontea} @forward{f=1;yo=1.5;lp=true}       
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_dandeliontea;type=STRING} @self  
+  - brightness{b=-1;s=-1} @self                               
+  - tint{m=lrd_boiler;c=ffffff} @self                         
+  - state{s=working;r=true} @self 
+
+  
+  ### WHEATBEER ###
+  # "lrd_wheatbeer" #
+  
+lrd_brewery_wheatbeer_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_wheatbeer_boiler} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_wheatbeer_boiler} @self
+  - skill{s=lrd_brewery_start_recipe_lrd_wheatbeer_fermenter} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_wheatbeer_fermenter} @self
+  - skill{s=lrd_brewery_start_recipe_lrd_wheatbeer_distiller} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_wheatbeer_distiller} @self
+  
+  
+  #boiler#
+lrd_brewery_start_recipe_lrd_wheatbeer_boiler:
+  Conditions:
+  - mythicmobtype{t=lrd_boiler}
+  - (( varequals{var=caster.slot1;val=WHEAT} && varequals{var=caster.slot2;val=SUGAR} ) || ( varequals{var=caster.slot1;val=SUGAR} && varequals{var=caster.slot2;val=WHEAT} )) true
+  - varequals{var=caster.working;val=true} false              
+  Skills:
+  - brightness{b=15;s=15} @self                               
+  - tint{m=lrd_boiler;c=e58b6a} @self                         
+  - setvar{var=caster.recipe;val=wheatbeer;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self                     
+
+lrd_brewery_finish_recipe_lrd_wheatbeer_boiler:
+  Conditions:
+  - mythicmobtype{t=lrd_boiler}
+  - varequals{var=caster.recipe;val=wheatbeer} true                
+  - variableInRange{var=caster.worktime;val=>60} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_wheatbeer_wort} @forward{f=0.75;yo=1.25;lp=true}             
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_wheatbeer_wort;type=STRING} @self  
+  - brightness{b=-1;s=-1} @self                               
+  - tint{m=lrd_boiler;c=ffffff} @self                         
+  - state{s=working;r=true} @self 
+  
+  
+  #fermenter#
+  
+lrd_brewery_start_recipe_lrd_wheatbeer_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - (( varequals{var=caster.slot1;val=lrd_wheatbeer_wort} && varequals{var=caster.slot2;val=empty} ) || ( varequals{var=caster.slot1;val=empty} && varequals{var=caster.slot2;val=lrd_wheatbeer_wort} )) true
+  - varequals{var=caster.working;val=true} false      
+  Skills:                       
+  - setvar{var=caster.recipe;val=wheatbeer;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self                  
+
+lrd_brewery_finish_recipe_lrd_wheatbeer_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - varequals{var=caster.recipe;val=wheatbeer} true                
+  - variableInRange{var=caster.worktime;val=>120} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_wheatbeer_unfiltered} @forward{f=1;yo=1.5;lp=true}       
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_wheatbeer_unfiltered;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  
+  
+  #distiller#
+  
+lrd_brewery_start_recipe_lrd_wheatbeer_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - (( varequals{var=caster.slot1;val=lrd_wheatbeer_unfiltered} && varequals{var=caster.slot2;val=empty} ) || ( varequals{var=caster.slot1;val=empty} && varequals{var=caster.slot2;val=lrd_wheatbeer_unfiltered} )) true
+  - varequals{var=caster.working;val=true} false      
+  Skills:                       
+  - setvar{var=caster.recipe;val=wheatbeer;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self                
+
+lrd_brewery_finish_recipe_lrd_wheatbeer_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - varequals{var=caster.recipe;val=wheatbeer} true                
+  - variableInRange{var=caster.worktime;val=>120} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_wheatbeer} @forward{f=1;yo=1.4;lp=true}            
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_wheatbeer;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  - state{s=done} @self
+
+  
+  ### MEADOWMEAD ###
+  # "lrd_meadowmead" #
+  
+lrd_brewery_meadowmead_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_meadowmead_boiler} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_meadowmead_boiler} @self
+  - skill{s=lrd_brewery_start_recipe_lrd_meadowmead_fermenter} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_meadowmead_fermenter} @self
+  - skill{s=lrd_brewery_start_recipe_lrd_meadowmead_distiller} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_meadowmead_distiller} @self
+  
+  
+  #boiler#
+lrd_brewery_start_recipe_lrd_meadowmead_boiler:
+  Conditions:
+  - mythicmobtype{t=lrd_boiler}
+  - (( varequals{var=caster.slot1;val=WHEAT} && varequals{var=caster.slot2;val=HONEY_BOTTLE} ) || ( varequals{var=caster.slot1;val=HONEY_BOTTLE} && varequals{var=caster.slot2;val=WHEAT} )) true
+  - varequals{var=caster.working;val=true} false              
+  Skills:
+  - brightness{b=15;s=15} @self                               
+  - tint{m=lrd_boiler;c=e58b6a} @self                         
+  - setvar{var=caster.recipe;val=meadowmead;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=interact} @self                                  
+  - state{s=working} @self                     
+
+lrd_brewery_finish_recipe_lrd_meadowmead_boiler:
+  Conditions:
+  - mythicmobtype{t=lrd_boiler}
+  - varequals{var=caster.recipe;val=meadowmead} true                
+  - variableInRange{var=caster.worktime;val=>60} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_meadowmead_wort} @forward{f=0.75;yo=1.25;lp=true}       
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_meadowmead_wort;type=STRING} @self  
+  - brightness{b=-1;s=-1} @self                               
+  - tint{m=lrd_boiler;c=ffffff} @self                         
+  - state{s=working;r=true} @self 
+  
+  
+  #fermenter#
+  
+lrd_brewery_start_recipe_lrd_meadowmead_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - (( varequals{var=caster.slot1;val=lrd_meadowmead_wort} && varequals{var=caster.slot2;val=empty} ) || ( varequals{var=caster.slot1;val=empty} && varequals{var=caster.slot2;val=lrd_meadowmead_wort} )) true
+  - varequals{var=caster.working;val=true} false      
+  Skills:                       
+  - setvar{var=caster.recipe;val=meadowmead;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self                  
+
+lrd_brewery_finish_recipe_lrd_meadowmead_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - varequals{var=caster.recipe;val=meadowmead} true                
+  - variableInRange{var=caster.worktime;val=>120} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_meadowmead_unfiltered} @forward{f=1;yo=1.5;lp=true}       
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_meadowmead_unfiltered;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  
+  
+  #distiller#
+  
+lrd_brewery_start_recipe_lrd_meadowmead_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - (( varequals{var=caster.slot1;val=lrd_meadowmead_unfiltered} && varequals{var=caster.slot2;val=empty} ) || ( varequals{var=caster.slot1;val=empty} && varequals{var=caster.slot2;val=lrd_meadowmead_unfiltered} )) true
+  - varequals{var=caster.working;val=true} false      
+  Skills:                       
+  - setvar{var=caster.recipe;val=meadowmead;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self                
+
+lrd_brewery_finish_recipe_lrd_meadowmead_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - varequals{var=caster.recipe;val=meadowmead} true                
+  - variableInRange{var=caster.worktime;val=>120} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_meadowmead} @forward{f=1;yo=1.4;lp=true}            
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_meadowmead;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  - state{s=done} @self
+
+  
+  ### MOONSHINE ###
+  # "lrd_moonshine" #
+  
+lrd_brewery_moonshine_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_moonshine_boiler} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_moonshine_boiler} @self
+  - skill{s=lrd_brewery_start_recipe_lrd_moonshine_fermenter} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_moonshine_fermenter} @self
+  - skill{s=lrd_brewery_start_recipe_lrd_moonshine_distiller} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_moonshine_distiller} @self
+  
+  
+  #boiler#
+lrd_brewery_start_recipe_lrd_moonshine_boiler:
+  Conditions:
+  - mythicmobtype{t=lrd_boiler}
+  - (( varequals{var=caster.slot1;val=WHEAT} && varequals{var=caster.slot2;val=SUGAR_CANE} ) || ( varequals{var=caster.slot1;val=SUGAR_CANE} && varequals{var=caster.slot2;val=WHEAT} )) true
+  - varequals{var=caster.working;val=true} false              
+  Skills:
+  - brightness{b=15;s=15} @self                               
+  - tint{m=lrd_boiler;c=e58b6a} @self                         
+  - setvar{var=caster.recipe;val=moonshine;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self                     
+
+lrd_brewery_finish_recipe_lrd_moonshine_boiler:
+  Conditions:
+  - mythicmobtype{t=lrd_boiler}
+  - varequals{var=caster.recipe;val=moonshine} true                
+  - variableInRange{var=caster.worktime;val=>120} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_moonshine_wort} @forward{f=0.75;yo=1.25;lp=true}             
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_moonshine_wort;type=STRING} @self  
+  - brightness{b=-1;s=-1} @self                               
+  - tint{m=lrd_boiler;c=ffffff} @self                         
+  - state{s=working;r=true} @self 
+  
+  
+  #fermenter#
+  
+lrd_brewery_start_recipe_lrd_moonshine_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - (( varequals{var=caster.slot1;val=lrd_moonshine_wort} && varequals{var=caster.slot2;val=empty} ) || ( varequals{var=caster.slot1;val=empty} && varequals{var=caster.slot2;val=lrd_moonshine_wort} )) true
+  - varequals{var=caster.working;val=true} false      
+  Skills:                       
+  - setvar{var=caster.recipe;val=moonshine;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self                  
+
+lrd_brewery_finish_recipe_lrd_moonshine_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - varequals{var=caster.recipe;val=moonshine} true                
+  - variableInRange{var=caster.worktime;val=>300} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_moonshine_unfiltered} @forward{f=1;yo=1.5;lp=true}       
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_moonshine_unfiltered;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  
+  
+  #distiller#
+  
+lrd_brewery_start_recipe_lrd_moonshine_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - (( varequals{var=caster.slot1;val=lrd_moonshine_unfiltered} && varequals{var=caster.slot2;val=empty} ) || ( varequals{var=caster.slot1;val=empty} && varequals{var=caster.slot2;val=lrd_moonshine_unfiltered} )) true
+  - varequals{var=caster.working;val=true} false      
+  Skills:                       
+  - setvar{var=caster.recipe;val=moonshine;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self                
+
+lrd_brewery_finish_recipe_lrd_moonshine_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - varequals{var=caster.recipe;val=moonshine} true                
+  - variableInRange{var=caster.worktime;val=>300} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_moonshine} @forward{f=1;yo=1.4;lp=true}            
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_moonshine;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  - state{s=done} @self
+
+  
+  ### POTATO VODKA ###
+  # "lrd_potatovodka" #
+  
+lrd_brewery_potatovodka_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_potatovodka_boiler} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_potatovodka_boiler} @self
+  - skill{s=lrd_brewery_start_recipe_lrd_potatovodka_fermenter} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_potatovodka_fermenter} @self
+  - skill{s=lrd_brewery_start_recipe_lrd_potatovodka_distiller} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_potatovodka_distiller} @self
+  
+  
+  #boiler#
+lrd_brewery_start_recipe_lrd_potatovodka_boiler:
+  Conditions:
+  - mythicmobtype{t=lrd_boiler}
+  - (( varequals{var=caster.slot1;val=POTATO} && varequals{var=caster.slot2;val=SUGAR} ) || ( varequals{var=caster.slot1;val=SUGAR} && varequals{var=caster.slot2;val=POTATO} )) true
+  - varequals{var=caster.working;val=true} false              
+  Skills:
+  - brightness{b=15;s=15} @self                               
+  - tint{m=lrd_boiler;c=e58b6a} @self                         
+  - setvar{var=caster.recipe;val=potatovodka;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self
+
+lrd_brewery_finish_recipe_lrd_potatovodka_boiler:
+  Conditions:
+  - mythicmobtype{t=lrd_boiler}
+  - varequals{var=caster.recipe;val=potatovodka} true                
+  - variableInRange{var=caster.worktime;val=>180} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_potatovodka_wort} @forward{f=0.75;yo=1.25;lp=true}             
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_potatovodka_wort;type=STRING} @self  
+  - brightness{b=-1;s=-1} @self                               
+  - tint{m=lrd_boiler;c=ffffff} @self                         
+  - state{s=working;r=true} @self 
+  
+  
+  #fermenter#
+  
+lrd_brewery_start_recipe_lrd_potatovodka_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - (( varequals{var=caster.slot1;val=lrd_potatovodka_wort} && varequals{var=caster.slot2;val=empty} ) || ( varequals{var=caster.slot1;val=empty} && varequals{var=caster.slot2;val=lrd_potatovodka_wort} )) true
+  - varequals{var=caster.working;val=true} false      
+  Skills:                       
+  - setvar{var=caster.recipe;val=potatovodka;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self      
+
+lrd_brewery_finish_recipe_lrd_potatovodka_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - varequals{var=caster.recipe;val=potatovodka} true                
+  - variableInRange{var=caster.worktime;val=>240} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_potatovodka_unfiltered} @forward{f=1;yo=1.5;lp=true}       
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_potatovodka_unfiltered;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  
+  
+  #distiller#
+  
+lrd_brewery_start_recipe_lrd_potatovodka_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - (( varequals{var=caster.slot1;val=lrd_potatovodka_unfiltered} && varequals{var=caster.slot2;val=empty} ) || ( varequals{var=caster.slot1;val=empty} && varequals{var=caster.slot2;val=lrd_potatovodka_unfiltered} )) true
+  - varequals{var=caster.working;val=true} false      
+  Skills:                       
+  - setvar{var=caster.recipe;val=potatovodka;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self                
+
+lrd_brewery_finish_recipe_lrd_potatovodka_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - varequals{var=caster.recipe;val=potatovodka} true                
+  - variableInRange{var=caster.worktime;val=>240} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_potatovodka} @forward{f=1;yo=1.4;lp=true}            
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_potatovodka;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  - state{s=done} @self
+  
+  
+  
+  
+  ### APPLE VODKA ###
+  # "lrd_applevodka" #
+  
+lrd_brewery_applevodka_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_applevodka_fermenter} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_applevodka_fermenter} @self
+  - skill{s=lrd_brewery_start_recipe_lrd_applevodka_distiller} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_applevodka_distiller} @self
+
+  #fermenter#
+  
+lrd_brewery_start_recipe_lrd_applevodka_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - (( varequals{var=caster.slot1;val=lrd_potatovodka_wort} && varequals{var=caster.slot2;val=APPLE} ) || ( varequals{var=caster.slot1;val=APPLE} && varequals{var=caster.slot2;val=lrd_potatovodka_wort} )) true
+  - varequals{var=caster.working;val=true} false      
+  Skills:                       
+  - setvar{var=caster.recipe;val=applevodka;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self                  
+
+lrd_brewery_finish_recipe_lrd_applevodka_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - varequals{var=caster.recipe;val=applevodka} true                
+  - variableInRange{var=caster.worktime;val=>240} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_applevodka_unfiltered} @forward{f=1;yo=1.5;lp=true}       
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_applevodka_unfiltered;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  
+  
+  #distiller#
+  
+lrd_brewery_start_recipe_lrd_applevodka_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - (( varequals{var=caster.slot1;val=lrd_applevodka_unfiltered} && varequals{var=caster.slot2;val=empty} ) || ( varequals{var=caster.slot1;val=empty} && varequals{var=caster.slot2;val=lrd_applevodka_unfiltered} )) true
+  - varequals{var=caster.working;val=true} false      
+  Skills:                       
+  - setvar{var=caster.recipe;val=applevodka;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self                
+
+lrd_brewery_finish_recipe_lrd_applevodka_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - varequals{var=caster.recipe;val=applevodka} true                
+  - variableInRange{var=caster.worktime;val=>240} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_applevodka} @forward{f=1;yo=1.4;lp=true}            
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_applevodka;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  - state{s=done} @self
+  
+    
+  ### RED WINE ###
+  # "lrd_redwine" #
+  
+lrd_brewery_redwine_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_redwine_fermenter} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_redwine_fermenter} @self
+  
+  #fermenter#      
+  
+lrd_brewery_start_recipe_lrd_redwine_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - (( varequals{var=caster.slot1;val=SWEET_BERRIES} && varequals{var=caster.slot2;val=SUGAR} ) || ( varequals{var=caster.slot1;val=SUGAR} && varequals{var=caster.slot2;val=SWEET_BERRIES} )) true
+  - varequals{var=caster.working;val=true} false
+  - varequals{var=caster.holding;val=empty} true
+  Skills:                     
+  - setvar{var=caster.recipe;val=redwine;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self             
+
+lrd_brewery_finish_recipe_lrd_redwine_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - varequals{var=caster.recipe;val=redwine} true                
+  - variableInRange{var=caster.worktime;val=>300} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_redwine} @forward{f=1;yo=1.5;lp=true}       
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_redwine;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  
+    
+  ### WHITE WINE ###
+  # "lrd_whitewine" #
+  
+lrd_brewery_whitewine_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_whitewine_fermenter} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_whitewine_fermenter} @self
+  
+  #fermenter#  
+  
+lrd_brewery_start_recipe_lrd_whitewine_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - (( varequals{var=caster.slot1;val=GLOW_BERRIES} && varequals{var=caster.slot2;val=SUGAR} ) || ( varequals{var=caster.slot1;val=SUGAR} && varequals{var=caster.slot2;val=GLOW_BERRIES} )) true
+  - varequals{var=caster.working;val=true} false
+  - varequals{var=caster.holding;val=empty} true
+  Skills:                     
+  - setvar{var=caster.recipe;val=whitewine;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self             
+
+lrd_brewery_finish_recipe_lrd_whitewine_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - varequals{var=caster.recipe;val=whitewine} true                
+  - variableInRange{var=caster.worktime;val=>300} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_whitewine} @forward{f=1;yo=1.5;lp=true}       
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_whitewine;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  
+  
+    
+  ### MELON WINE ###
+  # "lrd_melonwine" #
+  
+lrd_brewery_melonwine_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_melonwine_fermenter} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_melonwine_fermenter} @self
+  
+  #fermenter#      
+  
+lrd_brewery_start_recipe_lrd_melonwine_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - (( varequals{var=caster.slot1;val=MELON_SLICE} && varequals{var=caster.slot2;val=SUGAR} ) || ( varequals{var=caster.slot1;val=SUGAR} && varequals{var=caster.slot2;val=MELON_SLICE} )) true
+  - varequals{var=caster.working;val=true} false
+  - varequals{var=caster.holding;val=empty} true
+  Skills:                     
+  - setvar{var=caster.recipe;val=melonwine;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self             
+
+lrd_brewery_finish_recipe_lrd_melonwine_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - varequals{var=caster.recipe;val=melonwine} true                
+  - variableInRange{var=caster.worktime;val=>300} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_melonwine} @forward{f=1;yo=1.5;lp=true}       
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_melonwine;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  
+  
+    
+  ### APPLE WINE ###
+  # "lrd_applewine" #
+  
+lrd_brewery_applewine_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_applewine_fermenter} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_applewine_fermenter} @self
+  
+  #fermenter#       
+  
+lrd_brewery_start_recipe_lrd_applewine_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - (( varequals{var=caster.slot1;val=APPLE} && varequals{var=caster.slot2;val=SUGAR} ) || ( varequals{var=caster.slot1;val=SUGAR} && varequals{var=caster.slot2;val=APPLE} )) true
+  - varequals{var=caster.working;val=true} false
+  - varequals{var=caster.holding;val=empty} true
+  Skills:                     
+  - setvar{var=caster.recipe;val=applewine;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self             
+
+lrd_brewery_finish_recipe_lrd_applewine_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - varequals{var=caster.recipe;val=applewine} true                
+  - variableInRange{var=caster.worktime;val=>300} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_applewine} @forward{f=1;yo=1.5;lp=true}       
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_applewine;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  
+  
+    
+  ### PUMPKIN WINE ###
+  # "lrd_pumpkinwine" #
+  
+lrd_brewery_pumpkinwine_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_pumpkinwine_fermenter} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_pumpkinwine_fermenter} @self
+  
+  #fermenter#        
+  
+lrd_brewery_start_recipe_lrd_pumpkinwine_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - (( varequals{var=caster.slot1;val=PUMPKIN} && varequals{var=caster.slot2;val=SUGAR} ) || ( varequals{var=caster.slot1;val=SUGAR} && varequals{var=caster.slot2;val=PUMPKIN} )) true
+  - varequals{var=caster.working;val=true} false
+  - varequals{var=caster.holding;val=empty} true
+  Skills:                     
+  - setvar{var=caster.recipe;val=pumpkinwine;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self             
+
+lrd_brewery_finish_recipe_lrd_pumpkinwine_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - varequals{var=caster.recipe;val=pumpkinwine} true                
+  - variableInRange{var=caster.worktime;val=>300} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_pumpkinwine} @forward{f=1;yo=1.5;lp=true}       
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_pumpkinwine;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  
+  
+  
+  
+  ### SWEET VERMOUTH ###
+  # "lrd_sweetvermouth" #
+  
+lrd_brewery_sweetvermouth_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_sweetvermouth_distiller} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_sweetvermouth_distiller} @self
+  
+  #distiller#
+  
+lrd_brewery_start_recipe_lrd_sweetvermouth_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - (( varequals{var=caster.slot1;val=lrd_redwine} && varequals{var=caster.slot2;val=empty} ) || ( varequals{var=caster.slot1;val=empty} && varequals{var=caster.slot2;val=lrd_redwine} )) true
+  - varequals{var=caster.working;val=true} false      
+  Skills:                       
+  - setvar{var=caster.recipe;val=sweetvermouth;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self                
+
+lrd_brewery_finish_recipe_lrd_sweetvermouth_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - varequals{var=caster.recipe;val=sweetvermouth} true                
+  - variableInRange{var=caster.worktime;val=>300} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_sweetvermouth} @forward{f=1;yo=1.4;lp=true}            
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_sweetvermouth;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  - state{s=done} @self
+  
+  
+  
+  
+  ### DRY VERMOUTH ###
+  # "lrd_dryvermouth" #
+  
+lrd_brewery_dryvermouth_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_dryvermouth_distiller} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_dryvermouth_distiller} @self
+  
+  #distiller#
+  
+lrd_brewery_start_recipe_lrd_dryvermouth_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - (( varequals{var=caster.slot1;val=lrd_whitewine} && varequals{var=caster.slot2;val=empty} ) || ( varequals{var=caster.slot1;val=empty} && varequals{var=caster.slot2;val=lrd_whitewine} )) true
+  - varequals{var=caster.working;val=true} false      
+  Skills:                       
+  - setvar{var=caster.recipe;val=dryvermouth;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self                
+
+lrd_brewery_finish_recipe_lrd_dryvermouth_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - varequals{var=caster.recipe;val=dryvermouth} true                
+  - variableInRange{var=caster.worktime;val=>300} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_dryvermouth} @forward{f=1;yo=1.4;lp=true}            
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_dryvermouth;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  - state{s=done} @self
+  
+  
+  
+  
+  ### MELON VERMOUTH ###
+  # "lrd_melonvermouth" #
+  
+lrd_brewery_melonvermouth_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_melonvermouth_distiller} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_melonvermouth_distiller} @self
+  
+  #distiller#
+  
+lrd_brewery_start_recipe_lrd_melonvermouth_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - (( varequals{var=caster.slot1;val=lrd_melonwine} && varequals{var=caster.slot2;val=empty} ) || ( varequals{var=caster.slot1;val=empty} && varequals{var=caster.slot2;val=lrd_melonwine} )) true
+  - varequals{var=caster.working;val=true} false      
+  Skills:                       
+  - setvar{var=caster.recipe;val=melonvermouth;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self                
+
+lrd_brewery_finish_recipe_lrd_melonvermouth_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - varequals{var=caster.recipe;val=melonvermouth} true                
+  - variableInRange{var=caster.worktime;val=>300} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_melonvermouth} @forward{f=1;yo=1.4;lp=true}            
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_melonvermouth;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  - state{s=done} @self
+  
+  
+  
+  
+  ### APPLE VERMOUTH ###
+  # "lrd_applevermouth" #
+  
+lrd_brewery_applevermouth_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_applevermouth_distiller} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_applevermouth_distiller} @self
+  
+  #distiller#
+  
+lrd_brewery_start_recipe_lrd_applevermouth_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - (( varequals{var=caster.slot1;val=lrd_applewine} && varequals{var=caster.slot2;val=empty} ) || ( varequals{var=caster.slot1;val=empty} && varequals{var=caster.slot2;val=lrd_applewine} )) true
+  - varequals{var=caster.working;val=true} false      
+  Skills:                       
+  - setvar{var=caster.recipe;val=applevermouth;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self                
+
+lrd_brewery_finish_recipe_lrd_applevermouth_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - varequals{var=caster.recipe;val=applevermouth} true                
+  - variableInRange{var=caster.worktime;val=>300} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_applevermouth} @forward{f=1;yo=1.4;lp=true}            
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_applevermouth;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  - state{s=done} @self
+  
+  
+  
+  
+  ### PUMPKIN VERMOUTH ###
+  # "lrd_pumpkinvermouth" #
+  
+lrd_brewery_pumpkinvermouth_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_pumpkinvermouth_distiller} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_pumpkinvermouth_distiller} @self
+  
+  #distiller#
+  
+lrd_brewery_start_recipe_lrd_pumpkinvermouth_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - (( varequals{var=caster.slot1;val=lrd_pumpkinwine} && varequals{var=caster.slot2;val=empty} ) || ( varequals{var=caster.slot1;val=empty} && varequals{var=caster.slot2;val=lrd_pumpkinwine} )) true
+  - varequals{var=caster.working;val=true} false      
+  Skills:                       
+  - setvar{var=caster.recipe;val=pumpkinvermouth;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self                
+
+lrd_brewery_finish_recipe_lrd_pumpkinvermouth_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - varequals{var=caster.recipe;val=pumpkinvermouth} true                
+  - variableInRange{var=caster.worktime;val=>300} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_pumpkinvermouth} @forward{f=1;yo=1.4;lp=true}            
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_pumpkinvermouth;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  - state{s=done} @self
+  
+  
+  
+  
+  
+    ### APPLE CIDER ###
+  # "lrd_applecider" #
+  
+lrd_brewery_applecider_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_applecider_fermenter} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_applecider_fermenter} @self
+  
+  #fermenter#       
+  
+lrd_brewery_start_recipe_lrd_applecider_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - (( varequals{var=caster.slot1;val=APPLE} && varequals{var=caster.slot2;val=WHEAT} ) || ( varequals{var=caster.slot1;val=WHEAT} && varequals{var=caster.slot2;val=APPLE} )) true
+  - varequals{var=caster.working;val=true} false
+  - varequals{var=caster.holding;val=empty} true
+  Skills:                     
+  - setvar{var=caster.recipe;val=applecider;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self             
+
+lrd_brewery_finish_recipe_lrd_applecider_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - varequals{var=caster.recipe;val=applecider} true                
+  - variableInRange{var=caster.worktime;val=>240} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_applecider} @forward{f=1;yo=1.5;lp=true}       
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_applecider;type=STRING} @self  
+  - state{s=working;r=true} @self
+  
+  
+  
+  
+  
+    ### MELON CIDER ###
+  # "lrd_meloncider" #
+  
+lrd_brewery_meloncider_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_meloncider_fermenter} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_meloncider_fermenter} @self
+  
+  #fermenter#       
+  
+lrd_brewery_start_recipe_lrd_meloncider_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - (( varequals{var=caster.slot1;val=MELON_SLICE} && varequals{var=caster.slot2;val=WHEAT} ) || ( varequals{var=caster.slot1;val=WHEAT} && varequals{var=caster.slot2;val=MELON_SLICE} )) true
+  - varequals{var=caster.working;val=true} false
+  - varequals{var=caster.holding;val=empty} true
+  Skills:                     
+  - setvar{var=caster.recipe;val=meloncider;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self             
+
+lrd_brewery_finish_recipe_lrd_meloncider_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - varequals{var=caster.recipe;val=meloncider} true                
+  - variableInRange{var=caster.worktime;val=>240} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_meloncider} @forward{f=1;yo=1.5;lp=true}       
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_meloncider;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  
+  
+  
+  
+  
+    ### SWEETBERRY CIDER ###
+  # "lrd_sweetberrycider" #
+  
+lrd_brewery_sweetberrycider_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_sweetberrycider_fermenter} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_sweetberrycider_fermenter} @self
+  
+  #fermenter#       
+  
+lrd_brewery_start_recipe_lrd_sweetberrycider_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - (( varequals{var=caster.slot1;val=SWEET_BERRIES} && varequals{var=caster.slot2;val=WHEAT} ) || ( varequals{var=caster.slot1;val=WHEAT} && varequals{var=caster.slot2;val=SWEET_BERRIES} )) true
+  - varequals{var=caster.working;val=true} false
+  - varequals{var=caster.holding;val=empty} true
+  Skills:                     
+  - setvar{var=caster.recipe;val=sweetberrycider;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self             
+
+lrd_brewery_finish_recipe_lrd_sweetberrycider_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - varequals{var=caster.recipe;val=sweetberrycider} true                
+  - variableInRange{var=caster.worktime;val=>240} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_sweetberrycider} @forward{f=1;yo=1.5;lp=true}       
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_sweetberrycider;type=STRING} @self  
+  - state{s=working;r=true} @self
+  
+  
+  
+  
+  ### APPLE BRANDY ###
+  # "lrd_applebrandy" #
+  
+lrd_brewery_applebrandy_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_applebrandy_distiller} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_applebrandy_distiller} @self
+  
+  #distiller#
+  
+lrd_brewery_start_recipe_lrd_applebrandy_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - (( varequals{var=caster.slot1;val=lrd_applecider} && varequals{var=caster.slot2;val=empty} ) || ( varequals{var=caster.slot1;val=empty} && varequals{var=caster.slot2;val=lrd_applecider} )) true
+  - varequals{var=caster.working;val=true} false      
+  Skills:                       
+  - setvar{var=caster.recipe;val=applebrandy;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self                
+
+lrd_brewery_finish_recipe_lrd_applebrandy_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - varequals{var=caster.recipe;val=applebrandy} true                
+  - variableInRange{var=caster.worktime;val=>600} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_applebrandy} @forward{f=1;yo=1.4;lp=true}            
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_applebrandy;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  - state{s=done} @self
+  
+  
+  
+  
+  ### melon BRANDY ###
+  # "lrd_melonbrandy" #
+  
+lrd_brewery_melonbrandy_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_melonbrandy_distiller} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_melonbrandy_distiller} @self
+  
+  #distiller#
+  
+lrd_brewery_start_recipe_lrd_melonbrandy_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - (( varequals{var=caster.slot1;val=lrd_meloncider} && varequals{var=caster.slot2;val=empty} ) || ( varequals{var=caster.slot1;val=empty} && varequals{var=caster.slot2;val=lrd_meloncider} )) true
+  - varequals{var=caster.working;val=true} false      
+  Skills:                       
+  - setvar{var=caster.recipe;val=melonbrandy;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self                
+
+lrd_brewery_finish_recipe_lrd_melonbrandy_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - varequals{var=caster.recipe;val=melonbrandy} true                
+  - variableInRange{var=caster.worktime;val=>600} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_melonbrandy} @forward{f=1;yo=1.4;lp=true}            
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_melonbrandy;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  - state{s=done} @self
+  
+  
+  
+  
+  ### sweetberry BRANDY ###
+  # "lrd_sweetberrybrandy" #
+  
+lrd_brewery_sweetberrybrandy_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_sweetberrybrandy_distiller} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_sweetberrybrandy_distiller} @self
+  
+  #distiller#
+  
+lrd_brewery_start_recipe_lrd_sweetberrybrandy_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - (( varequals{var=caster.slot1;val=lrd_sweetberrycider} && varequals{var=caster.slot2;val=empty} ) || ( varequals{var=caster.slot1;val=empty} && varequals{var=caster.slot2;val=lrd_sweetberrycider} )) true
+  - varequals{var=caster.working;val=true} false      
+  Skills:                       
+  - setvar{var=caster.recipe;val=sweetberrybrandy;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self                
+
+lrd_brewery_finish_recipe_lrd_sweetberrybrandy_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - varequals{var=caster.recipe;val=sweetberrybrandy} true                
+  - variableInRange{var=caster.worktime;val=>600} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_sweetberrybrandy} @forward{f=1;yo=1.4;lp=true}            
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_sweetberrybrandy;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  - state{s=done} @self
+  
+  
+  
+    
+  ### NETHERWART WINE ###
+  # "lrd_netherwartwine" #
+  
+lrd_brewery_netherwartwine_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_netherwartwine_fermenter} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_netherwartwine_fermenter} @self
+  
+  #fermenter#      
+  
+lrd_brewery_start_recipe_lrd_netherwartwine_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - (( varequals{var=caster.slot1;val=NETHER_WART} && varequals{var=caster.slot2;val=SUGAR} ) || ( varequals{var=caster.slot1;val=SUGAR} && varequals{var=caster.slot2;val=NETHER_WART} )) true
+  - varequals{var=caster.working;val=true} false
+  - varequals{var=caster.holding;val=empty} true
+  Skills:                     
+  - setvar{var=caster.recipe;val=netherwartwine;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self             
+
+lrd_brewery_finish_recipe_lrd_netherwartwine_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - varequals{var=caster.recipe;val=netherwartwine} true                
+  - variableInRange{var=caster.worktime;val=>300} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_netherwartwine} @forward{f=1;yo=1.5;lp=true}       
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_netherwartwine;type=STRING} @self  
+  - state{s=working;r=true} @self  
+  
+  
+   
+  
+  
+  
+  
+   
+  
+  
+  ### TEQUILA ###
+  # "lrd_tequila" #
+  
+lrd_brewery_tequila_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_tequila_fermenter} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_tequila_fermenter} @self
+  - skill{s=lrd_brewery_start_recipe_lrd_tequila_distiller} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_tequila_distiller} @self
+
+  #fermenter#
+  
+lrd_brewery_start_recipe_lrd_tequila_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - (( varequals{var=caster.slot1;val=CACTUS} && varequals{var=caster.slot2;val=SUGAR} ) || ( varequals{var=caster.slot1;val=SUGAR} && varequals{var=caster.slot2;val=CACTUS} )) true
+  - varequals{var=caster.working;val=true} false      
+  Skills:                       
+  - setvar{var=caster.recipe;val=tequila;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self                  
+
+lrd_brewery_finish_recipe_lrd_tequila_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - varequals{var=caster.recipe;val=tequila} true                
+  - variableInRange{var=caster.worktime;val=>600} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_tequila_unfiltered} @forward{f=1;yo=1.5;lp=true}       
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_tequila_unfiltered;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  
+  
+  #distiller#
+  
+lrd_brewery_start_recipe_lrd_tequila_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - (( varequals{var=caster.slot1;val=lrd_tequila_unfiltered} && varequals{var=caster.slot2;val=empty} ) || ( varequals{var=caster.slot1;val=empty} && varequals{var=caster.slot2;val=lrd_tequila_unfiltered} )) true
+  - varequals{var=caster.working;val=true} false      
+  Skills:                       
+  - setvar{var=caster.recipe;val=tequila;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self                
+
+lrd_brewery_finish_recipe_lrd_tequila_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - varequals{var=caster.recipe;val=tequila} true                
+  - variableInRange{var=caster.worktime;val=>300} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_tequila} @forward{f=1;yo=1.4;lp=true}            
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_tequila;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  - state{s=done} @self
+
+  
+  
+  
+  
+  
+  ### TORCHED WHISKEY ###
+  # "lrd_torchedwhiskey" #
+  
+lrd_brewery_torchedwhiskey_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_torchedwhiskey_boiler} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_torchedwhiskey_boiler} @self
+  - skill{s=lrd_brewery_start_recipe_lrd_torchedwhiskey_fermenter} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_torchedwhiskey_fermenter} @self
+  - skill{s=lrd_brewery_start_recipe_lrd_torchedwhiskey_distiller} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_torchedwhiskey_distiller} @self
+  
+  
+  #boiler#
+lrd_brewery_start_recipe_lrd_torchedwhiskey_boiler:
+  Conditions:
+  - mythicmobtype{t=lrd_boiler}
+  - (( varequals{var=caster.slot1;val=TORCHFLOWER} && varequals{var=caster.slot2;val=SUGAR} ) || ( varequals{var=caster.slot1;val=SUGAR} && varequals{var=caster.slot2;val=TORCHFLOWER} )) true
+  - varequals{var=caster.working;val=true} false              
+  Skills:
+  - brightness{b=15;s=15} @self                               
+  - tint{m=lrd_boiler;c=e58b6a} @self                         
+  - setvar{var=caster.recipe;val=torchedwhiskey;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self                     
+
+lrd_brewery_finish_recipe_lrd_torchedwhiskey_boiler:
+  Conditions:
+  - mythicmobtype{t=lrd_boiler}
+  - varequals{var=caster.recipe;val=torchedwhiskey} true                
+  - variableInRange{var=caster.worktime;val=>240} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_torchedwhiskey_wort} @forward{f=0.75;yo=1.25;lp=true}             
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_torchedwhiskey_wort;type=STRING} @self  
+  - brightness{b=-1;s=-1} @self                               
+  - tint{m=lrd_boiler;c=ffffff} @self                         
+  - state{s=working;r=true} @self 
+  
+  
+  #fermenter#
+  
+lrd_brewery_start_recipe_lrd_torchedwhiskey_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - (( varequals{var=caster.slot1;val=lrd_torchedwhiskey_wort} && varequals{var=caster.slot2;val=empty} ) || ( varequals{var=caster.slot1;val=empty} && varequals{var=caster.slot2;val=lrd_torchedwhiskey_wort} )) true
+  - varequals{var=caster.working;val=true} false      
+  Skills:                       
+  - setvar{var=caster.recipe;val=torchedwhiskey;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self                  
+
+lrd_brewery_finish_recipe_lrd_torchedwhiskey_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - varequals{var=caster.recipe;val=torchedwhiskey} true                
+  - variableInRange{var=caster.worktime;val=>600} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_torchedwhiskey_unfiltered} @forward{f=1;yo=1.5;lp=true}       
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_torchedwhiskey_unfiltered;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  
+  
+  #distiller#
+  
+lrd_brewery_start_recipe_lrd_torchedwhiskey_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - (( varequals{var=caster.slot1;val=lrd_torchedwhiskey_unfiltered} && varequals{var=caster.slot2;val=empty} ) || ( varequals{var=caster.slot1;val=SWEET_BERRIES} && varequals{var=caster.slot2;val=lrd_torchedwhiskey_unfiltered} )) true
+  - varequals{var=caster.working;val=true} false      
+  Skills:                       
+  - setvar{var=caster.recipe;val=torchedwhiskey;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self                
+
+lrd_brewery_finish_recipe_lrd_torchedwhiskey_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - varequals{var=caster.recipe;val=torchedwhiskey} true                
+  - variableInRange{var=caster.worktime;val=>120} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_torchedwhiskey} @forward{f=1;yo=1.4;lp=true}            
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_torchedwhiskey;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  - state{s=done} @self
+
+  
+  
+
+  
+  ### GIN ###
+  # "lrd_gin" #
+  
+lrd_brewery_gin_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_gin_fermenter} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_gin_fermenter} @self
+  - skill{s=lrd_brewery_start_recipe_lrd_gin_distiller} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_gin_distiller} @self
+
+  #fermenter#
+  
+lrd_brewery_start_recipe_lrd_gin_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - (( varequals{var=caster.slot1;val=lrd_potatovodka_wort} && varequals{var=caster.slot2;val=SWEET_BERRIES} ) || ( varequals{var=caster.slot1;val=SWEET_BERRIES} && varequals{var=caster.slot2;val=lrd_potatovodka_wort} )) true
+  - varequals{var=caster.working;val=true} false      
+  Skills:                       
+  - setvar{var=caster.recipe;val=gin;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self                  
+
+lrd_brewery_finish_recipe_lrd_gin_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - varequals{var=caster.recipe;val=gin} true                
+  - variableInRange{var=caster.worktime;val=>300} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_gin_unfiltered} @forward{f=1;yo=1.5;lp=true}       
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_gin_unfiltered;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  
+  
+  #distiller#
+  
+lrd_brewery_start_recipe_lrd_gin_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - (( varequals{var=caster.slot1;val=lrd_gin_unfiltered} && varequals{var=caster.slot2;val=empty} ) || ( varequals{var=caster.slot1;val=empty} && varequals{var=caster.slot2;val=lrd_gin_unfiltered} )) true
+  - varequals{var=caster.working;val=true} false      
+  Skills:                       
+  - setvar{var=caster.recipe;val=gin;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self                
+
+lrd_brewery_finish_recipe_lrd_gin_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - varequals{var=caster.recipe;val=gin} true                
+  - variableInRange{var=caster.worktime;val=>600} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_gin} @forward{f=1;yo=1.4;lp=true}            
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_gin;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  - state{s=done} @self
+  
+  
+   
+  
+  
+  ### CAVE GIN ###
+  # "lrd_cavegin" #
+  
+lrd_brewery_cavegin_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_cavegin_fermenter} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_cavegin_fermenter} @self
+  - skill{s=lrd_brewery_start_recipe_lrd_cavegin_distiller} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_cavegin_distiller} @self
+
+  #fermenter#
+  
+lrd_brewery_start_recipe_lrd_cavegin_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - (( varequals{var=caster.slot1;val=lrd_potatovodka_wort} && varequals{var=caster.slot2;val=GLOW_BERRIES} ) || ( varequals{var=caster.slot1;val=GLOW_BERRIES} && varequals{var=caster.slot2;val=lrd_potatovodka_wort} )) true
+  - varequals{var=caster.working;val=true} false      
+  Skills:                       
+  - setvar{var=caster.recipe;val=cavegin;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self                  
+
+lrd_brewery_finish_recipe_lrd_cavegin_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - varequals{var=caster.recipe;val=cavegin} true                
+  - variableInRange{var=caster.worktime;val=>300} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_cavegin_unfiltered} @forward{f=1;yo=1.5;lp=true}       
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_cavegin_unfiltered;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  
+  
+  #distiller#
+  
+lrd_brewery_start_recipe_lrd_cavegin_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - (( varequals{var=caster.slot1;val=lrd_cavegin_unfiltered} && varequals{var=caster.slot2;val=empty} ) || ( varequals{var=caster.slot1;val=empty} && varequals{var=caster.slot2;val=lrd_cavegin_unfiltered} )) true
+  - varequals{var=caster.working;val=true} false      
+  Skills:                       
+  - setvar{var=caster.recipe;val=cavegin;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self                
+
+lrd_brewery_finish_recipe_lrd_cavegin_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - varequals{var=caster.recipe;val=cavegin} true                
+  - variableInRange{var=caster.worktime;val=>600} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_cavegin} @forward{f=1;yo=1.4;lp=true}            
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_cavegin;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  - state{s=done} @self
+  
+  
+  ### absinthe ###
+  # "lrd_absinthe" #
+  
+lrd_brewery_absinthe_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_absinthe_fermenter} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_absinthe_fermenter} @self
+  - skill{s=lrd_brewery_start_recipe_lrd_absinthe_distiller} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_absinthe_distiller} @self
+  
+  #fermenter#
+  
+lrd_brewery_start_recipe_lrd_absinthe_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - (( varequals{var=caster.slot1;val=CANE_SUGAR} && varequals{var=caster.slot2;val=WARPED_ROOTS} ) || ( varequals{var=caster.slot1;val=WARPED_ROOTS} && varequals{var=caster.slot2;val=CANE_SUGAR} )) true
+  - varequals{var=caster.working;val=true} false      
+  Skills:                       
+  - setvar{var=caster.recipe;val=absinthe;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self                  
+
+lrd_brewery_finish_recipe_lrd_absinthe_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - varequals{var=caster.recipe;val=absinthe} true                
+  - variableInRange{var=caster.worktime;val=>900} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_absinthe_unfiltered} @forward{f=1;yo=1.5;lp=true}       
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_absinthe_unfiltered;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  
+  
+  #distiller#
+  
+lrd_brewery_start_recipe_lrd_absinthe_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - (( varequals{var=caster.slot1;val=lrd_absinthe_unfiltered} && varequals{var=caster.slot2;val=empty} ) || ( varequals{var=caster.slot1;val=empty} && varequals{var=caster.slot2;val=lrd_absinthe_unfiltered} )) true
+  - varequals{var=caster.working;val=true} false      
+  Skills:                       
+  - setvar{var=caster.recipe;val=absinthe;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self                
+
+lrd_brewery_finish_recipe_lrd_absinthe_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - varequals{var=caster.recipe;val=absinthe} true                
+  - variableInRange{var=caster.worktime;val=>900} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_absinthe} @forward{f=1;yo=1.4;lp=true}            
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_absinthe;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  - state{s=done} @self
+  
+  
+  ### rum ###
+  # "lrd_rum" #
+  
+lrd_brewery_rum_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_rum_fermenter} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_rum_fermenter} @self
+  - skill{s=lrd_brewery_start_recipe_lrd_rum_distiller} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_rum_distiller} @self
+  
+  #fermenter#
+  
+lrd_brewery_start_recipe_lrd_rum_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - (( varequals{var=caster.slot1;val=SUGAR_CANE} && varequals{var=caster.slot2;val=WHEAT} ) || ( varequals{var=caster.slot1;val=WHEAT} && varequals{var=caster.slot2;val=SUGAR_CANE} )) true
+  - varequals{var=caster.working;val=true} false      
+  Skills:                       
+  - setvar{var=caster.recipe;val=rum;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self                  
+
+lrd_brewery_finish_recipe_lrd_rum_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - varequals{var=caster.recipe;val=rum} true                
+  - variableInRange{var=caster.worktime;val=>600} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_rum_unfiltered} @forward{f=1;yo=1.5;lp=true}       
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_rum_unfiltered;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  
+  
+  #distiller#
+  
+lrd_brewery_start_recipe_lrd_rum_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - (( varequals{var=caster.slot1;val=lrd_rum_unfiltered} && varequals{var=caster.slot2;val=empty} ) || ( varequals{var=caster.slot1;val=empty} && varequals{var=caster.slot2;val=lrd_rum_unfiltered} )) true
+  - varequals{var=caster.working;val=true} false      
+  Skills:                       
+  - setvar{var=caster.recipe;val=rum;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self                
+
+lrd_brewery_finish_recipe_lrd_rum_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - varequals{var=caster.recipe;val=rum} true                
+  - variableInRange{var=caster.worktime;val=>300} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_rum} @forward{f=1;yo=1.4;lp=true}            
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_rum;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  - state{s=done} @self
+  
+  
+  ### bourbon ###
+  # "lrd_bourbon" #
+  
+lrd_brewery_bourbon_recipe:
+  Skills:
+  - skill{s=lrd_brewery_start_recipe_lrd_bourbon_boiler} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_bourbon_boiler} @self
+  - skill{s=lrd_brewery_start_recipe_lrd_bourbon_fermenter} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_bourbon_fermenter} @self
+  - skill{s=lrd_brewery_start_recipe_lrd_bourbon_distiller} @self
+  - skill{s=lrd_brewery_finish_recipe_lrd_bourbon_distiller} @self
+  
+  
+  #boiler#
+lrd_brewery_start_recipe_lrd_bourbon_boiler:
+  Conditions:
+  - mythicmobtype{t=lrd_boiler}
+  - (( varequals{var=caster.slot1;val=WHEAT_SEEDS} && varequals{var=caster.slot2;val=SUGAR} ) || ( varequals{var=caster.slot1;val=SUGAR} && varequals{var=caster.slot2;val=WHEAT_SEEDS} )) true
+  - varequals{var=caster.working;val=true} false              
+  Skills:
+  - brightness{b=15;s=15} @self                               
+  - tint{m=lrd_boiler;c=e58b6a} @self                         
+  - setvar{var=caster.recipe;val=bourbon;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self                     
+
+lrd_brewery_finish_recipe_lrd_bourbon_boiler:
+  Conditions:
+  - mythicmobtype{t=lrd_boiler}
+  - varequals{var=caster.recipe;val=bourbon} true                
+  - variableInRange{var=caster.worktime;val=>600} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_bourbon_wort} @forward{f=0.75;yo=1.25;lp=true}             
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_bourbon_wort;type=STRING} @self  
+  - brightness{b=-1;s=-1} @self                               
+  - tint{m=lrd_boiler;c=ffffff} @self                         
+  - state{s=working;r=true} @self 
+  
+  
+  #fermenter#
+  
+lrd_brewery_start_recipe_lrd_bourbon_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - (( varequals{var=caster.slot1;val=lrd_bourbon_wort} && varequals{var=caster.slot2;val=empty} ) || ( varequals{var=caster.slot1;val=empty} && varequals{var=caster.slot2;val=lrd_bourbon_wort} )) true
+  - varequals{var=caster.working;val=true} false      
+  Skills:                       
+  - setvar{var=caster.recipe;val=bourbon;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self                  
+
+lrd_brewery_finish_recipe_lrd_bourbon_fermenter:
+  Conditions:
+  - mythicmobtype{t=lrd_fermenter}
+  - varequals{var=caster.recipe;val=bourbon} true                
+  - variableInRange{var=caster.worktime;val=>600} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_bourbon_unfiltered} @forward{f=1;yo=1.5;lp=true}       
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_bourbon_unfiltered;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  
+  
+  #distiller#
+  
+lrd_brewery_start_recipe_lrd_bourbon_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - (( varequals{var=caster.slot1;val=lrd_bourbon_unfiltered} && varequals{var=caster.slot2;val=empty} ) || ( varequals{var=caster.slot1;val=empty} && varequals{var=caster.slot2;val=lrd_bourbon_unfiltered} )) true
+  - varequals{var=caster.working;val=true} false      
+  Skills:                       
+  - setvar{var=caster.recipe;val=bourbon;type=STRING} @self       
+  - setvar{var=caster.working;val=true;type=STRING} @self     
+  - state{s=working} @self                
+
+lrd_brewery_finish_recipe_lrd_bourbon_distiller:
+  Conditions:
+  - mythicmobtype{t=lrd_distiller}
+  - varequals{var=caster.recipe;val=bourbon} true                
+  - variableInRange{var=caster.worktime;val=>600} true         
+  Skills:
+  - sound{s=littleroom_brewerypack:recipe_complete;v=10;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self
+  - summon{t=lrd_bourbon} @forward{f=1;yo=1.4;lp=true}            
+  - setvar{var=caster.recipe;val=none;type=STRING} @self      
+  - setvar{var=caster.slot1;val=empty;type=STRING} @self      
+  - setvar{var=caster.slot2;val=empty;type=STRING} @self     
+  - setvar{var=caster.worktime;val=0;type=INTEGER} @self     
+  - setvar{var=caster.working;val=false;type=STRING} @self    
+  - setvar{var=caster.holding;val=lrd_bourbon;type=STRING} @self  
+  - state{s=working;r=true} @self 
+  - state{s=done} @self

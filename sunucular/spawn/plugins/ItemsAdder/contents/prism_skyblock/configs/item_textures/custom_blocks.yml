@@ -1,0 +1,116 @@
+info:
+  namespace: prism_skyblock
+items:
+  
+  cobalt_ore:
+    resource:
+      generate: true
+      material: DIAMOND
+      parent_model: block/cube_all
+      textures:
+      - block_textures/cobalt_ore
+      model_id: 1
+    specific_properties:
+      block:
+        placed_model:
+          type: REAL_NOTE
+          break_particles: ITEM
+        break_tools_whitelist:
+        - DIAMOND_PICKAXE
+        - NETHERITE_PICKAXE
+        hardness: 5
+        cancel_drop: true
+        sound: 
+          break:
+            name: BLOCK_STONE_BREAK
+            volume: 1
+            pitch: 0.9
+          place:
+            name: BLOCK_STONE_PLACE
+            volume: 1
+            pitch: 0.9
+
+  mithril_ore:
+    resource:
+      generate: true
+      material: DIAMOND
+      parent_model: block/cube_all
+      textures:
+      - block_textures/mithril_ore
+      model_id: 2
+    specific_properties:
+      block:
+        placed_model:
+          type: REAL_NOTE
+          break_particles: ITEM
+        break_tools_whitelist:
+        - DIAMOND_PICKAXE
+        - NETHERITE_PICKAXE
+        hardness: 5.5
+        cancel_drop: true
+        sound: 
+          break:
+            name: BLOCK_STONE_BREAK
+            volume: 1
+            pitch: 0.9
+          place:
+            name: BLOCK_STONE_PLACE
+            volume: 1
+            pitch: 0.9
+
+  soulsteel_ore:
+    resource:
+      generate: true
+      material: DIAMOND
+      parent_model: block/cube_all
+      textures:
+      - block_textures/soulsteel_ore
+      model_id: 3
+    specific_properties:
+      block:
+        placed_model:
+          type: REAL_NOTE
+          break_particles: ITEM
+        break_tools_whitelist:
+        - DIAMOND_PICKAXE
+        - NETHERITE_PICKAXE
+        hardness: 6
+        cancel_drop: true
+        sound: 
+          break:
+            name: BLOCK_STONE_BREAK
+            volume: 1
+            pitch: 0.9
+          place:
+            name: BLOCK_STONE_PLACE
+            volume: 1
+            pitch: 0.9
+
+
+loots:
+
+  blocks:
+    cobalt_ore:
+      type: prism_skyblock:cobalt_ore
+      items:
+        ruby:
+          item: prism_skyblock:raw_cobalt
+          min_amount: 1
+          max_amount: 1
+          chance: 100
+    mithril_ore:
+      type: prism_skyblock:mithril_ore
+      items:
+        ruby:
+          item: prism_skyblock:raw_mithril
+          min_amount: 1
+          max_amount: 1
+          chance: 100
+    soulsteel_ore:
+      type: prism_skyblock:soulsteel_ore
+      items:
+        ruby:
+          item: prism_skyblock:raw_soulsteel
+          min_amount: 1
+          max_amount: 1
+          chance: 100

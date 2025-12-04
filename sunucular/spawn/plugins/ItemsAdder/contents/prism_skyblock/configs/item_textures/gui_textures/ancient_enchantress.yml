@@ -1,0 +1,45 @@
+info:
+  namespace: prism_skyblock
+items:
+  
+  enchant-accept:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 54
+      textures:
+      - interface/gui_textures/ancient_enchantress/accept
+  enchant-deny:
+      enabled: true
+      resource:
+        generate: true
+        material: BOOK
+        model_id: 55
+        textures:
+        - interface/gui_textures/ancient_enchantress/deny
+  enchant-waiting:
+      enabled: true
+      resource:
+        generate: true
+        material: BOOK
+        model_id: 56
+        textures:
+        - interface/gui_textures/ancient_enchantress/waiting
+
+  enchant-next:
+      enabled: true
+      resource:
+        generate: true
+        material: BOOK
+        model_id: 57
+        textures:
+        - interface/gui_textures/ancient_enchantress/next
+  enchant-back:
+      enabled: true
+      resource:
+        generate: true
+        material: BOOK
+        model_id: 58
+        textures:
+        - interface/gui_textures/ancient_enchantress/back

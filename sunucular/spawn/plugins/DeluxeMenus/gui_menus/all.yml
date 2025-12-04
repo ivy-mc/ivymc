@@ -1,0 +1,87 @@
+menu_title: ':offset_-16::all:'
+open_command: all
+size: 54
+open_requirement:
+  requirements:
+    permission:
+      type: has permission
+      permission: deluxemenus.admin
+      deny_commands:
+        - '[message] &cYou don''t have permission to do that!'
+
+items:
+  'Overworld':
+    material: PAPER
+    model_data: 10023
+    slots: 
+    - 1
+    - 2
+    - 3
+    - 10
+    - 11
+    - 12
+    - 19
+    - 20
+    - 21
+    display_name: "&6&lDunya"
+    lore:
+       - "&7Teleport me to this world"
+    click_commands:
+       - '[console] ivyrtp rtp vahsi %player_name%'
+
+  'Mining':
+    material: PAPER
+    model_data: 10023
+    slots: 
+    - 5
+    - 6
+    - 7
+    - 14
+    - 15
+    - 16
+    - 23
+    - 24
+    - 25
+    display_name: "&6&lMaden Dunyasi"
+    lore:
+       - "&7Teleport me to this world"
+    click_commands:
+       - '[console] ivyrtp rtp maden %player_name%'
+       
+  'Nether':
+    material: PAPER
+    model_data: 10023
+    slots: 
+    - 28
+    - 29
+    - 30
+    - 37
+    - 38
+    - 39
+    - 46
+    - 47
+    - 48
+    display_name: "&6&lNether"
+    lore:
+       - "&7Teleport me to this world"
+    click_commands:
+       - '[console] ivyrtp rtp nether %player_name%'
+
+  'End':
+    material: PAPER
+    model_data: 10023
+    slots: 
+    - 32
+    - 33
+    - 34
+    - 41
+    - 42
+    - 43
+    - 50
+    - 51
+    - 52
+    display_name: "&6&lThe End"
+    lore:
+       - "&7Teleport me to this world" 
+    click_commands:
+       - '[console] ivyrtp rtp end %player_name%'

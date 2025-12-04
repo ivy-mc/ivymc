@@ -1,0 +1,60 @@
+info:
+  namespace: prism_skyblock
+items:
+  
+  ah-cata-listings:
+    enabled: true
+    resource:
+      generate: false
+      material: BOOK
+      model_id: 73
+      model_path: gui_textures/ah/cata_listings
+  ah-cata-listings-selected:
+    enabled: true
+    resource:
+      generate: false
+      material: BOOK
+      model_id: 74
+      model_path: gui_textures/ah/cata_listings_selected
+  ah-cata-yours:
+    enabled: true
+    resource:
+      generate: false
+      material: BOOK
+      model_id: 75
+      model_path: gui_textures/ah/cata_yours
+  ah-cata-yours-selected:
+    enabled: true
+    resource:
+      generate: false
+      material: BOOK
+      model_id: 76
+      model_path: gui_textures/ah/cata_yours_selected
+  ah-cata-expired:
+    enabled: true
+    resource:
+      generate: false
+      material: BOOK
+      model_id: 77
+      model_path: gui_textures/ah/cata_expired
+  ah-cata-expired-selected:
+    enabled: true
+    resource:
+      generate: false
+      material: BOOK
+      model_id: 78
+      model_path: gui_textures/ah/cata_expired_selected
+  ah-slot-available:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 79
+      texture: interface/gui_textures/ah/available_slot
+  ah-slot-locked:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 80
+      texture: interface/gui_textures/ah/locked_slot

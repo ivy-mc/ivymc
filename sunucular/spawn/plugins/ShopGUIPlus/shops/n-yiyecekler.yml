@@ -1,0 +1,384 @@
+n-yiyecekler:
+  name: "&fᵩᵒ"
+  fillItem:
+    material: PAPER
+    model: 7548
+    name: "&f"
+  items:
+    4:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵶ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Yiyecekler kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop foods
+      slot: 3
+      page: 1
+    10:
+      type: special
+      special: BALANCE
+      slot: 49
+      page: 1
+    21:
+      type: item
+      item:
+        material: POTATO
+        quantity: 1
+      buyPrice: 100
+      sellPrice: 3.7
+      slot: 18
+      page: 1
+    22:
+      type: item
+      item:
+        material: BAKED_POTATO
+        quantity: 1
+      buyPrice: 120
+      sellPrice: 3.5
+      slot: 19
+      page: 1
+    23:
+      type: item
+      item:
+        material: POISONOUS_POTATO
+        quantity: 1
+      buyPrice: 200
+      sellPrice: 60
+      slot: 20
+      page: 1
+    24:
+      type: item
+      item:
+        material: CARROT
+        quantity: 1
+      buyPrice: 100
+      sellPrice: 3.7
+      slot: 21
+      page: 1
+    25:
+      type: item
+      item:
+        material: GOLDEN_CARROT
+        quantity: 1
+      buyPrice: 250
+      sellPrice: 5.7
+      slot: 22
+      page: 1
+    26:
+      type: item
+      item:
+        material: MELON_SLICE
+        quantity: 1
+      buyPrice: 150
+      sellPrice: 3.15
+      slot: 23
+      page: 1
+    27:
+      type: item
+      item:
+        material: GLISTERING_MELON_SLICE
+        quantity: 1
+      buyPrice: 250
+      sellPrice: 5.7
+      slot: 24
+      page: 1
+    28:
+      type: item
+      item:
+        material: BEETROOT
+        quantity: 1
+      buyPrice: 110
+      sellPrice: 3.8
+      slot: 25
+      page: 1
+    29:
+      type: item
+      item:
+        material: SWEET_BERRIES
+        quantity: 1
+      buyPrice: 100
+      sellPrice: 3.94
+      slot: 26
+      page: 1
+    30:
+      type: item
+      item:
+        material: GLOW_BERRIES
+        quantity: 1
+      buyPrice: 50
+      sellPrice: 3.35
+      slot: 27
+      page: 1
+    31:
+      type: item
+      item:
+        material: BREAD
+        quantity: 1
+      buyPrice: 300
+      sellPrice: 4.5
+      slot: 28
+      page: 1
+    32:
+      type: item
+      item:
+        material: DRIED_KELP
+        quantity: 1
+      buyPrice: 100
+      sellPrice: 4.08
+      slot: 29
+      page: 1
+    33:
+      type: item
+      item:
+        material: COOKIE
+        quantity: 1
+      buyPrice: 450
+      sellPrice: 4.8
+      slot: 30
+      page: 1
+    34:
+      type: item
+      item:
+        material: PUMPKIN_PIE
+        quantity: 1
+      buyPrice: 600
+      sellPrice: 3.3
+      slot: 31
+      page: 1
+    35:
+      type: item
+      item:
+        material: CAKE
+        quantity: 1
+      buyPrice: 350
+      sellPrice: 11.8
+      slot: 32
+      page: 1
+    36:
+      type: item
+      item:
+        material: MUSHROOM_STEW
+        quantity: 1
+      buyPrice: 36
+      sellPrice: 9.5
+      slot: 33
+      page: 1
+    37:
+      type: item
+      item:
+        material: RABBIT_STEW
+        quantity: 1
+      buyPrice: 36
+      sellPrice: 9.5
+      slot: 34
+      page: 1
+    38:
+      type: item
+      item:
+        material: SUSPICIOUS_STEW
+        quantity: 1
+      buyPrice: 36
+      sellPrice: 9.5
+      slot: 35
+      page: 1
+    39:
+      type: item
+      item:
+        material: BEETROOT_SOUP
+        quantity: 1
+      buyPrice: 36
+      sellPrice: 9.5
+      slot: 36
+      page: 1
+    40:
+      type: item
+      item:
+        material: APPLE
+        quantity: 1
+      buyPrice: 300
+      sellPrice: 3.35
+      slot: 37
+      page: 1
+    41:
+      type: item
+      item:
+        material: GOLDEN_APPLE
+        quantity: 1
+      buyPrice: 5000
+      sellPrice: -1
+      slot: 38
+      page: 1
+    42:
+      type: item
+      item:
+        material: ENCHANTED_GOLDEN_APPLE
+        quantity: 1
+      buyPrice: 10000
+      sellPrice: -1
+      slot: 39
+      page: 1
+    43:
+      type: item
+      item:
+        material: HONEY_BOTTLE
+        quantity: 1
+      buyPrice: 50
+      sellPrice: 5.5
+      slot: 40
+      page: 1
+    44:
+      type: item
+      item:
+        material: EGG
+        quantity: 1
+      buyPrice: 150
+      sellPrice: 3.25
+      slot: 41
+      page: 1
+    45:
+      type: item
+      item:
+        material: MUTTON
+        quantity: 1
+      buyPrice: 110
+      sellPrice: 5.12
+      slot: 42
+      page: 1
+    46:
+      type: item
+      item:
+        material: RABBIT
+        quantity: 1
+      buyPrice: 110
+      sellPrice: 5.12
+      slot: 43
+      page: 1
+    47:
+      type: item
+      item:
+        material: CHICKEN
+        quantity: 1
+      buyPrice: 80
+      sellPrice: 5.09
+      slot: 44
+      page: 1
+    48:
+      type: item
+      item:
+        material: PORKCHOP
+        quantity: 1
+      buyPrice: 80
+      sellPrice: 5.09
+      slot: 18
+      page: 2
+    49:
+      type: item
+      item:
+        material: BEEF
+        quantity: 1
+      buyPrice: 80
+      sellPrice: 5.09
+      slot: 19
+      page: 2
+    50:
+      type: item
+      item:
+        material: COD
+        quantity: 1
+      sellPrice: 8.22
+      slot: 20
+      page: 2
+    51:
+      type: item
+      item:
+        material: SALMON
+        quantity: 1
+      buyPrice: 200
+      sellPrice: 8.22
+      slot: 21
+      page: 2
+    52:
+      type: item
+      item:
+        material: TROPICAL_FISH
+        quantity: 1
+      buyPrice: 200
+      sellPrice: 8.22
+      slot: 22
+      page: 2
+    53:
+      type: item
+      item:
+        material: PUFFERFISH
+        quantity: 1
+      buyPrice: 200
+      sellPrice: 8.22
+      slot: 23
+      page: 2
+    54:
+      type: item
+      item:
+        material: COOKED_MUTTON
+        quantity: 1
+      buyPrice: 120
+      sellPrice: 5.12
+      slot: 24
+      page: 2
+    55:
+      type: item
+      item:
+        material: COOKED_RABBIT
+        quantity: 1
+      buyPrice: 120
+      sellPrice: 5.12
+      slot: 25
+      page: 2
+    56:
+      type: item
+      item:
+        material: COOKED_CHICKEN
+        quantity: 1
+      buyPrice: 100
+      sellPrice: 5.09
+      slot: 26
+      page: 2
+    57:
+      type: item
+      item:
+        material: COOKED_PORKCHOP
+        quantity: 1
+      buyPrice: 100
+      sellPrice: 5.09
+      slot: 27
+      page: 2
+    58:
+      type: item
+      item:
+        material: COOKED_BEEF
+        quantity: 1
+      buyPrice: 100
+      sellPrice: 5.09
+      slot: 28
+      page: 2
+    59:
+      type: item
+      item:
+        material: COOKED_COD
+        quantity: 1
+      buyPrice: 220
+      sellPrice: 8.22
+      slot: 29
+      page: 2
+    60:
+      type: special
+      special: BALANCE
+      slot: 49
+      page: 2

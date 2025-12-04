@@ -1,0 +1,120 @@
+balloon-yellow:
+  Id: PAPER
+  Display: '&lballoon-yellow'
+  CustomModelData: 250320
+  Skills:
+  - summon{m=balloon-yellow;os=true} @selfLocation{fo=-2} ~onUse ?equipslot{slot=HAND}
+  - consumeslot{slot=HAND;amount=1} @self ~onUse
+
+balloon-white:
+  Id: PAPER
+  Display: '&lballoon-white'
+  CustomModelData: 250321
+  Skills:
+  - summon{m=balloon-white;os=true} @selfLocation{fo=-2} ~onUse ?equipslot{slot=HAND}
+  - consumeslot{slot=HAND;amount=1} @self ~onUse
+
+balloon-red:
+  Id: PAPER
+  Display: '&lballoon-red'
+  CustomModelData: 250322
+  Skills:
+  - summon{m=balloon-red;os=true} @selfLocation{fo=-2} ~onUse ?equipslot{slot=HAND}
+  - consumeslot{slot=HAND;amount=1} @self ~onUse
+
+balloon-purple:
+  Id: PAPER
+  Display: '&lballoon-purple'
+  CustomModelData: 250323
+  Skills:
+  - summon{m=balloon-purple;os=true} @selfLocation{fo=-2} ~onUse ?equipslot{slot=HAND}
+  - consumeslot{slot=HAND;amount=1} @self ~onUse
+
+balloon-pink:
+  Id: PAPER
+  Display: '&lballoon-pink'
+  CustomModelData: 250324
+  Skills:
+  - summon{m=balloon-pink;os=true} @selfLocation{fo=-2} ~onUse ?equipslot{slot=HAND}
+  - consumeslot{slot=HAND;amount=1} @self ~onUse
+
+balloon-orange:
+  Id: PAPER
+  Display: '&lballoon-orange'
+  CustomModelData: 250325
+  Skills:
+  - summon{m=balloon-orange;os=true} @selfLocation{fo=-2} ~onUse ?equipslot{slot=HAND}
+  - consumeslot{slot=HAND;amount=1} @self ~onUse
+
+balloon-lightpink:
+  Id: PAPER
+  Display: '&lballoon-lightpink'
+  CustomModelData: 250326
+  Skills:
+  - summon{m=balloon-lightpink;os=true} @selfLocation{fo=-2} ~onUse ?equipslot{slot=HAND}
+  - consumeslot{slot=HAND;amount=1} @self ~onUse
+
+balloon-lightblue:
+  Id: PAPER
+  Display: '&lballoon-lightblue'
+  CustomModelData: 250327
+  Skills:
+  - summon{m=balloon-lightblue;os=true} @selfLocation{fo=-2} ~onUse ?equipslot{slot=HAND}
+  - consumeslot{slot=HAND;amount=1} @self ~onUse
+
+balloon-green:
+  Id: PAPER
+  Display: '&lballoon-green'
+  CustomModelData: 250328
+  Skills:
+  - summon{m=balloon-green;os=true} @selfLocation{fo=-2} ~onUse ?equipslot{slot=HAND}
+  - consumeslot{slot=HAND;amount=1} @self ~onUse
+
+balloon-gray:
+  Id: PAPER
+  Display: '&lballoon-gray'
+  CustomModelData: 250329
+  Skills:
+  - summon{m=balloon-gray;os=true} @selfLocation{fo=-2} ~onUse ?equipslot{slot=HAND}
+  - consumeslot{slot=HAND;amount=1} @self ~onUse
+
+balloon-darkgreen:
+  Id: PAPER
+  Display: '&lballoon-darkgreen'
+  CustomModelData: 250330
+  Skills:
+  - summon{m=balloon-darkgreen;os=true} @selfLocation{fo=-2} ~onUse ?equipslot{slot=HAND}
+  - consumeslot{slot=HAND;amount=1} @self ~onUse
+
+balloon-darkgray:
+  Id: PAPER
+  Display: '&lballoon-darkgray'
+  CustomModelData: 250331
+  Skills:
+  - summon{m=balloon-darkgray;os=true} @selfLocation{fo=-2} ~onUse ?equipslot{slot=HAND}
+  - consumeslot{slot=HAND;amount=1} @self ~onUse
+
+balloon-brown:
+  Id: PAPER
+  Display: '&lballoon-brown'
+  CustomModelData: 250332
+  Skills:
+  - summon{m=balloon-brown;os=true} @selfLocation{fo=-2} ~onUse ?equipslot{slot=HAND}
+  - consumeslot{slot=HAND;amount=1} @self ~onUse
+
+balloon-blue:
+  Id: PAPER
+  Display: '&lballoon-blue'
+  CustomModelData: 250333
+  Skills:
+  - summon{m=balloon-blue;os=true} @selfLocation{fo=-2} ~onUse ?equipslot{slot=HAND}
+  - consumeslot{slot=HAND;amount=1} @self ~onUse
+
+balloon-black:
+  Id: PAPER
+  Display: '&lballoon-black'
+  CustomModelData: 250334
+  Skills:
+  - summon{m=balloon-black;os=true} @selfLocation{fo=-2} ~onUse ?equipslot{slot=HAND}
+  - consumeslot{slot=HAND;amount=1} @self ~onUse
+#gEOrh0c4FGW2lEauR3VltWeVpXTSxWVVpEcsRFWkFjVoFzaU5UbMV1bzYTUBt0VJFmWOVnM

@@ -1,0 +1,26 @@
+baseCommand: /livestream
+aliases:
+  - /stream
+  - /live
+description: Link to a streamer's livestream!
+permission: advancedchat.livestream
+
+command:
+  - effects:
+      - "MESSAGE:&cCommand usage: /livestream <link>! <condition>%arg length% != 1 : %allow%</condition>"
+      - "BROADCAST:&d━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <condition>%arg length% = 1 : %allow%</condition>"
+      - "BROADCAST:&d⚡ &5&lLIVE STREAM ALERT &d⚡ <condition>%arg length% = 1 : %allow%</condition>"
+      - "BROADCAST:  <condition>%arg length% = 1 : %allow%</condition>"
+      - "BROADCAST:&d✧ &f%player name% &dis now broadcasting! <condition>%arg length% = 1 : %allow%</condition>"
+      - "BROADCAST:&d✧ &fJoin the stream at: &b%arg-1% <condition>%arg length% = 1 : %allow%</condition>"
+      - "BROADCAST:  <condition>%arg length% = 1 : %allow%</condition>"
+      - "BROADCAST:&d⚜ &fDon't miss out on the action! &d⚜ <condition>%arg length% = 1 : %allow%</condition>"
+      - "BROADCAST:&d━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <condition>%arg length% = 1 : %allow%</condition>"
+      - "PLAY_SOUND:BLOCK_NOTE_BLOCK_PLING:1:2 @AllPlayers <condition>%arg length% = 1 : %allow%</condition>"
+      - "PLAY_SOUND:ENTITY_PLAYER_LEVELUP:1:1 @AllPlayers <condition>%arg length% = 1 : %allow%</condition>"
+      - "PLAY_SOUND:ENTITY_EXPERIENCE_ORB_PICKUP:1:0.7 @AllPlayers <condition>%arg length% = 1 : %allow%</condition>"
+      - "PLAY_SOUND:ENTITY_FIREWORK_ROCKET_TWINKLE:1:1 @AllPlayers <condition>%arg length% = 1 : %allow%</condition>"
+
+invalidArgs:
+  - effects:
+      - "MESSAGE:&cCommand usage: /livestream <link>!"

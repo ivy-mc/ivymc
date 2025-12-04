@@ -1,0 +1,135 @@
+info:
+  namespace: prism_skyblock
+font_images:
+  
+  shift_1:
+    path: shift
+    y_position: -32768
+    scale_ratio: -1
+    symbol: ꐠ
+
+  shift_2:
+    path: shift
+    y_position: -32768
+    scale_ratio: 0
+    symbol: ꐡ
+
+  shift_4:
+    path: shift
+    y_position: -32768
+    scale_ratio: 2
+    symbol: ꐢ
+
+  shift_8:
+    path: shift
+    y_position: -32768
+    scale_ratio: 6
+    symbol: ꐣ
+
+  shift_16:
+    path: shift
+    y_position: -32768
+    scale_ratio: 14
+    symbol: ꐤ
+
+  shift_32:
+    path: shift
+    y_position: -32768
+    scale_ratio: 30
+    symbol: ꐥ
+
+  shift_64:
+    path: shift
+    y_position: -32768
+    scale_ratio: 62
+    symbol: ꐦ
+
+  shift_128:
+    path: shift
+    y_position: -32768
+    scale_ratio: 126
+    symbol: ꐧ
+
+  shift_256:
+    path: shift
+    y_position: -32768
+    scale_ratio: 254
+    symbol: ꐨ
+
+  shift_512:
+    path: shift
+    y_position: -32768
+    scale_ratio: 510
+    symbol: ꐩ
+
+  shift_1024:
+    path: shift
+    y_position: -32768
+    scale_ratio: 1022
+    symbol: ꐪ
+
+  neg_shift_1:
+    path: shift
+    y_position: -32768
+    scale_ratio: -3
+    symbol: ꐫ
+
+  neg_shift_2:
+    path: shift
+    y_position: -32768
+    scale_ratio: -4
+    symbol: ꐬ
+
+  neg_shift_4:
+    path: shift
+    y_position: -32768
+    scale_ratio: -6
+    symbol: ꐭ
+
+  neg_shift_8:
+    path: shift
+    y_position: -32768
+    scale_ratio: -10
+    symbol: ꐮ
+
+  neg_shift_16:
+    path: shift
+    y_position: -32768
+    scale_ratio: -18
+    symbol: ꐯ
+
+  neg_shift_32:
+    path: shift
+    y_position: -32768
+    scale_ratio: -34
+    symbol: ꐰ
+
+  neg_shift_64:
+    path: shift
+    y_position: -32768
+    scale_ratio: -66
+    symbol: ꐱ
+
+  neg_shift_128:
+    path: shift
+    y_position: -32768
+    scale_ratio: -130
+    symbol: ꐲ
+
+  neg_shift_256:
+    path: shift
+    y_position: -32768
+    scale_ratio: -258
+    symbol: ꐳ
+
+  neg_shift_512:
+    path: shift
+    y_position: -32768
+    scale_ratio: -514
+    symbol: ꐴ
+
+  neg_shift_1024:
+    path: shift
+    y_position: -32768
+    scale_ratio: -1026
+    symbol: ꐵ

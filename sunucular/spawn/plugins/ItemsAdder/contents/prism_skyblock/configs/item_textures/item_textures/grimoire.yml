@@ -1,0 +1,12 @@
+info:
+  namespace: prism_skyblock
+items:
+  
+  draedon_grimoire:
+    enabled: true   
+    resource:
+      generate: true
+      material: FEATHER
+      model_id: 1
+      textures:
+      - item_texture/grimoire/draedon_grimoire.png

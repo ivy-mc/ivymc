@@ -1,0 +1,711 @@
+database:
+  # Database backend type, can be set to mysql or sqlite
+  type: sqlite
+  # MySQL database host
+  mySQLHost: localhost
+  # MySQL connection port number
+  mySQLPort: 3306
+  # MySQL database name
+  mySQLDatabase: db
+  # MySQL database user
+  mySQLUser: root
+  # MySQL user's password
+  mySQLPassword: ""
+  # MySQL table names
+  tableNames:
+    players: "players"
+
+# Types of economies which will be enabled and possible to use within shops.
+# Supported economies:
+#  - EXP (default Minecraft experience points)
+#  - EXP_LEVELS (default Minecraft experience levels; integer prices recommended, prices are rounded down)
+#  - VAULT (requires https://www.spigotmc.org/resources/vault.34315/)
+#  - GEMS_ECONOMY (requires https://www.spigotmc.org/resources/gemseconomy.19655/)
+#  - GRINGOTTS (requires https://www.spigotmc.org/resources/gringotts.42071/)
+#  - MYSQL_TOKENS (requires https://www.spigotmc.org/resources/mysql-tokens.7535/)
+#  - PLAYER_POINTS (requires https://www.spigotmc.org/resources/playerpoints.80745/)
+#  - TOKEN_ENCHANT (requires https://www.spigotmc.org/resources/tokenenchant.2287/)
+#  - TOKEN_MANAGER (requires https://www.spigotmc.org/resources/tokenmanager.8610/)
+#  - VOTING_PLUGIN (requires https://www.spigotmc.org/resources/votingplugin.15358/)
+#  - COINS_ENGINE (requires https://www.spigotmc.org/resources/coinsengine.84121/)
+# First position will be the default economy for all shops.
+economyTypes:
+  - VAULT
+currencies:
+  prefixes:
+    VAULT: ""
+  suffixes:
+    VAULT: "&fᵍ"
+# Name of the main GUI
+shopMenuName: "&fᵩᵚ"
+# Size of the main GUI, valid values are 9, 18, 27, 36, 45 and 54
+shopMenuSize: 45
+# Choose an item to fill the empty slots of menu with
+shopMenuFillItem:
+  material: PAPER
+  model: 7548
+  name: "&f"
+# Define whether selling all with middle mouse button is enabled
+enableSellAll: true
+# Define whether the buy GUI with option to select quantity is enabled
+enableBuyGUI: true
+# Define whether the sell GUI with option to select quantity is enabled
+enableSellGUI: true
+# Define whether sell all button in SellGUI is enabled (enableSellGUI has to be enabled too)
+enableSellGUISellAll: true
+# Define whether after closing/buying/selling the shop GUI should be opened again
+returnToShop: true
+# Define whether the quick buy/sell option should be enabled (amount selection gui will stay open until player closes it)
+quickBuySell: false
+# Define whether lines containing the %buy% placeholder should be hidden for unbuyable items
+hideBuyPriceForUnbuyable: true
+# Choose placeholder for the price when hideBuyPriceForUnbuyable is disabled
+buyPriceForUnsellablePlaceholder: "N/A &fᵍ"
+# Define whether lines containing the %sell% placeholder should be hidden for unsellable items
+hideSellPriceForUnsellable: true
+# Choose placeholder for the price when hideSellPriceForUnsellable is disabled
+sellPriceForUnsellablePlaceholder: "N/A &fᵍ"
+# Choose actions for mouse clicks inside shops
+# Supported click types: all from ClickType enum (https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/inventory/ClickType.html)
+# Supported actions: BUY, SELL, SELL_ALL, NONE
+clickActions:
+  LEFT: BUY
+  RIGHT: SELL
+  SHIFT_RIGHT: NONE
+  MIDDLE: NONE
+# Maximum amount of enchantments players can add to an item, set to -1 for no limit
+maxEnchantments: 3
+# Choose whether players should be able to buy enchantments only 1 level higher than current (eg. player has sword with Sharpness 1, they could buy only Sharpness 2)
+limitEnchantmentLevelDiff: false
+# Define whether the amount selection double click bug fix should be enabled
+enableAmountSelectionFix: true
+# Define whether players should be able to use sell all option to sell all their items (allowAllSellAllStackSizes = true) or only amount multiplied by the original stack size of the shop item (allowAllSellAllStackSizes = false)
+allowAllSellAllStackSizes: false
+# Define whether all prices should be rounded up, down, to the nearest whole number or not rounded (valid values are UP, DOWN, NEAREST and NONE)
+roundPrices: none
+# Define whether main menu (/shop command) should be disabled. The only way to access shops will be to use /shop <id> when you disable it.
+disableMainMenu: false
+# Choose if different messages should be sent when someone buy/sell items for $0 (MSG_ITEM_BOUGHTFREE, MSG_ITEM_SOLDFREE, MSG_ITEM_SOLDALLFREE)
+useDifferentMessagesForFreeItems: true
+# Choose if item names should have first letters of their names capitalized, for instance nether brick would become Nether Brick
+capitalizeItemNames: true
+# Choose the type of price modifiers. (BOTH (permission modifiers have higher priority than command-ones), COMMAND, PERMISSION)
+priceModifiersType: BOTH
+# Choose if the gui shall be closed after using the Sell All feature
+closeGuiAfterSellAll: false
+# Choose if bulk buy/sell guis should be opened immediately after clicking an item (enableBuyGUI and enableSellGUI have to be enabled as well and players need the bulk buy/sell permissions)
+openBulkGuiImmediately: false
+# Choose if players who have the shop opened by console with /shop [player] should be able to access all shops regardless of permissions they have
+sudoAllowAllShopsAccess: false
+# Choose which items stack size should be capped at 16 inside the amount selection GUI so players can't buy eg. oversized ender pearl stacks
+# Format is same as for regular items in shops yaml
+itemStackSizeCappedAt:
+  1:
+    material: ENDER_PEARL
+    size: 16
+  2:
+    material: SNOWBALL
+    size: 16
+  3:
+    material: EGG
+    size: 16
+  4:
+    material: BUCKET
+    size: 1
+# Choose what gamemodes will prevent players from accessing shops. Valid values: ADVENTURE, CREATIVE, SPECTATOR, SURVIVAL
+disableShopsInGamemodes:
+  - ADVENTURE
+  - CREATIVE
+  - SPECTATOR
+# Choose in which worlds players won't be able to access the shop. Same list format as disableShopsInGamemodes
+disableShopsInWorlds: [ ]
+
+# Choose whether price modifiers should be displayed in percents instead of decimals (eg. 10% instead of 0.10), remember you will still have to use the decimal way in commands
+displayPriceModifiersInPercents: true
+
+# Choose whether the world-specific permission to access shops should be omitted when player has a shop opened with /shop [player] [shop name]
+disableSudoWorldPermissionCheck: false
+
+# Choose whether the shop-specific permission to access shops should be omitted when player has a shop opened with /shop [player] [shop name]
+disableSudoShopPermissionCheck: false
+
+# Choose sounds for certain GUI actions. Full list is available at https://docs.brcdev.net/#/sounds
+sounds:
+  MAIN_MENU_OPEN: cubeshop:click
+  SHOP_OPEN: UI_BUTTON_CLICK
+  SHOP_SELECT_ITEM: UI_BUTTON_CLICK
+  SHOP_SWITCH_PAGE: ITEM_BOOK_PAGE_TURN
+  SELL_ITEM: cubeshop:sell
+  SELL_ALL_ITEM: cubeshop:sell
+  BUY_ITEM: cubeshop:buy
+
+# Choose predefined settings for all items (will be overriden when set explicitly for an item in shops yaml)
+defaultItemSettings:
+  # Choose whether item meta (name, lore etc.) should be compared when players attempt to sell an item
+  compareMeta: false
+  # Choose whether item meta should be removed from an item when it's purchased by a player from the shop
+  stripItemMeta: false
+  # Choose whether item model should be compared when players attempt to sell an item
+  compareModel: true
+  # Choose whether item damage/durability should be compared when players attempt to sell an item
+  compareDamage: false
+  # Choose whether item NBT data should be compared when players attempt to sell an item
+  compareNbt: false
+
+# Format of item lores in shops, %buy% will be replaced with the buy price and %sell% with sell price
+shopItemLoreFormat:
+  # This lore will be applied to items
+  item:
+    - ""
+    - "&fᵞ #FCFCFC%buy%"
+    - "&fᵨ #FCFCFC%sell%"
+    - ""
+    - "&fᵤ #8B93AFsᴏʟ ᴛıᴋ ɪʟᴇ sᴀᴛıɴ ᴀʟ"
+    - "&fᵤ #8B93AFsᴀğ ᴛıᴋ ɪʟᴇ sᴀᴛ"
+  # This lore will be applied to items in the buy GUI (when enableBuyGUI is set to true)
+  itemBuyGUI:
+    - "&fᵧ #C0C0C0%buy%"
+  # This lore will be applied to items in the sell GUI (when enableSellGUI is set to true)
+  itemSellGUI:
+    - "&fᵧ #C0C0C0%sell%"
+  # This lore will be applied to the sell all button in the sell GUI (when enableSellGUI and enableSellGUISellAll are set to true)
+  itemSellGUISellAll:
+    - "&7Tutar: #C0C0C0%sell%"
+  # This one to permissions
+  permission:
+    - "&fᵧ #C0C0C0%buy%"
+  # And this one to enchantments
+  enchantment:
+    - "&fᵧ #C0C0C0%buy%"
+  # And the last one to commands
+  command:
+    - "&fᵧ #C0C0C0%buy%"
+
+# Logging settings
+log:
+  # Define whether transactions will be logged to the console/main server log
+  toConsole: true
+  # Define whether transactions will be logged to a separate log
+  toFile: false
+  # Date format of transactions (http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html)
+  formatDate: "yyyy/MM/dd HH:mm:ss"
+  # Log message for bought command
+  formatBuyCommand: "%player% bought %amount% x %command% command for %price% from %shop% shop"
+  # Log message for bought enchantment
+  formatBuyEnchantment: "%player% bought %enchantment% enchantment for %price% from %shop% shop"
+  # Log message for bought permission
+  formatBuyPermission: "%player% bought %permission% permission for %price% from %shop% shop"
+  # Log message for bought items
+  formatBuy: "%player% bought %amount% x %item% for %price% from %shop% shop"
+  # Log message for sold items
+  formatSell: "%player% sold %amount% x %item% for %price% to %shop% shop"
+  # Log message for sold all items
+  formatSellAll: "%player% sold all %amount% x %item% for %price% to %shop% shop"
+
+# Sell hand command settings
+sellHand:
+  # When set to true, players will be able to sell any quantity of the item (the price will be calculated from the base price)
+  allowAllQuantities: true
+  # When set to true, /sell hand will work same way as /sell handall does
+  sellsAllItems: false
+  # When set to true, free items (with sell price of $0) will be excluded from being sold using /sell hand and /sell handall
+  excludeFreeItems: true
+  # When set to true, items in armor slots will be excluded from being sold using /sell hand and /sell handall
+  excludeArmorSlots: true
+
+# Sell all command settings
+sellAll:
+  # When set to true, players will get a detailed summary with prices of each item stack sold
+  detailedSummary: false
+  # Choose if maximal sell price of an item across all shops should be chosen in sell all. Enabling this may affect sell command performance when having lots of shops/items
+  findMaxSellPrice: true
+  # When set to true, free items (with sell price of $0) will be excluded from being sold using /sell all
+  excludeFreeItems: true
+  # When set to true, items in armor slots will be excluded from being sold using /sell all
+  excludeArmorSlots: true
+
+buttons:
+  # "Go back button"
+  goBack:
+    item:
+      # Material name, full list can be found here: https://docs.brcdev.net/#/materials
+      material: PAPER
+      model: 7548
+      # Amount of the item
+      amount: 1
+      # (optional) Data value, for example 1 for WOOD:1 means spruce wood planks
+      damage: 0
+      # (optional) Custom name
+      name: "&f"
+    # Slot in each shop's GUI
+    slot: 53
+  # "Previous page" button
+  previousPage:
+    item:
+      material: PAPER
+      model: 7548
+      quantity: 1
+      name: "#FF6666Önceki sayfa"
+    slot: 48
+  # "Next page" button
+  nextPage:
+    item:
+      material: PAPER
+      model: 7548
+      quantity: 1
+      name: "#66FF66Sonraki sayfa"
+    slot: 50
+
+# Elements of the bulk buy GUI
+amountSelectionGUIBulkBuy:
+  # Size of the GUI, valid values are 9, 18, 27, 36, 45 and 54
+  size: 36
+  # Fill item
+  fillItem:
+    material: PAPER
+    model: 7548
+    name: "&f"
+  # Choose if buttons type should be replaced with the bought item's type
+  replaceButtonsType: true
+  # Buttons
+  buttons:
+    # "Buy 1 stack" button
+    buy1:
+      item:
+        material: CHEST
+        quantity: 1
+        name: "#92D58D1 yığın satın al"
+        lore:
+          - "&fᵧ #C0C0C0%buy%"
+      # Value indicated the amount of stacks
+      value: 1
+      slot: 9
+    # "Buy 2 stacks" button
+    buy2:
+      item:
+        material: CHEST
+        quantity: 2
+        name: "#92D58D2 yığın satın al"
+        lore:
+          - "&fᵧ #C0C0C0%buy%"
+      value: 2
+      slot: 10
+    # "Buy 3 stacks" button
+    buy3:
+      item:
+        material: CHEST
+        quantity: 3
+        name: "#92D58D3 yığın satın al"
+        lore:
+          - "&fᵧ #C0C0C0%buy%"
+      value: 3
+      slot: 11
+    # "Buy 4 stacks" button
+    buy4:
+      item:
+        material: CHEST
+        quantity: 4
+        name: "#92D58D4 yığın satın al"
+        lore:
+          - "&fᵧ #C0C0C0%buy%"
+      value: 4
+      slot: 12
+    # "Buy 5 stacks" button
+    buy5:
+      item:
+        material: CHEST
+        quantity: 5
+        name: "#92D58D5 yığın satın al"
+        lore:
+          - "&fᵧ #C0C0C0%buy%"
+      value: 5
+      slot: 13
+    # "Buy 6 stacks" button
+    buy6:
+      item:
+        material: CHEST
+        quantity: 6
+        name: "#92D58D6 yığın satın al"
+        lore:
+          - "&fᵧ #C0C0C0%buy%"
+      value: 6
+      slot: 14
+    # "Buy 7 stacks" button
+    buy7:
+      item:
+        material: CHEST
+        quantity: 7
+        name: "#92D58D7 yığın satın al"
+        lore:
+          - "&fᵧ #C0C0C0%buy%"
+      value: 7
+      slot: 15
+    # "Buy 8 stacks" button
+    buy8:
+      item:
+        material: CHEST
+        quantity: 8
+        name: "#92D58D8 yığın satın al"
+        lore:
+          - "&fᵧ #C0C0C0%buy%"
+      value: 8
+      slot: 16
+    # "Buy 9 stacks" button
+    buy9:
+      item:
+        material: CHEST
+        quantity: 9
+        name: "#92D58D9 yığın satın al"
+        lore:
+          - "&fᵧ #C0C0C0%buy%"
+      value: 9
+      slot: 17
+    # "Cancel" button
+    cancel:
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵟ #D86E6Eİptal"
+      slot: 31
+
+# Elements of the bulk buy GUI
+amountSelectionGUIBulkSell:
+  # Size of the GUI, valid values are 9, 18, 27, 36, 45 and 54
+  size: 36
+  # Fill item
+  fillItem:
+    material: PAPER
+    model: 7548
+    name: "&f"
+  # Choose if buttons type should be replaced with the sold item's type
+  replaceButtonsType: true
+  # Buttons
+  buttons:
+    # "Sell 1 stack" button
+    sell1:
+      item:
+        material: CHEST
+        quantity: 1
+        name: "#92D58D1 yığın sat"
+        lore:
+          - "&fᵧ #C0C0C0%sell%"
+      # Value indicated the amount of stacks
+      value: 1
+      slot: 9
+    # "Sell 2 stacks" button
+    sell2:
+      item:
+        material: CHEST
+        quantity: 2
+        name: "#92D58D2 yığın sat"
+        lore:
+          - "&fᵧ #C0C0C0%sell%"
+      value: 2
+      slot: 10
+    # "Sell 3 stacks" button
+    sell3:
+      item:
+        material: CHEST
+        quantity: 3
+        name: "#92D58D3 yığın sat"
+        lore:
+          - "&fᵧ #C0C0C0%sell%"
+      value: 3
+      slot: 11
+    # "Sell 4 stacks" button
+    sell4:
+      item:
+        material: CHEST
+        quantity: 4
+        name: "#92D58D4 yığın sat"
+        lore:
+          - "&fᵧ #C0C0C0%sell%"
+      value: 4
+      slot: 12
+    # "Sell 5 stacks" button
+    sell5:
+      item:
+        material: CHEST
+        quantity: 5
+        name: "#92D58D5 yığın sat"
+        lore:
+          - "&fᵧ #C0C0C0%sell%"
+      value: 5
+      slot: 13
+    # "Sell 6 stacks" button
+    sell6:
+      item:
+        material: CHEST
+        quantity: 6
+        name: "#92D58D6 yığın sat"
+        lore:
+          - "&fᵧ #C0C0C0%sell%"
+      value: 6
+      slot: 14
+    # "Sell 7 stacks" button
+    sell7:
+      item:
+        material: CHEST
+        quantity: 7
+        name: "#92D58D7 yığın sat"
+        lore:
+          - "&fᵧ #C0C0C0%sell%"
+      value: 7
+      slot: 15
+    # "Sell 8 stacks" button
+    sell8:
+      item:
+        material: CHEST
+        quantity: 8
+        name: "#92D58D8 yığın sat"
+        lore:
+          - "&fᵧ #C0C0C0%sell%"
+      value: 8
+      slot: 16
+    # "Sell 9 stacks" button
+    sell9:
+      item:
+        material: CHEST
+        quantity: 9
+        name: "#92D58D9 yığın sat"
+        lore:
+          - "&fᵧ #C0C0C0%sell%"
+      value: 9
+      slot: 17
+    # "Cancel" button
+    cancel:
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵟ #D86E6Eİptal"
+      slot: 31
+
+# Elements of the regular buy/sell GUI
+amountSelectionGUI:
+  # Size of the GUI, valid values are 9, 18, 27, 36, 45 and 54
+  size: 54
+  # Fill item
+  fillItem:
+    material: PAPER
+    model: 7548
+    name: "&f"
+  # Slot of the item being bought/sold
+  itemSlot: 13
+  # Buttons
+  buttons:
+    # "Set to 1" button
+    set1:
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵥ#D86E6E&l1"
+      slot: 10
+    # "Remove 10" button
+    remove10:
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵣ#D86E6E&l10"
+      slot: 11
+    # "Remove 1" button
+    remove1:
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵣ#D86E6E&l1"
+      slot: 12
+    # "Add 1" button
+    add1:
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵦ#92D58D&l1"
+      slot: 14
+    # "Add 10" button
+    add10:
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵦ#92D58D&l10"
+      slot: 15
+    # "Set to 16" button
+    set16:
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵢ#92D58D&l16"
+      slot: 16
+    # "Set to 64" button
+    set64:
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵢ#92D58D&l64"
+      slot: 16
+    # "Confirm" button
+    confirm:
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵡ #92D58DOnayla"
+      slot: 29
+    # "Sell all" button
+    sellAll:
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "#92D58DHepsini sat"
+      slot: 40
+    # "Buy more" button
+    buyMore:
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "#92D58DDaha fazla al"
+      slot: 31
+    # "Sell more" button
+    sellMore:
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "#92D58DDaha fazla sat"
+      slot: 31
+    # "Cancel" button
+    cancel:
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵟ #D86E6Eİptal"
+      slot: 33
+
+shopMenuItems:
+  # Has to be unique, value doesn't matter
+  1:
+    item:
+      # The same rules apply for material, amount, damage and lore as for goBackButton
+      material: PAPER
+      model: 7548
+      quantity: 1
+      name: "&fᵪ"
+      lore:
+        - "&f"
+        - "&fᵤ #8B93AFᴄʟɪᴄᴋ ᴛᴏ ᴏᴘᴇɴ"
+    # Shop ID from shops yaml
+    shop: "bloklar"
+    # Slot in shops menu, counting from 0 to 53
+    slot: 12
+  2:
+    item:
+      material: PAPER
+      model: 7548
+      quantity: 1
+      name: "&fᵮ"
+      lore:
+        - "&f"
+        - "&fᵤ #8B93AFᴄʟɪᴄᴋ ᴛᴏ ᴏᴘᴇɴ"
+    shop: "maden"
+    slot: 13
+  3:
+    item:
+      material: PAPER
+      model: 7548
+      quantity: 1
+      name: "&fᵰ"
+      lore:
+        - "&f"
+        - "&fᵤ #8B93AFᴄʟɪᴄᴋ ᴛᴏ ᴏᴘᴇɴ"
+    shop: "mob_drop"
+    slot: 14
+  4:
+    item:
+      material: PAPER
+      model: 7548
+      quantity: 1
+      name: "&fᵭ"
+      lore:
+        - "&f"
+        - "&fᵤ #8B93AFᴄʟɪᴄᴋ ᴛᴏ ᴏᴘᴇɴ"
+    shop: "yiyecekler"
+    slot: 21
+  5:
+    item:
+      material: PAPER
+      model: 7548
+      quantity: 1
+      name: "&fᵬ"
+      lore:
+        - "&f"
+        - "&fᵤ #8B93AFᴄʟɪᴄᴋ ᴛᴏ ᴏᴘᴇɴ"
+    shop: "tarim"
+    slot: 22
+  6:
+    item:
+      material: PAPER
+      model: 7548
+      quantity: 1
+      name: "&fᵫ"
+      lore:
+        - "&f"
+        - "&fᵤ #8B93AFᴄʟɪᴄᴋ ᴛᴏ ᴏᴘᴇɴ"
+    shop: "boyalar"
+    slot: 23
+  7:
+    item:
+      material: PAPER
+      model: 7548
+      quantity: 1
+      name: "&fᵱ"
+      lore:
+        - "&f"
+        - "&fᵤ #8B93AFᴄʟɪᴄᴋ ᴛᴏ ᴏᴘᴇɴ"
+    shop: "odunlar"
+    slot: 30
+  8:
+    item:
+      material: PAPER
+      model: 7548
+      quantity: 1
+      name: "&fᵲ"
+      lore:
+        - "&f"
+        - "&fᵤ #8B93AFᴄʟɪᴄᴋ ᴛᴏ ᴏᴘᴇɴ"
+    shop: "baliklar"
+    slot: 31
+  9:
+    item:
+      material: PAPER
+      model: 7548
+      quantity: 1
+      name: "&fᵯ"
+      lore:
+        - "&f"
+        - "&fᵤ #8B93AFᴄʟɪᴄᴋ ᴛᴏ ᴏᴘᴇɴ"
+    shop: "cesitli"
+    slot: 32
+  10:
+    type: special
+    special: balance
+    slot: 10
+
+
+specialElements:
+  balance:
+    item:
+      material: PAPER
+      model: 7548
+      quantity: 1
+      name: "&fᵝ #C0C0C0%balance%"

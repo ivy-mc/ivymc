@@ -1,0 +1,116 @@
+info:
+  namespace: mob_balloons
+items:
+  zombie_balloon:
+    display_name: "Zombie Balloon"
+    permission: zombie_balloon
+    resource:
+      material: PAPER
+      generate: false
+      model_path: zombie_balloon
+  drowned_balloon:
+    display_name: "Drowned Balloon"
+    permission: drowned_balloon
+    resource:
+      material: PAPER
+      generate: false
+      model_path: drowned_balloon
+  husk_balloon:
+    display_name: "Husk Balloon"
+    permission: husk_balloon
+    resource:
+      material: PAPER
+      generate: false
+      model_path: husk_balloon
+  zombie_villager_balloon:
+    display_name: "Zombie Villager Balloon"
+    permission: zombie_villager_balloon
+    resource:
+      material: PAPER
+      generate: false
+      model_path: zombie_villager_balloon
+  skeleton_balloon:
+    display_name: "Skeleton Balloon"
+    permission: skeleton_balloon
+    resource:
+      material: PAPER
+      generate: false
+      model_path: skeleton_balloon
+  bogged_balloon:
+    display_name: "Bogged Balloon"
+    permission: bogged_balloon
+    resource:
+      material: PAPER
+      generate: false
+      model_path: bogged_balloon
+  stray_balloon:
+    display_name: "Stray Balloon"
+    permission: stray_balloon
+    resource:
+      material: PAPER
+      generate: false
+      model_path: stray_balloon
+  wither_skeleton_balloon:
+    display_name: "Wither Skeleton Balloon"
+    permission: wither_skeleton_balloon
+    resource:
+      material: PAPER
+      generate: false
+      model_path: wither_skeleton_balloon
+  enderman_balloon:
+    display_name: "Enderman Balloon"
+    permission: enderman_balloon
+    resource:
+      material: PAPER
+      generate: false
+      model_path: enderman_balloon
+  creeper_balloon:
+    display_name: "Creeper Balloon"
+    permission: creeper_balloon
+    resource:
+      material: PAPER
+      generate: false
+      model_path: creeper_balloon
+  spider_balloon:
+    display_name: "Spider Balloon"
+    permission: spider_balloon
+    resource:
+      material: PAPER
+      generate: false
+      model_path: spider_balloon
+  cave_spider_balloon:
+    display_name: "Cave Spider Balloon"
+    permission: cave_spider_balloon
+    resource:
+      material: PAPER
+      generate: false
+      model_path: cave_spider_balloon
+  ghast_balloon:
+    display_name: "Ghast Balloon"
+    permission: ghast_balloon
+    resource:
+      material: PAPER
+      generate: false
+      model_path: ghast_balloon
+  ghastling_balloon:
+    display_name: "Ghastling Balloon"
+    permission: ghastling_balloon
+    resource:
+      material: LEATHER_HORSE_ARMOR
+      generate: false
+      model_path: ghastling_balloon
+  piglin_balloon:
+    display_name: "Piglin Balloon"
+    permission: piglin_balloon
+    resource:
+      material: PAPER
+      generate: false
+      model_path: piglin_balloon
+  zombified_piglin_balloon:
+    display_name: "Zombified Piglin Balloon"
+    permission: zombified_piglin_balloon
+    resource:
+      material: PAPER
+      generate: false
+      model_path: zombified_piglin_balloon
+#0a3401f745b8bae5efb15240b422ce71

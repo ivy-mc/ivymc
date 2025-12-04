@@ -1,0 +1,38 @@
+# IvyRTP - RTP Bölgeleri Konfigürasyonu
+# Bu dosyada tüm RTP bölgeleri tanımlanır
+# /ivyrtp create, remove, edit komutlarıyla dinamik olarak yönetilebilir
+
+regions:
+  vahsi:
+    display-name: "Vahşi Dünya"
+    betterrtp-command: "vahsi"
+    cooldown: 300
+    actions:
+      - "[CONSOLE] say {player} vahşi dünyaya ışınlandı!"
+      - "[PLAYER] me vahşi dünyaya gidiyorum!"
+  
+  madenler:
+    display-name: "Madenler"
+    betterrtp-command: "maden"
+    cooldown: 300
+    actions:
+      - "[CONSOLE] say {player} maden dünyasına gitti!"
+  
+  nether:
+    display-name: "Nether"
+    betterrtp-command: "world_nether"
+    cooldown: 600
+    actions:
+      - "[CONSOLE] say {player} Nether'a ışınlandı!"
+  
+  end:
+    display-name: "End"
+    betterrtp-command: "world_the_end"
+    cooldown: 600
+    actions:
+      - "[CONSOLE] say {player} End dünyasına gitti!"
+
+# Action formatı:
+# [CONSOLE] <komut> - Konsol komutu olarak çalıştırılır
+# [PLAYER] <komut> - Oyuncu komutu olarak çalıştırılır
+# Placeholder: {player} - Oyuncu adı

@@ -1,0 +1,47 @@
+{
+    "boiler_land": {
+        "sounds": [
+            "littleroom_brewerypack:boiler_land"
+        ]
+    },
+    "boiler_use": {
+        "sounds": [
+            "littleroom_brewerypack:boiler_use"
+        ]
+    },
+    "distiller_land": {
+        "sounds": [
+            "littleroom_brewerypack:distiller_land"
+        ]
+    },
+    "distiller_use": {
+        "sounds": [
+            "littleroom_brewerypack:distiller_use"
+        ]
+    },
+    "fermenter_land": {
+        "sounds": [
+            "littleroom_brewerypack:fermenter_land"
+        ]
+    },
+    "fermenter_use": {
+        "sounds": [
+            "littleroom_brewerypack:fermenter_use"
+        ]
+    },
+    "recipe_complete": {
+        "sounds": [
+            "littleroom_brewerypack:recipe_complete"
+        ]
+    },
+    "hiccup": {
+        "sounds": [
+            "littleroom_brewerypack:hiccup_1",
+            "littleroom_brewerypack:hiccup_2",
+            "littleroom_brewerypack:hiccup_3",
+            "littleroom_brewerypack:hiccup_4",
+            "littleroom_brewerypack:hiccup_5",
+            "littleroom_brewerypack:hiccup_6"
+        ]
+    }
+}

@@ -1,0 +1,17 @@
+info:
+  namespace: server_decorations
+
+categories:
+  decorations:
+    display_name: "Server Decorations"
+    icon: server_decorations:small_wooden_crate
+    items:
+      - server_decorations:small_wooden_crate
+      - server_decorations:middle_wooden_crate
+      - server_decorations:big_wooden_crate
+      - server_decorations:sign_spawn
+      - server_decorations:sign_shop
+      - server_decorations:sign_quests
+      - server_decorations:sign_pvp
+      - server_decorations:sign_minigames
+      - server_decorations:sign_logging_site

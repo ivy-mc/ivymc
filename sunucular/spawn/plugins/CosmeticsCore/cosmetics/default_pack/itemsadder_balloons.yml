@@ -1,0 +1,46 @@
+cosmetics:
+  
+  # Example custom balloon created with ItemsAdder entities (supports also animated ItemsAdder entities models)
+  amogus_balloon:
+    enabled: true
+    display_name: "Amogus Balloon"
+    type: BALLOON_ENTITY
+    # Showing a different item into the GUI (in this case it's a must because ItemsAdder entities can't be put in GUIs)
+    model:
+      gui: potion:400014
+      normal: cosmetics:amogus
+    dye:
+      enabled: true
+      default: "#ff0000"
+
+  # Example custom kite created with ItemsAdder entities (supports also animated ItemsAdder entities models)
+  star_kite:
+    enabled: true
+    display_name: "Star Kite"
+    type: BALLOON_ENTITY
+    # Showing a different item into the GUI (in this case it's a must because ItemsAdder entities can't be put in GUIs)
+    model:
+      gui: potion:400016
+      normal: cosmetics:star_kite
+    dye:
+      enabled: true
+
+  ballon_cluster:
+    enabled: true
+    display_name: "Balloon Cluster"
+    type: BALLOON_ENTITY
+    model:
+      gui: potion:400015
+      normal: cosmetics:ballon_cluster
+    dye:
+      enabled: false
+
+  locomotive:
+    enabled: true
+    display_name: "Locomotive"
+    type: BALLOON_ENTITY
+    model:
+      gui: potion:400017
+      normal: cosmetics:locomotive
+    dye:
+      enabled: false

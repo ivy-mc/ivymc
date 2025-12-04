@@ -1,0 +1,171 @@
+info:
+  namespace: ero_feral_fantasy_set
+items:
+  ero_feral_fantasy_bear_ears:
+    display_name: Feral Fantasy Bear Ears
+    permission: ero_feral_fantasy_set.bear_ears
+    resource:
+      material: PAPER
+      generate: false
+      model_path: bear_ears
+    attribute_modifiers:
+      head:
+        armor: 2
+    behaviours:
+      hat: true
+    durability:
+      max_custom_durability: 165
+  ero_feral_fantasy_bear_tail:
+    display_name: Feral Fantasy Bear Tail
+    permission: ero_feral_fantasy_set.bear_tail
+    resource:
+      material: PAPER
+      generate: false
+      model_path: bear_tail
+    attribute_modifiers:
+      head:
+        armor: 2
+    behaviours:
+      hat: true
+    durability:
+      max_custom_durability: 165
+  ero_feral_fantasy_cat_ears:
+    display_name: Feral Fantasy Cat Ears
+    permission: ero_feral_fantasy_set.cat_ears
+    resource:
+      material: PAPER
+      generate: false
+      model_path: cat_ears
+    attribute_modifiers:
+      head:
+        armor: 2
+    behaviours:
+      hat: true
+    durability:
+      max_custom_durability: 165
+  ero_feral_fantasy_cat_tail:
+    display_name: Feral Fantasy Cat Tail
+    permission: ero_feral_fantasy_set.cat_tail
+    resource:
+      material: PAPER
+      generate: false
+      model_path: cat_tail
+    attribute_modifiers:
+      head:
+        armor: 2
+    behaviours:
+      hat: true
+    durability:
+      max_custom_durability: 165
+  ero_feral_fantasy_fox_ears:
+    display_name: Feral Fantasy Fox Ears
+    permission: ero_feral_fantasy_set.fox_ears
+    resource:
+      material: PAPER
+      generate: false
+      model_path: fox_ears
+    attribute_modifiers:
+      head:
+        armor: 2
+    behaviours:
+      hat: true
+    durability:
+      max_custom_durability: 165
+  ero_feral_fantasy_fox_tail:
+    display_name: Feral Fantasy Fox Tail
+    permission: ero_feral_fantasy_set.fox_tail
+    resource:
+      material: PAPER
+      generate: false
+      model_path: fox_tail
+    attribute_modifiers:
+      head:
+        armor: 2
+    behaviours:
+      hat: true
+    durability:
+      max_custom_durability: 165
+  ero_feral_fantasy_rabbit_ears:
+    display_name: Feral Fantasy Rabbit Ears
+    permission: ero_feral_fantasy_set.rabbit_ears
+    resource:
+      material: PAPER
+      generate: false
+      model_path: rabbit_ears
+    attribute_modifiers:
+      head:
+        armor: 2
+    behaviours:
+      hat: true
+    durability:
+      max_custom_durability: 165
+  ero_feral_fantasy_rabbit_tail:
+    display_name: Feral Fantasy Rabbit Tail
+    permission: ero_feral_fantasy_set.rabbit_tail
+    resource:
+      material: PAPER
+      generate: false
+      model_path: rabbit_tail
+    attribute_modifiers:
+      head:
+        armor: 2
+    behaviours:
+      hat: true
+    durability:
+      max_custom_durability: 165
+  ero_feral_fantasy_tiger_ears:
+    display_name: Feral Fantasy Tiger Ears
+    permission: ero_feral_fantasy_set.tiger_ears
+    resource:
+      material: PAPER
+      generate: false
+      model_path: tiger_ears
+    attribute_modifiers:
+      head:
+        armor: 2
+    behaviours:
+      hat: true
+    durability:
+      max_custom_durability: 165
+  ero_feral_fantasy_tiger_tail:
+    display_name: Feral Fantasy Tiger Tail
+    permission: ero_feral_fantasy_set.tiger_tail
+    resource:
+      material: PAPER
+      generate: false
+      model_path: tiger_tail
+    attribute_modifiers:
+      head:
+        armor: 2
+    behaviours:
+      hat: true
+    durability:
+      max_custom_durability: 165
+  ero_feral_fantasy_wolf_ears:
+    display_name: Feral Fantasy Wolf Ears
+    permission: ero_feral_fantasy_set.wolf_ears
+    resource:
+      material: PAPER
+      generate: false
+      model_path: wolf_ears
+    attribute_modifiers:
+      head:
+        armor: 2
+    behaviours:
+      hat: true
+    durability:
+      max_custom_durability: 165
+  ero_feral_fantasy_wolf_tail:
+    display_name: Feral Fantasy Wolf Tail
+    permission: ero_feral_fantasy_set.wolf_tail
+    resource:
+      material: PAPER
+      generate: false
+      model_path: wolf_tail
+    attribute_modifiers:
+      head:
+        armor: 2
+    behaviours:
+      hat: true
+    durability:
+      max_custom_durability: 165

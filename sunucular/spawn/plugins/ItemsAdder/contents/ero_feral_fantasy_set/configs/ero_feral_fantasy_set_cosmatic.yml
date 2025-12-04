@@ -1,0 +1,243 @@
+info:
+  namespace: ero_feral_fantasy_set
+items:
+  ero_feral_fantasy_cosmetics_bear_ears:
+    display_name: Feral Fantasy Bear Ears Cosmetics
+    permission: ero_feral_fantasy_set.ero_feral_fantasy_cosmetics_bear_ears
+    resource:
+      generate: false
+      model_path: bear_ears
+      material: POTION
+      model_id: 9925040
+  ero_feral_fantasy_cosmetics_bear_tail:
+    display_name: Feral Fantasy Bear Tail Cosmetics
+    permission: ero_feral_fantasy_set.ero_feral_fantasy_cosmetics_bear_tail
+    resource:
+      generate: false
+      model_path: bear_tail_cosmetic
+      material: POTION
+      model_id: 9925041
+  ero_feral_fantasy_cosmetics_bear_tail_self:
+    display_name: Feral Fantasy Bear Tail Cosmetics Self
+    permission: ero_feral_fantasy_set.ero_feral_fantasy_cosmetics_bear_tail_self
+    resource:
+      generate: false
+      model_path: bear_tail_cosmetic_self
+      material: POTION
+      model_id: 9925042
+  ero_feral_fantasy_cosmetics_bear_tail_self_2:
+    display_name: Feral Fantasy Bear Tail Cosmetics Self 2
+    permission: ero_feral_fantasy_set.ero_feral_fantasy_cosmetics_bear_tail_self_2
+    resource:
+      generate: false
+      model_path: bear_tail_cosmetic_self_2
+      material: POTION
+      model_id: 9925043
+  ero_feral_fantasy_cosmetics_bear_tail_normal_2:
+    display_name: Feral Fantasy Bear Tail Cosmetics Normal 2
+    permission: ero_feral_fantasy_set.ero_feral_fantasy_cosmetics_bear_tail_normal_2
+    resource:
+      generate: false
+      model_path: bear_tail_cosmetic_normal_2
+      material: POTION
+      model_id: 9925044
+  ero_feral_fantasy_cosmetics_cat_ears:
+    display_name: Feral Fantasy Cat Ears Cosmetics
+    permission: ero_feral_fantasy_set.ero_feral_fantasy_cosmetics_cat_ears
+    resource:
+      generate: false
+      model_path: cat_ears
+      material: POTION
+      model_id: 9925045
+  ero_feral_fantasy_cosmetics_cat_tail:
+    display_name: Feral Fantasy Cat Tail Cosmetics
+    permission: ero_feral_fantasy_set.ero_feral_fantasy_cosmetics_cat_tail
+    resource:
+      generate: false
+      model_path: cat_tail_cosmetic
+      material: POTION
+      model_id: 9925046
+  ero_feral_fantasy_cosmetics_cat_tail_self:
+    display_name: Feral Fantasy Cat Tail Cosmetics Self
+    permission: ero_feral_fantasy_set.ero_feral_fantasy_cosmetics_cat_tail_self
+    resource:
+      generate: false
+      model_path: cat_tail_cosmetic_self
+      material: POTION
+      model_id: 9925047
+  ero_feral_fantasy_cosmetics_cat_tail_self_2:
+    display_name: Feral Fantasy Cat Tail Cosmetics Self 2
+    permission: ero_feral_fantasy_set.ero_feral_fantasy_cosmetics_cat_tail_self_2
+    resource:
+      generate: false
+      model_path: cat_tail_cosmetic_self_2
+      material: POTION
+      model_id: 9925048
+  ero_feral_fantasy_cosmetics_cat_tail_normal_2:
+    display_name: Feral Fantasy Cat Tail Cosmetics Normal 2
+    permission: ero_feral_fantasy_set.ero_feral_fantasy_cosmetics_cat_tail_normal_2
+    resource:
+      generate: false
+      model_path: cat_tail_cosmetic_normal_2
+      material: POTION
+      model_id: 9925049
+  ero_feral_fantasy_cosmetics_fox_ears:
+    display_name: Feral Fantasy Fox Ears Cosmetics
+    permission: ero_feral_fantasy_set.ero_feral_fantasy_cosmetics_fox_ears
+    resource:
+      generate: false
+      model_path: fox_ears
+      material: POTION
+      model_id: 9925050
+  ero_feral_fantasy_cosmetics_fox_tail:
+    display_name: Feral Fantasy Fox Tail Cosmetics
+    permission: ero_feral_fantasy_set.ero_feral_fantasy_cosmetics_fox_tail
+    resource:
+      generate: false
+      model_path: fox_tail_cosmetic
+      material: POTION
+      model_id: 9925051
+  ero_feral_fantasy_cosmetics_fox_tail_self:
+    display_name: Feral Fantasy Fox Tail Cosmetics Self
+    permission: ero_feral_fantasy_set.ero_feral_fantasy_cosmetics_fox_tail_self
+    resource:
+      generate: false
+      model_path: fox_tail_cosmetic_self
+      material: POTION
+      model_id: 9925052
+  ero_feral_fantasy_cosmetics_fox_tail_self_2:
+    display_name: Feral Fantasy Fox Tail Cosmetics Self 2
+    permission: ero_feral_fantasy_set.ero_feral_fantasy_cosmetics_fox_tail_self_2
+    resource:
+      generate: false
+      model_path: fox_tail_cosmetic_self_2
+      material: POTION
+      model_id: 9925053
+  ero_feral_fantasy_cosmetics_fox_tail_normal_2:
+    display_name: Feral Fantasy Fox Tail Cosmetics Normal 2
+    permission: ero_feral_fantasy_set.ero_feral_fantasy_cosmetics_fox_tail_normal_2
+    resource:
+      generate: false
+      model_path: fox_tail_cosmetic_normal_2
+      material: POTION
+      model_id: 9925054
+  ero_feral_fantasy_cosmetics_rabbit_ears:
+    display_name: Feral Fantasy Rabbit Ears Cosmetics
+    permission: ero_feral_fantasy_set.ero_feral_fantasy_cosmetics_rabbit_ears
+    resource:
+      generate: false
+      model_path: rabbit_ears
+      material: POTION
+      model_id: 9925055
+  ero_feral_fantasy_cosmetics_rabbit_tail:
+    display_name: Feral Fantasy Rabbit Tail Cosmetics
+    permission: ero_feral_fantasy_set.ero_feral_fantasy_cosmetics_rabbit_tail
+    resource:
+      generate: false
+      model_path: rabbit_tail_cosmetic
+      material: POTION
+      model_id: 9925056
+  ero_feral_fantasy_cosmetics_rabbit_tail_self:
+    display_name: Feral Fantasy Rabbit Tail Cosmetics Self
+    permission: ero_feral_fantasy_set.ero_feral_fantasy_cosmetics_rabbit_tail_self
+    resource:
+      generate: false
+      model_path: rabbit_tail_cosmetic_self
+      material: POTION
+      model_id: 9925057
+  ero_feral_fantasy_cosmetics_rabbit_tail_self_2:
+    display_name: Feral Fantasy Rabbit Tail Cosmetics Self 2
+    permission: ero_feral_fantasy_set.ero_feral_fantasy_cosmetics_rabbit_tail_self_2
+    resource:
+      generate: false
+      model_path: rabbit_tail_cosmetic_self_2
+      material: POTION
+      model_id: 9925058
+  ero_feral_fantasy_cosmetics_rabbit_tail_normal_2:
+    display_name: Feral Fantasy Rabbit Tail Cosmetics Normal 2
+    permission: ero_feral_fantasy_set.ero_feral_fantasy_cosmetics_rabbit_tail_normal_2
+    resource:
+      generate: false
+      model_path: rabbit_tail_cosmetic_normal_2
+      material: POTION
+      model_id: 9925059
+  ero_feral_fantasy_cosmetics_tiger_ears:
+    display_name: Feral Fantasy Tiger Ears Cosmetics
+    permission: ero_feral_fantasy_set.ero_feral_fantasy_cosmetics_tiger_ears
+    resource:
+      generate: false
+      model_path: tiger_ears
+      material: POTION
+      model_id: 9925060
+  ero_feral_fantasy_cosmetics_tiger_tail:
+    display_name: Feral Fantasy Tiger Tail Cosmetics
+    permission: ero_feral_fantasy_set.ero_feral_fantasy_cosmetics_tiger_tail
+    resource:
+      generate: false
+      model_path: tiger_tail_cosmetic
+      material: POTION
+      model_id: 9925061
+  ero_feral_fantasy_cosmetics_tiger_tail_self:
+    display_name: Feral Fantasy Tiger Tail Cosmetics Self
+    permission: ero_feral_fantasy_set.ero_feral_fantasy_cosmetics_tiger_tail_self
+    resource:
+      generate: false
+      model_path: tiger_tail_cosmetic_self
+      material: POTION
+      model_id: 9925062
+  ero_feral_fantasy_cosmetics_tiger_tail_self_2:
+    display_name: Feral Fantasy Tiger Tail Cosmetics Self 2
+    permission: ero_feral_fantasy_set.ero_feral_fantasy_cosmetics_tiger_tail_self_2
+    resource:
+      generate: false
+      model_path: tiger_tail_cosmetic_self_2
+      material: POTION
+      model_id: 9925063
+  ero_feral_fantasy_cosmetics_tiger_tail_normal_2:
+    display_name: Feral Fantasy Tiger Tail Cosmetics Normal 2
+    permission: ero_feral_fantasy_set.ero_feral_fantasy_cosmetics_tiger_tail_normal_2
+    resource:
+      generate: false
+      model_path: tiger_tail_cosmetic_normal_2
+      material: POTION
+      model_id: 9925064
+  ero_feral_fantasy_cosmetics_wolf_ears:
+    display_name: Feral Fantasy Wolf Ears Cosmetics
+    permission: ero_feral_fantasy_set.ero_feral_fantasy_cosmetics_wolf_ears
+    resource:
+      generate: false
+      model_path: wolf_ears
+      material: POTION
+      model_id: 9925065
+  ero_feral_fantasy_cosmetics_wolf_tail:
+    display_name: Feral Fantasy Wolf Tail Cosmetics
+    permission: ero_feral_fantasy_set.ero_feral_fantasy_cosmetics_wolf_tail
+    resource:
+      generate: false
+      model_path: wolf_tail_cosmetic
+      material: POTION
+      model_id: 9925066
+  ero_feral_fantasy_cosmetics_wolf_tail_self:
+    display_name: Feral Fantasy Wolf Tail Cosmetics Self
+    permission: ero_feral_fantasy_set.ero_feral_fantasy_cosmetics_wolf_tail_self
+    resource:
+      generate: false
+      model_path: wolf_tail_cosmetic_self
+      material: POTION
+      model_id: 9925067
+  ero_feral_fantasy_cosmetics_wolf_tail_self_2:
+    display_name: Feral Fantasy Wolf Tail Cosmetics Self 2
+    permission: ero_feral_fantasy_set.ero_feral_fantasy_cosmetics_wolf_tail_self_2
+    resource:
+      generate: false
+      model_path: wolf_tail_cosmetic_self_2
+      material: POTION
+      model_id: 9925068
+  ero_feral_fantasy_cosmetics_wolf_tail_normal_2:
+    display_name: Feral Fantasy Wolf Tail Cosmetics Normal 2
+    permission: ero_feral_fantasy_set.ero_feral_fantasy_cosmetics_wolf_tail_normal_2
+    resource:
+      generate: false
+      model_path: wolf_tail_cosmetic_normal_2
+      material: POTION
+      model_id: 9925069

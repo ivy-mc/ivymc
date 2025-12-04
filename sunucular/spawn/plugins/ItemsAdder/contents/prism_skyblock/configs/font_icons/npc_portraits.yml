@@ -1,0 +1,150 @@
+info:
+  namespace: prism_skyblock
+font_images:
+  
+  npc-lewis:
+    symbol: ꀼ
+    path: interface/npc_portraits/lewis.png
+    y_position: 9.5
+    scale_ratio: 46
+    permission: somerandom.perm
+
+  npc-wally:
+    symbol: ꁠ
+    path: interface/npc_portraits/wally.png
+    y_position: 9.5
+    scale_ratio: 46
+    permission: somerandom.perm
+
+  npc-pris:
+    symbol: ꁥ
+    path: interface/npc_portraits/pris.png
+    y_position: 9.5
+    scale_ratio: 46
+    permission: somerandom.perm
+
+  npc-samuel:
+    symbol: ꁦ
+    path: interface/npc_portraits/samuel.png
+    y_position: 9.5
+    scale_ratio: 46
+    permission: somerandom.perm
+
+  npc-robot:
+    symbol: ꁨ
+    path: interface/npc_portraits/robot.png
+    y_position: 9.5
+    scale_ratio: 46
+    permission: somerandom.perm
+
+  npc-duncan:
+    symbol: ꁩ
+    path: interface/npc_portraits/duncan.png
+    y_position: 9.5
+    scale_ratio: 46
+    permission: somerandom.perm
+
+  npc-callan:
+    symbol: ꁪ
+    path: interface/npc_portraits/callan.png
+    y_position: 9.5
+    scale_ratio: 46
+    permission: somerandom.perm
+
+  npc-sabrina:
+    symbol: ꁫ
+    path: interface/npc_portraits/sabrina.png
+    y_position: 9.5
+    scale_ratio: 46
+    permission: somerandom.perm
+
+  npc-mia:
+    symbol: ꁳ
+    path: interface/npc_portraits/mia.png
+    y_position: 9.5
+    scale_ratio: 46
+    permission: somerandom.perm
+
+  npc-froggy:
+    symbol: ꁴ
+    path: interface/npc_portraits/froggy.png
+    y_position: 9.5
+    scale_ratio: 46
+    permission: somerandom.perm
+
+  npc-norman:
+    symbol: ꁵ
+    path: interface/npc_portraits/norman.png
+    y_position: 9.5
+    scale_ratio: 46
+    permission: somerandom.perm
+
+  npc-liana:
+    symbol: ꁶ
+    path: interface/npc_portraits/liana.png
+    y_position: 9.5
+    scale_ratio: 46
+    permission: somerandom.perm
+
+  npc-bengbeng:
+    symbol: ꁷ
+    path: interface/npc_portraits/bengbeng.png
+    y_position: 9.5
+    scale_ratio: 46
+    permission: somerandom.perm
+
+  npc-glen:
+    symbol: ꁸ
+    path: interface/npc_portraits/glen.png
+    y_position: 9.5
+    scale_ratio: 46
+    permission: somerandom.perm
+
+  npc-lissandra:
+    symbol: ꁹ
+    path: interface/npc_portraits/lissandra.png
+    y_position: 9.5
+    scale_ratio: 46
+    permission: somerandom.perm
+
+  npc-dustindinh:
+    symbol: ꁺ
+    path: interface/npc_portraits/dustindinh.png
+    y_position: 9.5
+    scale_ratio: 46
+    permission: somerandom.perm
+
+  npc-48minh:
+    symbol: ꁻ
+    path: interface/npc_portraits/48minh.png
+    y_position: 9.5
+    scale_ratio: 46
+    permission: somerandom.perm
+
+  npc-anika:
+    symbol: ꁼ
+    path: interface/npc_portraits/anika.png
+    y_position: 9.5
+    scale_ratio: 46
+    permission: somerandom.perm
+
+  npc-kurt:
+    symbol: ꁽ
+    path: interface/npc_portraits/kurt.png
+    y_position: 9.5
+    scale_ratio: 46
+    permission: somerandom.perm
+
+  npc-wilfred:
+    symbol: ꂉ
+    path: interface/npc_portraits/wilfred.png
+    y_position: 9.5
+    scale_ratio: 46
+    permission: somerandom.perm
+
+  npc-darcy:
+    symbol: ꂊ
+    path: interface/npc_portraits/darcy.png
+    y_position: 9.5
+    scale_ratio: 46
+    permission: somerandom.perm

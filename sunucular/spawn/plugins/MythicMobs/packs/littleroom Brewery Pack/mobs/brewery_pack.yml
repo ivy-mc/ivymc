@@ -1,0 +1,1137 @@
+﻿#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+
+lrd_boiler: 
+  Type: ARMOR_STAND 
+  Display: 'lrd_boiler'
+  Options:
+    Despawn: false
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+    Collidable: false
+    Silent: true
+    Persistent: PERSISTENT
+  DamageModifiers:
+    - SUFFOCATION -1
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - model{mid=lrd_boiler;n=false;d=false;h=false;usm=true} @self ~onSpawn
+  - model{mid=lrd_boiler;n=false;d=false;h=false;usm=true} @self ~onLoad
+  - BodyClamp{mh=0;mb=0;rde=0;rdu=0} @self ~onSpawn
+  - BodyClamp{mh=0;mb=0;rde=0;rdu=0} @self ~onLoad
+  - throw{v=2;vy-5;fromorigin=true;origin=@selflocation{y=2}} @eir{r=24;conditions=[ - boundingboxesoverlap]} ~onTimer:1
+  - CancelEvent{sync=true} @trigger ~onInteract ?holding{m=lrd_boiler}
+  - skill{s=lrd_brewery_spawn} @selflocation{yo=.5} ~onSpawn
+  - skill{s=lrd_brewery_check_owner_direction_south} @owner ~onSpawn
+  - skill{s=lrd_brewery_check_owner_direction_north} @owner ~onSpawn
+  - skill{s=lrd_brewery_check_owner_direction_west} @owner ~onSpawn
+  - skill{s=lrd_brewery_check_owner_direction_east} @owner ~onSpawn
+  - skill{s=lrd_brewery_errorprevention} @selflocation ~onTimer:2
+  - skill{s=lrd_brewery_remove_boiler} @self ~onDeath
+  - skill{s=lrd_brewery_add_item} @self ~onInteract
+  - skill{s=lrd_brewery_take_item} @trigger ~onInteract
+  - skill{s=lrd_brewery_check_current_recipe;cd=1} @self ~onTimer:1
+  - skill{s=lrd_brewery_working_boiler} @self ~onTimer:1
+  
+
+lrd_fermenter: 
+  Type: ARMOR_STAND 
+  Display: 'lrd_fermenter'
+  Options:
+    Despawn: false
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+    Collidable: false
+    Silent: true
+    Persistent: PERSISTENT
+  DamageModifiers:
+    - SUFFOCATION -1
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - model{mid=lrd_fermenter;n=false;d=false;h=false;usm=true} @self ~onSpawn
+  - model{mid=lrd_fermenter;n=false;d=false;h=false;usm=true} @self ~onLoad
+  - BodyClamp{mh=0;mb=0;rde=0;rdu=0} @self ~onSpawn
+  - BodyClamp{mh=0;mb=0;rde=0;rdu=0} @self ~onLoad
+  - throw{v=2;vy-5;fromorigin=true;origin=@selflocation{y=2}} @eir{r=24;conditions=[ - boundingboxesoverlap]} ~onTimer:1
+  - CancelEvent{sync=true} @trigger ~onInteract ?holding{m=lrd_fermenter}
+  - skill{s=lrd_brewery_spawn} @selflocation{yo=.5} ~onSpawn
+  - skill{s=lrd_brewery_check_owner_direction_south} @owner ~onSpawn
+  - skill{s=lrd_brewery_check_owner_direction_north} @owner ~onSpawn
+  - skill{s=lrd_brewery_check_owner_direction_west} @owner ~onSpawn
+  - skill{s=lrd_brewery_check_owner_direction_east} @owner ~onSpawn
+  - skill{s=lrd_brewery_errorprevention} @selflocation ~onTimer:2
+  - skill{s=lrd_brewery_remove_fermenter} @self ~onDeath
+  - skill{s=lrd_brewery_add_item} @self ~onInteract
+  - skill{s=lrd_brewery_take_item} @trigger ~onInteract
+  - skill{s=lrd_brewery_check_current_recipe;cd=1} @self ~onTimer:1
+  - skill{s=lrd_brewery_working_fermenter} @self ~onTimer:1
+  
+
+lrd_distiller: 
+  Type: ARMOR_STAND 
+  Display: 'lrd_distiller'
+  Options:
+    Despawn: false
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+    Collidable: false
+    Silent: true
+    Persistent: PERSISTENT
+  DamageModifiers:
+    - SUFFOCATION -1
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - model{mid=lrd_distiller;n=false;d=false;h=false;usm=true} @self ~onSpawn
+  - model{mid=lrd_distiller;n=false;d=false;h=false;usm=true} @self ~onLoad
+  - BodyClamp{mh=0;mb=0;rde=0;rdu=0} @self ~onSpawn
+  - BodyClamp{mh=0;mb=0;rde=0;rdu=0} @self ~onLoad
+  - throw{v=2;vy-5;fromorigin=true;origin=@selflocation{y=2}} @eir{r=24;conditions=[ - boundingboxesoverlap]} ~onTimer:1
+  - CancelEvent{sync=true} @trigger ~onInteract ?holding{m=lrd_distiller}
+  - skill{s=lrd_brewery_spawn} @selflocation{yo=.5} ~onSpawn
+  - skill{s=lrd_brewery_check_owner_direction_south} @owner ~onSpawn
+  - skill{s=lrd_brewery_check_owner_direction_north} @owner ~onSpawn
+  - skill{s=lrd_brewery_check_owner_direction_west} @owner ~onSpawn
+  - skill{s=lrd_brewery_check_owner_direction_east} @owner ~onSpawn
+  - skill{s=lrd_brewery_errorprevention} @selflocation ~onTimer:2
+  - skill{s=lrd_brewery_remove_distiller} @self ~onDeath
+  - skill{s=lrd_brewery_add_item} @self ~onInteract
+  - skill{s=lrd_brewery_take_item} @trigger ~onInteract
+  - skill{s=lrd_brewery_check_current_recipe;cd=1} @self ~onTimer:1
+  - skill{s=lrd_brewery_working_distiller} @self ~onTimer:1
+
+
+## RECIPE DISPLAY ##
+
+# tea #
+lrd_tea:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_tea
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_tea} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+# blacktea #
+lrd_blacktea:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_blacktea
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_blacktea} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+# greentea #
+lrd_greentea:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_greentea
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_greentea} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+# oolongtea #
+lrd_oolongtea:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_oolongtea
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_oolongtea} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+# chai #
+lrd_chai:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_chai
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_chai} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+# herbaltea #
+lrd_herbaltea:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_herbaltea
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_herbaltea} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+# rooibostea #
+lrd_rooibostea:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_rooibostea
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_rooibostea} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+# whitetea #
+lrd_whitetea:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_whitetea
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_whitetea} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+# blossomtea #
+lrd_blossomtea:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_blossomtea
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_blossomtea} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+# lilactea #
+lrd_lilactea:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_lilactea
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_lilactea} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+# rosehiptea #
+lrd_rosehiptea:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_rosehiptea
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_rosehiptea} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+# withertea #
+lrd_withertea:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_withertea
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_withertea} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+# dandeliontea #
+lrd_dandeliontea:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_dandeliontea
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_dandeliontea} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+# wheatbeer #
+lrd_wheatbeer_wort:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_wheatbeer_wort
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_wheatbeer_wort} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+lrd_wheatbeer_unfiltered:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_wheatbeer_unfiltered
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_wheatbeer_unfiltered} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+lrd_wheatbeer:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_wheatbeer
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_wheatbeer} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+# meadowmead #
+lrd_meadowmead_wort:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_meadowmead_wort
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_meadowmead_wort} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+lrd_meadowmead_unfiltered:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_meadowmead_unfiltered
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_meadowmead_unfiltered} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+lrd_meadowmead:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_meadowmead
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_meadowmead} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+# moonshine #
+lrd_moonshine_wort:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_moonshine_wort
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_moonshine_wort} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+lrd_moonshine_unfiltered:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_moonshine_unfiltered
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_moonshine_unfiltered} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+lrd_moonshine:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_moonshine
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_moonshine} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+# potatovodka #
+lrd_potatovodka_wort:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_potatovodka_wort
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_potatovodka_wort} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+lrd_potatovodka_unfiltered:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_potatovodka_unfiltered
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_potatovodka_unfiltered} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+lrd_potatovodka:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_potatovodka
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_potatovodka} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+
+# applevodka #
+lrd_applevodka_unfiltered:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_applevodka_unfiltered
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_applevodka_unfiltered} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+lrd_applevodka:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_applevodka
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_applevodka} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+
+# redwine #
+lrd_redwine:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_redwine
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_redwine} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+
+# whitewine #
+lrd_whitewine:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_whitewine
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_whitewine} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENTRENT
+  - remove @self ~onSignal:NOPARENT
+  
+
+# melonwine #
+lrd_melonwine:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_melonwine
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_melonwine} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+
+# applewine #
+lrd_applewine:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_applewine
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_applewine} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+
+# pumpkinwine #
+lrd_pumpkinwine:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_pumpkinwine
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_pumpkinwine} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+
+# sweetvermouth #
+lrd_sweetvermouth:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_sweetvermouth
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_sweetvermouth} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+
+# dryvermouth #
+lrd_dryvermouth:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_dryvermouth
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_dryvermouth} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+
+# melonvermouth #
+lrd_melonvermouth:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_melonvermouth
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_melonvermouth} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+
+# applevermouth #
+lrd_applevermouth:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_applevermouth
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_applevermouth} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+
+# pumpkinvermouth #
+lrd_pumpkinvermouth:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_pumpkinvermouth
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_pumpkinvermouth} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+
+# applecider #
+lrd_applecider:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_applecider
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_applecider} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+
+# meloncider #
+lrd_meloncider:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_meloncider
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_meloncider} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+
+# sweetberrycider #
+lrd_sweetberrycider:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_sweetberrycider
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_sweetberrycider} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+
+# applebrandy #
+lrd_applebrandy:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_applebrandy
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_applebrandy} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+
+# melonbrandy #
+lrd_melonbrandy:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_melonbrandy
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_melonbrandy} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+
+# sweetberrybrandy #
+lrd_sweetberrybrandy:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_sweetberrybrandy
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_sweetberrybrandy} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+
+# netherwartwine #
+lrd_netherwartwine:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_netherwartwine
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_netherwartwine} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+
+# tequila #
+
+lrd_tequila_unfiltered:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_tequila_unfiltered
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_tequila_unfiltered} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+lrd_tequila:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_tequila
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_tequila} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+# torchedwhiskey #
+
+lrd_torchedwhiskey_wort:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_torchedwhiskey_wort
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_torchedwhiskey_wort} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+lrd_torchedwhiskey_unfiltered:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_torchedwhiskey_unfiltered
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_torchedwhiskey_unfiltered} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+lrd_torchedwhiskey:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_torchedwhiskey
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_torchedwhiskey} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+
+# gin #
+lrd_gin_unfiltered:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_gin_unfiltered
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_gin_unfiltered} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+lrd_gin:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_gin
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_gin} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+
+# cavegin #
+
+lrd_cavegin_unfiltered:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_cavegin_unfiltered
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_cavegin_unfiltered} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+lrd_cavegin:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_cavegin
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_cavegin} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+lrd_absinthe_unfiltered:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_absinthe_unfiltered
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_absinthe_unfiltered} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+lrd_absinthe:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_absinthe
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_absinthe} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+lrd_rum_unfiltered:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_rum_unfiltered
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_rum_unfiltered} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+lrd_rum:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_rum
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_rum} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+lrd_bourbon_wort:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_bourbon_wort
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_bourbon_wort} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+lrd_bourbon_unfiltered:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_bourbon_unfiltered
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_bourbon_unfiltered} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT
+  
+lrd_bourbon:
+  Type: item_display
+  DisplayOptions:
+    Item: lrd_bourbon
+    Billboard: FIXED
+    Scale: 0.5,0.5,0.5
+    LeftRotation: 0,0,0,1
+    Transform: GUI
+  Options:
+    Despawn: false
+    Persistent: PERSISTENT
+  Skills:
+  - e:p{p=crit;a=5;hs=.2;vs=.2;s=0.1} @origin ~onSpawn
+  - dropitem{i=lrd_bourbon} @self ~onSignal:NOPARENT
+  - remove @self ~onSignal:NOPARENT

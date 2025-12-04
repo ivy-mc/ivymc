@@ -1,0 +1,34 @@
+info:
+  namespace: prism_skyblock
+font_images:
+
+  rarity-1stars:
+    symbol: ꁉ
+    path: labels/item_rarity/1stars.png
+    y_position: 7
+    scale_ratio: 8
+    permission: somerandom.perm
+  rarity-2stars:
+    symbol: ꁊ
+    path: labels/item_rarity/2stars.png
+    y_position: 7
+    scale_ratio: 8
+    permission: somerandom.perm
+  rarity-3stars:
+    symbol: ꁋ
+    path: labels/item_rarity/3stars.png
+    y_position: 7
+    scale_ratio: 8
+    permission: somerandom.perm
+  rarity-4stars:
+    symbol: ꁌ
+    path: labels/item_rarity/4stars.png
+    y_position: 7
+    scale_ratio: 8
+    permission: somerandom.perm
+  rarity-5stars:
+    symbol: ꁍ
+    path: labels/item_rarity/5stars.png
+    y_position: 7
+    scale_ratio: 8
+    permission: somerandom.perm

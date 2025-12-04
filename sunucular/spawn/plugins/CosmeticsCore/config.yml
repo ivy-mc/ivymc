@@ -1,0 +1,113 @@
+lang: en
+prefix: '&5Cosmetics&r '
+extract_default_assets: true
+cosmetics:
+  max_equippable:
+    body: 3
+    balloon: 2
+  hide_during_combat:
+    enabled: true
+    combat_duration_ticks: 600
+    only_pvp: true
+  fix_invisible_nametag: false
+  hide_in_vanish: true
+  worlds:
+  - '*'
+wardrobe_room:
+  allow-not-owned-preview: true
+  camera:
+    hide_actionbar_texts: true
+    use_invisibility_potion: false
+    rotation:
+      manual:
+        enabled: true
+        step: 20
+      auto:
+        enabled: true
+        direction: RIGHT
+        step: 1.5
+        pause_ticks_on_manual_rotation: 60
+    zoom:
+      enabled: true
+      min: 2
+    fade_effect: true
+    location:
+      world: world
+      x: 69.06360485112236
+      y: 74.50304261594877
+      z: -22.41521674885025
+      yaw: 141.72774
+      pitch: 4.6500254
+  mannequin:
+    location:
+      world: world
+      x: 66.36379126295137
+      y: 72.5
+      z: -25.43345316474126
+      yaw: -6.9226074
+      pitch: -0.60001063
+  teleport_area:
+    enter:
+      world: world
+      pos1:
+        x: 63.0
+        y: 72.0
+        z: -35.0
+      pos2:
+        x: 68.0
+        y: 76.0
+        z: -35.0
+    exit_location:
+      world: world
+      x: 66.52322602310876
+      y: 72.0
+      z: -22.34540723245625
+      yaw: 179.9777
+      pitch: -1.7999748
+  gui:
+    cursor_default: fermented_spider_eye:9000001
+    cursor_rotate: fermented_spider_eye:9000002
+    cursor_pointer: fermented_spider_eye:9000003
+    dyeing_pointer: fermented_spider_eye:9100003
+    tutorial_gui: fermented_spider_eye:9100004
+    tutorial_gui_checked: fermented_spider_eye:9100005
+    slots:
+      colors:
+        owned: 56,67,100
+        not_owned: 195,147,57
+        wearing: 57,70,195
+        wearing_preview: 195,120,57
+        max_amount_reached_owned: 24, 29, 43
+        max_amount_reached_not_owned: 64, 48, 17
+      add_item_in_blank_slots:
+        # This is useful only for some expert users that need to do some crazy stuff.
+        # Do not enable it if you don't know what you are doing.
+        enabled: false
+        type: PAPER
+        custom_model_data: 1337666
+  commands:
+    whitelist:
+      enabled: true
+      list:
+      - msg
+      - tell
+      - r
+      - reply
+      - help
+    blacklist:
+      enabled: false
+      list:
+      - home
+      - sethome
+send_creative_hidden_hat_message: true
+save:
+  # Use only one at a time
+  file:
+    enabled: true
+  mysql:
+    enabled: true
+    url: jdbc:mysql://127.0.0.1:3306/cosmeticscore
+    username: ivydb
+    password: ivy1881
+    table: cosmeticscore_saved
+debug: false

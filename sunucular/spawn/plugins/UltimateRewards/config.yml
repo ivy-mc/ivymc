@@ -1,0 +1,255 @@
+#
+#     _     _ _       _                            ______                               _
+#    (_)   (_) |  _  (_)              _           (_____ \                             | |
+#    | |   | |_| |_|_| |___  _____ _| |_ _____    _____) )_____ _ _  _ _ _____  ____ __| |  ___
+#    | |   | | (_   _) |    \(____ (_   _) ___ |  |  __  /| ___ |  |  | (____ |/ ___) _  |/___)
+#    | |___| | | | |_| | | | / /_\_ | | |_| ____| | |  \ \|____|  |  | / /_\ | |  ( (_| |___ |
+#    \_____/ \_) \__)_|_|_|_\_|  |_|  \__)_____)  |_|   |_|_____)\___/\_|  |_|_|   \____(___/
+#
+#   Global Configuration
+#
+# All the information you need can be found at https://ultimaterewards.athelion.eu/
+# If you have any questions, join https://discord.athelion.eu/ for assistance
+#
+
+# Option to enable/disable update checker
+update-checker: true
+
+#
+# Database section
+#
+
+# What type of database do you want to use?
+# Valid values: SQLITE, MYSQL, MARIADB, POSTGRESQL
+backend: SQLITE
+
+# MySQL server host address
+mysql-host: 127.0.0.1
+
+# MySQL server port
+mysql-port: 3306
+
+# Name of the MySQL database
+mysql-database-name: database
+
+# You can keep this by default
+mysql-table-name: rewards
+
+# Username to connect to the MySQL database
+mysql-user: admin
+
+# Password to connect to the MySQL database
+mysql-password: 12345
+
+# MySQL's connection pool settings
+mysql-pool-settings-maximum-pool-size: 10
+mysql-pool-settings-minimum-idle: 5
+mysql-pool-settings-maximum-lifetime: 1800000
+mysql-pool-settings-connection-timeout: 5000
+
+# Additional MySQL properties
+mysql-properties:
+  useUnicode: true
+  characterEncoding: utf8
+
+#
+# Global settings section
+#
+
+# Number of accounts that can claim
+# rewards on same IP, when the number is higher
+# the claiming will be cancelled.
+# Set to 0 to disable limit feature.
+max-accounts-per-ip: 0
+# Player's accounts will be displayed when connected
+log-accounts: true
+# Checks if the player is afk, so
+# it won't add to his play-time.
+# Requires: Essentials or CMI
+enable-afk-checker: true
+# Available values:
+#   CONTAINING_TEXT
+#     Filters all the strings that contain the specified argument string.
+#       Example: kill, kick, looking | ki -> kick, kill, looking
+#
+#   CONTAINING_ALL_CHARS_OF_TEXT
+#     Filters all the strings that contain all the characters in the specified argument string.
+#       Example: help, reset, reload | el -> help, reload
+#       Example: kill, kick, looking | li -> kill, looking
+#
+#   STARTING_WITH_TEXT
+#     Filters all the strings that start with the specified argument string.
+#       Example: help, reset, reload | re -> reload, reset
+#
+tab-argument-matcher: CONTAINING_ALL_CHARS_OF_TEXT
+
+help-header: '&e&m--------------&6&l AVAILABLE COMMANDS&e &m--------------'
+help-message-format: '&6 • &e%syntax% &7- &f%description%'
+help-footer: '&e&m--------------------------------------------------'
+
+# Name of discord role for server booster.
+# Used in checker if player is boosting discord server.
+discord-booster-role-name: Server Booster
+# Channel for logging reward claiming
+# Set channel ID
+# Set to none to disable logging
+discord-log-channel: none
+# Determines if menus should be closed
+# after claiming an available reward from the reward's GUI
+close-menu-after-claiming: false
+
+available-rewards-menu-rows: 4
+available-rewards-menu-slots:
+- 0
+- 1
+- 2
+- 3
+- 4
+- 5
+- 6
+- 7
+- 8
+
+# If set to false, placeholders will show
+# the 'unavailable' property from lang.yml in %ultimaterewards_cooldown_{rewardName}%
+use-timer-in-placeholder: true
+
+join-announcement:
+  # A list of announcement times which
+  # will be sent at the following intervals (in seconds):
+  delays:
+  - 5
+  # Set the command executed when players click on the announcement
+  command: ultimaterewards:rewards
+  # Set the sound played for the announcement
+  # NOTE: Item & sound names may vary between Minecraft versions,
+  #       so make sure to use valid names for your version.
+  sound:
+    enabled: true
+    value: BLOCK_NOTE_BLOCK_HARP
+    volume: 1.0
+    pitch: 1.0
+
+live-announcement:
+  # Set the command executed when players click on the live announcement
+  command: ultimaterewards:reward claim %reward%
+  sound:
+    enabled: true
+    value: BLOCK_NOTE_BLOCK_HARP
+    volume: 1.0
+    pitch: 1.0
+
+join-auto-claim:
+  delay: 1
+  sound:
+    enabled: true
+    value: ENTITY_HORSE_SADDLE
+    volume: 1.0
+    pitch: 1.0
+
+live-auto-claim:
+  sound:
+    enabled: true
+    value: ITEM_ARMOR_EQUIP_GENERIC
+    volume: 1.0
+    pitch: 1.0
+
+# If set to true, reward claiming will be automatically blocked if a player
+# has a full inventory.
+check-for-full-inventory: true
+
+# Menu that will be opened after executing the /rewards menu command
+main-menu: main
+
+# Set the item used as the background for the rewards GUI
+# Set to 'none' to disable this option.
+background-item: GRAY_STAINED_GLASS_PANE
+
+progress-bar-symbol: '|'
+progress-bar-completed-color: '&a'
+progress-bar-missing-color: '&8'
+progress-bar-length: 15
+
+# Available options:
+#   - CHAT
+#   - ANVIL
+input-type: ANVIL
+
+# Specify time calculator that handles
+# player's time spent on server/network
+# Available types:
+#   - DEFAULT
+#   - PLAYTIMES (https://www.spigotmc.org/resources/playtimes-track-player-playtime.58858/)
+play-time-calculator: DEFAULT
+
+# Do not change this setting for now !!
+play-time-calculation: MINUTES
+
+# Format for the play-time placeholder (%ultimaterewards_playtime%)
+play-time-placeholder-format: '&e%days%&f days &e%hours%&f hours &e%minutes%&f minutes&r'
+# Format for the afk-time placeholder (%ultimaterewards_afk_session_time%)
+afk-time-placeholder-format: '&e%minutes%&f minutes &e%seconds% &fseconds&r'
+
+# List of worlds where play-time is not tracked
+worlds-with-disabled-playtime-tracking:
+- 'afkworld'
+- 'someworld'
+- 'anotherworld'
+
+# How much time (in minutes) a player must have played
+# on the server to be able to obtain rewards.
+# Set to 0 to disable this requirement.
+first-time-join-required-play-time: 100
+
+# How much time (in minutes) a player must have played
+# on the server in their current session to be able to obtain rewards.
+# Set to 0 to disable this requirement.
+session-required-play-time: 10
+
+# Defaults section for player settings.
+# NOTE: Each reward can be configured if it is included
+# in these notifications or in the auto-claim in their .yml configuration.
+#
+# If the player should be informed about available rewards when they join
+join-notification-by-default: true
+# If the player should be notified when a reward is available
+live-notification-by-default: true
+# Whether rewards should be automatically claimed on connection
+join-auto-claim-by-default: false
+# Whether rewards should be automatically claimed when the reward is available
+live-auto-claim-by-default: false
+# When player doesn't have permission for setting
+setting-no-permission-item: BARRIER
+
+# Ignore that,
+# used in the addon.
+10-percent: WHITE_WOOL
+20-percent: WHITE_WOOL
+30-percent: WHITE_WOOL
+40-percent: WHITE_WOOL
+50-percent: WHITE_WOOL
+60-percent: WHITE_WOOL
+70-percent: WHITE_WOOL
+80-percent: WHITE_WOOL
+90-percent: WHITE_WOOL
+100-percent: WHITE_WOOL
+
+commands:
+  reward:
+    name: reward
+    aliases:
+    - 'rw'
+  rewards:
+    name: rewards
+    aliases:
+    - 'rws'
+  referral:
+    name: referral
+    aliases:
+    - 'ref'
+  vote:
+    name: vote
+    aliases:
+    - 'uvote'
+
+debug: false

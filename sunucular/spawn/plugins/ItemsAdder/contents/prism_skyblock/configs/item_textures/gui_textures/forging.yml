@@ -1,0 +1,21 @@
+info:
+  namespace: prism_skyblock
+items:
+  
+  forging-locked:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 66
+      textures:
+      - interface/gui_textures/forging/locked
+
+  forging-queue:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 67
+      textures:
+      - interface/gui_textures/forging/queue

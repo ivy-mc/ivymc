@@ -1,0 +1,8 @@
+Name: <white>Wind Key
+Virtual: false
+ItemData:
+  Type: VANILLA
+  Tag:
+    Value: '{components:{"minecraft:custom_data":{itemsadder:{id:"elite_crates_wind_key",namespace:"elitecreatures"}},"minecraft:custom_model_data":{floats:[10136.0f]},"minecraft:custom_name":{color:"white",italic:0b,text:"Wind Key"},"minecraft:item_name":{color:"white",italic:0b,text:"Wind Key"}},count:1,id:"minecraft:paper"}'
+    DataVersion: 4438
+ItemStackable: true

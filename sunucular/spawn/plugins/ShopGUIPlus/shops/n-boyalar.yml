@@ -1,0 +1,1801 @@
+n-boyalar:
+  name: "&fᵩᵐ"
+  fillItem:
+    material: PAPER
+    model: 7548
+    name: "&f"
+  items:
+    6:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵴ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Boyalar kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop dyes
+      slot: 5
+      page: 1
+    10:
+      type: special
+      special: BALANCE
+      slot: 49
+      page: 1
+    21:
+      type: item
+      item:
+        material: WHITE_DYE
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 0.06
+      slot: 18
+      page: 1
+    22:
+      type: item
+      item:
+        material: ORANGE_DYE
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 0.06
+      slot: 19
+      page: 1
+    23:
+      type: item
+      item:
+        material: MAGENTA_DYE
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 0.06
+      slot: 20
+      page: 1
+    24:
+      type: item
+      item:
+        material: LIGHT_BLUE_DYE
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 0.06
+      slot: 21
+      page: 1
+    25:
+      type: item
+      item:
+        material: YELLOW_DYE
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 0.06
+      slot: 22
+      page: 1
+    26:
+      type: item
+      item:
+        material: LIME_DYE
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 0.06
+      slot: 23
+      page: 1
+    27:
+      type: item
+      item:
+        material: PINK_DYE
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 0.06
+      slot: 24
+      page: 1
+    28:
+      type: item
+      item:
+        material: GRAY_DYE
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 0.06
+      slot: 25
+      page: 1
+    29:
+      type: item
+      item:
+        material: LIGHT_GRAY_DYE
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 0.06
+      slot: 26
+      page: 1
+    30:
+      type: item
+      item:
+        material: CYAN_DYE
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 0.06
+      slot: 27
+      page: 1
+    31:
+      type: item
+      item:
+        material: PURPLE_DYE
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 0.06
+      slot: 28
+      page: 1
+    32:
+      type: item
+      item:
+        material: BLUE_DYE
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 0.06
+      slot: 29
+      page: 1
+    33:
+      type: item
+      item:
+        material: BROWN_DYE
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 0.06
+      slot: 30
+      page: 1
+    34:
+      type: item
+      item:
+        material: GREEN_DYE
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 0.06
+      slot: 31
+      page: 1
+    35:
+      type: item
+      item:
+        material: RED_DYE
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 0.06
+      slot: 32
+      page: 1
+    36:
+      type: item
+      item:
+        material: BLACK_DYE
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 0.06
+      slot: 33
+      page: 1
+    37:
+      type: item
+      item:
+        material: POPPY
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.14
+      slot: 34
+      page: 1
+    38:
+      type: item
+      item:
+        material: OXEYE_DAISY
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.14
+      slot: 35
+      page: 1
+    39:
+      type: item
+      item:
+        material: LILY_OF_THE_VALLEY
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.14
+      slot: 36
+      page: 1
+    40:
+      type: item
+      item:
+        material: ALLIUM
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.14
+      slot: 37
+      page: 1
+    41:
+      type: item
+      item:
+        material: AZURE_BLUET
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.14
+      slot: 38
+      page: 1
+    42:
+      type: item
+      item:
+        material: RED_TULIP
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.14
+      slot: 39
+      page: 1
+    43:
+      type: item
+      item:
+        material: PINK_TULIP
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.14
+      slot: 40
+      page: 1
+    44:
+      type: item
+      item:
+        material: WHITE_TULIP
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.14
+      slot: 41
+      page: 1
+    45:
+      type: item
+      item:
+        material: ORANGE_TULIP
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.14
+      slot: 42
+      page: 1
+    46:
+      type: item
+      item:
+        material: BLUE_ORCHID
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.14
+      slot: 43
+      page: 1
+    47:
+      type: item
+      item:
+        material: DANDELION
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.14
+      slot: 44
+      page: 1
+    48:
+      type: item
+      item:
+        material: WITHER_ROSE
+        quantity: 1
+      buyPrice: 30
+      sellPrice: 0.42
+      slot: 18
+      page: 2
+    49:
+      type: item
+      item:
+        material: CORNFLOWER
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.14
+      slot: 19
+      page: 2
+    50:
+      type: item
+      item:
+        material: SPORE_BLOSSOM
+        quantity: 1
+      buyPrice: 7.5
+      sellPrice: 0.53
+      slot: 20
+      page: 2
+    51:
+      type: item
+      item:
+        material: ROSE_BUSH
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.22
+      slot: 21
+      page: 2
+    52:
+      type: item
+      item:
+        material: LILAC
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.22
+      slot: 22
+      page: 2
+    53:
+      type: item
+      item:
+        material: PEONY
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.22
+      slot: 23
+      page: 2
+    54:
+      type: item
+      item:
+        material: PINK_PETALS
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.22
+      slot: 24
+      page: 2
+    55:
+      type: item
+      item:
+        material: WHITE_WOOL
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 25
+      page: 2
+    56:
+      type: item
+      item:
+        material: ORANGE_WOOL
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 26
+      page: 2
+    57:
+      type: item
+      item:
+        material: MAGENTA_WOOL
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 27
+      page: 2
+    58:
+      type: item
+      item:
+        material: LIGHT_BLUE_WOOL
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 28
+      page: 2
+    59:
+      type: item
+      item:
+        material: YELLOW_WOOL
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11 
+      slot: 29
+      page: 2
+    60:
+      type: item
+      item:
+        material: LIME_WOOL
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 30
+      page: 2
+    61:
+      type: item
+      item:
+        material: PINK_WOOL
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 31
+      page: 2
+    62:
+      type: item
+      item:
+        material: GRAY_WOOL
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 32
+      page: 2
+    63:
+      type: item
+      item:
+        material: LIGHT_GRAY_WOOL
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 33
+      page: 2
+    64:
+      type: item
+      item:
+        material: CYAN_WOOL
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 34
+      page: 2
+    65:
+      type: item
+      item:
+        material: PURPLE_WOOL
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 35
+      page: 2
+    66:
+      type: item
+      item:
+        material: BLUE_WOOL
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 36
+      page: 2
+    67:
+      type: item
+      item:
+        material: BROWN_WOOL
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 37
+      page: 2
+    68:
+      type: item
+      item:
+        material: GREEN_WOOL
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 38
+      page: 2
+    69:
+      type: item
+      item:
+        material: RED_WOOL
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 39
+      page: 2
+    70:
+      type: item
+      item:
+        material: BLACK_WOOL
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 40
+      page: 2
+    71:
+      type: item
+      item:
+        material: WHITE_TERRACOTTA
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 41
+      page: 2
+    72:
+      type: item
+      item:
+        material: ORANGE_TERRACOTTA
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 42
+      page: 2
+    73:
+      type: item
+      item:
+        material: MAGENTA_TERRACOTTA
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 43
+      page: 2
+    74:
+      type: item
+      item:
+        material: LIGHT_BLUE_TERRACOTTA
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 44
+      page: 2
+    214:
+      type: special
+      special: BALANCE
+      slot: 49
+      page: 2
+    75:
+      type: item
+      item:
+        material: YELLOW_TERRACOTTA
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 18
+      page: 3
+    76:
+      type: item
+      item:
+        material: LIME_TERRACOTTA
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 19
+      page: 3
+    77:
+      type: item
+      item:
+        material: PINK_TERRACOTTA
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 20
+      page: 3
+    78:
+      type: item
+      item:
+        material: GRAY_TERRACOTTA
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 21
+      page: 3
+    79:
+      type: item
+      item:
+        material: LIGHT_GRAY_TERRACOTTA
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 22
+      page: 3
+    80:
+      type: item
+      item:
+        material: CYAN_TERRACOTTA
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 23
+      page: 3
+    81:
+      type: item
+      item:
+        material: PURPLE_TERRACOTTA
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 24
+      page: 3
+    82:
+      type: item
+      item:
+        material: BLUE_TERRACOTTA
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 25
+      page: 3
+    83:
+      type: item
+      item:
+        material: BROWN_TERRACOTTA
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 26
+      page: 3
+    84:
+      type: item
+      item:
+        material: GREEN_TERRACOTTA
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 27
+      page: 3
+    85:
+      type: item
+      item:
+        material: RED_TERRACOTTA
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 28
+      page: 3
+    86:
+      type: item
+      item:
+        material: BLACK_TERRACOTTA
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 29
+      page: 3
+    87:
+      type: item
+      item:
+        material: WHITE_CONCRETE_POWDER
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 0.16
+      slot: 30
+      page: 3
+    88:
+      type: item
+      item:
+        material: ORANGE_CONCRETE_POWDER
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 0.16
+      slot: 31
+      page: 3
+    89:
+      type: item
+      item:
+        material: MAGENTA_CONCRETE_POWDER
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 0.16
+      slot: 32
+      page: 3
+    90:
+      type: item
+      item:
+        material: LIGHT_BLUE_CONCRETE_POWDER
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 0.16
+      slot: 33
+      page: 3
+    91:
+      type: item
+      item:
+        material: YELLOW_CONCRETE_POWDER
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 0.16
+      slot: 34
+      page: 3
+    92:
+      type: item
+      item:
+        material: LIME_CONCRETE_POWDER
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 0.16
+      slot: 35
+      page: 3
+    93:
+      type: item
+      item:
+        material: PINK_CONCRETE_POWDER
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 0.16
+      slot: 36
+      page: 3
+    94:
+      type: item
+      item:
+        material: GRAY_CONCRETE_POWDER
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 0.16
+      slot: 37
+      page: 3
+    95:
+      type: item
+      item:
+        material: LIGHT_GRAY_CONCRETE_POWDER
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 0.16
+      slot: 38
+      page: 3
+    96:
+      type: item
+      item:
+        material: CYAN_CONCRETE_POWDER
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 0.16
+      slot: 39
+      page: 3
+    97:
+      type: item
+      item:
+        material: PURPLE_CONCRETE_POWDER
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 0.16
+      slot: 40
+      page: 3
+    98:
+      type: item
+      item:
+        material: BLUE_CONCRETE_POWDER
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 0.16
+      slot: 41
+      page: 3
+    99:
+      type: item
+      item:
+        material: BROWN_CONCRETE_POWDER
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 0.16
+      slot: 42
+      page: 3
+    100:
+      type: item
+      item:
+        material: GREEN_CONCRETE_POWDER
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 0.16
+      slot: 43
+      page: 3
+    101:
+      type: item
+      item:
+        material: RED_CONCRETE_POWDER
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 0.16
+      slot: 44
+      page: 3
+    215:
+      type: special
+      special: BALANCE
+      slot: 49
+      page: 3
+    102:
+      type: item
+      item:
+        material: BLACK_CONCRETE_POWDER
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 0.16
+      slot: 18
+      page: 4
+    103:
+      type: item
+      item:
+        material: WHITE_CONCRETE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 19
+      page: 4
+    104:
+      type: item
+      item:
+        material: ORANGE_CONCRETE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 20
+      page: 4
+    105:
+      type: item
+      item:
+        material: MAGENTA_CONCRETE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 21
+      page: 4
+    106:
+      type: item
+      item:
+        material: LIGHT_BLUE_CONCRETE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 22
+      page: 4
+    107:
+      type: item
+      item:
+        material: YELLOW_CONCRETE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 23
+      page: 4
+    108:
+      type: item
+      item:
+        material: LIME_CONCRETE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 24
+      page: 4
+    109:
+      type: item
+      item:
+        material: PINK_CONCRETE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 25
+      page: 4
+    110:
+      type: item
+      item:
+        material: GRAY_CONCRETE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 26
+      page: 4
+    111:
+      type: item
+      item:
+        material: LIGHT_GRAY_CONCRETE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 27
+      page: 4
+    112:
+      type: item
+      item:
+        material: CYAN_CONCRETE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 28
+      page: 4
+    113:
+      type: item
+      item:
+        material: PURPLE_CONCRETE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 29
+      page: 4
+    114:
+      type: item
+      item:
+        material: BLUE_CONCRETE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 30
+      page: 4
+    115:
+      type: item
+      item:
+        material: BROWN_CONCRETE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 31
+      page: 4
+    116:
+      type: item
+      item:
+        material: GREEN_CONCRETE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 32
+      page: 4
+    117:
+      type: item
+      item:
+        material: RED_CONCRETE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 33
+      page: 4
+    118:
+      type: item
+      item:
+        material: BLACK_CONCRETE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 34
+      page: 4
+    119:
+      type: item
+      item:
+        material: WHITE_STAINED_GLASS
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 35
+      page: 4
+    120:
+      type: item
+      item:
+        material: ORANGE_STAINED_GLASS
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 36
+      page: 4
+    121:
+      type: item
+      item:
+        material: MAGENTA_STAINED_GLASS
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 37
+      page: 4
+    122:
+      type: item
+      item:
+        material: LIGHT_BLUE_STAINED_GLASS
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 38
+      page: 4
+    123:
+      type: item
+      item:
+        material: YELLOW_STAINED_GLASS
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 39
+      page: 4
+    124:
+      type: item
+      item:
+        material: LIME_STAINED_GLASS
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 40
+      page: 4
+    125:
+      type: item
+      item:
+        material: PINK_STAINED_GLASS
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 41
+      page: 4
+    126:
+      type: item
+      item:
+        material: GRAY_STAINED_GLASS
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 42
+      page: 4
+    127:
+      type: item
+      item:
+        material: LIGHT_GRAY_STAINED_GLASS
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 43
+      page: 4
+    128:
+      type: item
+      item:
+        material: CYAN_STAINED_GLASS
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 44
+      page: 4
+    216:
+      type: special
+      special: BALANCE
+      slot: 49
+      page: 4
+    129:
+      type: item
+      item:
+        material: PURPLE_STAINED_GLASS
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 18
+      page: 5
+    130:
+      type: item
+      item:
+        material: BLUE_STAINED_GLASS
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 19
+      page: 5
+    131:
+      type: item
+      item:
+        material: BROWN_STAINED_GLASS
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 20
+      page: 5
+    132:
+      type: item
+      item:
+        material: GREEN_STAINED_GLASS
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 21
+      page: 5
+    133:
+      type: item
+      item:
+        material: RED_STAINED_GLASS
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 22
+      page: 5
+    134:
+      type: item
+      item:
+        material: BLACK_STAINED_GLASS
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 23
+      page: 5
+    135:
+      type: item
+      item:
+        material: WHITE_STAINED_GLASS_PANE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 24
+      page: 5
+    136:
+      type: item
+      item:
+        material: ORANGE_STAINED_GLASS_PANE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 25
+      page: 5
+    137:
+      type: item
+      item:
+        material: MAGENTA_STAINED_GLASS_PANE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 26
+      page: 5
+    138:
+      type: item
+      item:
+        material: LIGHT_BLUE_STAINED_GLASS_PANE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 27
+      page: 5
+    139:
+      type: item
+      item:
+        material: YELLOW_STAINED_GLASS_PANE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 28
+      page: 5
+    140:
+      type: item
+      item:
+        material: LIME_STAINED_GLASS_PANE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 29
+      page: 5
+    141:
+      type: item
+      item:
+        material: PINK_STAINED_GLASS_PANE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 30
+      page: 5
+    142:
+      type: item
+      item:
+        material: GRAY_STAINED_GLASS_PANE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 31
+      page: 5
+    143:
+      type: item
+      item:
+        material: LIGHT_GRAY_STAINED_GLASS_PANE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 32
+      page: 5
+    144:
+      type: item
+      item:
+        material: CYAN_STAINED_GLASS_PANE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 33
+      page: 5
+    145:
+      type: item
+      item:
+        material: PURPLE_STAINED_GLASS_PANE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 34
+      page: 5
+    146:
+      type: item
+      item:
+        material: BLUE_STAINED_GLASS_PANE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 35
+      page: 5
+    147:
+      type: item
+      item:
+        material: BROWN_STAINED_GLASS_PANE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 36
+      page: 5
+    148:
+      type: item
+      item:
+        material: GREEN_STAINED_GLASS_PANE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 37
+      page: 5
+    149:
+      type: item
+      item:
+        material: RED_STAINED_GLASS_PANE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 38
+      page: 5
+    150:
+      type: item
+      item:
+        material: BLACK_STAINED_GLASS_PANE
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 39
+      page: 5
+    151:
+      type: item
+      item:
+        material: WHITE_GLAZED_TERRACOTTA
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 40
+      page: 5
+    152:
+      type: item
+      item:
+        material: ORANGE_GLAZED_TERRACOTTA
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 41
+      page: 5
+    153:
+      type: item
+      item:
+        material: MAGENTA_GLAZED_TERRACOTTA
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 42
+      page: 5
+    154:
+      type: item
+      item:
+        material: LIGHT_BLUE_GLAZED_TERRACOTTA
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 43
+      page: 5
+    155:
+      type: item
+      item:
+        material: YELLOW_GLAZED_TERRACOTTA
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 44
+      page: 5
+    217:
+      type: special
+      special: BALANCE
+      slot: 49
+      page: 5
+    156:
+      type: item
+      item:
+        material: LIME_GLAZED_TERRACOTTA
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 18
+      page: 6
+    157:
+      type: item
+      item:
+        material: PINK_GLAZED_TERRACOTTA
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 19
+      page: 6
+    158:
+      type: item
+      item:
+        material: GRAY_GLAZED_TERRACOTTA
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 20
+      page: 6
+    159:
+      type: item
+      item:
+        material: LIGHT_GRAY_GLAZED_TERRACOTTA
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 21
+      page: 6
+    160:
+      type: item
+      item:
+        material: CYAN_GLAZED_TERRACOTTA
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 22
+      page: 6
+    161:
+      type: item
+      item:
+        material: PURPLE_GLAZED_TERRACOTTA
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 23
+      page: 6
+    162:
+      type: item
+      item:
+        material: BLUE_GLAZED_TERRACOTTA
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 24
+      page: 6
+    163:
+      type: item
+      item:
+        material: BROWN_GLAZED_TERRACOTTA
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 25
+      page: 6
+    164:
+      type: item
+      item:
+        material: GREEN_GLAZED_TERRACOTTA
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 26
+      page: 6
+    165:
+      type: item
+      item:
+        material: RED_GLAZED_TERRACOTTA
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 27
+      page: 6
+    166:
+      type: item
+      item:
+        material: BLACK_GLAZED_TERRACOTTA
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 28
+      page: 6
+    167:
+      type: item
+      item:
+        material: WHITE_BED
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 29
+      page: 6
+    168:
+      type: item
+      item:
+        material: ORANGE_BED
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 30
+      page: 6
+    169:
+      type: item
+      item:
+        material: MAGENTA_BED
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 31
+      page: 6
+    170:
+      type: item
+      item:
+        material: LIGHT_BLUE_BED
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 32
+      page: 6
+    171:
+      type: item
+      item:
+        material: YELLOW_BED
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 33
+      page: 6
+    172:
+      type: item
+      item:
+        material: LIME_BED
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 34
+      page: 6
+    173:
+      type: item
+      item:
+        material: PINK_BED
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 35
+      page: 6
+    174:
+      type: item
+      item:
+        material: GRAY_BED
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 36
+      page: 6
+    175:
+      type: item
+      item:
+        material: LIGHT_GRAY_BED
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 37
+      page: 6
+    176:
+      type: item
+      item:
+        material: CYAN_BED
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 38
+      page: 6
+    177:
+      type: item
+      item:
+        material: PURPLE_BED
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 39
+      page: 6
+    178:
+      type: item
+      item:
+        material: BLUE_BED
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 40
+      page: 6
+    179:
+      type: item
+      item:
+        material: BROWN_BED
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 41
+      page: 6
+    180:
+      type: item
+      item:
+        material: GREEN_BED
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 42
+      page: 6
+    181:
+      type: item
+      item:
+        material: RED_BED
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 43
+      page: 6
+    182:
+      type: item
+      item:
+        material: BLACK_BED
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.11
+      slot: 44
+      page: 6
+    218:
+      type: special
+      special: BALANCE
+      slot: 49
+      page: 6
+    183:
+      type: item
+      item:
+        material: WHITE_CANDLE
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 1.4
+      slot: 18
+      page: 7
+    184:
+      type: item
+      item:
+        material: ORANGE_CANDLE
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 1.4
+      slot: 19
+      page: 7
+    185:
+      type: item
+      item:
+        material: MAGENTA_CANDLE
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 1.4
+      slot: 20
+      page: 7
+    186:
+      type: item
+      item:
+        material: LIGHT_BLUE_CANDLE
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 1.4
+      slot: 21
+      page: 7
+    187:
+      type: item
+      item:
+        material: YELLOW_CANDLE
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 1.4
+      slot: 22
+      page: 7
+    188:
+      type: item
+      item:
+        material: LIME_CANDLE
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 1.4
+      slot: 23
+      page: 7
+    189:
+      type: item
+      item:
+        material: PINK_CANDLE
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 1.4
+      slot: 24
+      page: 7
+    190:
+      type: item
+      item:
+        material: GRAY_CANDLE
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 1.4
+      slot: 25
+      page: 7
+    191:
+      type: item
+      item:
+        material: CYAN_CANDLE
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 1.4
+      slot: 26
+      page: 7
+    192:
+      type: item
+      item:
+        material: PURPLE_CANDLE
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 1.4
+      slot: 27
+      page: 7
+    193:
+      type: item
+      item:
+        material: BLUE_CANDLE
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 1.4
+      slot: 28
+      page: 7
+    194:
+      type: item
+      item:
+        material: BROWN_CANDLE
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 1.4
+      slot: 29
+      page: 7
+    195:
+      type: item
+      item:
+        material: GREEN_CANDLE
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 1.4
+      slot: 30
+      page: 7
+    196:
+      type: item
+      item:
+        material: RED_CANDLE
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 1.4
+      slot: 31
+      page: 7
+    197:
+      type: item
+      item:
+        material: BLACK_CANDLE
+        quantity: 1
+      buyPrice: 20
+      sellPrice: 1.4
+      slot: 32
+      page: 7
+    198:
+      type: item
+      item:
+        material: WHITE_BANNER
+        quantity: 1
+      buyPrice: 24
+      sellPrice: 1.7
+      slot: 33
+      page: 7
+    199:
+      type: item
+      item:
+        material: ORANGE_BANNER
+        quantity: 1
+      buyPrice: 24
+      sellPrice: 1.7
+      slot: 34
+      page: 7
+    200:
+      type: item
+      item:
+        material: MAGENTA_BANNER
+        quantity: 1
+      buyPrice: 24
+      sellPrice: 1.7
+      slot: 35
+      page: 7
+    201:
+      type: item
+      item:
+        material: LIGHT_BLUE_BANNER
+        quantity: 1
+      buyPrice: 24
+      sellPrice: 1.7
+      slot: 36
+      page: 7
+    202:
+      type: item
+      item:
+        material: YELLOW_BANNER
+        quantity: 1
+      buyPrice: 24
+      sellPrice: 1.7
+      slot: 37
+      page: 7
+    203:
+      type: item
+      item:
+        material: LIME_BANNER
+        quantity: 1
+      buyPrice: 24
+      sellPrice: 1.7
+      slot: 38
+      page: 7
+    204:
+      type: item
+      item:
+        material: PINK_BANNER
+        quantity: 1
+      buyPrice: 24
+      sellPrice: 1.7
+      slot: 39
+      page: 7
+    205:
+      type: item
+      item:
+        material: GRAY_BANNER
+        quantity: 1
+      buyPrice: 24
+      sellPrice: 1.7
+      slot: 40
+      page: 7
+    206:
+      type: item
+      item:
+        material: LIGHT_GRAY_BANNER
+        quantity: 1
+      buyPrice: 24
+      sellPrice: 1.7
+      slot: 41
+      page: 7
+    207:
+      type: item
+      item:
+        material: CYAN_BANNER
+        quantity: 1
+      buyPrice: 24
+      sellPrice: 1.7
+      slot: 42
+      page: 7
+    208:
+      type: item
+      item:
+        material: PURPLE_BANNER
+        quantity: 1
+      buyPrice: 24
+      sellPrice: 1.7
+      slot: 43
+      page: 7
+    209:
+      type: item
+      item:
+        material: BLUE_BANNER
+        quantity: 1
+      buyPrice: 24
+      sellPrice: 1.7
+      slot: 44
+      page: 7
+    219:
+      type: special
+      special: BALANCE
+      slot: 49
+      page: 7
+    210:
+      type: item
+      item:
+        material: BROWN_BANNER
+        quantity: 1
+      buyPrice: 24
+      sellPrice: 1.7
+      slot: 18
+      page: 8
+    211:
+      type: item
+      item:
+        material: GREEN_BANNER
+        quantity: 1
+      buyPrice: 24
+      sellPrice: 1.7
+      slot: 19
+      page: 8
+    212:
+      type: item
+      item:
+        material: RED_BANNER
+        quantity: 1
+      buyPrice: 24
+      sellPrice: 1.7
+      slot: 20
+      page: 8
+    213:
+      type: item
+      item:
+        material: BLACK_BANNER
+        quantity: 1
+      buyPrice: 24
+      sellPrice: 1.7
+      slot: 21
+      page: 8
+    220:
+      type: special
+      special: BALANCE
+      slot: 49
+      page: 8

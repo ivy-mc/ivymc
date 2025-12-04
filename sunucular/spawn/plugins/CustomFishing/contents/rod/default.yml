@@ -1,0 +1,45 @@
+
+FISHING_ROD:
+  tag: false
+  material: fishing_rod
+  effects:
+    effect_1:
+      type: wait-time-multiplier
+      value: 1.5
+
+copper_fishing_rod:
+  material: fishing_rod
+  display:
+    name: "<#FFFFFF>Copper Fishing Rod"
+  custom-model-data: 1000
+  max-durability: 100
+iron_fishing_rod:
+  material: fishing_rod
+  display:
+    name: "<#FFFFFF>Iron Fishing Rod"
+  custom-model-data: 1001
+  max-durability: 250
+golden_fishing_rod:
+  material: fishing_rod
+  display:
+    name: "<#FFFFFF>Golden Fishing Rod"
+  custom-model-data: 1004
+  max-durability: 85
+diamond_fishing_rod:
+  material: fishing_rod
+  display:
+    name: "<#FFFFFF>Diamond Fishing Rod"
+  custom-model-data: 1002
+  max-durability: 500
+netherite_fishing_rod:
+  material: fishing_rod
+  display:
+    name: "<#FFFFFF>Netherite Fishing Rod"
+    lore:
+      - '&7ᴛʜɪꜱ ʀᴏᴅ ᴄᴀɴ ʙᴇ ᴜꜱᴇᴅ ꜰᴏʀ'
+      - '&7ʟᴀᴠᴀ ꜰɪꜱʜɪɴɢ'
+  custom-model-data: 1003
+  max-durability: 750
+  effects:
+    effect_1:
+      type: lava-fishing

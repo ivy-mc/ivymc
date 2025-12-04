@@ -1,0 +1,73 @@
+cosmetics:
+  ero_feral_fantasy_cosmetics_bear_tail:
+    display_name: Feral Fantasy Bear Tail
+    enabled: true
+    type: BODY_ITEM
+    model:
+      gui: potion:9925041
+      normal: potion:9925041
+      normal_2: potion:9925044
+      self: potion:9925042
+      self_2: potion:9925043
+    dye:
+      enabled: false
+  ero_feral_fantasy_cosmetics_cat_tail:
+    display_name: Feral Fantasy Cat Tail
+    enabled: true
+    type: BODY_ITEM
+    model:
+      gui: potion:9925046
+      normal: potion:9925046
+      normal_2: potion:9925049
+      self: potion:9925047
+      self_2: potion:9925048
+    dye:
+      enabled: false
+  ero_feral_fantasy_cosmetics_fox_tail:
+    display_name: Feral Fantasy Fox Tail
+    enabled: true
+    type: BODY_ITEM
+    model:
+      gui: potion:9925051
+      normal: potion:9925051
+      normal_2: potion:9925054
+      self: potion:9925052
+      self_2: potion:9925053
+    dye:
+      enabled: false
+  ero_feral_fantasy_cosmetics_rabbit_tail:
+    display_name: Feral Fantasy Rabbit Tail
+    enabled: true
+    type: BODY_ITEM
+    model:
+      gui: potion:9925056
+      normal: potion:9925056
+      normal_2: potion:9925059
+      self: potion:9925057
+      self_2: potion:9925058
+    dye:
+      enabled: false
+  ero_feral_fantasy_cosmetics_tiger_tail:
+    display_name: Feral Fantasy Tiger Tail
+    enabled: true
+    type: BODY_ITEM
+    model:
+      gui: potion:9925061
+      normal: potion:9925061
+      normal_2: potion:9925064
+      self: potion:9925062
+      self_2: potion:9925063
+    dye:
+      enabled: false
+  ero_feral_fantasy_cosmetics_wolf_tail:
+    display_name: Feral Fantasy Wolf Tail
+    enabled: true
+    type: BODY_ITEM
+    model:
+      gui: potion:9925066
+      normal: potion:9925066
+      normal_2: potion:9925069
+      self: potion:9925067
+      self_2: potion:9925068
+    dye:
+      enabled: false

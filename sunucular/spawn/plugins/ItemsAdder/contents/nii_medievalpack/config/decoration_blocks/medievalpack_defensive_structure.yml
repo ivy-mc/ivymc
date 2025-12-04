@@ -1,0 +1,24 @@
+info:
+  namespace: nii_medievalpack
+
+items:
+  medievalpack_defensive_structure:
+    display_name: "Defensive Structure"
+    permission: medievalpack.decoration_blocks.medievalpack_defensive_structure
+    resource:
+      generate: false
+      material: BARRIER
+      model_path: blocks/decoration_blocks/medievalpack_defensive_structure
+    behaviours:
+      furniture:
+        fixed_rotation: false
+        small: false
+        solid: true
+        placeable_on:
+          floor: true
+          ceiling: true
+          walls: true
+        hitbox:
+          height: 3
+          length: 3
+          width: 2

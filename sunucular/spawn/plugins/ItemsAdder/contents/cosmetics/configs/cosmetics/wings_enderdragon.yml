@@ -1,0 +1,12 @@
+info:
+  namespace: cosmetics
+entities:
+  wings_enderdragon:
+    display_name: "wings_enderdragon"
+    type: ARMOR_STAND
+    model_folder: entity/wings_enderdragon
+    speed:
+      movement: 0.0
+      flying: 0.0
+    max_health: 1
+    shadow: false

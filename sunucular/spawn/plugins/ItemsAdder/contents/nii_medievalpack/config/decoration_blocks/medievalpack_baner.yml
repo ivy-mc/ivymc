@@ -1,0 +1,24 @@
+info:
+  namespace: nii_medievalpack
+
+items:
+  medievalpack_baner:
+    display_name: "Baner"
+    permission: medievalpack.decoration_blocks.medievalpack_baner
+    resource:
+      generate: false
+      material: BARRIER
+      model_path: blocks/decoration_blocks/medievalpack_baner
+    behaviours:
+      furniture:
+        fixed_rotation: false
+        small: false
+        solid: true
+        placeable_on:
+          floor: true
+          ceiling: true
+          walls: true
+        hitbox:
+          height: 3
+          length: 1
+          width: 1

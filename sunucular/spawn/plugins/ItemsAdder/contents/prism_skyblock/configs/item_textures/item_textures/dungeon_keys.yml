@@ -1,0 +1,28 @@
+info:
+  namespace: prism_skyblock
+items:
+  
+  dungeonkey-diamond:
+    enabled: true   
+    resource:
+      generate: true
+      material: TRIPWIRE_HOOK
+      model_id: 1
+      textures:
+      - item_texture/dungeon_keys/diamond_key.png
+  dungeonkey-emerald:
+    enabled: true   
+    resource:
+      generate: true
+      material: TRIPWIRE_HOOK
+      model_id: 2
+      textures:
+      - item_texture/dungeon_keys/emerald_key.png
+  dungeonkey-star:
+    enabled: true   
+    resource:
+      generate: true
+      material: TRIPWIRE_HOOK
+      model_id: 3
+      textures:
+      - item_texture/dungeon_keys/star_key.png

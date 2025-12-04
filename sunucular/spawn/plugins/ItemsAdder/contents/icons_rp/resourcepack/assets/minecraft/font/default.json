@@ -1,0 +1,87 @@
+{
+	"providers": [
+        {
+			"type": "reference",
+			"id": "minecraft:include/menus"
+		},	
+        {
+			"type": "reference",
+			"id": "minecraft:include/statistics"
+		},			
+        {
+			"type": "reference",
+			"id": "minecraft:include/hud"
+		},			
+        {
+			"type": "reference",
+			"id": "minecraft:include/gui"
+		},	
+        {
+			"type": "reference",
+			"id": "minecraft:include/advancement"
+		},	
+        {
+			"type": "reference",
+			"id": "minecraft:include/splash"
+		},			
+        {
+			"type": "reference",
+			"id": "minecraft:include/firework"
+		},
+        {
+			"type": "reference",
+			"id": "minecraft:include/banner_pattern"
+        },			
+        {
+			"type": "reference",
+			"id": "minecraft:include/language"
+        },
+		{
+			"type": "reference",
+			"id": "minecraft:include/tropical_fish"
+		},
+        {
+			"type": "reference",
+			"id": "minecraft:include/music"
+        },		
+        {
+			"type": "reference",
+			"id": "minecraft:include/info"
+        },
+        {
+			"type": "reference",
+			"id": "minecraft:include/smithing"
+        },
+		{
+			"type": "reference",
+			"id": "minecraft:include/magic"
+        },
+        {
+			"type": "reference",
+			"id": "minecraft:include/tooltip"
+        },
+        {
+			"type": "reference",
+			"id": "minecraft:include/bee"
+        },
+		{
+			"type": "reference",
+			"id": "minecraft:include/toast"
+		},
+		{
+			"type": "reference",
+			"id": "minecraft:include/respackopts"
+		},
+		{
+		"type":"space",
+			"advances":{
+				"󎀀":-90,
+				"󎀁":2,
+				"󎀂":-54,
+				"󎀃":54,
+				"󎀄": -30,
+				"󎀅": -131
+			}
+		}
+	]
+}

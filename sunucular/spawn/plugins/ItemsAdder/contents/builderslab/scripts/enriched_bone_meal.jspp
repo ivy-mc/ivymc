@@ -1,0 +1,15 @@
+import "org.bukkit.GameMode";
+import "org.bukkit.event.player.PlayerInteractEvent";
+
+if ($event instanceof PlayerInteractEvent interactEvent && interactEvent.hasBlock()) {
+    var clickedBlock = interactEvent.getClickedBlock();
+    if (clickedBlock.getType() == Material.DIRT) {
+        cancelEvent();
+        clickedBlock.setType(Material.GRASS_BLOCK);
+        playSound(clickedBlock.getLocation(), "minecraft:item.bone_meal.use");
+        playParticle(clickedBlock.getLocation().add(0.5,1,0.5), "minecraft:happy_villager", 3, 0.5, 0.5, 0.5, 0.1);
+        if ($player.getGameMode() != GameMode.CREATIVE){
+            $itemStack.setAmount($itemStack.getAmount()-1);
+        }
+    }
+}

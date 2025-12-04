@@ -1,0 +1,21 @@
+info:
+  namespace: prism_skyblock
+items:
+  
+  consumable-diceoffate:
+    enabled: true   
+    resource:
+      generate: true
+      material: APPLE
+      model_id: 1
+      textures:
+      - item_texture/consumables/dice_of_fate.png
+
+  consumable-hexiacrystal:
+    enabled: true   
+    resource:
+      generate: true
+      material: APPLE
+      model_id: 2
+      textures:
+      - item_texture/consumables/hexia_crystal.png

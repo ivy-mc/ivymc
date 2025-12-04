@@ -1,0 +1,31 @@
+name: '&6&lYourNpcName'
+starts_with:
+- YourNpc
+block_movement: true
+slow_effect: true
+save_conversation_progress: false
+start_conversation_radius: 0
+end_conversation_radius: 5
+requires_permission: false
+conversation:
+  conversation1:
+    dialogue:
+      dialogue1:
+        text:
+        - ' '
+        - '                %img_chaticon% &6&lYourNpcName &8(1/1)'
+        - ' '
+        - '                &7Lorem ipsum dolor sit amet, consectetur adipiscing'
+        - '                &7elit,sed do eiusmod tempor incididunt ut labore'
+        - '                &7et dolore magna aliqua. Ut enim ad minim veniam'
+        - '%img_warrior%'
+        - ' '
+        time: 1
+        show_name: false
+        actions:
+        - 'playsound: BLOCK_NOTE_BLOCK_BELL;10;0.1'
+
+
+
+
+

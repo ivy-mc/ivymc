@@ -1,0 +1,37 @@
+{
+    "providers": [
+        {
+         "type": "bitmap",
+         "file": "icons:advancement/advancement_groups.png",
+         "ascent": 8,
+         "height": 10,
+         "chars": [
+            "\uDB80\uDE15\uDB80\uDE16\uDB80\uDE17\uDB80\uDE18\uDB80\uDE19"	
+            ]
+        },
+        {
+         "type": "bitmap",
+         "file": "icons:advancement/advancement_categories.png",
+         "ascent": 11,
+         "height": 15,
+         "chars": [
+            "\uDB80\uDE1A\uDB80\uDE1B\uDB80\uDE1C"	
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "icons:advancement/minecraft_advancements.png",
+            "ascent": 8,
+            "height": 46,
+            "chars": [
+                "\uDBC1\uDE6E\uDBC1\uDE75\uDBC1\uDE7C",
+                "\uDBC1\uDE6F\uDBC1\uDE76\uDBC1\uDE7D",
+                "\uDBC1\uDE70\uDBC1\uDE77\uDBC1\uDE7E",
+                "\uDBC1\uDE71\uDBC1\uDE78\uDBC1\uDE7F",
+                "\uDBC1\uDE72\uDBC1\uDE79\uDBC1\uDE80",
+                "\uDBC1\uDE73\uDBC1\uDE7A\uDBC1\uDE81",
+                "\uDBC1\uDE74\uDBC1\uDE7B\uDBC1\uDE82"
+               ]
+         }
+    ]
+}

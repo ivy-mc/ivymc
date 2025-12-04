@@ -1,0 +1,7 @@
+{
+  "condition": "addons.menu_style.default",
+  "fallbacks": [
+    "assets/simple_icons/textures/chat/gamemodes.png",
+    "assets/small_simple_icons/textures/chat/gamemodes.png"
+  ]
+}

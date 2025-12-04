@@ -1,0 +1,171 @@
+#
+# Example config of a time reward.
+#
+# Decides if rewards will be claimable.
+enabled: true
+#
+# Each type of reward has different specifications.
+# All currently supported types can be found on:
+# https://ultimaterewards.athelion.eu/
+#
+type: time_reward
+#
+# Reward tag
+#
+tag: Time Reward
+# Claiming command, /timereward in this example
+command: timereward
+# When will the reward be available again
+# after claiming.
+cooldown: 24
+# Unit used for cooldown
+unit: hours # So the cooldown is 24 hours
+#
+# Format which will be used to show the
+# general cooldown of this reward.
+#
+cooldown-general-format: "%hours% hours"
+#
+# Format of the cooldown that will be displayed
+# when using the %cooldown% placeholder in reward GUIs.
+#
+cooldown-format: '%hours%:%minutes%:%seconds%'
+# Make the reward available for the player
+# after their first join on the server.
+available-after-first-join: false
+# Notifies players that the reward is currently available
+live-reminder-enabled: true
+# How many free slots should the player have
+# to be able to claim this reward.
+required-slots: 3
+#
+# (Optional) Permission which player must have to be
+# able to obtain this reward.
+#
+permission: ultimaterewards.exampleTimeReward
+#
+# NOTE THAT ITEM & SOUND NAMES ARE SLIGHTLY DIFFERENT BETWEEN 1.12 & 1.13 VERSIONS!
+# SO MAKE SURE YOU ARE USING VALID ITEM NAMES (DEFAULT ONES ARE USED FROM 1.13+ VERSIONS)
+# OTHERWISE, THEY WILL BE REPLACED BY STONE IF AN INVALID NAME IS USED.
+#
+# When the player has this permission,
+# the following properties will be shown...
+#
+# When the reward is currently claimable:
+available-item: CHEST_MINECART
+available-display-name: '&a&lTIME REWARD'
+available-lore:
+  - '&7Can be obtained every &f%cooldown%'
+  - ' '
+  - '&7Contains:'
+  - '&e ➪ 1x Diamond'
+  - '&e ➪ 3x Gold Ingot'
+  - '&e ➪ 6x Iron Ingot'
+  - ' '
+  - '&b► Click to claim'
+# When the reward is under cooldown:
+unavailable-item: MINECART
+unavailable-display-name: "&7&lTIME REWARD"
+unavailable-lore:
+  - '&7Available in:'
+  - '&7%cooldown%'
+#
+# On the other hand, when the player doesn't have this permission,
+# the following properties will be shown.
+#
+no-permission-item: BARRIER
+no-permission-display-name: "&c&l&mTIME REWARD"
+no-permission-lore:
+  - "&c ✕ Locked, requires"
+  - "&c   %permission% permission"
+#
+# Commands list that will be executed after the player
+# obtains this reward.
+# All available actions and format examples can be found on
+# https://ultimaterewards.athelion.eu/
+#
+# Format: [] - required value | () - optional value
+#   [<actionType>] <command>
+#
+# Examples:
+#   (<chance>):
+#   - [console] 50:give %player% diamond 1
+#       - this command will have a 50%
+#         execution chance due to its property value
+#
+#   - [message] "&aYou have claimed your %type% reward!"
+#       - this action will send the player a message
+#         with the defined content
+#
+# You can also use the random placeholders
+# from randoms.yml file and use them in a command.
+# Example:
+#   - give %player% iron_ingot %exampleRandom%
+#       - the placeholder will be replaced by
+#         a random number from the defined interval in randoms.yml
+#
+actions:
+  100:
+    - '[console] give %player% diamond 1'
+    - '[console] give %player% gold_ingot 3'
+    - '[console] give %player% iron_ingot 6'
+    - '[console] say %player% claimed their %type% reward!'
+    #    - '[actionbar] &aSuccessfully claimed!' # Action bar can be used only from 1.12 versions!
+    - '[title] &aClaimed'
+    - '[subtitle] &aReward %type%'
+    - '[message] &7Enjoy your claimed reward | New line!'
+  20:
+    - '[console] give %player% diamond 1'
+    - '[console] give %player% gold_ingot 3'
+    - '[console] give %player% iron_ingot 6'
+    - '[console] say %player% claimed their %type% reward!'
+    #    - '[actionbar] &aSuccessfully claimed!' # Action bar can be used only from 1.12 versions!
+    - '[title] &aClaimed'
+    - '[subtitle] &aReward %type%'
+    - '[message] &7Enjoy your claimed reward | New line!'
+    - '[firework] colors:{FF0000;00FF00;0000FF},type:BALL_LARGE,power:3'
+    - '[sound] BLOCK_CHEST_OPEN,volume:0.2,pitch:1'
+    - '[message] &a&lYou have been extra lucky today! Received 5 more diamonds!'
+    - '[console] give %player% diamond 5'
+#
+# Variants for this reward can be added here.
+# If you don't want any, delete the variants section.
+#
+# Which variant will be available for the player depends on their permission.
+# You can add as many variants as you want.
+#
+variants:
+  premium:
+    permission: ultimaterewards.timeRewardExample.premium
+    available-display-name: "&6&lPREMIUM TIME REWARD"
+    available-lore:
+      - '&7Can be obtained every &f%cooldown%'
+      - ' '
+      - '&7Contains:'
+      - '&e ➪ 3x Diamonds'
+      - '&e ➪ 12x Gold Ingots'
+      - '&e ➪ 24x Iron Ingots'
+      - ' '
+      - '&6► Click to claim premium reward'
+    actions:
+      80:
+        - '[console] give %player% diamond 3'
+        - '[console] give %player% iron_ingot 12'
+        - '[console] give %player% gold_ingot 24'
+        - '[console] say %player% claimed their %type% reward!'
+        #    - '[actionbar] &aSuccessfully claimed!' # Action bar can be used only from 1.12 versions!
+        - '[title] &aClaimed'
+        - '[subtitle] &aReward %type%'
+        - '[sound] BLOCK_CHEST_OPEN,volume:0.2,pitch:1'
+      20:
+        - '[console] give %player% diamond 3'
+        - '[console] give %player% iron_ingot 12'
+        - '[console] give %player% gold_ingot 24'
+        - '[console] say %player% claimed their %type% reward!'
+        #    - '[actionbar] &aSuccessfully claimed!' # Action bar can be used only from 1.12 versions!
+        - '[title] &aClaimed'
+        - '[subtitle] &aReward %type%'
+        - '[firework] colors:{FF0000;00FF00;0000FF},type:BALL_LARGE,power:3'
+        - '[sound] BLOCK_CHEST_OPEN,volume:0.2,pitch:1'
+        - '[message] &6&lYou have been extra lucky today! | Received 10 more diamonds!'
+        - '[console] give %player% diamond 10'

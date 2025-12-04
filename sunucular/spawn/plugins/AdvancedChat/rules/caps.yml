@@ -1,0 +1,10 @@
+# Configuration for Caps in Chat
+# Bypass permission: advancedchat.bypass.rule.caps
+enabled: true
+conditions:
+  - '%caps_percentage% > 70 : %allow%'
+  - '%message_length% < 5 : %stop%'
+effects:
+  - 'CANCEL_EVENT'
+  - 'MESSAGE:&c&l(!) &c%player name%, please do not use excessive caps.'
+  # - 'CONSOLE_COMMAND:warn %player name% Caps' # you could also warn the player here

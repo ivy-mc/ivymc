@@ -1,0 +1,30 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 46.196.89.44
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1763309479170
+  login: 1763309424011
+money: '0'
+last-account-name: TunaBabaProYT
+logoutlocation:
+  world: c59af994-31af-4629-ac32-df01c6e1e106
+  world-name: world
+  x: -3.854963085636654
+  y: 68.0
+  z: -103.74711070605088
+  yaw: 16.78199005126953
+  pitch: 52.80021667480469

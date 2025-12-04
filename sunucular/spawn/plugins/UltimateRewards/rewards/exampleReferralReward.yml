@@ -1,0 +1,109 @@
+#
+# Example config of a referral reward.
+#
+# Decides if rewards will be claimable.
+enabled: true
+#
+# Each type of reward has different specifications.
+# All currently supported types can be found on:
+# https://ultimaterewards.athelion.eu/
+#
+type: referral_reward
+#
+# Reward tag
+#
+tag: Referral Reward
+#
+# (Optional) Permission which player must have to be
+# able to obtain this reward.
+#
+permission: ultimaterewards.exampleReferralReward
+#
+# Required referred players to achieve this reward.
+#
+required-uses: 5
+# Notifies players that the reward is currently available
+live-reminder-enabled: true
+#
+# NOTE THAT ITEM & SOUND NAMES ARE SLIGHTLY DIFFERENT BETWEEN >1.12 & 1.13< VERSIONS!
+# SO MAKE SURE YOU ARE USING VALID ITEM NAMES (DEFAULT ONE ARE USED FROM 1.13+ VERSIONS)
+# OTHERWISE WILL BE REPLACED BY STONE IF INVALID NAME IS IN USE.
+#
+# When the player achieves the required number of referred players,
+# this version of the reward item is displayed in the inventory:
+#
+available-item: "LIME_DYE"
+available-display-name: "&a#1 &lREFERRAL"
+available-lore:
+  - '&8Referral reward unlocked'
+  - '&8upon activation by 5 players.'
+  - ' '
+  - '&7Contains:'
+  - '&e ➪ 16x XP Bottle'
+  - ' '
+  - '&b► Click to claim reward'
+#
+# Whereas the player doesn't have enough referred players,
+# this version of the reward item is displayed in the inventory:
+#
+unavailable-item: "RED_DYE"
+unavailable-display-name: "&4#1 &lREFERRAL"
+unavailable-lore:
+  - ' '
+  - '&7Contains:'
+  - '&7 ➪ 16x XP Bottle'
+  - ' '
+  - '&4► To unlock, you need to invite'
+  - '&4  %players% more players!'
+#
+# When the player has already claimed this reward:
+#
+claimed-item: "GRAY_DYE"
+claimed-display-name: "&7#1 &lREFERRAL"
+claimed-lore:
+  - ' '
+  - '&7Contains:'
+  - '&7 &m➪ 16x XP Bottle'
+  - ' '
+  - '&7 Already claimed'
+  - '&7 for %uses% referrals!'
+#
+# When the player doesn't have permission for this reward,
+# the following properties will be shown.
+#
+no-permission-item: BARRIER
+no-permission-display-name: "&c#1 &lREFERRAL"
+no-permission-lore:
+  - '&c ✕ Locked, requires'
+  - '&c   %permission% permission'
+#
+# Commands list that will be executed after the player
+# obtains this reward.
+# All available actions can be found at
+# https://ultimaterewards.athelion.eu/
+#
+# Format: () - optional value | [] - required value
+#   [<actionType>] (<chance>):<command>
+#
+# Examples:
+#   - [console] 50:give %player% diamond 1
+#       - this command will have a 50%
+#         execution chance due to its property value
+#
+#   - [message] "&aYou have claimed your %type% reward!"
+#       - this action will send the player a message
+#         with the defined content
+#
+# You can also use the random placeholders
+# from the randoms.yml file and use them in commands.
+# Example:
+#   - give %player% iron_ingot %exampleRandom%
+#       - the placeholder will be replaced by
+#         a random number from the defined interval in randoms.yml
+#
+actions:
+  - '[console] give %player% experience_bottle 16'
+  - '[console] say %player% claimed his %type% reward!'
+  #  - '[actionbar] &aSuccessfully claimed!' # Action bar can be used only from 1.12 versions!
+  - '[title] &aClaimed'
+  - '[subtitle] &aReward %type%'

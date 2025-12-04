@@ -1,0 +1,51 @@
+info:
+  namespace: bc
+categories:
+  bcandle:
+    enabled: true
+    icon: "bc:candlesconce_iron"
+    name: 'Better Candles'
+    permission: "ia.menu.seecategory.bc"
+    font_image:
+      name: "mcguis:blank_menu"
+      x_position_pixels: -16
+    title_position_pixels: 0
+    items:
+      - "bc:candlesconce_iron"
+      - "bc:candlesconce_silver"
+      - "bc:candlesconce_gold"
+      - "bc:candlesconce_ironblue"
+      - "bc:candlesconce_silverblue"
+      - "bc:candlesconce_goldblue"
+      - "bc:candlesconce_ironred"
+      - "bc:candlesconce_silverred"
+      - "bc:candlesconce_goldred"
+      - "bc:torchblk"
+      - "bc:torchbl"
+      - "bc:torchpu"
+      - "bc:torchwht"
+      - "bc:torchlm"
+      - "bc:torchrd"
+      - "bc:tall"
+      - "bc:tallcyan"
+      - "bc:tallpink"
+      - "bc:tallpurple"
+      - "bc:tallgray"
+      - "bc:tallor"
+      - "bc:tallmag"
+      - "bc:candle_four_candles"
+      - "bc:lbcandle_four_candles"
+      - "bc:grndle_four_candles"
+      - "bc:gracandle_four_candles"
+      - "bc:ylcandle_four_candles"
+      - "bc:whcandle_four_candles"
+      - "bc:rdcandle_four_candles"
+      - "bc:shortwarped"
+      - "bc:shortcrimson"
+      - "bc:shortsculk"
+      - "bc:shortmush"
+      - "bc:shortbee"
+      - "bc:shortcreep"
+      - "bc:shortskel"
+      - "bc:pump"
+      - "bc:melon"

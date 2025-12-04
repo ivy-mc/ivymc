@@ -1,0 +1,842 @@
+info:
+  namespace: carpet_expansion
+categories:
+  vanilla_props:
+    enabled: true
+    icon: carpet_expansion:blue_carpet_single
+    name: Carpet Expansion
+    items:
+    - carpet_expansion:blue_carpet_single
+    - carpet_expansion:blue_carpet_corner
+    - carpet_expansion:blue_carpet_side
+    - carpet_expansion:blue_carpet_middle
+    - carpet_expansion:black_carpet_single
+    - carpet_expansion:black_carpet_corner
+    - carpet_expansion:black_carpet_side
+    - carpet_expansion:black_carpet_middle
+    - carpet_expansion:brown_carpet_single
+    - carpet_expansion:brown_carpet_corner
+    - carpet_expansion:brown_carpet_side
+    - carpet_expansion:brown_carpet_middle
+    - carpet_expansion:cyan_carpet_single
+    - carpet_expansion:cyan_carpet_corner
+    - carpet_expansion:cyan_carpet_side
+    - carpet_expansion:cyan_carpet_middle
+    - carpet_expansion:gray_carpet_single
+    - carpet_expansion:gray_carpet_corner
+    - carpet_expansion:gray_carpet_side
+    - carpet_expansion:gray_carpet_middle
+    - carpet_expansion:green_carpet_single
+    - carpet_expansion:green_carpet_corner
+    - carpet_expansion:green_carpet_side
+    - carpet_expansion:green_carpet_middle
+    - carpet_expansion:light_blue_carpet_single
+    - carpet_expansion:light_blue_carpet_corner
+    - carpet_expansion:light_blue_carpet_side
+    - carpet_expansion:light_blue_carpet_middle
+    - carpet_expansion:light_gray_carpet_single
+    - carpet_expansion:light_gray_carpet_corner
+    - carpet_expansion:light_gray_carpet_side
+    - carpet_expansion:light_gray_carpet_middle
+    - carpet_expansion:lime_carpet_single
+    - carpet_expansion:lime_carpet_corner
+    - carpet_expansion:lime_carpet_side
+    - carpet_expansion:lime_carpet_middle
+    - carpet_expansion:magenta_carpet_single
+    - carpet_expansion:magenta_carpet_corner
+    - carpet_expansion:magenta_carpet_side
+    - carpet_expansion:magenta_carpet_middle
+    - carpet_expansion:orange_carpet_single
+    - carpet_expansion:orange_carpet_corner
+    - carpet_expansion:orange_carpet_side
+    - carpet_expansion:orange_carpet_middle
+    - carpet_expansion:pink_carpet_single
+    - carpet_expansion:pink_carpet_corner
+    - carpet_expansion:pink_carpet_side
+    - carpet_expansion:pink_carpet_middle
+    - carpet_expansion:purple_carpet_single
+    - carpet_expansion:purple_carpet_corner
+    - carpet_expansion:purple_carpet_side
+    - carpet_expansion:purple_carpet_middle
+    - carpet_expansion:red_carpet_single
+    - carpet_expansion:red_carpet_corner
+    - carpet_expansion:red_carpet_side
+    - carpet_expansion:red_carpet_middle
+    - carpet_expansion:white_carpet_single
+    - carpet_expansion:white_carpet_corner
+    - carpet_expansion:white_carpet_side
+    - carpet_expansion:white_carpet_middle
+    - carpet_expansion:yellow_carpet_single
+    - carpet_expansion:yellow_carpet_corner
+    - carpet_expansion:yellow_carpet_side
+    - carpet_expansion:yellow_carpet_middle
+items:
+  blue_carpet_single:
+    display_name: Blue Carpet Single
+    resource:
+      material: PAPER
+      generate: false
+      model_path: blue_carpet_single
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  blue_carpet_corner:
+    display_name: Blue Carpet Corner
+    resource:
+      material: PAPER
+      generate: false
+      model_path: blue_carpet_corner
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  blue_carpet_side:
+    display_name: Blue Carpet Side
+    resource:
+      material: PAPER
+      generate: false
+      model_path: blue_carpet_side
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  blue_carpet_middle:
+    display_name: Blue Carpet Middle
+    resource:
+      material: PAPER
+      generate: false
+      model_path: blue_carpet_middle
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  black_carpet_single:
+    display_name: Black Carpet Single
+    resource:
+      material: PAPER
+      generate: false
+      model_path: black_carpet_single
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  black_carpet_corner:
+    display_name: Black Carpet Corner
+    resource:
+      material: PAPER
+      generate: false
+      model_path: black_carpet_corner
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  black_carpet_side:
+    display_name: Black Carpet Side
+    resource:
+      material: PAPER
+      generate: false
+      model_path: black_carpet_side
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  black_carpet_middle:
+    display_name: Black Carpet Middle
+    resource:
+      material: PAPER
+      generate: false
+      model_path: black_carpet_middle
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  brown_carpet_single:
+    display_name: Brown Carpet Single
+    resource:
+      material: PAPER
+      generate: false
+      model_path: brown_carpet_single
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  brown_carpet_corner:
+    display_name: Brown Carpet Corner
+    resource:
+      material: PAPER
+      generate: false
+      model_path: brown_carpet_corner
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  brown_carpet_side:
+    display_name: Brown Carpet Side
+    resource:
+      material: PAPER
+      generate: false
+      model_path: brown_carpet_side
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  brown_carpet_middle:
+    display_name: Brown Carpet Middle
+    resource:
+      material: PAPER
+      generate: false
+      model_path: brown_carpet_middle
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  cyan_carpet_single:
+    display_name: Cyan Carpet Single
+    resource:
+      material: PAPER
+      generate: false
+      model_path: cyan_carpet_single
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  cyan_carpet_corner:
+    display_name: Cyan Carpet Corner
+    resource:
+      material: PAPER
+      generate: false
+      model_path: cyan_carpet_corner
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  cyan_carpet_side:
+    display_name: Cyan Carpet Side
+    resource:
+      material: PAPER
+      generate: false
+      model_path: cyan_carpet_side
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  cyan_carpet_middle:
+    display_name: Cyan Carpet Middle
+    resource:
+      material: PAPER
+      generate: false
+      model_path: cyan_carpet_middle
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  gray_carpet_single:
+    display_name: Gray Carpet Single
+    resource:
+      material: PAPER
+      generate: false
+      model_path: gray_carpet_single
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  gray_carpet_corner:
+    display_name: Gray Carpet Corner
+    resource:
+      material: PAPER
+      generate: false
+      model_path: gray_carpet_corner
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  gray_carpet_side:
+    display_name: Gray Carpet Side
+    resource:
+      material: PAPER
+      generate: false
+      model_path: gray_carpet_side
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  gray_carpet_middle:
+    display_name: Gray Carpet Middle
+    resource:
+      material: PAPER
+      generate: false
+      model_path: gray_carpet_middle
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  green_carpet_single:
+    display_name: Green Carpet Single
+    resource:
+      material: PAPER
+      generate: false
+      model_path: green_carpet_single
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  green_carpet_corner:
+    display_name: Green Carpet Corner
+    resource:
+      material: PAPER
+      generate: false
+      model_path: green_carpet_corner
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  green_carpet_side:
+    display_name: Green Carpet Side
+    resource:
+      material: PAPER
+      generate: false
+      model_path: green_carpet_side
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  green_carpet_middle:
+    display_name: Green Carpet Middle
+    resource:
+      material: PAPER
+      generate: false
+      model_path: green_carpet_middle
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  light_blue_carpet_single:
+    display_name: Light Blue Carpet Single
+    resource:
+      material: PAPER
+      generate: false
+      model_path: light_blue_carpet_single
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  light_blue_carpet_corner:
+    display_name: Light Blue Carpet Corner
+    resource:
+      material: PAPER
+      generate: false
+      model_path: light_blue_carpet_corner
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  light_blue_carpet_side:
+    display_name: Light Blue Carpet Side
+    resource:
+      material: PAPER
+      generate: false
+      model_path: light_blue_carpet_side
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  light_blue_carpet_middle:
+    display_name: Light Blue Carpet Middle
+    resource:
+      material: PAPER
+      generate: false
+      model_path: light_blue_carpet_middle
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  light_gray_carpet_single:
+    display_name: Light Gray Carpet Single
+    resource:
+      material: PAPER
+      generate: false
+      model_path: light_gray_carpet_single
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  light_gray_carpet_corner:
+    display_name: Light Gray Carpet Corner
+    resource:
+      material: PAPER
+      generate: false
+      model_path: light_gray_carpet_corner
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  light_gray_carpet_side:
+    display_name: Light Gray Carpet Side
+    resource:
+      material: PAPER
+      generate: false
+      model_path: light_gray_carpet_side
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  light_gray_carpet_middle:
+    display_name: Light Gray Carpet Middle
+    resource:
+      material: PAPER
+      generate: false
+      model_path: light_gray_carpet_middle
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  lime_carpet_single:
+    display_name: Lime Carpet Single
+    resource:
+      material: PAPER
+      generate: false
+      model_path: lime_carpet_single
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  lime_carpet_corner:
+    display_name: Lime Carpet Corner
+    resource:
+      material: PAPER
+      generate: false
+      model_path: lime_carpet_corner
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  lime_carpet_side:
+    display_name: Lime Carpet Side
+    resource:
+      material: PAPER
+      generate: false
+      model_path: lime_carpet_side
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  lime_carpet_middle:
+    display_name: Lime Carpet Middle
+    resource:
+      material: PAPER
+      generate: false
+      model_path: lime_carpet_middle
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  magenta_carpet_single:
+    display_name: Magenta Carpet Single
+    resource:
+      material: PAPER
+      generate: false
+      model_path: magenta_carpet_single
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  magenta_carpet_corner:
+    display_name: Magenta Carpet Corner
+    resource:
+      material: PAPER
+      generate: false
+      model_path: magenta_carpet_corner
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  magenta_carpet_side:
+    display_name: Magenta Carpet Side
+    resource:
+      material: PAPER
+      generate: false
+      model_path: magenta_carpet_side
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  magenta_carpet_middle:
+    display_name: Magenta Carpet Middle
+    resource:
+      material: PAPER
+      generate: false
+      model_path: magenta_carpet_middle
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  orange_carpet_single:
+    display_name: Orange Carpet Single
+    resource:
+      material: PAPER
+      generate: false
+      model_path: orange_carpet_single
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  orange_carpet_corner:
+    display_name: Orange Carpet Corner
+    resource:
+      material: PAPER
+      generate: false
+      model_path: orange_carpet_corner
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  orange_carpet_side:
+    display_name: Orange Carpet Side
+    resource:
+      material: PAPER
+      generate: false
+      model_path: orange_carpet_side
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  orange_carpet_middle:
+    display_name: Orange Carpet Middle
+    resource:
+      material: PAPER
+      generate: false
+      model_path: orange_carpet_middle
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  pink_carpet_single:
+    display_name: Pink Carpet Single
+    resource:
+      material: PAPER
+      generate: false
+      model_path: pink_carpet_single
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  pink_carpet_corner:
+    display_name: Pink Carpet Corner
+    resource:
+      material: PAPER
+      generate: false
+      model_path: pink_carpet_corner
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  pink_carpet_side:
+    display_name: Pink Carpet Side
+    resource:
+      material: PAPER
+      generate: false
+      model_path: pink_carpet_side
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  pink_carpet_middle:
+    display_name: Pink Carpet Middle
+    resource:
+      material: PAPER
+      generate: false
+      model_path: pink_carpet_middle
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  purple_carpet_single:
+    display_name: Purple Carpet Single
+    resource:
+      material: PAPER
+      generate: false
+      model_path: purple_carpet_single
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  purple_carpet_corner:
+    display_name: Purple Carpet Corner
+    resource:
+      material: PAPER
+      generate: false
+      model_path: purple_carpet_corner
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  purple_carpet_side:
+    display_name: Purple Carpet Side
+    resource:
+      material: PAPER
+      generate: false
+      model_path: purple_carpet_side
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  purple_carpet_middle:
+    display_name: Purple Carpet Middle
+    resource:
+      material: PAPER
+      generate: false
+      model_path: purple_carpet_middle
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  red_carpet_single:
+    display_name: Red Carpet Single
+    resource:
+      material: PAPER
+      generate: false
+      model_path: red_carpet_single
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  red_carpet_corner:
+    display_name: Red Carpet Corner
+    resource:
+      material: PAPER
+      generate: false
+      model_path: red_carpet_corner
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  red_carpet_side:
+    display_name: Red Carpet Side
+    resource:
+      material: PAPER
+      generate: false
+      model_path: red_carpet_side
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  red_carpet_middle:
+    display_name: Red Carpet Middle
+    resource:
+      material: PAPER
+      generate: false
+      model_path: red_carpet_middle
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  white_carpet_single:
+    display_name: White Carpet Single
+    resource:
+      material: PAPER
+      generate: false
+      model_path: white_carpet_single
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  white_carpet_corner:
+    display_name: White Carpet Corner
+    resource:
+      material: PAPER
+      generate: false
+      model_path: white_carpet_corner
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  white_carpet_side:
+    display_name: White Carpet Side
+    resource:
+      material: PAPER
+      generate: false
+      model_path: white_carpet_side
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  white_carpet_middle:
+    display_name: White Carpet Middle
+    resource:
+      material: PAPER
+      generate: false
+      model_path: white_carpet_middle
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  yellow_carpet_single:
+    display_name: Yellow Carpet Single
+    resource:
+      material: PAPER
+      generate: false
+      model_path: yellow_carpet_single
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  yellow_carpet_corner:
+    display_name: Yellow Carpet Corner
+    resource:
+      material: PAPER
+      generate: false
+      model_path: yellow_carpet_corner
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  yellow_carpet_side:
+    display_name: Yellow Carpet Side
+    resource:
+      material: PAPER
+      generate: false
+      model_path: yellow_carpet_side
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+  yellow_carpet_middle:
+    display_name: Yellow Carpet Middle
+    resource:
+      material: PAPER
+      generate: false
+      model_path: yellow_carpet_middle
+    behaviours:
+      furniture:
+        entity: item_frame
+        solid: false
+        gravity: false
+        fixed_rotation: true
+#kkNxFnQYRHN4ckWsJnb340b3VlWCJUMSFFcyIlVw1WYYxmbWR3ZlJGaEV2VHBlayVVQ0YHO

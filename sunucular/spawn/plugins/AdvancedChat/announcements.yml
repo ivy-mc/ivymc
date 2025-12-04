@@ -1,0 +1,20 @@
+# Announcements Configuration
+enabled: true
+
+# Should announcements order be random?
+random: true
+
+# Announcements interval in seconds
+interval: 300
+
+order:
+  - first
+  - second
+
+# Add sound to the announcements
+sound:
+  enabled: true
+  sound: ENTITY_EXPERIENCE_ORB_PICKUP
+
+announcements:
+                                                            </gradient>'

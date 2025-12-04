@@ -1,0 +1,11 @@
+menu_title: '&f:offset_-8:%img_welcome%'
+open_commands:
+- '[sound] entity.experience_orb.pickup'
+update_interval: 1
+size: 45
+items:
+  donttouch:
+    material: air
+    slot: 1
+
+# 379CIQMA61WVTKPHA33TW6

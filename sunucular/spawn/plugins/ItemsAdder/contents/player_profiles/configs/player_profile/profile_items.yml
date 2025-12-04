@@ -1,0 +1,38 @@
+info:
+  namespace: profile
+items:
+  online:
+    display_name:
+    permission: online.p
+    lore:
+    - ':profile_prefix:'
+    resource:
+      material: PAPER
+      generate: false
+      model_path: gui_item/online
+  offline:
+    display_name:
+    permission: offline.p
+    lore:
+    - ':profile_prefix:'
+    resource:
+      material: PAPER
+      generate: false
+      model_path: gui_item/offline
+  air:
+    display_name: air
+    permission: offline.p
+    lore:
+    resource:
+      material: PAPER
+      generate: false
+      model_path: gui_item/air
+  player_head_gui:
+    enabled: true
+    display_name: 
+    resource:
+      generate: false
+      model_path: gui_item/player_head_gui
+      material: PLAYER_HEAD
+    lore:
+      - ""

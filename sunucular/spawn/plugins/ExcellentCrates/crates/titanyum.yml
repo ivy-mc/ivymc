@@ -1,0 +1,1004 @@
+Name: <b><gradient:#FF0000:#FF2323:#FF922C:#FF5000>Tɪᴛᴀɴʏᴜᴍ Kᴀsᴀsɪ</gradient></b>
+Permission_Required: false
+Opening:
+  Cooldown: 0
+Key:
+  Ids:
+  - titanium_key
+  # Sets whether or not keys are required to open this crate.
+  Required: true
+Block:
+  Pushback:
+    Enabled: true
+  Hologram:
+    Enabled: true
+    Template: titanyum
+    Y_Offset: 1.0
+  Effect:
+    Model: spiral
+    Particle:
+      Name: FLAME
+  Locations:
+  - 159.0,114.0,15.0,0.0,0.0,Lobby
+  Positions:
+  - -10,71,0,world
+Milestones:
+  Repeatable: false
+Rewards:
+  List:
+    netherite_ingot:
+      Name: Netherite Ingot
+      Chance: 35.0
+      Rarity: common
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:netherite_ingot"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:netherite_ingot"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    diamond:
+      Name: Diamond
+      Chance: 35.0
+      Rarity: common
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:diamond"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:diamond"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    emerald:
+      Name: Emerald
+      Chance: 35.0
+      Rarity: common
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:emerald"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:emerald"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    gold_ingot:
+      Name: Gold Ingot
+      Chance: 35.0
+      Rarity: common
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:gold_ingot"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:gold_ingot"}'
+            DataVersion: 4438
+        '1':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:gold_ingot"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    iron_ingot:
+      Name: Iron Ingot
+      Chance: 35.0
+      Rarity: common
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:iron_ingot"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:iron_block"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    lapis_lazuli:
+      Name: Lapis Lazuli
+      Chance: 35.0
+      Rarity: common
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:lapis_lazuli"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:lapis_block"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    ender_pearl:
+      Name: Ender Pearl
+      Chance: 35.0
+      Rarity: common
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:ender_pearl"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:ender_pearl"}'
+            DataVersion: 4438
+        '1':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:ender_pearl"}'
+            DataVersion: 4438
+        '2':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:ender_pearl"}'
+            DataVersion: 4438
+        '3':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:ender_pearl"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    chorus_fruit:
+      Name: Chorus Fruit
+      Chance: 35.0
+      Rarity: common
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:chorus_fruit"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:chorus_fruit"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    blaze_rod:
+      Name: Blaze Rod
+      Chance: 35.0
+      Rarity: common
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:blaze_rod"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:blaze_rod"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    golden_apple:
+      Name: Golden Apple
+      Chance: 35.0
+      Rarity: common
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:golden_apple"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:golden_apple"}'
+            DataVersion: 4438
+        '1':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:golden_apple"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    golden_carrot:
+      Name: Golden Carrot
+      Chance: 35.0
+      Rarity: common
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:golden_carrot"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:golden_carrot"}'
+            DataVersion: 4438
+        '1':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:golden_carrot"}'
+            DataVersion: 4438
+        '2':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:golden_carrot"}'
+            DataVersion: 4438
+        '3':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:golden_carrot"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    nether_star:
+      Name: Nether Star
+      Chance: 25.0
+      Rarity: uncommon
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:nether_star"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:nether_star"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    totem_of_undying:
+      Name: Totem Of Undying
+      Chance: 25.0
+      Rarity: uncommon
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:totem_of_undying"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:totem_of_undying"}'
+            DataVersion: 4438
+        '1':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:totem_of_undying"}'
+            DataVersion: 4438
+        '2':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:totem_of_undying"}'
+            DataVersion: 4438
+        '3':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:totem_of_undying"}'
+            DataVersion: 4438
+        '4':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:totem_of_undying"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    enchanted_golden_apple:
+      Name: Enchanted Golden Apple
+      Chance: 25.0
+      Rarity: uncommon
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:enchanted_golden_apple"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:enchanted_golden_apple"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    dragon_head:
+      Name: Dragon Head
+      Chance: 25.0
+      Rarity: uncommon
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:dragon_head"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:dragon_head"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    '|_titanium_fortune_pickaxe_|':
+      Name: '&f&l&k|&r &4&lTitanium &c&lFortune &7&lPickaxe &f&l&k|'
+      Chance: 15.0
+      Rarity: rare
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:netherite_pickaxe"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:netherite_pickaxe"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    '|_titanium_silk_pickaxe_|':
+      Name: '&f&l&k|&r &4&lTitanium &c&lSilk &7&lPickaxe &f&l&k|'
+      Chance: 15.0
+      Rarity: rare
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:netherite_pickaxe"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:netherite_pickaxe"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    '|_titanium_fortune_axe_|':
+      Name: '&f&l&k|&r &4&lTitanium &c&lFortune &7&lAxe &f&l&k|'
+      Chance: 15.0
+      Rarity: rare
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:netherite_axe"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:netherite_axe"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    '|_titanium_silk_axe_|':
+      Name: '&f&l&k|&r &4&lTitanium &c&lSilk &7&lAxe &f&l&k|'
+      Chance: 15.0
+      Rarity: rare
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:netherite_axe"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:netherite_axe"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    '|_titanium_fortune_shovel_|':
+      Name: '&f&l&k|&r &4&lTitanium &c&lFortune &7&lShovel &f&l&k|'
+      Chance: 15.0
+      Rarity: rare
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:netherite_shovel"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:netherite_shovel"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    '|_titanium_silk_shovel_|':
+      Name: '&f&l&k|&r &4&lTitanium &c&lSilk &7&lShovel &f&l&k|'
+      Chance: 15.0
+      Rarity: rare
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:netherite_shovel"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:netherite_shovel"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    '|_titanium_fortune_hoe_|':
+      Name: '&f&l&k|&r &4&lTitanium &c&lFortune &7&lHoe &f&l&k|'
+      Chance: 15.0
+      Rarity: rare
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:netherite_hoe"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:netherite_hoe"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    '|_titanium_silk_hoe_|':
+      Name: '&f&l&k|&r &4&lTitanium &c&lSilk &7&lHoe &f&l&k|'
+      Chance: 15.0
+      Rarity: rare
+      Broadcast: false
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:netherite_hoe"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:netherite_hoe"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    titanium_sword:
+      Name: '&f&l&k|&r &4&lTitanium &c&lSword &f&l&k|'
+      Chance: 5.0
+      Rarity: legendary
+      Broadcast: true
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:netherite_sword"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:netherite_sword"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    titanium_helmet:
+      Name: '&f&l&k|&r &4&lTitanium &c&lHelmet &f&l&k|'
+      Chance: 5.0
+      Rarity: legendary
+      Broadcast: true
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:netherite_helmet"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:netherite_helmet"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    titanium_chestplate:
+      Name: '&f&l&k|&r &4&lTitanium &c&lChestplate &f&l&k|'
+      Chance: 5.0
+      Rarity: legendary
+      Broadcast: true
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:netherite_chestplate"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:netherite_chestplate"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    titanium_leggings:
+      Name: '&f&l&k|&r &4&lTitanium &c&lLeggings &f&l&k|'
+      Chance: 5.0
+      Rarity: legendary
+      Broadcast: true
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:netherite_leggings"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:netherite_leggings"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    titanium_boots:
+      Name: '&f&l&k|&r &4&lTitanium &c&lBoots &f&l&k|'
+      Chance: 5.0
+      Rarity: legendary
+      Broadcast: true
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:netherite_boots"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:netherite_boots"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    titanium_wings:
+      Name: '&f&l&k|&r &4&lTitanium &c&lWings &f&l&k|'
+      Chance: 5.0
+      Rarity: legendary
+      Broadcast: true
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:elytra"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:elytra"}'
+            DataVersion: 4438
+      Custom_Preview: false
+    '|_titanium_shield_|':
+      Name: '&f&l&k|&r &4&lTitanium &c&lShield &f&l&k|'
+      Chance: 5.0
+      Rarity: legendary
+      Broadcast: true
+      Ignored_For_Permissions: []
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+      PreviewData:
+        Type: VANILLA
+        Tag:
+          Value: '{count:1,id:"minecraft:shield"}'
+          DataVersion: 4438
+      Type: ITEM
+      ItemsData:
+        '0':
+          Type: VANILLA
+          Tag:
+            Value: '{count:1,id:"minecraft:shield"}'
+            DataVersion: 4438
+      Custom_Preview: false
+Last_Opener: '&35ntm&r'
+Last_Reward: Totem Of Undying
+_dataver: 600
+ItemProvider:
+  Type: VANILLA
+  Tag:
+    Value: '{components:{"minecraft:custom_data":{itemsadder:{id:"elite_crates_lava_chest",namespace:"elitecreatures"}},"minecraft:custom_model_data":{floats:[10022.0f]},"minecraft:custom_name":{color:"white",italic:0b,text:"Lava Chest"},"minecraft:item_name":{color:"white",italic:0b,text:"Lava Chest"}},count:1,id:"minecraft:paper"}'
+    DataVersion: 4438
+Preview:
+  Enabled: true
+  Id: default
+Animation:
+  Enabled: true
+  Id: roulette
+Description: []
+ItemStackable: true

@@ -1,0 +1,241 @@
+# Message when the backpack starts to be loaded from the database (after player interaction)
+backpack-loading: "#eb0000Backpack loading in progress..."
+# Message when the backpack has been loaded
+backpack-loaded: "&fThe backpack was loaded"
+# Message when the backpack is updating and the player tries to open it
+backpack-updating: "&fUpdating the backpack in progress"
+# Message when the backpack could not be loaded
+backpack-loading-error: "&cProblem encountered during backpack loading"
+# When a player tries to open a backpack, but it is being used by another player
+backpack-is-used-by-another-player: "&cThe backpack is used by another player"
+
+# Message when admin changes crafting
+backpack-crafting-change: "&aCrafting of the backpack has been changed"
+# Message when a player tries to change crafting when it is empty or the same as before
+backpack-crafting-cannot-change: "&cThe crafting of the backpack cannot be changed, perhaps it is empty or is the same"
+# Message when admin cancels crafting changes
+backpack-crafting-change-cancelled: "&cBackpack crafting changes cancelled"
+
+# Message after the backpack has been added by the player's backpack view
+# %player% Name of backpack owner
+backpack-added-inventory: "&6Added player's backpack&8: &f%player% &6to your inventory"
+
+# If a player has no permissions
+command-no-permissions: "&4You do not have the permissions to use this command"
+# When a player has a cooldown
+cooldown-message: "#eb0000You must wait before using it again"
+# When a player is not authorised to open a backpack
+backpack-no-permission-use: "&4You do not have the permissions to open the backpack"
+# When the player's backpack recharges (using the command)
+loading-in-progress: "&6Loading in progress... please wait a moment"
+# When players' backpacks could not be loaded
+players-backpack-not-loaded: "&cPlayer's backpacks could not be loaded"
+# When the player does not have any backpack
+player-not-created-backpacks: "&7This player has not created any backpacks yet"
+# When the player is offline
+# %player% > Player Name
+player-is-offline: "&7Player&8: &f%player% &7 is offline"
+
+# Message when a player tries to have more backpacks than one (only if option in config is set to true: limit-backpack-per-inventory)
+one-backpack-per-inventory: "&cYou can only carry one backpack"
+
+# Message when a player tries to have more backpacks than x(limit-backpack-per-inventory-amount) (only if the option in the configuration is set to true: limit-backpack-per-inventory).
+multiple-backpack-per-inventory: "&cYou can only carry %amount% backpacks"
+
+# Message when player tries to put item in container when it's locked
+blocked-backpack-insert-message: "&cYou can't put this item here!"
+
+# Message when resourcepack is loaded leave blank if there is to be no message
+resourcepack-loaded: "&6Resourcepack has been loaded"
+# Message when resourcepack fails to load leave blank if there is to be no message
+resourcepack-failed-load: "&6Failed to load resourcepack"
+
+# Message if the command is only for the player
+command-only-player: "&cThis argument can only be used by a player!"
+# Message if the command is only for the console
+command-only-console: "&cThis argument can only be used by a console!"
+
+# Message when uuid is invalid
+invalid-uuid: "&cIncorrect UUID"
+
+# Message when the item was blocked, %item% is the name of the material
+item-has-blocked: "&6The Item has been blocked&8: &f%item%"
+
+# Message when the given item is already blocked
+item-already-blocked: "&cItem already blocked&8: &f%item%"
+
+# Message when the material was blocked, %item% is the name of the material
+material-has-blocked: "&6The Material has been blocked&8: &f%material%"
+# Message when the given material is already blocked
+material-already-blocked: "&cMaterial already blocked&8: &f%material%"
+# Message when given material is incorrect
+invalid-material: "&cInvalid Material Name&8: &f%material%"
+# Message when player has empty hands
+empty-hand: "&cYou must have something in your hand"
+
+# Message when backpack tier is incorrect, %tier% is the given value
+invalid-backpack-tier: "&cInvalid Backpack Tier&8: &f%tier%"
+
+# Message when a player adds a backpack, %tier% is the tier of the backpack
+backpack-added: "&6Backpack&8: &f%tier% &6Added"
+
+# Message when a backpack was added to a player, %tier% is the tier of the backpack, %player% is the name of the player
+backpack-added-player: "&6Backpack&8: &f%tier%  &6Added to player&8: &f%player%"
+# Message when a backpack of the specified tier has not been found
+backpack-tier-not-found: "&cBackpack&8: &f%tier% &cnot found"
+
+# Message when no players have created backpacks yet or something has gone wrong
+players-not-created-backpacks: "No player has created a backpack yet or something has gone wrong"
+
+# Message when an unexpected error occurs
+unexpected-error: "&cAn unexpected error occurred during command execution, check console for errors."
+
+# Message when resourcepack is reloaded with command
+resourcepack-reloaded: "&6Resourcepack has been updated and reloaded with all players"
+
+# A message when a player tries to put an item in a backpack that is not permitted type FILTERED
+filtered-backpack-item-not-allowed: "&cYou can't put this item in this backpack"
+
+# Message when a player tries to click a button on a menu, and it has a cooldown
+button-cooldown: "&cYou must wait another &f%time% &cseconds before clicking again "
+
+# Message when someone else has already edited the allowed items for this backpack
+allowed-items-gui-has-editor: "&cSomeone is already editing the allowed items for this backpack"
+
+# Message when failed to open gui of allowed items
+allowed-items-could-open: "&cCannot open Allowed items, check the console and check the config for this backpack to see if they are correct"
+
+# Message when player is not the owner of the backpack
+not-owner: "&cYou are not the owner of this backpack!"
+
+# Message when a player tries to create a backpack with a non-empty container
+crafting.blocked-filled-container: "&4You cannot craft using filled containers!"
+
+
+# GUI Configuration
+#
+# Conditional Operators Guide:
+# This plugin supports conditional expressions in text using these formats:
+#
+# STANDARD CONDITIONALS: %[(condition)text]%
+#    - Shows 'text' if condition is true, otherwise shows nothing
+#    - Used for: pagination, optional elements
+#
+# TERNARY CONDITIONALS: %[(condition)true_text ~: false_text]%
+#    - Shows 'true_text' if condition is true, otherwise shows 'false_text'
+#    - Uses ~: as separator to avoid conflicts with colons in text
+#    - Used for: status indicators, type switching
+#
+# EXAMPLES FROM THIS CONFIG:
+#   Pagination: "%[(max_pages > 1)&cPage&8: &6%page% &8/ &7%max_pages%]%"
+#   Crafting status: "%[(isCraftable == true)&8[&2&l✔&8] ~: &8[&c&l❌&8]]%"
+#   Enable/disable: "%[(isCraftable == true)disable ~: enable]%"
+#   Type switching: "%[(type == DEFAULT)FILTERED ~: DEFAULT]%"
+#
+# OPERATORS USED IN THIS CONFIG:
+#   >  (greater than)     Example: max_pages > 1
+#   == (equals)           Example: isCraftable == true, type == DEFAULT
+
+gui:
+  # Title format for allowed items GUI - shows pagination when multiple pages exist
+  allowed-items-gui: "&cAllowed items&8: &f%size% &cBackpack Tier&8: &f%tier% %[(max_pages > 1)&cPage&8: &6%page% &8/ &7%max_pages%]%"
+
+  # Main backpack settings interface
+  backpack-settings-main:
+    title: "&6Tier&8: &f%tier% &6backpack settings"
+    buttons:
+      # Button for editing crafting recipes
+      edit-crafting-button:
+        display-name: "&2Click to change crafting"
+        lore:
+          - "&fCan be crafted&8: %[(isCraftable == true)&8[&2&l✔&8] ~: &8[&c&l❌&8]]%"
+          - " "
+          - "&7Click &f&lLMB &7To Edit crafting"
+          - "&7Click &f&lSHIFT + RMB &7to %[(isCraftable == true)disable ~: enable]% ability to craft a backpack"
+
+      # Button for managing allowed items list
+      allowed-items-button:
+        display-name: "&2Click to edit allowed items"
+        lore:
+          - "&7Currently allowed items for this backpack are&8: &c%size%"
+          - " "
+          - "&7Click &f&lLMB &7To open the gui with allowed items"
+          - " "
+          - "&8Includes these items if the backpack has the &fFILTERED &8type"
+
+      # Button for changing backpack type between DEFAULT and FILTERED
+      change-backpack-type-button:
+        display-name: "&2Click to edit backpack type"
+        lore:
+          - "&7The current type of backpack is&8: &c%type%"
+          - " "
+          - "&7Click &f&lLMB &7To change the type to&8: &f%[(type == DEFAULT)FILTERED ~: DEFAULT]%"
+
+  # GUI for selecting which backpack to modify crafting
+  backpack-chose-crafting-gui:
+    title: "#0047F7Choose which backpack you want to change crafting"
+    buttons:
+      # Individual backpack selection button
+      select-backpack-button:
+        lore:
+          - "&fCan be crafted&8: %[(isCraftable == true)&8[&2&l✔&8] ~: &8[&c&l❌&8]]%"
+
+  # GUI showing all backpacks owned by a specific player
+  player-backpacks-gui:
+    title: "&cPlayer backpacks&8: &f%playerName% %[(max_pages > 1)&cPage&8: &6%page% &8/ &7%max_pages%]%"
+    # Tooltip information shown when hovering over backpack items
+    hover-text:
+      - "&8▪ &fBackpack Owner&f: &6%owner%"
+      - "&8▪ &fLast Update&f: &a%lastUpdated%"
+      - "&8▪ &fLast Player&f: &a%lastPlayer%"
+      - "&8▪ &fBackpack Id&f: &a%backpackUUID%"
+
+  # Player information display in backpack overview
+  player-backpack-gui-info:
+    displayName: "&6%playerName%"
+    lore:
+      - "&fOwned Backpacks&8: &6%amount%"
+      - "&7Click &f&lLMB &7To open the player backpacks menu"
+
+  # GUI showing all players who own backpacks
+  all-backpack-gui:
+    title: "&cAll players with backpacks&8: &f%size% %[(max_pages > 1)&cPage&8: &6%page% &8/ &7%max_pages%]%"
+
+  # GUI for editing crafting recipes
+  crafting-edit-gui:
+    title: "#194d33You are changing the crafting %crafting%"
+
+# NBT Items Configuration
+# Settings for custom NBT items that can be used in backpacks
+nbt:
+  # Template for displaying custom NBT items
+  nbt-item:
+    displayName: "&fCustom NBT Item"
+    lore:
+      - "&8» &7Plugin Name&8: &f%plugin%"
+      - "&8» &7Namespace&8: &f%namespace%"
+      - "&8» &7Namespace Value: &f%value%"
+
+items:
+  # Database backpack information display
+  # Used when viewing backpack details in admin/database interfaces
+  database-backpack-info:
+    lore:
+      - "&8▪ &fBackpack Owner&8: &6%owner%"           # Shows who owns this backpack
+      - "&8▪ &fId&8: &7%backpackUUID%"                # Unique identifier for the backpack
+      - "&8▪ &fLast Update&8: &a%lastUpdate%"         # When the backpack was last modified
+      - "&8▪ &fLast Player&8: &a%lastPlayer%"         # Last player who interacted with it
+      - " "                                       # Empty line for spacing
+      - "&7Click &f&lLMB &7To open the backpack"  # Left click action
+      - "&7Click &f&lRMB &8&l+ &f&lSHIFT &7To add a backpack to your inventory"  # Right click + shift action
+
+  database-backpack-no-settings:
+    display-name: "&c⚠ Unconfigured Backpack"
+    lore:
+      - "&8▪ &fOwner&8: &6%owner%"
+      - "&8▪ &fID&8: &7%backpackUUID%"
+      - "&8▪ &fLast Update&8: &a%lastUpdate%"
+      - "&8▪ &fLast Player&8: &a%lastPlayer%"
+      - " "
+      - "&c⚠ &7Missing tier settings&8: &e%tier%"
+      - "&c⚠ &7Backpack requires configuration"

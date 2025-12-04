@@ -1,0 +1,251 @@
+info:
+  namespace: prism_skyblock
+
+armors_rendering:
+  gilded_netherite:
+    color: "#d40000"
+    layer_1: item_texture/armors/gilded_netherite_armor_layer_1
+    layer_2: item_texture/armors/gilded_netherite_armor_layer_2
+    use_color: false
+  soul_netherite:
+    color: "#d50000"
+    layer_1: item_texture/armors/soul_netherite_armor_layer_1
+    layer_2: item_texture/armors/soul_netherite_armor_layer_2
+    use_color: false
+  warden:
+    color: "#d60000"
+    layer_1: item_texture/armors/warden_armor_layer_1
+    layer_2: item_texture/armors/warden_armor_layer_2
+    use_color: false
+  hextech:
+    color: "#d70000"
+    layer_1: item_texture/armors/hextech_armor_layer_1
+    layer_2: item_texture/armors/hextech_armor_layer_2
+    use_color: false
+
+items:
+
+  gilded_netherite_helmet:
+    enabled: true
+    resource:
+      generate: true
+      model_id: 2
+      textures:
+      - item_texture/armors/gilded_netherite_helmet
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: gilded_netherite
+  gilded_netherite_chestplate:
+    enabled: true
+    resource:
+      generate: true
+      model_id: 2
+      textures:
+      - item_texture/armors/gilded_netherite_chestplate
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: gilded_netherite
+  gilded_netherite_leggings:
+    enabled: true
+    resource:
+      generate: true
+      model_id: 2
+      textures:
+      - item_texture/armors/gilded_netherite_leggings
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: gilded_netherite
+  gilded_netherite_boots:
+    enabled: true
+    resource:
+      generate: true
+      model_id: 2
+      textures:
+      - item_texture/armors/gilded_netherite_boots
+    specific_properties:
+      armor:
+        slot: feet
+        custom_armor: gilded_netherite
+
+  soul_netherite_helmet:
+    enabled: true
+    resource:
+      generate: true
+      model_id: 3
+      textures:
+      - item_texture/armors/soul_netherite_helmet
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: soul_netherite
+  soul_netherite_chestplate:
+    enabled: true
+    resource:
+      generate: true
+      model_id: 3
+      textures:
+      - item_texture/armors/soul_netherite_chestplate
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: soul_netherite
+  soul_netherite_leggings:
+    enabled: true
+    resource:
+      generate: true
+      model_id: 3
+      textures:
+      - item_texture/armors/soul_netherite_leggings
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: soul_netherite
+  soul_netherite_boots:
+    enabled: true
+    resource:
+      generate: true
+      model_id: 3
+      textures:
+      - item_texture/armors/soul_netherite_boots
+    specific_properties:
+      armor:
+        slot: feet
+        custom_armor: soul_netherite
+
+  warden_helmet:
+    enabled: true
+    resource:
+      generate: true
+      model_id: 4
+      textures:
+      - item_texture/armors/warden_helmet
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: warden
+  warden_chestplate:
+    enabled: true
+    resource:
+      generate: true
+      model_id: 4
+      textures:
+      - item_texture/armors/warden_chestplate
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: warden
+  warden_leggings:
+    enabled: true
+    resource:
+      generate: true
+      model_id: 4
+      textures:
+      - item_texture/armors/warden_leggings
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: warden
+  warden_boots:
+    enabled: true
+    resource:
+      generate: true
+      model_id: 4
+      textures:
+      - item_texture/armors/warden_boots
+    specific_properties:
+      armor:
+        slot: feet
+        custom_armor: warden
+
+  hextech_helmet:
+    enabled: true
+    resource:
+      generate: true
+      model_id: 5
+      textures:
+      - item_texture/armors/hextech_helmet
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: hextech
+  hextech_chestplate:
+    enabled: true
+    resource:
+      generate: true
+      model_id: 5
+      textures:
+      - item_texture/armors/hextech_chestplate
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: hextech
+  hextech_leggings:
+    enabled: true
+    resource:
+      generate: true
+      model_id: 5
+      textures:
+      - item_texture/armors/hextech_leggings
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: hextech
+  hextech_boots:
+    enabled: true
+    resource:
+      generate: true
+      model_id: 5
+      textures:
+      - item_texture/armors/hextech_boots
+    specific_properties:
+      armor:
+        slot: feet
+        custom_armor: hextech
+
+  hextech_helmet_ascended:
+    enabled: true
+    resource:
+      generate: true
+      model_id: 6
+      textures:
+      - item_texture/armors/hextech_helmet_ascended
+    specific_properties:
+      armor:
+        slot: head
+        custom_armor: hextech
+  hextech_chestplate_ascended:
+    enabled: true
+    resource:
+      generate: true
+      model_id: 6
+      textures:
+      - item_texture/armors/hextech_chestplate_ascended
+    specific_properties:
+      armor:
+        slot: chest
+        custom_armor: hextech
+  hextech_leggings_ascended:
+    enabled: true
+    resource:
+      generate: true
+      model_id: 6
+      textures:
+      - item_texture/armors/hextech_leggings_ascended
+    specific_properties:
+      armor:
+        slot: legs
+        custom_armor: hextech
+  hextech_boots_ascended:
+    enabled: true
+    resource:
+      generate: true
+      model_id: 6
+      textures:
+      - item_texture/armors/hextech_boots_ascended
+    specific_properties:
+      armor:
+        slot: feet
+        custom_armor: hextech

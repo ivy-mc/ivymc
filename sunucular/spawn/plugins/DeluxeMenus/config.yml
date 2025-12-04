@@ -1,0 +1,105 @@
+# DeluxeMenus 1.14.1-Release main configuration file
+#
+# A full wiki on how to use this plugin can be found at:
+# https://wiki.helpch.at/helpchat-plugins/deluxemenus
+
+use_admin_commands_in_menus_list: false
+menus_list_page_size: 10
+metas_list_page_size: 15
+debug: HIGHEST
+check_updates: true
+gui_menus:
+  all:
+    file: all.yml
+  miningend:
+    file: miningend.yml
+  miningnether:
+    file: miningnether.yml
+  netherend:
+    file: netherend.yml
+  overend:
+    file: overend.yml
+  overmining:
+    file: overmining.yml
+  overminingend:
+    file: overminingend.yml
+  overminingnether:
+    file: overminingnether.yml
+  overnether:
+    file: overnether.yml
+  overnetherend:
+    file: overnetherend.yml
+  quest_leaderboard:
+    file: quest_leaderboard.yml
+  quest_badges:
+    file: quest_badges.yml
+  quest_badges_2:
+    file: quest_badges_2.yml
+  bank:
+    file: bank.yml
+  marketplace:
+    file: marketplace.yml
+  submenu_daily_deals_1:
+    file: submenu_daily_deals_1.yml
+  submenu_daily_deals_2:
+    file: submenu_daily_deals_2.yml
+  submenu_daily_deals_3:
+    file: submenu_daily_deals_3.yml
+  submenu_daily_deals_4:
+    file: submenu_daily_deals_4.yml
+  submenu_daily_deals_5:
+    file: submenu_daily_deals_5.yml
+  submenu_categories_misc_fertilizers:
+    file: submenu_categories_misc_fertilizers.yml
+  submenu_categories_misc_gears:
+    file: submenu_categories_misc_gears.yml
+  submenu_categories_fruits_seeds:
+    file: submenu_categories_fruits_seeds.yml
+  submenu_categories_vegetables_seeds:
+    file: submenu_categories_vegetables_seeds.yml
+  submenu_categories_cereals_seeds:
+    file: submenu_categories_cereals_seeds.yml
+  submenu_categories_trees_seeds:
+    file: submenu_categories_trees_seeds.yml
+  submenu_categories_bushes_seeds:
+    file: submenu_categories_bushes_seeds.yml
+  submenu_categories_flowers_seeds:
+    file: submenu_categories_flowers_seeds.yml
+  # ###########################################################
+  submenu_categories_fruits_sell:
+    file: submenu_categories_fruits_sell.yml
+  submenu_categories_vegetables_sell:
+    file: submenu_categories_vegetables_sell.yml
+  submenu_categories_cereals_sell:
+    file: submenu_categories_cereals_sell.yml
+  submenu_categories_trees_sell:
+    file: submenu_categories_trees_sell.yml
+  submenu_categories_bushes_sell:
+    file: submenu_categories_bushes_sell.yml
+  submenu_categories_flowers_sell:
+    file: submenu_categories_flowers_sell.yml
+  submenu_categories_overgrown_fruits_sell:
+    file: submenu_categories_overgrown_fruits_sell.yml
+  submenu_categories_overgrown_vegetables_sell:
+    file: submenu_categories_overgrown_vegetables_sell.yml
+  submenu_categories_overgrown_cereals_sell:
+    file: submenu_categories_overgrown_cereals_sell.yml
+  submenu_categories_overgrown_trees_sell:
+    file: submenu_categories_overgrown_trees_sell.yml
+  submenu_categories_overgrown_bushes_sell:
+    file: submenu_categories_overgrown_bushes_sell.yml
+  submenu_categories_overgrown_flowers_sell:
+    file: submenu_categories_overgrown_flowers_sell.yml
+  meslek:
+    file: meslek.yml
+  fish_codex:
+    file: fish_codex.yml
+  fish_codex_2:
+    file: fish_codex_2.yml
+  fish_codex_3:
+    file: fish_codex_3.yml
+  navigator:
+    file: navigator.yml
+
+
+# IjaRJXOuR0cwQENUlHcjlETJJjUwEEVPVTVU1UMNRUT5lUbOJUatlUVohldVhmb3hzS3IEN

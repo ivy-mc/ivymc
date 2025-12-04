@@ -1,0 +1,111 @@
+#
+# Example config of a play time reward.
+#
+# Decides if rewards will be claimable.
+enabled: true
+#
+# Each type of reward has different specifications.
+# All currently supported types can be found on:
+# https://ultimaterewards.athelion.eu/
+#
+type: play_time_reward
+#
+# Reward tag
+#
+tag: Play Time Reward
+#
+# (Optional) Permission which player must have to be
+# able to obtain this reward.
+#
+permission: ultimaterewards.examplePlayTimeReward
+#
+# Required play time (in minutes) to achieve this reward.
+#
+required-time: 720
+# Format that replaces the %requiredTime% placeholder in the rewards menu
+format: "%hours% hour(s) %minutes% minute(s)"
+# Notifies players that the reward is currently available
+live-reminder-enabled: true
+#
+# Based on what the time played will evolve, options:
+#   LOCAL (the time played is different for each server)
+#   GLOBAL (time is calculated cross-server)
+#
+tracking: LOCAL
+# NOTE THAT ITEM & SOUND NAMES ARE SLIGHTLY DIFFERENT BETWEEN >1.12 & 1.13< VERSIONS!
+# SO MAKE SURE YOU ARE USING VALID ITEM NAMES (DEFAULT ONE ARE USED FROM 1.13+ VERSIONS)
+# OTHERWISE WILL BE REPLACED BY STONE IF INVALID NAME IS IN USE.
+#
+# When player achieves required play time,
+# this version of reward item is displayed in the inventory:
+#
+available-item: "LIME_DYE"
+available-display-name: "&a&lPLAY TIME REWARD"
+available-lore:
+  - "&7You have played"
+  - "&7enough time to be able"
+  - "&7obtain this reward!"
+  - " "
+  - "&b► Click to claim!"
+#
+# Whereas player doesn't have enough played time,
+# this version of reward item is displayed in the inventory:
+#
+unavailable-item: "RED_DYE"
+unavailable-display-name: "&c&lPLAY TIME REWARD"
+unavailable-lore:
+  - "&7You need to spend enough"
+  - "&7hours to be able obtain"
+  - "&7this reward!"
+  - " "
+  - "&4► Requires another %requiredHours%"
+#
+# When player has already claimed this reward:
+#
+claimed-item: "GRAY_DYE"
+claimed-display-name: "&7&lPLAY TIME REWARD"
+claimed-lore:
+  - "&7You have already"
+  - "&7claimed this reward"
+  - "&7for %time% minutes!" #TODO: Formatting
+#
+# When player doesn't have permission for this reward,
+# the following properties will be shown.
+#
+no-permission-item: BARRIER
+no-permission-display-name: "&c&l&mPLAY TIME REWARD"
+no-permission-lore:
+  - "&c ✕ Locked, requires"
+  - "&c   %permission% permission"
+#
+# Commands list that will be executed after player
+# obtains this reward.
+# All available actions can be found at
+# https://ultimaterewards.athelion.eu/
+#
+# Format: () - optional value | [] - required value
+#   [<actionType>] (<chance>):<command>
+#
+# Examples:
+#   - [console] 50:give %player% diamond 1
+#       - this command will have a 50%
+#         execution chance due to its property value
+#
+#   - [message] "&aYou have claimed your %type% reward!"
+#       - this action will send the player a message
+#         with the defined content
+#
+# You can also use the random placeholders
+# from the randoms.yml file and use them in commands.
+# Example:
+#   - give %player% iron_ingot %exampleRandom%
+#       - the placeholder will be replaced by
+#         a random number from the defined interval in randoms.yml
+#
+actions:
+  - '[console] give %player% diamond 1'
+  - '[console] say %player% claimed his %type% reward!'
+  #  - '[actionbar] &aSuccessfully claimed!' # Action bar can be used only from 1.12 versions!
+  - '[title] &aClaimed'
+  - '[subtitle] &aReward %type%'
+  - '[sound] BLOCK_CHEST_OPEN'

@@ -1,0 +1,158 @@
+#
+# Example config of a streak vote reward.
+#
+# Decides if rewards will be claimable.
+enabled: true
+#
+# Each type of reward has different specifications.
+# All currently supported types can be found on:
+# https://ultimaterewards.athelion.eu/
+#
+type: streak_vote_reward
+#
+# Reward tag
+#
+tag: Streak Vote Reward
+# You can set the numbering type. Available types:
+#   - NORMAL
+#   - ROMAN
+numbering-type: NORMAL
+#
+# (Optional) Permission which player must have to be
+# able to obtain this reward.
+#
+permission: ultimaterewards.exampleStreakVoteReward
+#
+# How long does a player have to complete
+# the necessary votes to unlock the current streak
+#
+reset-time: 24
+cooldown-general-format: "%hours% hours"
+#
+# Format of the cooldown that will be displayed
+# on the usage of the %cooldown% placeholder in reward GUIs.
+#
+cooldown-format: '%hours%:%minutes%:%seconds%'
+#
+# If set to true, the streak progress will reset if
+# the player misses the claim schedule.
+#
+resetting: true
+#
+# If resetting is set to false, you can specify
+# whether it should be reset when the player reaches the final streak.
+#
+reset-after-completing: true
+# Notifies players that the reward is currently available
+live-reminder-enabled: true
+#
+# NOTE THAT ITEM & SOUND NAMES ARE SLIGHTLY DIFFERENT BETWEEN <1.12 & 1.13< VERSIONS!
+# SO MAKE SURE YOU ARE USING VALID ITEM NAMES (DEFAULT ONES ARE USED FROM 1.13+ VERSIONS)
+# OTHERWISE, THEY WILL BE REPLACED BY STONE IF AN INVALID NAME IS USED.
+#
+# When the player can claim this reward,
+# it will be shown as this:
+#
+# %lore% will be replaced with each streak's lore
+# defined at the bottom of the page.
+available-item: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTNlOWY0ZGJhZGRlMGY3MjdjNTgwM2Q3NWQ4YmIzNzhmYjlmY2I0YjYwZDMzYmVjMTkwOTJhM2EyZTdiMDdhOSJ9fX0=
+available-display-name: '&a&lSTREAK VOTE REWARD #%number%'
+available-lore:
+  - ' '
+  - '%lore%'
+  - ' '
+  - '&b► Ready to be claimed'
+# When the player can't claim this reward right now,
+# it will be shown as this:
+unavailable-item: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzY1ZjNiYWUwZDIwM2JhMTZmZTFkYzNkMTMwN2E4NmE2MzhiZTkyNDQ3MWYyM2U4MmFiZDlkNzhmOGEzZmNhIn19fQ==
+unavailable-display-name: '&c&lSTREAK VOTE REWARD #%number%'
+unavailable-lore:
+  - ' '
+  - '%lore%'
+  - ' '
+  - '&c ► Required votes: &4%requiredVotes%'
+  - '&c ► Remaining time: &4%cooldown%'
+# The next streak reward will be marked, and
+# it will be shown as this:
+upcoming-item: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2FmNmZhYjc2N2NhNGQ3ZGY2MjE3Yjg5NWI2NjdiY2FjYzUyNGQ0MDcwNjg2MTlmODE5YTA3MGYzZjYyOWNlMCJ9fX0=
+upcoming-display-name: '&8&lSTREAK VOTE REWARD #%number%'
+upcoming-lore:
+  - ' '
+  - '%lore%'
+  - ' '
+  - '&7► Claim rewards before'
+  - '&7  to achieve this reward!'
+# The claimed streak will be shown as this:
+claimed-item: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzMyOGRjZGUxNzNiZWZmOWYzZjQxYjkyMzIxM2ZjMWJiNzY3ODk2N2NjYjJlZGU3YTdjZjQwYjE4MzZiMWE3MyJ9fX0=
+claimed-display-name: '&7&lSTREAK VOTE REWARD #%number%'
+claimed-lore:
+  - '&7 Claimed'
+#
+# When the player doesn't have the reward's permission,
+# the following properties will be shown.
+#
+no-permission-item: BARRIER
+no-permission-display-name: "&c&l&mSTREAK VOTE REWARD #%number%"
+no-permission-lore:
+  - "&c ✕ Locked, requires"
+  - "&c   %permission% permission"
+#
+# Sets the number of items in the GUI menu
+# according to the corresponding streak.
+#
+show-amount-of-the-streaks: true
+#
+# A streak can have an optional length,
+# generally, when creating a streak, you should follow
+# this pattern:
+#
+# 1: # first streak
+#   use-firework: <true/false> # optional value
+#   actions: # List of actions executed after claiming a reward
+#     - <| list of actions |>
+# 2: # second streak
+#    <| another streak reward configurations |>
+#
+streaks:
+  1:
+    data: 3
+    lore:
+      - '&7Contains:'
+      - '&f 1x Coal'
+    actions:
+      - "[console] give %player% coal 1"
+      - "[subtitle] &aObtained 1st streak!"
+  2:
+    data: 5
+    lore:
+      - '&7Contains:'
+      - '&f 1x Iron Ingot'
+    actions:
+      - "[console] give %player% iron_ingot 1"
+      - "[subtitle] &aObtained 2nd streak!"
+  3:
+    data: 7
+    lore:
+      - '&7Contains:'
+      - '&f 1x Gold Ingot'
+    actions:
+      - "[console] give %player% gold_ingot 1"
+      - "[subtitle] &aObtained 3rd streak!"
+  4:
+    data: 10
+    lore:
+      - '&7Contains:'
+      - '&f 1x Diamond'
+    actions:
+      - "[console] give %player% diamond 1"
+      - "[subtitle] &aObtained 4th streak!"
+  5:
+    data: 13
+    lore:
+      - '&7Contains:'
+      - '&d 1x Netherite Ingot'
+    actions:
+      - "[console] give %player% netherite_ingot 1"
+      - "[title] &bGreat Job!"
+      - "[subtitle] &aObtained final streak!"
+      - "[firework]"

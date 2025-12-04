@@ -1,0 +1,38 @@
+# LOG DOSYALARI
+
+**/logs/
+
+**/*.log
+
+
+# CACHE KLASÖRLERİ
+
+**/cache/
+
+**/tmp/
+
+**/temp/
+
+
+# BACKUP KLASÖRLERİ (Crafty otomatik yedekler)
+
+**/backups/
+
+
+# ITEMSADDER CACHE
+
+**/ItemsAdder/storage/
+
+**/ItemsAdder/tmp/
+
+**/ItemsAdder/cache/
+
+
+# PLUGIN GEÇİCİ DOSYALARI
+
+**/plugins/*/cache/
+
+**/plugins/*/temp/
+
+**/plugins/*/logs/
+

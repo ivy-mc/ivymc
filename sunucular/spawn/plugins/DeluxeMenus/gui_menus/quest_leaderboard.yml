@@ -1,0 +1,117 @@
+menu_title: "&f%img_offset_-8%%img_quest_leaderboard%"
+open_command: qleaderboard
+size: 27
+update_interval: 10
+items:
+  1:
+    material: head-%ajlb_lb_odailyquests_total_1_alltime_name%
+    slot: 4
+    display_name: "&f%ajlb_lb_odailyquests_total_1_alltime_name%"
+    lore:
+      - "&7ᴛᴏᴛᴀʟ ǫᴜᴇsᴛs ᴄᴏᴍᴘʟᴇᴛᴇᴅ: &#64ba3f%ajlb_lb_odailyquests_total_1_alltime_value%"
+      - "&#a5d0e9Total quest shows how many quests"
+      - "&#a5d0e9this player completed in total"
+      - ""
+      - "&fʀᴀɴᴋɪɴɢ: &#c372de1sᴛ"
+    model_data: 2
+  2:
+    material: head-%ajlb_lb_odailyquests_total_2_alltime_name%
+    slot: 3
+    display_name: "&f%ajlb_lb_odailyquests_total_2_alltime_name%"
+    lore:
+      - "&7ᴛᴏᴛᴀʟ ǫᴜᴇsᴛs ᴄᴏᴍᴘʟᴇᴛᴇᴅ: &#64ba3f%ajlb_lb_odailyquests_total_2_alltime_value%"
+      - "&#a5d0e9Total quest shows how many quests"
+      - "&#a5d0e9this player completed in total"
+      - ""
+      - "&fʀᴀɴᴋɪɴɢ: &#c372de2ɴᴅ"
+    model_data: 2
+  3:
+    material: head-%ajlb_lb_odailyquests_total_3_alltime_name%
+    slot: 5
+    display_name: "&f%ajlb_lb_odailyquests_total_3_alltime_name%"
+    lore:
+      - "&7ᴛᴏᴛᴀʟ ǫᴜᴇsᴛs ᴄᴏᴍᴘʟᴇᴛᴇᴅ: &#64ba3f%ajlb_lb_odailyquests_total_3_alltime_value%"
+      - "&#a5d0e9Total quest shows how many quests"
+      - "&#a5d0e9this player completed in total"
+      - ""
+      - "&fʀᴀɴᴋɪɴɢ: &#c372de3ʀᴅ"
+    model_data: 2
+  4:
+    material: head-%ajlb_lb_odailyquests_total_4_alltime_name%
+    slot: 10
+    display_name: "&f%ajlb_lb_odailyquests_total_4_alltime_name%"
+    lore:
+      - "&7ᴛᴏᴛᴀʟ ǫᴜᴇsᴛs ᴄᴏᴍᴘʟᴇᴛᴇᴅ: &#64ba3f%ajlb_lb_odailyquests_total_4_alltime_value%"
+      - "&#a5d0e9Total quest shows how many quests"
+      - "&#a5d0e9this player completed in total"
+      - ""
+      - "&fʀᴀɴᴋɪɴɢ: &#c372de4ᴛʜ"
+    model_data: 2
+  5:
+    material: head-%ajlb_lb_odailyquests_total_5_alltime_name%
+    slot: 11
+    display_name: "&f%ajlb_lb_odailyquests_total_5_alltime_name%"
+    lore:
+      - "&7ᴛᴏᴛᴀʟ ǫᴜᴇsᴛs ᴄᴏᴍᴘʟᴇᴛᴇᴅ: &#64ba3f%ajlb_lb_odailyquests_total_5_alltime_value%"
+      - "&#a5d0e9Total quest shows how many quests"
+      - "&#a5d0e9this player completed in total"
+      - ""
+      - "&fʀᴀɴᴋɪɴɢ: &#c372de5ᴛʜ"
+    model_data: 2
+  6:
+    material: head-%ajlb_lb_odailyquests_total_6_alltime_name%
+    slot: 12
+    display_name: "&f%ajlb_lb_odailyquests_total_6_alltime_name%"
+    lore:
+      - "&7ᴛᴏᴛᴀʟ ǫᴜᴇsᴛs ᴄᴏᴍᴘʟᴇᴛᴇᴅ: &#64ba3f%ajlb_lb_odailyquests_total_6_alltime_value%"
+      - "&#a5d0e9Total quest shows how many quests"
+      - "&#a5d0e9this player completed in total"
+      - ""
+      - "&fʀᴀɴᴋɪɴɢ: &#c372de6ᴛʜ"
+    model_data: 2
+  7:
+    material: head-%6jlb_lb_odailyquests_total_7_alltime_name%
+    slot: 13
+    display_name: "&f%ajlb_lb_odailyquests_total_7_alltime_name%"
+    lore:
+      - "&7ᴛᴏᴛᴀʟ ǫᴜᴇsᴛs ᴄᴏᴍᴘʟᴇᴛᴇᴅ: &#64ba3f%ajlb_lb_odailyquests_total_7_alltime_value%"
+      - "&#a5d0e9Total quest shows how many quests"
+      - "&#a5d0e9this player completed in total"
+      - ""
+      - "&fʀᴀɴᴋɪɴɢ: &#c372de7ᴛʜ"
+    model_data: 2
+  8:
+    material: head-%ajlb_lb_odailyquests_total_8_alltime_name%
+    slot: 14
+    display_name: "&f%ajlb_lb_odailyquests_total_8_alltime_name%"
+    lore:
+      - "&7ᴛᴏᴛᴀʟ ǫᴜᴇsᴛs ᴄᴏᴍᴘʟᴇᴛᴇᴅ: &#64ba3f%ajlb_lb_odailyquests_total_8_alltime_value%"
+      - "&#a5d0e9Total quest shows how many quests"
+      - "&#a5d0e9this player completed in total"
+      - ""
+      - "&fʀᴀɴᴋɪɴɢ: &#c372de8ᴛʜ"
+    model_data: 2
+  9:
+    material: head-%ajlb_lb_odailyquests_total_9_alltime_name%
+    slot: 15
+    display_name: "&f%ajlb_lb_odailyquests_total_9_alltime_name%"
+    lore:
+      - "&7ᴛᴏᴛᴀʟ ǫᴜᴇsᴛs ᴄᴏᴍᴘʟᴇᴛᴇᴅ: &#64ba3f%ajlb_lb_odailyquests_total_9_alltime_value%"
+      - "&#a5d0e9Total quest shows how many quests"
+      - "&#a5d0e9this player completed in total"
+      - ""
+      - "&fʀᴀɴᴋɪɴɢ: &#c372de9ᴛʜ"
+    model_data: 2
+  10:
+    material: head-%ajlb_lb_odailyquests_total_10_alltime_name%
+    slot: 16
+    display_name: "&f%ajlb_lb_odailyquests_total_10_alltime_name%"
+    lore:
+      - "&7ᴛᴏᴛᴀʟ ǫᴜᴇsᴛs ᴄᴏᴍᴘʟᴇᴛᴇᴅ: &#64ba3f%ajlb_lb_odailyquests_total_10_alltime_value%"
+      - "&#a5d0e9Total quest shows how many quests"
+      - "&#a5d0e9this player completed in total"
+      - ""
+      - "&fʀᴀɴᴋɪɴɢ: &#c372de10ᴛʜ"
+    model_data: 2
+#81d5836c452464f5d2242b6aa9d527f1
+# eyJ1c2VyLW5hbWUiOiJiYWhveiIsInVzZXItaWQiOiI2MjY0IiwiZGF0ZSI6IjIwMjUtMTAtMjMgMjA6MDAiLCJzaXRlIjoiaHR0cHM6Ly9nbGVha3MucHJvIn0=

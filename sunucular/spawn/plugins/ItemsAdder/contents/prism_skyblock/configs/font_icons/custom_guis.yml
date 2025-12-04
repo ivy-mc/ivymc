@@ -1,0 +1,395 @@
+info:
+  namespace: prism_skyblock
+font_images:
+  
+  gui-profile_gui:
+    symbol: ꀀ
+    path: interface/custom_guis/adventurer_menu.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-portals_gui:
+    symbol: ꀁ
+    path: interface/custom_guis/portals.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-skills_gui:
+    symbol: ꀂ
+    path: interface/custom_guis/skills.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-skills_progression_gui:
+    symbol: ꀃ
+    path: interface/custom_guis/skills_progression.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-xp_sources:
+    symbol: ꀎ
+    path: interface/custom_guis/xp_sources.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-abilities:
+    symbol: ꀏ
+    path: interface/custom_guis/abilities.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-skillleaderboard:
+    symbol: ꀐ
+    path: interface/custom_guis/skill_leaderboard.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-dungeons:
+    symbol: ꀑ
+    path: interface/custom_guis/dungeons.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-innates:
+    symbol: ꀔ
+    path: interface/custom_guis/innates.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-factions:
+    symbol: ꀗ
+    path: interface/custom_guis/factions.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-friends:
+    symbol: ꀘ
+    path: interface/custom_guis/friends.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-confirm:
+    symbol: ꀙ
+    path: interface/custom_guis/confirm.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-party:
+    symbol: ꀚ
+    path: interface/custom_guis/party.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-islandpanel:
+    symbol: ꀝ
+    path: interface/custom_guis/island_panel.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-islandupgrades:
+    symbol: ꀢ
+    path: interface/custom_guis/island_upgrades.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-islandbank:
+    symbol: ꀦ
+    path: interface/custom_guis/island_bank.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-islandchest:
+    symbol: ꀧ
+    path: interface/custom_guis/island_chest.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-islandgui:
+    symbol: ꀨ
+    path: interface/custom_guis/island_gui.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-islandcreate:
+    symbol: ꀭ
+    path: interface/custom_guis/island_create.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-ascension:
+    symbol: ꀮ
+    path: interface/custom_guis/ascension.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-codex:
+    symbol: ꀯ
+    path: interface/custom_guis/codex.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-forge:
+    symbol: ꀰ
+    path: interface/custom_guis/forge.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-ah:
+    symbol: ꀲ
+    path: interface/custom_guis/ah.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-ahauctioning:
+    symbol: ꀳ
+    path: interface/custom_guis/ah_auction.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-auctionmy:
+    symbol: ꀴ
+    path: interface/custom_guis/ah_myauction.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-ahexpired:
+    symbol: ꀵ
+    path: interface/custom_guis/ah_expired.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-bank:
+    symbol: ꀹ
+    path: interface/custom_guis/bank.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-shop:
+    symbol: ꀻ
+    path: interface/custom_guis/shop.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-shopamount:
+    symbol: ꀽ
+    path: interface/custom_guis/shop_amount.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-ancientenchantress:
+    symbol: ꁎ
+    path: interface/custom_guis/ancient_enchantress.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-enchantwiki:
+    symbol: ꁏ
+    path: interface/custom_guis/enchant_wiki.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-homelist:
+    symbol: ꂂ
+    path: interface/custom_guis/homelist.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-banlist:
+    symbol: ꁑ
+    path: interface/custom_guis/banlist.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-warnlist:
+    symbol: ꁓ
+    path: interface/custom_guis/warnlist.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-mutelist:
+    symbol: ꁔ
+    path: interface/custom_guis/mutelist.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-punishmentrecords:
+    symbol: ꁖ
+    path: interface/custom_guis/punishmentrecords.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-locksmith:
+    symbol: ꁗ
+    path: interface/custom_guis/locksmith.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-trade:
+    symbol: ꁭ
+    path: interface/custom_guis/trade.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-settings:
+    symbol: ꁲ
+    path: interface/custom_guis/settings.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-store:
+    symbol: ꁾ
+    path: interface/custom_guis/store.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-navigator:
+    symbol: ꁿ
+    path: interface/custom_guis/navigator.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-profile:
+    symbol: ꂃ
+    path: interface/custom_guis/player_profile.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-codexmob:
+    symbol: ꂄ
+    path: interface/custom_guis/codex_mob.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-codexboss:
+    symbol: ꂅ
+    path: interface/custom_guis/codex_boss.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-dailyquests:
+    symbol: ꂚ
+    path: interface/custom_guis/daily_quests.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-questsmilestone:
+    symbol: ꂛ
+    path: interface/custom_guis/quests_milestone.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-stardustshop:
+    symbol: ꂜ
+    path: interface/custom_guis/stardust_shop.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-scrolldecypher:
+    symbol: ꂝ
+    path: interface/custom_guis/scroll_decypher.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-yourfaction:
+    symbol: ꂟ
+    path: interface/custom_guis/your_faction.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-lootloh:
+    symbol: ꂮ
+    path: interface/custom_guis/loot_loh.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-island-member:
+    symbol: ꃋ
+    path: interface/custom_guis/island_member.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-island-visitors:
+    symbol: ꃌ
+    path: interface/custom_guis/island_visitors.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-island-coops:
+    symbol: ꃍ
+    path: interface/custom_guis/island_coops.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-islandbiome:
+    symbol: ꃎ
+    path: interface/custom_guis/island_biome.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-island-member-manage:
+    symbol: ꃐ
+    path: interface/custom_guis/island_member_manage.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm
+
+  gui-island-member-role:
+    symbol: ꃑ
+    path: interface/custom_guis/island_member_role.png
+    y_position: 19
+    scale_ratio: 256
+    permission: somerandom.perm

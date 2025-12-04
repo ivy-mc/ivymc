@@ -1,0 +1,11 @@
+info:
+  namespace: "custom_menu"
+font_images:   
+  welcome:
+    path: "welcome.png"
+    y_position: 17
+    scale_ratio: 256
+  blackbg:
+    path: "blackbg.png"
+    y_position: 256
+    scale_ratio: 2048        

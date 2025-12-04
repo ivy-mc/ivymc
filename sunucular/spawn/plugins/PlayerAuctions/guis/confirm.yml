@@ -1,0 +1,178 @@
+# PlayerAuctions by Olzie-12
+# https://www.spigotmc.org/resources/83073
+# We also have a discord server for help: https://olziedev.com/discord or check docs https://docs.olziedev.com/projects/playerauctions
+# Also if you find any bugs be happy to report them I will fix them :)
+# Made with love
+
+confirm:
+  # Should we enable the gui?
+  enabled: true
+  # What is the name of the gui?
+  name: "confirm"
+  # The title of the gui (Can use color codes)
+  title: "&fᵩけ"
+  # What is the size of this GUI? (multiples of 9 can only go up to 54)
+  size: 54
+  # What are the actions when this menu is opened up?
+  open-actions: []
+  # What are the actions when this menu is closed?
+  close-actions: []
+  # Where should the item the player is buying be?
+  slot-buying: 22
+  # What is the default amount an item should be at?
+  # If this number is higher than the item amount of the auction, it'll just be set to the auction amount instead.
+  default-amount: 64
+  # Should the previous menu that was opened be opened when this menu is closed?
+  open-previous: true
+  # Should the amount items be removed if there is not enough for that button. E.g. you're purchasing an item with 1x amount, it won't show any of the buttons.
+  # You can also put an item where the amount items are, and it'll only show if the amount item isn't there.
+  show-needed-amount-items: false
+
+  # Enter amounts through the GUI
+  enter:
+    # Should the feature be enabled?
+    # You will need ProtocolLib for this to work.
+    enabled: true
+    # What are the premade lines in the sign?
+    # %search% is the variable they have to enter the auction in, so please make sure that line doesn't contain anything else.
+    # If it doesn't contain the variable, then the plugin will just assume line 1 is user input. Colour codes will not work either.
+    lines:
+      - "%search%"
+      - "----------------"
+      - "Please enter"
+      - "an amount."
+
+    item:
+      material: GOLD_INGOT
+      custom-model-data: 9991
+      name: "&6 "
+      lore:
+        - "&6               ᴇɴᴛᴇʀ ᴀɴ ᴀᴍᴏᴜɴᴛ "
+        - "&7    ᴄʟɪᴄᴋ ᴛᴏ ᴇɴᴛᴇʀ ᴀɴ ᴀᴍᴏᴜɴᴛ ᴛᴏ ᴘᴜʀᴄʜᴀsᴇ   "
+        - " "
+      slot: 40
+      amount: 1
+      glowing: false
+
+  clickable-items:
+    accept:
+      # If you wish to disable any of these please set them the material to "AIR"
+      name: "&a "
+      
+      material: GOLD_INGOT
+      custom-model-data: 9991
+      lore:
+        - "&a         ᴀᴄᴄᴇᴘᴛ ᴘᴜʀᴄʜᴀsᴇ      "
+        - "&a           [amount]x&7 ғᴏʀ &a[price]"
+        - " "
+        - "&7        ᴄʟɪᴄᴋ ᴛᴏ ᴘᴜʀᴄʜᴀsᴇ         "
+        - " "
+      slot: 39
+      amount: 1
+      glowing: false
+      # These only work if the skull is a PLAYER_HEAD and the data is 3!
+      #texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWE0ZjY4YzhmYjI3OWU1MGFiNzg2ZjlmYTU0Yzg4Y2E0ZWNmZTFlYjVmZDVmMGMzOGM1NGM5YjFjNzIwM2Q3YSJ9fX0= - Skull texture
+      #owner: Next - Skull owner
+    deny:
+      name: "&c "
+      material: GOLD_INGOT
+      custom-model-data: 9991
+      lore:
+        - "&c             ᴅᴇɴʏ ᴘᴜʀᴄʜᴀsᴇ"
+        - "&7   ᴄʟɪᴄᴋ ᴛᴏ ᴅᴇɴʏ ᴛʜɪs ᴘᴜʀᴄʜᴀsᴇ   "
+        - " "
+      slot: 41
+      amount: 1
+      glowing: false
+    add-1:
+      name: "&a "
+      material: GOLD_INGOT
+      custom-model-data: 9991
+      lore:
+        - "&a      ᴀᴅᴅ 1x &7(ᴄᴜʀʀᴇɴᴛ: &a[amount]x)"
+        - "&7    ᴄʟɪᴄᴋ ᴛᴏ ᴀᴅᴅ 1x ᴀᴍᴏᴜɴᴛ    "
+        - "&7      "
+      slot: 23
+      amount: 1
+      glowing: false
+    add-32:
+      name: "&a "
+      material: GOLD_INGOT
+      custom-model-data: 9991
+      lore:
+        - "&a      ᴀᴅᴅ 32x &7(ᴄᴜʀʀᴇɴᴛ: &a[amount]x)"
+        - "&7    ᴄʟɪᴄᴋ ᴛᴏ ᴀᴅᴅ 32x ᴀᴍᴏᴜɴᴛ    "
+        - "&7      "
+      slot: 24
+      amount: 1
+      glowing: false
+    add-64:
+      name: "&a "
+      material: GOLD_INGOT
+      custom-model-data: 9991
+      lore:
+        - "&a      ᴀᴅᴅ 64x &7(ᴄᴜʀʀᴇɴᴛ: &a[amount]x)"
+        - "&7    ᴄʟɪᴄᴋ ᴛᴏ ᴀᴅᴅ 64x ᴀᴍᴏᴜɴᴛ    "
+        - "&7      "
+      slot: 25
+      amount: 1
+      glowing: false
+    remove-1:
+      name: "&c "
+      material: GOLD_INGOT
+      custom-model-data: 9991
+      lore:
+        - "&c      ʀᴇᴍᴏᴠᴇ 1x &7(ᴄᴜʀʀᴇɴᴛ: &c[amount]x)"
+        - "&7    ᴄʟɪᴄᴋ ᴛᴏ ʀᴇᴍᴏᴠᴇ 1x ᴀᴍᴏᴜɴᴛ    "
+        - "&7      "
+      slot: 19
+      amount: 1
+      glowing: false
+    remove-32:
+      name: "&c "
+      material: GOLD_INGOT
+      custom-model-data: 9991
+      lore:
+        - "&c      ʀᴇᴍᴏᴠᴇ 32x &7(ᴄᴜʀʀᴇɴᴛ: &c[amount]x)"
+        - "&7    ᴄʟɪᴄᴋ ᴛᴏ ʀᴇᴍᴏᴠᴇ 32x ᴀᴍᴏᴜɴᴛ    "
+        - "&7      "
+      slot: 20
+      amount: 1
+      glowing: false
+    remove-64:
+      name: "&c "
+      material: GOLD_INGOT
+      custom-model-data: 9991
+      lore:
+        - "&c      ʀᴇᴍᴏᴠᴇ 64x &7(ᴄᴜʀʀᴇɴᴛ: &c[amount]x)"
+        - "&7    ᴄʟɪᴄᴋ ᴛᴏ ʀᴇᴍᴏᴠᴇ 64x ᴀᴍᴏᴜɴᴛ    "
+        - "&7      "
+      slot: 21
+      amount: 1
+      glowing: false
+
+  items:
+    # What are the items that are placed into the GUI to make it more pretty?
+    1:
+      # This is the name of the item.
+      name: " "
+      # This is the item material.
+      material: AIR
+      # This is the data item
+      data: 0
+      # You can add lores!
+      # example of what you can do:
+      # lore:
+      #   - "&bThis is a pane."
+      slot: 0
+      # What is the stack amount?
+      amount: 1
+      # commands that will be executed on click.
+      # [server] means the command is executed as the console
+      # [player] means the command is executed as the player
+      # commands:
+      #   - "[server] msg %player% you clicked this item!"
+      glowing: false
+      # These only work if the skull is a PLAYER_HEAD and the data is 3!
+      #texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTZmOGFmYjI3YmFmYzc3YzJiODI1OTljMmY3YjhmMWY2ODMxMGU2YWE5MDRmMDUxYjA3YWIxYzJiNmIifX19 - Skull texture
+      #owner: Glass - Skull owner

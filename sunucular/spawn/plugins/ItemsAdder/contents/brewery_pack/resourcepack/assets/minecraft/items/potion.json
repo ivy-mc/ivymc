@@ -1,0 +1,326 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "minecraft:item/potion",
+            "tints": [
+                {
+                    "type": "minecraft:potion",
+                    "default": -13083194
+                }
+            ]
+        },
+        "entries": [
+            {
+                "threshold": 27561,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_tea"
+                }
+            },
+            {
+                "threshold": 27562,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_blacktea"
+                }
+            },
+            {
+                "threshold": 27563,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_greentea"
+                }
+            },
+            {
+                "threshold": 27564,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_oolongtea"
+                }
+            },
+            {
+                "threshold": 27565,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_chai"
+                }
+            },
+            {
+                "threshold": 27566,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_herbaltea"
+                }
+            },
+            {
+                "threshold": 27567,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_rooibostea"
+                }
+            },
+            {
+                "threshold": 27568,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_whitetea"
+                }
+            },
+            {
+                "threshold": 27569,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_blossomtea"
+                }
+            },
+            {
+                "threshold": 275610,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_lilactea"
+                }
+            },
+            {
+                "threshold": 275611,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_rosehiptea"
+                }
+            },
+            {
+                "threshold": 275612,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_withertea"
+                }
+            },
+            {
+                "threshold": 275613,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_dandeliontea"
+                }
+            },
+            {
+                "threshold": 275614,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_wort"
+                }
+            },
+            {
+                "threshold": 275615,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_unfiltered"
+                }
+            },
+            {
+                "threshold": 275616,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_wheatbeer"
+                }
+            },
+            {
+                "threshold": 275617,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_meadowmead"
+                }
+            },
+            {
+                "threshold": 275618,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_moonshine"
+                }
+            },
+            {
+                "threshold": 275619,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_potatovodka"
+                }
+            },
+            {
+                "threshold": 275620,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_applevodka"
+                }
+            },
+            {
+                "threshold": 275621,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_redwine"
+                }
+            },
+            {
+                "threshold": 275622,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_whitewine"
+                }
+            },
+            {
+                "threshold": 275623,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_melonwine"
+                }
+            },
+            {
+                "threshold": 275624,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_applewine"
+                }
+            },
+            {
+                "threshold": 275625,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_pumpkinwine"
+                }
+            },
+            {
+                "threshold": 275626,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_sweetvermouth"
+                }
+            },
+            {
+                "threshold": 275627,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_dryvermouth"
+                }
+            },
+            {
+                "threshold": 275628,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_melonvermouth"
+                }
+            },
+            {
+                "threshold": 275629,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_applevermouth"
+                }
+            },
+            {
+                "threshold": 275630,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_pumpkinvermouth"
+                }
+            },
+            {
+                "threshold": 275631,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_applecider"
+                }
+            },
+            {
+                "threshold": 275632,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_meloncider"
+                }
+            },
+            {
+                "threshold": 275633,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_sweetberrycider"
+                }
+            },
+            {
+                "threshold": 275634,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_applebrandy"
+                }
+            },
+            {
+                "threshold": 275635,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_melonbrandy"
+                }
+            },
+            {
+                "threshold": 275636,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_sweetberrybrandy"
+                }
+            },
+            {
+                "threshold": 275637,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_netherwartwine"
+                }
+            },
+            {
+                "threshold": 275638,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_tequila"
+                }
+            },
+            {
+                "threshold": 275639,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_torchedwhiskey"
+                }
+            },
+            {
+                "threshold": 275640,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_gin"
+                }
+            },
+            {
+                "threshold": 275641,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_cavegin"
+                }
+            },
+            {
+                "threshold": 275642,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_absinthe"
+                }
+            },
+            {
+                "threshold": 275643,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_rum"
+                }
+            },
+            {
+                "threshold": 275644,
+                "model": {
+                    "type": "model",
+                    "model": "littleroom_brewerypack:drinks/lrd_bourbon"
+                }
+            }
+        ]
+    }
+}

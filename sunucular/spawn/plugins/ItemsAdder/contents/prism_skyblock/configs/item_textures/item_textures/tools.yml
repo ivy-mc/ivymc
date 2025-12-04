@@ -1,0 +1,234 @@
+info:
+  namespace: prism_skyblock
+items:
+  
+  pickaxe-cobalt:
+    enabled: true   
+    resource:
+      generate: true
+      material: DIAMOND_PICKAXE
+      model_id: 1
+      textures:
+      - item_texture/tools/cobalt_pickaxe.png
+  axe-cobalt:
+    enabled: true   
+    resource:
+      generate: true
+      material: DIAMOND_AXE
+      model_id: 1
+      textures:
+      - item_texture/tools/cobalt_axe.png
+  shovel-cobalt:
+    enabled: true   
+    resource:
+      generate: true
+      material: DIAMOND_SHOVEL
+      model_id: 1
+      textures:
+      - item_texture/tools/cobalt_shovel.png
+  hoe-cobalt:
+    enabled: true   
+    resource:
+      generate: true
+      material: DIAMOND_HOE
+      model_id: 1
+      textures:
+      - item_texture/tools/cobalt_hoe.png
+
+  pickaxe-mithril:
+    enabled: true   
+    resource:
+      generate: true
+      material: DIAMOND_PICKAXE
+      model_id: 2
+      textures:
+      - item_texture/tools/mithril_pickaxe.png
+  axe-mithril:
+    enabled: true   
+    resource:
+      generate: true
+      material: DIAMOND_AXE
+      model_id: 2
+      textures:
+      - item_texture/tools/mithril_axe.png
+  shovel-mithril:
+    enabled: true   
+    resource:
+      generate: true
+      material: DIAMOND_SHOVEL
+      model_id: 2
+      textures:
+      - item_texture/tools/mithril_shovel.png
+  hoe-mithril:
+    enabled: true   
+    resource:
+      generate: true
+      material: DIAMOND_HOE
+      model_id: 2
+      textures:
+      - item_texture/tools/mithril_hoe.png
+
+  pickaxe-soulsteel:
+    enabled: true   
+    resource:
+      generate: true
+      material: DIAMOND_PICKAXE
+      model_id: 3
+      textures:
+      - item_texture/tools/soulsteel_pickaxe.png
+  axe-soulsteel:
+    enabled: true   
+    resource:
+      generate: true
+      material: DIAMOND_AXE
+      model_id: 3
+      textures:
+      - item_texture/tools/soulsteel_axe.png
+  shovel-soulsteel:
+    enabled: true   
+    resource:
+      generate: true
+      material: DIAMOND_SHOVEL
+      model_id: 3
+      textures:
+      - item_texture/tools/soulsteel_shovel.png
+  hoe-soulsteel:
+    enabled: true   
+    resource:
+      generate: true
+      material: DIAMOND_HOE
+      model_id: 3
+      textures:
+      - item_texture/tools/soulsteel_hoe.png
+
+  pickaxe-gilded_netherite:
+    enabled: true   
+    resource:
+      generate: true
+      material: DIAMOND_PICKAXE
+      model_id: 4
+      textures:
+      - item_texture/tools/gilded_netherite_pickaxe.png
+  axe-gilded_netherite:
+    enabled: true   
+    resource:
+      generate: true
+      material: DIAMOND_AXE
+      model_id: 4
+      textures:
+      - item_texture/tools/gilded_netherite_axe.png
+  shovel-gilded_netherite:
+    enabled: true   
+    resource:
+      generate: true
+      material: DIAMOND_SHOVEL
+      model_id: 4
+      textures:
+      - item_texture/tools/gilded_netherite_shovel.png
+  hoe-gilded_netherite:
+    enabled: true   
+    resource:
+      generate: true
+      material: DIAMOND_HOE
+      model_id: 4
+      textures:
+      - item_texture/tools/gilded_netherite_hoe.png
+
+  pickaxe-soul_netherite:
+    enabled: true   
+    resource:
+      generate: true
+      material: DIAMOND_PICKAXE
+      model_id: 5
+      textures:
+      - item_texture/tools/soul_netherite_pickaxe.png
+  axe-soul_netherite:
+    enabled: true   
+    resource:
+      generate: true
+      material: DIAMOND_AXE
+      model_id: 5
+      textures:
+      - item_texture/tools/soul_netherite_axe.png
+  shovel-soul_netherite:
+    enabled: true   
+    resource:
+      generate: true
+      material: DIAMOND_SHOVEL
+      model_id: 5
+      textures:
+      - item_texture/tools/soul_netherite_shovel.png
+  hoe-soul_netherite:
+    enabled: true   
+    resource:
+      generate: true
+      material: DIAMOND_HOE
+      model_id: 5
+      textures:
+      - item_texture/tools/soul_netherite_hoe.png
+
+  pickaxe-warden:
+    enabled: true   
+    resource:
+      generate: true
+      material: DIAMOND_PICKAXE
+      model_id: 6
+      textures:
+      - item_texture/tools/warden_pickaxe.png
+  axe-warden:
+    enabled: true   
+    resource:
+      generate: true
+      material: DIAMOND_AXE
+      model_id: 6
+      textures:
+      - item_texture/tools/warden_axe.png
+  shovel-warden:
+    enabled: true   
+    resource:
+      generate: true
+      material: DIAMOND_SHOVEL
+      model_id: 6
+      textures:
+      - item_texture/tools/warden_shovel.png
+  hoe-warden:
+    enabled: true   
+    resource:
+      generate: true
+      material: DIAMOND_HOE
+      model_id: 6
+      textures:
+      - item_texture/tools/warden_hoe.png
+
+  pickaxe-hextech:
+    enabled: true   
+    resource:
+      generate: true
+      material: DIAMOND_PICKAXE
+      model_id: 7
+      textures:
+      - item_texture/tools/hextech_pickaxe.png
+  axe-hextech:
+    enabled: true   
+    resource:
+      generate: true
+      material: DIAMOND_AXE
+      model_id: 7
+      textures:
+      - item_texture/tools/hextech_axe.png
+  shovel-hextech:
+    enabled: true   
+    resource:
+      generate: true
+      material: DIAMOND_SHOVEL
+      model_id: 7
+      textures:
+      - item_texture/tools/hextech_shovel.png
+  hoe-hextech:
+    enabled: true   
+    resource:
+      generate: true
+      material: DIAMOND_HOE
+      model_id: 7
+      textures:
+      - item_texture/tools/hextech_hoe.png

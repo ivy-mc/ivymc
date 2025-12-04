@@ -1,0 +1,17 @@
+cfitlik_balon:
+  Location: world;64.5;71.0;-116.48;93.27;-1.95
+  DisName: Ciftlik
+  HideFromList: true
+  Creator: 447726a0-b66b-3f0e-a0f7-3d7c9f537a4e
+ciftlik-balon:
+  Location: world;64.47;71.0;-116.48;92.66;-3.45
+  Creator: 447726a0-b66b-3f0e-a0f7-3d7c9f537a4e
+spawn-balon:
+  Location: world;9.47;71.0;0.5;92.51;-2.7
+  Creator: 447726a0-b66b-3f0e-a0f7-3d7c9f537a4e
+gozlem-balon:
+  Location: world;-110.47;74.0;-131.52;88.16;-4.35
+  Creator: 447726a0-b66b-3f0e-a0f7-3d7c9f537a4e
+liman-balon:
+  Location: world;182.56;51.0;-26.24;-178.53;70.19
+  Creator: 447726a0-b66b-3f0e-a0f7-3d7c9f537a4e

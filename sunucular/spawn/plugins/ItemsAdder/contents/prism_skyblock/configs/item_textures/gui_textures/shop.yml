@@ -1,0 +1,21 @@
+info:
+  namespace: prism_skyblock
+items:
+  
+  shop-buy:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 52
+      textures:
+      - interface/gui_textures/shop/buy
+
+  shop-sell:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 53
+      textures:
+      - interface/gui_textures/shop/sell

@@ -1,0 +1,15 @@
+info:
+  namespace: customfishing
+items:
+  splash_water:
+    resource:
+      material: PAPER
+      generate: false
+      model_path: item/util/splash_water
+      model_id: 49998
+  splash_lava:
+    resource:
+      material: PAPER
+      generate: false
+      model_path: item/util/splash_lava
+      model_id: 49999

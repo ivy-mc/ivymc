@@ -1,0 +1,129 @@
+#
+# Example config of one time reward.
+#
+# Decides if rewards will be claimable
+enabled: true
+#
+# Each type of reward has different specifications.
+# All currently supported types can be found on:
+# https://ultimaterewards.athelion.eu/
+#
+type: one_time_reward
+#
+# Reward tag
+#
+tag: One Time Reward
+# If set to true, reward will be removed from GUI
+# after player claims it
+disappear: false
+#
+included-in-auto-claim: true
+#
+# (Optional) Permission which player must have to be
+# able to obtain this reward.
+#
+permission: ultimaterewards.exampleOneTimeReward
+# Notifies players that the reward is currently available
+live-reminder-enabled: true
+#
+# When player has this permission,
+# following properties will be shown.
+#
+# NOTE THAT ITEM & SOUND NAMES ARE SLIGHTLY DIFFERENT BETWEEN >1.12 & 1.13< VERSIONS!
+# SO MAKE SURE YOU ARE USING VALID ITEM NAMES (DEFAULT ONE ARE USED FROM 1.13+ VERSIONS)
+# OTHERWISE WILL BE REPLACED BY STONE IF INVALID NAME IS IN USE.
+#
+# When the reward is currently claimable:
+available-item: CHEST_MINECART
+available-display-name: '&a&lWELCOME BONUS'
+available-lore:
+  - ' '
+  - '&7Contains:'
+  - '&e ➪ 1x Stone Sword'
+  - '&e ➪ 1x Stone Axe'
+  - '&e ➪ 1x Stone Pickaxe'
+  - '&e ➪ 1x Stone Shovel'
+  - '&e ➪ 16x Apple'
+  - '&e ➪ 1x Red Bed'
+  - ' '
+  - '&b► Click to claim'
+# When the reward is already claimed by player:
+unavailable-display-name: "&7&lWELCOME BONUS"
+unavailable-lore:
+  - '&7Welcome bonus was already'
+  - '&7claimed.'
+unavailable-item: MINECART
+#
+# In the other hand when player doesn't have this permission,
+# following properties will be shown.
+#
+no-permission-item: BARRIER
+no-permission-display-name: "&c&l&mWELCOME BONUS"
+no-permission-lore:
+  - "&c ✕ Locked, requires"
+  - "&c   %permission% permission"
+#
+# Commands list that will be executed after player
+# obtains this reward.
+# All available actions can be found on
+# https://ultimaterewards.athelion.eu/
+#
+# Format: () - optional value | [] - required value
+#   [<actionType>] (<chance>):<command>
+#
+# Examples:
+#   - [console] 50:give %player% diamond 1
+#       - this command will have 50%
+#         execution chance due his property value
+#
+#   - [message] "&aYou have claimed your %type% reward!"
+#       - this action will send player a message
+#         with defined content
+#
+# You can also use the random placeholders
+# from randoms.yml file and use it in command.
+# Example:
+#   - give %player% iron_ingot %exampleRandom%
+#       - placeholder will be replaced by
+#         random number from defined interval in randoms.yml
+#
+actions:
+  - '[console] give %player% stone_sword 1'
+  - '[console] give %player% stone_axe 1'
+  - '[console] give %player% stone_pickaxe 1'
+  - '[console] give %player% stone_shovel 1'
+  - '[console] give %player% apple 16'
+  - '[console] give %player% red_bed 1'
+  - '[message] &aWelcome to the server, %player%! I hope these items will assist you in getting started.'
+#
+# Variants for this reward can be added here,
+# if you don't want any, delete the variants section
+#
+# Which variant will be available for player depends on permission
+# You can add as many variants you want
+#
+variants:
+  premium:
+    permission: ultimaterewards.oneTimeRewardExample.premium
+    available-display-name: "&6&lPREMIUM WELCOME BONUS"
+    available-lore:
+      - ' '
+      - '&7Contains:'
+      - '&e ➪ 1x Iron Sword'
+      - '&e ➪ 1x Iron Axe'
+      - '&e ➪ 1x Iron Pickaxe'
+      - '&e ➪ 1x Iron Shovel'
+      - '&e ➪ 32x Apple'
+      - '&e ➪ 1x Red Bed'
+      - ' '
+      - '&6► Click to claim premium version'
+      - '&6   of the reward'
+    actions:
+      - '[console] give %player% iron_sword 1'
+      - '[console] give %player% iron_axe 1'
+      - '[console] give %player% iron_pickaxe 1'
+      - '[console] give %player% iron_shovel 1'
+      - '[console] give %player% apple 32'
+      - '[console] give %player% red_bed 1'
+      - '[firework]'
+      - '[message] &eWelcome to the server, %player%! I hope these items will assist you in getting started.'

@@ -1,0 +1,23 @@
+{
+    "providers": [
+        {
+         "type": "bitmap",
+         "file": "icons:splash/pride.png",
+         "ascent": 12,
+         "height": 12,
+         "chars": [
+            "\uDB80\uDDDC\uDB80\uDDDD\uDB80\uDDDE\uDB80\uDDDF\uDB80\uDDE0",
+            "\uDB80\uDDE1\uDB80\uDDE2\uDB80\uDDE3\uDB80\uDDE4\uDB80\uDDE5"	
+            ]
+        },
+        {
+         "type": "bitmap",
+         "file": "icons:splash/king.png",
+         "ascent": 16,
+         "height": 16,
+         "chars": [
+            "\uDB80\uDDE6"	
+            ]
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+info:
+  namespace: cosmetics
+entities:
+  amogus:
+    display_name: "amogus"
+    type: ARMOR_STAND
+    model_folder: entity/amogus
+    speed:
+      movement: 0.0
+      flying: 0.0
+    max_health: 1
+    shadow: false

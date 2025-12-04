@@ -1,0 +1,93 @@
+info:
+  namespace: prism_skyblock
+items:
+  
+  bank-account:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      textures:
+      - interface/gui_textures/bank/account
+      model_id: 43
+
+  bank-accountupgrade:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      textures:
+      - interface/gui_textures/bank/account_upgrade
+      model_id: 44
+
+  bank-deposit1:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 42
+      textures:
+      - interface/gui_textures/bank/deposit_one
+
+  bank-deposit2:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 45
+      textures:
+      - interface/gui_textures/bank/deposit_two
+
+  bank-deposit3:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 46
+      textures:
+      - interface/gui_textures/bank/deposit_three
+
+  bank-deposit4:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 47
+      textures:
+      - interface/gui_textures/bank/deposit_four
+
+  bank-withdraw1:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 48
+      textures:
+      - interface/gui_textures/bank/withdraw_one
+
+  bank-withdraw2:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 49
+      textures:
+      - interface/gui_textures/bank/withdraw_two
+
+  bank-withdraw3:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 50
+      textures:
+      - interface/gui_textures/bank/withdraw_three
+
+  bank-withdraw4:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 51
+      textures:
+      - interface/gui_textures/bank/withdraw_four

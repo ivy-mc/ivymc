@@ -1,0 +1,176 @@
+#
+#     _     _ _       _                            ______                               _
+#    (_)   (_) |  _  (_)              _           (_____ \                             | |
+#    | |   | |_| |_|_| |___  _____ _| |_ _____    _____) )_____ _ _  _ _ _____  ____ __| |  ___
+#    | |   | | (_   _) |    \(____ (_   _) ___ |  |  __  /| ___ |  |  | (____ |/ ___) _  |/___)
+#    | |___| | | | |_| | | | / /_\_ | | |_| ____| | |  \ \|____|  |  | / /_\ | |  ( (_| |___ |
+#    \_____/ \_) \__)_|_|_|_\_|  |_|  \__)_____)  |_|   |_|_____)\___/\_|  |_|_|   \____(___/
+#
+#   Language Configuration
+#
+prefix: '&6&lULTIMATEREWARDS&7 ⏵'
+reload-message: '%prefix% &aPlugin''s configuration has been reloaded!'
+unknown-command: '%prefix% &4Unknown command, use /rw help to list all available commands'
+insufficient-permissions-message: '%prefix% &cYou need %permission% permission to perform this action!'
+correct-usage-of-command: '%prefix% &cCorrect usage of the command: &4%usage%'
+unavailable-player-message: '%prefix% &cPlayer not available!'
+unavailable-reward-message: '%prefix% &cThe reward with the name ''%name%'' doesn''t exist!'
+unavailable-gui-message: '%prefix% &cThe GUI with the name ''%name%'' doesn''t exist!'
+account-not-synced-with-discord: '%prefix% &cYou need to sync your account with Discord!'
+account-not-boosting-discord: '%prefix% &cBoosting the Discord server is required.!'
+try-to-claim-in-disabled-world: '%prefix% &cReward %tag% can''t be claimed in this (%world%) world.'
+not-enough-free-slots-in-inventory: '%prefix% &cYou need to have %slots% free slots in your inventory to claim this reward!'
+reached-ip-limit: '%prefix% &cYou can not claim rewards because you have reached number of accounts
+  on same IP limit (%limit%)!'
+click-to-perform: '&7Click to perform %command% command'
+
+discord-logging-title: Reward Claiming
+discord-logging-description: Player `%player%` has claimed `%reward%` reward!
+
+claim-command-description: Claims stated reward
+available-command-description: Shows all redeemable rewards
+help-command-description: Shows all available commands
+toggle-command-description: Toggles specific setting
+reset-command-description: Resets the cooldown of specific reward
+open-command-description: Opens specific menu
+test-command-description: Tests the actions of specific reward
+convert-command-description: Converts data from local files to the database and vice versa
+reload-command-description: Reloads configuration and lang files
+about-command-description: Shows some information about the plugin
+
+proceed-vote-command-description: Proceeds vote for specific player
+vote-reset-command-description: Resets player's amount of votes
+
+referral-reset-command-description: Resets the referring player for player
+referral-apply-command-description: Applies referral
+referral-create-command-description: Creates a referral
+
+successfully-referred: '%prefix% &aYou have successfully referred the player %player%!'
+already-referred: '%prefix% &cYou are already referred to the player %player%!'
+player-does-not-have-referral: '%prefix% &cPlayer %player% doesn''t have a referral to apply!'
+referral-created: '%prefix% &aReferral created! From now on, you can invite players to activate the
+  code which is your name, and you will receive a reward!'
+referral-already-created: '%prefix% &cYou''ve already created your referral!'
+referral-reset: '%prefix% &aYou have reset the player that %player% being referred to.'
+referral-write-player-name: '&a► Write the players name that you want to refer to'
+referral-same-ip: '%prefix% &cYou can not apply referral from this player!'
+refer-player-unavailable: '%prefix% &cYou can''t refer to the player %player% due to their unavailability!'
+own-referral: '%prefix% &cYou can''t refer yourself!'
+referral-input-text: Enter Nickname
+
+referral-help-command:
+- ' '
+- '&8 - &fUltimate&lRewards&8 - &eReferral Help'
+- '&7  A player can refer another to obtain'
+- '&7  cool rewards by command:'
+- '&2   • &a/referral apply <player>'
+- ' '
+- '&7  Also player can have its own referral,'
+- '&7  the command to do so:'
+- '&2   • &a/referral create'
+- ' '
+
+referrals-uses-placeholder-not-created: '&cYou haven''t created a referral'
+referrals-uses-placeholder-zero: '&eSo far no one'
+rewards-available-placeholder-zero: '&eYou''ve claimed all the rewards for today'
+
+vote-command:
+- ' '
+- '&8 - &fUltimate&lRewards&8 - &eVotes'
+- '&7  You can vote on several sites:'
+- '&a   1) &fhttps://example.com/'
+- '&a   2) &fhttps://coolwebsite.com/'
+- '&8     by clicking on the link you will'
+- '&8     be redirected to the page'
+- ' '
+
+proceeded-vote: '%prefix% &aSuccessfully proceeded vote for %player%.'
+votes-reset: '%prefix% &aVotes has been reset for player %player%.'
+
+# Used for the placeholder %ultimaterewards_cooldown_{rewardName}%
+# to indicate the current status of the reward
+claimable: '&a✓ Claimable'
+unavailable: '&c✖ Unavailable'
+no-permission: '&cNo Permission'
+loading: '&b&oLoading...'
+
+reward-is-already-claimed: '%prefix% &cThe %reward% has already been claimed!'
+reward-collect-unavailable-message: '%prefix% &cYou can''t collect your reward yet.'
+reward-not-eligible-due-max-play-time: '%prefix% &cYou are no longer eligible for this reward!'
+reward-variant-no-permission: '%prefix% &cYou don''t have permission %permission% for this variant of reward!'
+reward-is-under-cooldown-message: '%prefix% &cThe %reward% is currently unavailable. You need to wait %cooldown%!'
+reward-successfully-reset-message: '%prefix% &aThe reward %reward% has been reset for %player%!'
+all-rewards-successfully-reset-message: '%prefix% &aRewards (%amount%) have been reset for %player% player'
+reward-successfully-reset-for-all-players: '%prefix% &aReward %reward% has been reset for all the players!'
+reward-successfully-reset-for-online-players: '%prefix% &aReward %reward% has been reset for all the online players!'
+reward-successfully-claimed-for-player: '%prefix% &aYou have claimed the %reward% reward for %player%.'
+
+unclaimed-rewards-notification:
+- ' '
+- '&aHey %player%, you have %rewards% unclaimed reward(s). &7►&f Click &7◄'
+- ' '
+unclaimed-rewards-notification-hover-text: '&2► Available rewards: &a%listOfRewards%'
+
+join-auto-claimed-notification:
+- ' '
+- '&a ✔ Following reward(s) has been auto-claimed: &f%listOfRewards%'
+- ' '
+join-auto-claim-full-inventory: '%prefix% &cThe following reward(s) could not be claimed because you do not have enough
+  space in your inventory: &4%listOfRewards%'
+
+live-auto-claim-notification:
+- ' '
+- '&a ✔ %reward% has been successfully auto-claimed!'
+- ' '
+live-auto-claim-notification-hover-text: '&2%reward% was obtained via auto-claim'
+
+live-notification-for-reward:
+- ' '
+- '&a ➔ %reward% is now available to be claimed! &7►&f Click &7◄'
+- ' '
+live-notification-for-reward-hover-text: '&2► Click to claim %reward%'
+
+multiple-live-notification-for-reward:
+- ' '
+- '&a &l➔&a Multiple rewards &f(%amount%)&a are available to claim! &7►&f Click &7◄'
+- ' '
+live-notification-for-multiple-rewards-hover-text: '&2► Click to redeem'
+
+auto-claim-failed: '%prefix% &cSome rewards could not be auto claimed, hover for details.'
+auto-claim-failed-hover-text-list-format: '%reward% - %reason%'
+auto-claim-failed-hover-text: '&cFollowing rewards cannot be auto claimed: %format%'
+
+discord-sync-required: Discord sync required
+discord-boost-required: Requires boosting discord server
+located-in-restricted-world: Unavailable in this world
+insufficient-play-time: Insufficient play-time
+short-session-play-time: Short session play-time
+not-enough-free-inventory-slots: Limited inventory space
+
+invalid-setting-type: '&cThis setting does not exist!'
+join-notification-setting-name: Join Notification
+live-notification-setting-name: Live Notifications
+join-auto-claim-setting-name: Join Auto Claim
+live-auto-claim-setting-name: Live Auto Claim
+setting-enabled: '%prefix% &aSetting %setting% has been enabled!'
+setting-disabled: '%prefix% &cSetting %setting% has been disabled!'
+no-permission-setting-display-name: '&c&l%settingType%'
+no-permission-setting-lore:
+- '&cYou can not toggle this type of setting!'
+- '&cMissing permission: %permission%'
+
+gui-successfully-opened-for-player: '%prefix% &aThe %reward% GUI has been opened for the player %player%.'
+
+not-enough-required-time-to-claim: '%prefix% &cYou must spend at least %requiredMinutes% minutes on the server before
+  you can collect rewards (%minutes% minutes remaining).'
+not-enough-session-required-time-to-claim: '%prefix% &cYour current session must have at least %requiredMinutes% minutes before
+  you can collect rewards (%minutes% minutes remaining).'
+not-enough-play-time-to-create-referral: '%prefix% &cYou must spend at least %requiredMinutes% minutes on the server before
+  you can create referral (%minutes% minutes remaining).'
+maximum-playtime-to-refer-reached: '%prefix% &cReferral can only be redeemed for %minutes% minutes after the first connection!'
+
+invalid-number: '%prefix% &c%input% isn''t valid number!'
+negative-number: '%prefix% &cNumber must be positive!'
+specify-streak: '%prefix% &cYou need to specify streak/day of the reward!'
+
+available-rewards-title: You have %amount% available rewards

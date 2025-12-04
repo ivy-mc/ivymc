@@ -1,0 +1,20 @@
+info:
+  namespace: prism_skyblock
+items:
+
+  friends-add:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 18
+      textures:
+      - interface/gui_textures/friends/add_friend
+  friends-leave:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 19
+      textures:
+      - interface/gui_textures/friends/leave

@@ -1,0 +1,48 @@
+info:
+  namespace: prism_skyblock
+items:
+  
+  button-settings:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 1
+      textures:
+      - interface/gui_textures/main_menu/button_settings
+
+  button-discord:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 2
+      textures:
+      - interface/gui_textures/main_menu/button_discord
+
+  button-store:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 3
+      textures:
+      - interface/gui_textures/main_menu/button_store
+
+  button-friends:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 4
+      textures:
+      - interface/gui_textures/main_menu/button_friends
+
+  slot-nothing:
+    enabled: true
+    resource:
+      generate: true
+      material: BARRIER
+      model_id: 1
+      textures:
+      - air

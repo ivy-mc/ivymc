@@ -1,0 +1,89 @@
+#
+# Example config of an area afk reward.
+#
+# Decides if rewards will be claimable
+enabled: true
+#
+# Each type of reward has different specifications.
+# All currently supported types can be found on:
+# https://ultimaterewards.athelion.eu/
+#
+type: area_afk_reward
+#
+# Reward tag
+#
+tag: Area Afk Reward
+# Area (region) where the AFK time is computed.
+area:
+  first-corner-location:
+  second-corner-location:
+# Required AFK time to obtain reward (in minutes)
+required-time: 2
+# Should the progress reset if the
+# player leave the world?
+reset-on-leave: true
+#
+# (Optional) Permission which player must have to be
+# able to obtain this reward.
+#
+permission: ultimaterewards.exampleAreaAfkReward
+#
+# When player has this permission,
+# following properties will be shown.
+#
+# When the reward is currently claimable:
+enter-actions:
+  - "[subtitle] &aEntered AFK area!"
+quit-actions:
+  - "[subtitle] &cLeft AFK area"
+progress-actions:
+ # - "[actionbar] &eNext Reward: %progress%" actionbar is available only in 1.12< versions
+  - "[subtitle] &eNext Reward: %progress%"
+#
+# Commands list that will be executed after player
+# obtains this reward.
+# All available actions can be found on
+# https://ultimaterewards.athelion.eu/
+#
+# Format: () - optional value | [] - required value
+#   [<actionType>] (<chance>):<command>
+#
+# Examples:
+#   - [console] 50:give %player% diamond 1
+#       - this command will have 50%
+#         execution chance due his property value
+#
+#   - [message] "&aYou have claimed your %type% reward!"
+#       - this action will send player a message
+#         with defined content
+#
+# You can also use the random placeholders
+# from randoms.yml file and use it in command.
+# Example:
+#   - give %player% iron_ingot %exampleRandom%
+#       - placeholder will be replaced by
+#         random number from defined interval in randoms.yml
+#
+actions:
+  - '[console] give %player% gold_nugget 1 '
+  - '[sound] BLOCK_NOTE_PLING'
+  - '[subtitle] &aYou have received a reward!'
+#
+# Variants for this reward can be added here,
+# if you don't want any, delete the variants section
+#
+# Which variant will be available for player depends on permission
+# You can add as many variants you want
+#
+variants:
+  premium:
+    permission: ultimaterewards.exampleAreaAfkReward.premium
+    actions:
+      80:
+        - '[console] give %player% gold_ingot 1'
+        - '[subtitle] &eYou have received a premium reward!'
+      20:
+        - '[console] give %player% gold_ingot 1'
+        - '[firework] colors:{FF0000;00FF00;0000FF},type:BALL_LARGE,power:3'
+        - '[message] &6&lWOW! You are a lucky player, received 1 diamond!'
+        - '[console] give %player% diamond 1'

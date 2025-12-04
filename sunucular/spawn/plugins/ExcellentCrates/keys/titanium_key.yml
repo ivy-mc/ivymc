@@ -1,0 +1,8 @@
+Name: <white>Lava Key
+Virtual: false
+ItemData:
+  Type: VANILLA
+  Tag:
+    Value: '{components:{"minecraft:custom_data":{itemsadder:{id:"elite_crates_lava_key",namespace:"elitecreatures"}},"minecraft:custom_model_data":{floats:[10133.0f]},"minecraft:custom_name":{color:"white",italic:0b,text:"Lava Key"},"minecraft:item_name":{color:"white",italic:0b,text:"Lava Key"}},count:1,id:"minecraft:paper"}'
+    DataVersion: 4438
+ItemStackable: true

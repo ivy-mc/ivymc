@@ -1,0 +1,10 @@
+current-color: 'ᴄᴜʀʀᴇɴᴛ ᴄᴏʟᴏʀ: {value}'
+cosmetic-icon-lore-not-owned: '&cʟᴏᴄᴋᴇᴅ'
+cosmetic-icon-lore-equip: ʟᴇꜰᴛ-ᴄʟɪᴄᴋ ᴛᴏ ᴇǫᴜɪᴘ
+cosmetic-icon-lore-unequip: ʟᴇꜰᴛ-ᴄʟɪᴄᴋ ᴛᴏ ᴜɴᴇǫᴜɪᴘ
+cosmetic-icon-lore-customize: ʀɪɢʜᴛ-ᴄʟɪᴄᴋ ᴛᴏ ᴄᴜѕᴛᴏᴍɪᴢᴇ
+message-warning-hidden-hat-creative: '&6Hat hidden while in creative mode to avoid
+  duplication issues.'
+message-no-permission: '&cYou don''t have permission to do that.'
+message-command-disabled-in-wardrobe: '&cThis command is disabled while in the wardrobe.'
+message-item-cannot-be-colored: '&cThis item cannot be colored.'

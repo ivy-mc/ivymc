@@ -1,0 +1,145 @@
+info:
+  namespace: prism_skyblock
+font_images:
+  
+  title-draedon1:
+    symbol: ꁘ
+    path: interface/titles/draedon1.png
+    y_position: 8
+    scale_ratio: 20
+    permission: somerandom.perm
+  title-draedon2:
+    symbol: ꁙ
+    path: interface/titles/draedon2.png
+    y_position: 8
+    scale_ratio: 20
+    permission: somerandom.perm
+  title-draedon3:
+    symbol: ꁚ
+    path: interface/titles/draedon3.png
+    y_position: 8
+    scale_ratio: 20
+    permission: somerandom.perm
+  title-draedon4:
+    symbol: ꁛ
+    path: interface/titles/draedon4.png
+    y_position: 8
+    scale_ratio: 20
+    permission: somerandom.perm
+  title-draedon5:
+    symbol: ꁜ
+    path: interface/titles/draedon5.png
+    y_position: 8
+    scale_ratio: 20
+    permission: somerandom.perm
+  title-draedon6:
+    symbol: ꁝ
+    path: interface/titles/draedon6.png
+    y_position: 8
+    scale_ratio: 20
+    permission: somerandom.perm
+
+  title-dungeoncompleted1:
+    symbol: ꃓ
+    path: interface/titles/dungeoncompleted1.png
+    y_position: 8
+    scale_ratio: 20
+    permission: somerandom.perm
+  title-dungeoncompleted2:
+    symbol: ꃔ
+    path: interface/titles/dungeoncompleted2.png
+    y_position: 8
+    scale_ratio: 20
+    permission: somerandom.perm
+  title-dungeoncompleted3:
+    symbol: ꃕ
+    path: interface/titles/dungeoncompleted3.png
+    y_position: 8
+    scale_ratio: 20
+    permission: somerandom.perm
+  title-dungeoncompleted4:
+    symbol: ꃖ
+    path: interface/titles/dungeoncompleted4.png
+    y_position: 8
+    scale_ratio: 20
+    permission: somerandom.perm
+  title-dungeoncompleted5:
+    symbol: ꃗ
+    path: interface/titles/dungeoncompleted5.png
+    y_position: 8
+    scale_ratio: 20
+    permission: somerandom.perm
+  title-dungeoncompleted6:
+    symbol: ꃘ
+    path: interface/titles/dungeoncompleted6.png
+    y_position: 8
+    scale_ratio: 20
+    permission: somerandom.perm
+  title-dungeoncompleted7:
+    symbol: ꃙ
+    path: interface/titles/dungeoncompleted7.png
+    y_position: 8
+    scale_ratio: 20
+    permission: somerandom.perm
+  title-dungeoncompleted8:
+    symbol: ꃚ
+    path: interface/titles/dungeoncompleted8.png
+    y_position: 8
+    scale_ratio: 20
+    permission: somerandom.perm
+
+  title-grimoireacquired1:
+    symbol: ꃃ
+    path: interface/titles/grimoireacquired1.png
+    y_position: 8
+    scale_ratio: 20
+    permission: somerandom.perm
+  title-grimoireacquired2:
+    symbol: ꃄ
+    path: interface/titles/grimoireacquired2.png
+    y_position: 8
+    scale_ratio: 20
+    permission: somerandom.perm
+  title-grimoireacquired3:
+    symbol: ꃅ
+    path: interface/titles/grimoireacquired3.png
+    y_position: 8
+    scale_ratio: 20
+    permission: somerandom.perm
+  title-grimoireacquired4:
+    symbol: ꃆ
+    path: interface/titles/grimoireacquired4.png
+    y_position: 8
+    scale_ratio: 20
+    permission: somerandom.perm
+  title-grimoireacquired5:
+    symbol: ꃇ
+    path: interface/titles/grimoireacquired5.png
+    y_position: 8
+    scale_ratio: 20
+    permission: somerandom.perm
+  title-grimoireacquired6:
+    symbol: ꃈ
+    path: interface/titles/grimoireacquired6.png
+    y_position: 8
+    scale_ratio: 20
+    permission: somerandom.perm
+  title-grimoireacquired7:
+    symbol: ꃉ
+    path: interface/titles/grimoireacquired7.png
+    y_position: 8
+    scale_ratio: 20
+    permission: somerandom.perm
+  title-grimoireacquired8:
+    symbol: ꃊ
+    path: interface/titles/grimoireacquired8.png
+    y_position: 8
+    scale_ratio: 20
+    permission: somerandom.perm
+
+  title-welcome1:
+    symbol: ꁤ
+    path: interface/titles/welcome.png
+    y_position: 8
+    scale_ratio: 20
+    permission: somerandom.perm

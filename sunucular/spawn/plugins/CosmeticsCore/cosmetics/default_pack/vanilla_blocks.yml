@@ -1,0 +1,262 @@
+cosmetics:
+  balloon_diamond_block:
+    enabled: true
+    display_name: "Diamond Block"
+    type: BALLOON
+    model:
+      gui: DIAMOND_BLOCK
+      normal: DIAMOND_BLOCK
+  balloon_gold_block:
+    enabled: true
+    display_name: "Gold Block"
+    type: BALLOON
+    model:
+      gui: GOLD_BLOCK
+      normal: GOLD_BLOCK
+  balloon_emerald_block:
+    enabled: true
+    display_name: "Emerald Block"
+    type: BALLOON
+    model:
+      gui: EMERALD_BLOCK
+      normal: EMERALD_BLOCK
+  balloon_redstone_block:
+    enabled: true
+    display_name: "Redstone Block"
+    type: BALLOON
+    model:
+      gui: REDSTONE_BLOCK
+      normal: REDSTONE_BLOCK
+  balloon_lapis_block:
+    enabled: true
+    display_name: "Lapis Lazuli Block"
+    type: BALLOON
+    model:
+      gui: LAPIS_BLOCK
+      normal: LAPIS_BLOCK
+  balloon_iron_block:
+    enabled: true
+    display_name: "Iron Block"
+    type: BALLOON
+    model:
+      gui: IRON_BLOCK
+      normal: IRON_BLOCK
+  balloon_netherite_block:
+    enabled: true
+    display_name: "Netherite Block"
+    type: BALLOON
+    model:
+      gui: NETHERITE_BLOCK
+      normal: NETHERITE_BLOCK
+  balloon_quartz_block:
+    enabled: true
+    display_name: "Quartz Block"
+    type: BALLOON
+    model:
+      gui: QUARTZ_BLOCK
+      normal: QUARTZ_BLOCK
+  balloon_coal_block:
+    enabled: true
+    display_name: "Coal Block"
+    type: BALLOON
+    model:
+      gui: COAL_BLOCK
+      normal: COAL_BLOCK
+  balloon_grass_block:
+    enabled: true
+    display_name: "Grass Block"
+    type: BALLOON
+    model:
+      gui: GRASS_BLOCK
+      normal: GRASS_BLOCK
+  balloon_dirt:
+    enabled: true
+    display_name: "Dirt"
+    type: BALLOON
+    model:
+      gui: DIRT
+      normal: DIRT
+  balloon_stone:
+    enabled: true
+    display_name: "Stone"
+    type: BALLOON
+    model:
+      gui: STONE
+      normal: STONE
+  balloon_cobblestone:
+    enabled: true
+    display_name: "Cobblestone"
+    type: BALLOON
+    model:
+      gui: COBBLESTONE
+      normal: COBBLESTONE
+  balloon_sand:
+    enabled: true
+    display_name: "Sand"
+    type: BALLOON
+    model:
+      gui: SAND
+      normal: SAND
+  balloon_gravel:
+    enabled: true
+    display_name: "Gravel"
+    type: BALLOON
+    model:
+      gui: GRAVEL
+      normal: GRAVEL
+  balloon_oak_planks:
+    enabled: true
+    display_name: "Oak Planks"
+    type: BALLOON
+    model:
+      gui: OAK_PLANKS
+      normal: OAK_PLANKS
+  balloon_bricks:
+    enabled: true
+    display_name: "Bricks"
+    type: BALLOON
+    model:
+      gui: BRICKS
+      normal: BRICKS
+  balloon_sponge:
+    enabled: true
+    display_name: "Sponge"
+    type: BALLOON
+    model:
+      gui: SPONGE
+      normal: SPONGE
+  balloon_melon:
+    enabled: true
+    display_name: "Melon"
+    type: BALLOON
+    model:
+      gui: MELON
+      normal: MELON
+  balloon_hay_block:
+    enabled: true
+    display_name: "Hay Bale"
+    type: BALLOON
+    model:
+      gui: HAY_BLOCK
+      normal: HAY_BLOCK
+  balloon_bookshelf:
+    enabled: true
+    display_name: "Bookshelf"
+    type: BALLOON
+    model:
+      gui: BOOKSHELF
+      normal: BOOKSHELF
+  balloon_crafting_table:
+    enabled: true
+    display_name: "Crafting Table"
+    type: BALLOON
+    model:
+      gui: CRAFTING_TABLE
+      normal: CRAFTING_TABLE
+
+  balloon_netherrack:
+    enabled: true
+    display_name: "Netherrack"
+    type: BALLOON
+    model:
+      gui: NETHERRACK
+      normal: NETHERRACK
+  balloon_basalt:
+    enabled: true
+    display_name: "Basalt"
+    type: BALLOON
+    model:
+      gui: BASALT
+      normal: BASALT
+  balloon_polished_basalt:
+    enabled: true
+    display_name: "Polished Basalt"
+    type: BALLOON
+    model:
+      gui: POLISHED_BASALT
+      normal: POLISHED_BASALT
+  balloon_blackstone:
+    enabled: true
+    display_name: "Blackstone"
+    type: BALLOON
+    model:
+      gui: BLACKSTONE
+      normal: BLACKSTONE
+  balloon_crimson_nylium:
+    enabled: true
+    display_name: "Crimson Nylium"
+    type: BALLOON
+    model:
+      gui: CRIMSON_NYLIUM
+      normal: CRIMSON_NYLIUM
+  balloon_warped_nylium:
+    enabled: true
+    display_name: "Warped Nylium"
+    type: BALLOON
+    model:
+      gui: WARPED_NYLIUM
+      normal: WARPED_NYLIUM
+  balloon_glowstone:
+    enabled: true
+    display_name: "Glowstone"
+    type: BALLOON
+    model:
+      gui: GLOWSTONE
+      normal: GLOWSTONE
+  balloon_magma_block:
+    enabled: true
+    display_name: "Magma Block"
+    type: BALLOON
+    model:
+      gui: MAGMA_BLOCK
+      normal: MAGMA_BLOCK
+  balloon_soul_sand:
+    enabled: true
+    display_name: "Soul Sand"
+    type: BALLOON
+    model:
+      gui: SOUL_SAND
+      normal: SOUL_SAND
+  balloon_soul_soil:
+    enabled: true
+    display_name: "Soul Soil"
+    type: BALLOON
+    model:
+      gui: SOUL_SOIL
+      normal: SOUL_SOIL
+
+  balloon_end_stone:
+    enabled: true
+    display_name: "End Stone"
+    type: BALLOON
+    model:
+      gui: END_STONE
+      normal: END_STONE
+  balloon_purpur_block:
+    enabled: true
+    display_name: "Purpur Block"
+    type: BALLOON
+    model:
+      gui: PURPUR_BLOCK
+      normal: PURPUR_BLOCK
+  balloon_end_bricks:
+    enabled: true
+    display_name: "End Stone Bricks"
+    type: BALLOON
+    model:
+      gui: END_STONE_BRICKS
+      normal: END_STONE_BRICKS
+  balloon_obsidian:
+    enabled: true
+    display_name: "Obsidian"
+    type: BALLOON
+    model:
+      gui: OBSIDIAN
+      normal: OBSIDIAN
+  balloon_crying_obsidian:
+    enabled: true
+    display_name: "Crying Obsidian"
+    type: BALLOON
+    model:
+      gui: CRYING_OBSIDIAN
+      normal: CRYING_OBSIDIAN

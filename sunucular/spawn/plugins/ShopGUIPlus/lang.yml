@@ -1,0 +1,170 @@
+PREFIX: '&fᵎ #ADE159'
+LANG:
+  CONSOLE: Konsol
+MSG:
+  AND: ' ve '
+  ERROR: Bir hata oluştu, lütfen sunucu sahibiyle iletişime geçin.
+  INGAMEONLY: Bu komut sadece oyun içinde kullanılabilir.
+  NOACCESS: Bunu yapmak için yetkiniz yok.
+  NOTLOADED: Mağazalar henüz yüklenmedi, lütfen daha sonra tekrar deneyin.
+  RELOADED: Yapılandırma yeniden yüklendi!
+  USAGE:
+    SUBCOMMAND: 'Geçersiz komut kullanımı. Doğru kullanım: %usage%'
+  CMD:
+    SHOP:
+      ADDMODIFIER:
+        ITEM:
+          USAGE: /shop addmodifier item <oyuncu> <mağaza> <eşya> <değer> [satın al|sat]
+          ADDED: '&7%player%#ADE159 oyuncusunun %shop% mağazasındaki %item% eşyası
+            için %type% fiyat değiştirgesini &7%modifier%#ADE159 olarak ayarladınız.'
+          ADDEDBY: '%shop% mağazasındaki %item% eşyası için %type% fiyat değiştirgeniz
+            &7%player%#ADE159 tarafından &7%modifier%#ADE159 olarak ayarlandı.'
+        SHOP:
+          USAGE: /shop addmodifier shop <oyuncu> <mağaza> <değer> [satın al|sat]
+          ADDED: '&7%player%#ADE159 oyuncusunun %shop% mağazasındaki tüm eşyalar için
+            %type% fiyat değiştirgesini &7%modifier%#ADE159 olarak ayarladınız.'
+          ADDEDBY: '%shop% mağazasındaki tüm eşyalar için %type% fiyat değiştirgeniz
+            &7%player%#ADE159 tarafından &7%modifier%#ADE159 olarak ayarlandı.'
+        GLOBAL:
+          USAGE: /shop addmodifier global <oyuncu> <değer> [satın al|sat]
+          ADDED: '&7%player%#ADE159 oyuncusunun %type% fiyat değiştirgesini &7%modifier%#ADE159
+            olarak ayarladınız.'
+          ADDEDBY: '%type% fiyat değiştirgeniz &7%player%#ADE159 tarafından &7%modifier%#ADE159
+            olarak ayarlandı.'
+      CHECK:
+        ITEM: Bu eşyanın türü &7%material%#ADE159 ve hasarı &7%damage%#ADE159.
+        NOITEM: Türünü kontrol etmek için elinizde bir eşya tutmanız gerekiyor.
+      CHECKMODIFIERS:
+        VIEW:
+          VIEW: |-
+            &7%player%#ADE159 oyuncusunun komut değiştirgenleri:
+            Küresel değiştirgenler:
+            %global%
+            Mağaza değiştirgenleri:
+            %shop%
+            Eşya değiştirgenleri:
+            %item%
+          VIEWPERMISSIONMODIFIERS: |-
+            &7%player%#ADE159 oyuncusunun izin değiştirgenleri:
+            Küresel değiştirgenler:
+            %global%Mağaza değiştirgenleri:
+            %shop%
+            Eşya değiştirgenleri:
+            %item%
+          ENTRY:
+            ITEM: 'Eşya: &7%item%#ADE159, mağaza: &7%shop%#ADE159, satın alma: &7%buy%#ADE159,
+              satış: &7%sell%#ADE159'
+            SHOP: 'Mağaza: &7%shop%#ADE159, satın alma: &7%buy%#ADE159, satış: &7%sell%#ADE159'
+            GLOBAL: 'Satın alma: &7%buy%#ADE159, satış: &7%sell%#ADE159'
+      RESETMODIFIER:
+        ITEM:
+          USAGE: /shop resetmodifier item <oyuncu> <mağaza> <eşya> [satın al|sat]
+          RESET: '&7%player%#ADE159 oyuncusunun %shop% mağazasındaki %item% eşyası
+            için %type% fiyat değiştirgesini sıfırladınız.'
+          RESETBY: '%shop% mağazasındaki %item% eşyası için %type% fiyat değiştirgeniz
+            &7%player%#ADE159 tarafından sıfırlandı.'
+        SHOP:
+          USAGE: /shop resetmodifier shop <oyuncu> <mağaza> [satın al|sat]
+          RESET: '&7%player%#ADE159 oyuncusunun %shop% mağazasındaki tüm eşyalar için
+            %type% fiyat değiştirgesini sıfırladınız.'
+          RESETBY: '%shop% mağazasındaki tüm eşyalar için %type% fiyat değiştirgeniz
+            &7%player%#ADE159 tarafından sıfırlandı.'
+        GLOBAL:
+          USAGE: /shop resetmodifier global <oyuncu> [satın al|sat]
+          RESET: '&7%player%#ADE159 oyuncusunun %type% fiyat değiştirgesini sıfırladınız.'
+          RESETBY: '%type% fiyat değiştirgeniz &7%player%#ADE159 tarafından sıfırlandı.'
+  MODIFIER:
+    INVALIDAMOUNT: Geçersiz değiştirgen değeri belirtildi. Geçerli değerler örneğin
+      %50 için 0.50, %200 için 2.0 vb.
+    INVALIDTYPE: Geçersiz değiştirgen türü belirtildi. Geçerli değerler satın al,
+      sat ve her ikisi.
+    BUY: satın al
+    SELL: sat
+    BOTH: satın al ve sat
+  INVALIDPLAYER: Geçersiz oyuncu adı belirtildi.
+  INVALIDSHOP: '&7%shop%#ADE159 ID''li mağaza bulunamadı.'
+  INVALIDITEM: '&7%item%#ADE159 ID''li eşya &7%shop%#ADE159 içinde bulunamadı.'
+  NOACCESSTOSHOP: '&7%shop%#ADE159 mağazasına erişim yetkiniz yok.'
+  NODIRECTACCESSTOSHOP: '&7%shop%#ADE159 mağazasına erişemezsiniz.'
+  MAINMENUDISABLED: Bu komutu kullanamazsınız. Lütfen bunun yerine /shop <id> kullanın.
+  WORLDBLACKLISTED: Bu dünyada %shop% mağazasına erişemezsiniz.
+  WORLDBANNED: Bu dünyada mağazaya erişemezsiniz.
+  WORLDBANNEDTARGET: '%player% o dünyada mağazaya erişemiyor.'
+  GAMEMODEBANNED: '%gamemode% oyun modundayken mağazaya erişemezsiniz.'
+  GAMEMODEBANNEDTARGET: '%player% oyuncu %gamemode% oyun modundayken mağazaya erişemiyor.'
+  ITEM:
+    FULLINVENTORY: Envanterinizde yeterli boş alan yok.
+    CANNOTAFFORD: '&7%amount% x %item%#ADE159 satın almak için &7%price%#ADE159 gerekiyor.'
+    CANNOTBUY: Bu eşyayı satın alamazsınız.
+    CANNOTSELL: Bu eşyayı satamazsınız.
+    BOUGHT: '&7%amount% x %item%#ADE159 eşyasını &7%price%#ADE159 karşılığında satın
+      aldınız.'
+    BOUGHTFREE: '&7%amount% x %item%#ADE159 aldınız.'
+    NOTENOUGH: Satmak için &7%amount% x %item%#ADE159 eşyanız yok.
+    SOLD: '&7%amount% x %item%#ADE159 eşyasını &7%price%#ADE159 karşılığında sattınız.'
+    SOLDFREE: '&7%amount% x %item%#ADE159 eşyasını verdiniz.'
+    SOLDALL: Tüm &7%item%#ADE159 eşyalarını (&7%amount% x %item%#ADE159) &7%price%#ADE159
+      karşılığında sattınız.
+    SOLDALLFREE: Tüm &7%item%#ADE159 eşyalarını (&7%amount% x %item%#ADE159) verdiniz.
+    NOACCESS: Bu eşyaya erişim yetkiniz yok.
+  ENCHANT:
+    CANNOTAPPLY: '&7%enchantment%#ADE159 büyüsü elinizde tuttuğunuz eşyaya uygulanamaz.'
+    ALREADYAPPLIED: Bu eşyaya zaten &7%enchantment%#ADE159 uygulanmış.
+    LEVELDIFF: En az &7%enchantment% %level%#ADE159 uygulanmış bir eşyaya ihtiyacınız
+      var.
+    CANNOTAFFORD: '&7%enchantment%#ADE159 satın almak için &7%price%#ADE159 gerekiyor.'
+    MAX: Bu eşyada zaten maksimum sayıda büyü var (%amount%).
+    TOOMANY: Aynı anda %amount% eşyadan fazlasını büyüleyemezsiniz.
+    BOUGHT: '&7%enchantment%#ADE159 büyüsünü &7%price%#ADE159 karşılığında satın aldınız.'
+    BOUGHTFREE: '&7%enchantment%#ADE159 aldınız.'
+  PERMISSION:
+    PERMISSIONSDISABLED: İzinler devre dışı, lütfen sunucu sahibiyle iletişime geçin.
+    ALREADYHAVE: '&7%permission%#ADE159 iznine zaten sahipsiniz.'
+    CANNOTAFFORD: '&7%permission%#ADE159 satın almak için &7%price%#ADE159 gerekiyor.'
+    BOUGHT: '&7%permission%#ADE159 iznini &7%price%#ADE159 karşılığında satın aldınız.'
+    BOUGHTFREE: '&7%permission%#ADE159 aldınız.'
+  COMMAND:
+    BOUGHT: '&7%command%#ADE159 komutunu &7%price%#ADE159 karşılığında satın aldınız.'
+    BOUGHTFREE: '&7%command%#ADE159 aldınız.'
+    CANNOTAFFORD: '&7%command%#ADE159 komutunu satın almak için &7%price%#ADE159 gerekiyor.'
+  SELLHAND:
+    NOITEM: Satmak için elinizde bir eşya tutmanız gerekiyor.
+    INVALIDQUANTITY: Geçersiz miktar belirtildi. 1 ile %max% arasında olmalı.
+    CANNOTSELL: Bu eşyayı satamazsınız.
+    MULTIPLEQUANTITYONLY: Bu miktarda satamazsınız. Bu eşya için sadece %quantity%
+      katları kabul edilir.
+  SELLHANDALL:
+    SOLD: '&7%quantity% x %item%#ADE159 eşyasını toplam &7%price%#ADE159 karşılığında
+      sattınız.'
+  SELLALL:
+    NOITEMS: Satabileceğiniz herhangi bir eşyanız yok.
+    SOLD: '&7%quantity% eşya#ADE159 toplam &7%price%#ADE159 karşılığında sattınız.'
+    INVALIDSHOP: Geçersiz mağaza belirtildi.
+  INVALIDPAGE: '&c%shop%&f mağazasının &c%page%&f sayfası bulunamadı.'
+  NUMBERFORMAT:
+    SHORTSCALE:
+      THOUSAND: ' Bin'
+      MILLION: ' Milyon'
+      BILLION: ' Milyar'
+      TRILLION: ' Trilyon'
+      QUADRILLION: ' Katrilyon'
+      QUINTILLION: ' Kentilyon'
+      SEXTILLION: ' Sekstilyon'
+      SEPTILLION: ' Septilyon'
+      OCTILLION: ' Oktilyon'
+      NONILLION: ' Nonilyon'
+      DECILLION: ' Desilyon'
+DIALOG:
+  AMOUNTSELECTION:
+    BUY:
+      NAME: '&fᵩᵘ'
+    SELL:
+      NAME: '&fᵩᵛ'
+    BULKBUY:
+      NAME: '&fᵩᵙ'
+    BULKSELL:
+      NAME: '&fᵩᵜ'
+SHOP:
+  PERMISSION:
+    ALREADYOWNED: '&4(Zaten sahip)'
+    NOTOWNED: '&a(Sahip değil)'

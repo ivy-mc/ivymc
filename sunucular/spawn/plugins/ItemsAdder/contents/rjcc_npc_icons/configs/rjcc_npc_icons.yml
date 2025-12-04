@@ -1,0 +1,82 @@
+info:
+  namespace: rjcc_npc_icons
+categories:
+  rjcc_npc_icons:
+    enabled: true
+    icon: "rjcc_npc_icons:blacksmith"
+    name: rjcc npc icons
+    permission: ia.menu
+    items:
+      - "rjcc_npc_icons:chaticon"
+      - "rjcc_npc_icons:blacksmith"
+      - "rjcc_npc_icons:wizard"
+      - "rjcc_npc_icons:warrior"
+      - "rjcc_npc_icons:farmer"
+      - "rjcc_npc_icons:miner"
+      - "rjcc_npc_icons:villager"
+      - "rjcc_npc_icons:king"
+font_images:
+  chaticon:
+    permission: "rjcc_npc_icons.chaticon"
+    show_in_gui: true
+    suggest_in_command: false
+    symbol: ꑃ
+    path: "chaticon.png"
+    scale_ratio: 10
+    y_position: 8
+  blacksmith:
+    permission: "rjcc_npc_icons.blacksmith"
+    show_in_gui: true
+    suggest_in_command: false
+    symbol: ꑄ
+    path: "blacksmith.png"
+    scale_ratio: 55
+    y_position: 55
+  farmer:
+    permission: "rjcc_npc_icons.farmer"
+    show_in_gui: true
+    suggest_in_command: false
+    symbol: ꑅ
+    path: "farmer.png"
+    scale_ratio: 55
+    y_position: 55
+  king:
+    permission: "rjcc_npc_icons.king"
+    show_in_gui: true
+    suggest_in_command: false
+    symbol: ꑆ
+    path: "king.png"
+    scale_ratio: 55
+    y_position: 55
+  miner:
+    permission: "rjcc_npc_icons.miner"
+    show_in_gui: true
+    suggest_in_command: false
+    symbol: ꑇ
+    path: "miner.png"
+    scale_ratio: 55
+    y_position: 55
+  villager:
+    permission: "rjcc_npc_icons.villager"
+    show_in_gui: true
+    suggest_in_command: false
+    symbol: ꑈ
+    path: "villager.png"
+    scale_ratio: 55
+    y_position: 55
+  warrior:
+    permission: "rjcc_npc_icons.warrior"
+    show_in_gui: true
+    suggest_in_command: false
+    symbol: ꑉ
+    path: "warrior.png"
+    scale_ratio: 55
+    y_position: 55
+  wizard:
+    permission: "rjcc_npc_icons.wizard"
+    show_in_gui: true
+    suggest_in_command: false
+    symbol: ꑊ
+    path: "wizard.png"
+    scale_ratio: 55
+    y_position: 55

@@ -1,0 +1,2029 @@
+﻿#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+## MYTHICITEM PARSER SLOT 1 ##
+
+lrd_brewery_add_mythicitem_slot1:
+  Skills:
+  - skill{s=lrd_brewery_add_lrd_boiler_slot1}
+  - message{m="this is working"} @everyone
+
+
+
+lrd_brewery_add_lrd_boiler_slot1:
+  TriggerConditions:
+  - holding{m=lrd_boiler} orelsecast lrd_brewery_add_lrd_fermenter_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_boiler_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added boiler to slot 1"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_boiler;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+lrd_brewery_add_lrd_boiler_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added boiler to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_boiler;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+  
+lrd_brewery_add_lrd_fermenter_slot1:
+  TriggerConditions:
+  - holding{m=lrd_fermenter} orelsecast lrd_brewery_add_lrd_distiller_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_fermenter_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_fermenter;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+lrd_brewery_add_lrd_fermenter_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added fermenter to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_fermenter;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+
+lrd_brewery_add_lrd_distiller_slot1:
+  TriggerConditions:
+  - holding{m=lrd_distiller} orelsecast lrd_brewery_add_lrd_tea_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_fermenter_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_distiller;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+lrd_brewery_add_lrd_distiller_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added distiller to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_distiller;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+  
+lrd_brewery_add_lrd_tea_slot1:
+  TriggerConditions:
+  - holding{m=lrd_tea} orelsecast lrd_brewery_add_lrd_blacktea_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_tea_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_tea;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+lrd_brewery_add_lrd_distiller_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added distiller to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_distiller;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+  
+  
+lrd_brewery_add_lrd_blacktea_slot1:
+  TriggerConditions:
+  - holding{m=lrd_blacktea} orelsecast lrd_brewery_add_lrd_greentea_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_blacktea_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_blacktea;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+lrd_brewery_add_lrd_blacktea_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added blacktea to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_blacktea;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+  
+lrd_brewery_add_lrd_greentea_slot1:
+  TriggerConditions:
+  - holding{m=lrd_greentea} orelsecast lrd_brewery_add_lrd_oolongtea_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_greentea_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_greentea;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+lrd_brewery_add_lrd_greentea_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added greentea to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_greentea;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+  
+  
+lrd_brewery_add_lrd_oolongtea_slot1:
+  TriggerConditions:
+  - holding{m=lrd_oolongtea} orelsecast lrd_brewery_add_lrd_chai_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_oolongtea_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_oolongtea;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+lrd_brewery_add_lrd_oolongtea_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added oolongtea to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_oolongtea;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+  
+  
+  
+lrd_brewery_add_lrd_chai_slot1:
+  TriggerConditions:
+  - holding{m=lrd_chai} orelsecast lrd_brewery_add_lrd_herbaltea_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_chai_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_chai;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+lrd_brewery_add_lrd_chai_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added chai to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_chai;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+  
+  
+  
+  
+lrd_brewery_add_lrd_herbaltea_slot1:
+  TriggerConditions:
+  - holding{m=lrd_herbaltea} orelsecast lrd_brewery_add_lrd_rooibostea_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_herbaltea_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_herbaltea;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+lrd_brewery_add_lrd_herbaltea_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added herbaltea to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_herbaltea;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+  
+  
+lrd_brewery_add_lrd_rooibostea_slot1:
+  TriggerConditions:
+  - holding{m=lrd_rooibostea} orelsecast lrd_brewery_add_lrd_whitetea_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_rooibostea_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_rooibostea;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+lrd_brewery_add_lrd_rooibostea_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added rooibostea to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_rooibostea;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+  
+  
+  
+lrd_brewery_add_lrd_whitetea_slot1:
+  TriggerConditions:
+  - holding{m=lrd_whitetea} orelsecast lrd_brewery_add_lrd_blossomtea_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_whitetea_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_whitetea;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+lrd_brewery_add_lrd_whitetea_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added whitetea to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_whitetea;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+  
+  
+lrd_brewery_add_lrd_blossomtea_slot1:
+  TriggerConditions:
+  - holding{m=lrd_blossomtea} orelsecast lrd_brewery_add_lrd_lilactea_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_blossomtea_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_blossomtea;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+lrd_brewery_add_lrd_blossomtea_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added blossomtea to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_blossomtea;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+  
+  
+lrd_brewery_add_lrd_lilactea_slot1:
+  TriggerConditions:
+  - holding{m=lrd_lilactea} orelsecast lrd_brewery_add_lrd_rosehiptea_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_lilactea_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_lilactea;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+lrd_brewery_add_lrd_lilactea_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added lilactea to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_lilactea;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+  
+  
+lrd_brewery_add_lrd_rosehiptea_slot1:
+  TriggerConditions:
+  - holding{m=lrd_rosehiptea} orelsecast lrd_brewery_add_lrd_withertea_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_rosehiptea_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_rosehiptea;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+lrd_brewery_add_lrd_rosehiptea_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added rosehiptea to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_rosehiptea;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+  
+  
+lrd_brewery_add_lrd_withertea_slot1:
+  TriggerConditions:
+  - holding{m=lrd_withertea} orelsecast lrd_brewery_add_lrd_dandeliontea_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_withertea_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_withertea;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+lrd_brewery_add_lrd_withertea_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added withertea to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_withertea;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+  
+  
+lrd_brewery_add_lrd_dandeliontea_slot1:
+  TriggerConditions:
+  - holding{m=lrd_dandeliontea} orelsecast lrd_brewery_add_lrd_wheatbeer_wort_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_dandeliontea_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_dandeliontea;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+lrd_brewery_add_lrd_dandeliontea_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added dandeliontea to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_dandeliontea;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+  
+  
+lrd_brewery_add_lrd_wheatbeer_wort_slot1:
+  TriggerConditions:
+  - holding{m=lrd_wheatbeer_wort} orelsecast lrd_brewery_add_lrd_wheatbeer_unfiltered_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_wheatbeer_wort_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_wheatbeer_wort;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+lrd_brewery_add_lrd_wheatbeer_wort_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added wheatbeer_wort to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_wheatbeer_wort;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+  
+  
+  
+lrd_brewery_add_lrd_wheatbeer_unfiltered_slot1:
+  TriggerConditions:
+  - holding{m=lrd_wheatbeer_unfiltered} orelsecast lrd_brewery_add_lrd_wheatbeer_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_wheatbeer_unfiltered_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_wheatbeer_unfiltered;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+lrd_brewery_add_lrd_wheatbeer_unfiltered_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added wheatbeer_unfiltered to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_wheatbeer_unfiltered;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+  
+  
+lrd_brewery_add_lrd_wheatbeer_slot1:
+  TriggerConditions:
+  - holding{m=lrd_wheatbeer} orelsecast lrd_brewery_add_lrd_meadowmead_wort_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_wheatbeer_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_wheatbeer;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_wheatbeer_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added wheatbeer to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_wheatbeer;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_meadowmead_wort_slot1:
+  TriggerConditions:
+  - holding{m=lrd_meadowmead_wort} orelsecast lrd_brewery_add_lrd_meadowmead_unfiltered_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_meadowmead_wort_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_meadowmead_wort;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_meadowmead_wort_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added meadowmead wort to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_meadowmead_wort;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_meadowmead_unfiltered_slot1:
+  TriggerConditions:
+  - holding{m=lrd_meadowmead_unfiltered} orelsecast lrd_brewery_add_lrd_meadowmead_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_meadowmead_unfiltered_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_meadowmead_unfiltered;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_meadowmead_unfiltered_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added meadowmead unfiltered to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_meadowmead_unfiltered;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+  
+  
+
+lrd_brewery_add_lrd_meadowmead_slot1:
+  TriggerConditions:
+  - holding{m=lrd_meadowmead} orelsecast lrd_brewery_add_lrd_moonshine_wort_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_meadowmead_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_meadowmead;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_meadowmead_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added meadowmead to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_meadowmead;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+  
+  
+lrd_brewery_add_lrd_moonshine_wort_slot1:
+  TriggerConditions:
+  - holding{m=lrd_moonshine_wort} orelsecast lrd_brewery_add_lrd_moonshine_unfiltered_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_moonshine_wort_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_moonshine_wort;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_moonshine_wort_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added moonshine_wort to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_moonshine_wort;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+  
+  
+  
+lrd_brewery_add_lrd_moonshine_unfiltered_slot1:
+  TriggerConditions:
+  - holding{m=lrd_moonshine_unfiltered} orelsecast lrd_brewery_add_lrd_moonshine_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_moonshine_unfiltered_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_moonshine_unfiltered;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_moonshine_unfiltered_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added moonshine_unfiltered to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_moonshine_unfiltered;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+  
+  
+lrd_brewery_add_lrd_moonshine_slot1:
+  TriggerConditions:
+  - holding{m=lrd_moonshine} orelsecast lrd_brewery_add_lrd_potatovodka_wort_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_moonshine_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_moonshine;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_moonshine_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added moonshine to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_moonshine;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+  
+lrd_brewery_add_lrd_potatovodka_wort_slot1:
+  TriggerConditions:
+  - holding{m=lrd_potatovodka_wort} orelsecast lrd_brewery_add_lrd_potatovodka_unfiltered_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_potatovodka_wort_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_potatovodka_wort;type=STRING} @self
+  - consumeslot{} @trigger
+  - message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  - message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_potatovodka_wort_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added potatovodka_wort to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_potatovodka_wort;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+  
+  
+lrd_brewery_add_lrd_potatovodka_unfiltered_slot1:
+  TriggerConditions:
+  - holding{m=lrd_potatovodka_unfiltered} orelsecast lrd_brewery_add_lrd_potatovodka_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_potatovodka_unfiltered_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_potatovodka_unfiltered;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_potatovodka_unfiltered_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added potatovodka_unfiltered to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_potatovodka_unfiltered;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+  
+  
+lrd_brewery_add_lrd_potatovodka_slot1:
+  TriggerConditions:
+  - holding{m=lrd_potatovodka} orelsecast lrd_brewery_add_lrd_applevodka_unfiltered_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_potatovodka_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_potatovodka;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_potatovodka_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added potatovodka to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_potatovodka;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+  
+  
+lrd_brewery_add_lrd_applevodka_unfiltered_slot1:
+  TriggerConditions:
+  - holding{m=lrd_applevodka_unfiltered} orelsecast lrd_brewery_add_lrd_applevodka_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_applevodka_unfiltered_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_applevodka_unfiltered;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_applevodka_unfiltered_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added applevodka_unfiltered to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_applevodka_unfiltered;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+  
+  
+lrd_brewery_add_lrd_applevodka_slot1:
+  TriggerConditions:
+  - holding{m=lrd_applevodka} orelsecast lrd_brewery_add_lrd_redwine_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_applevodka_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_applevodka;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_applevodka_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added applevodka to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_applevodka;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+  
+  
+lrd_brewery_add_lrd_redwine_slot1:
+  TriggerConditions:
+  - holding{m=lrd_redwine} orelsecast lrd_brewery_add_lrd_whitewine_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_redwine_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_redwine;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_redwine_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added redwine to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_redwine;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+  
+  
+  
+lrd_brewery_add_lrd_whitewine_slot1:
+  TriggerConditions:
+  - holding{m=lrd_whitewine} orelsecast lrd_brewery_add_lrd_melonwine_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_whitewine_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_whitewine;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_whitewine_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added whitewine to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_whitewine;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+  
+  
+  
+lrd_brewery_add_lrd_melonwine_slot1:
+  TriggerConditions:
+  - holding{m=lrd_melonwine} orelsecast lrd_brewery_add_lrd_applewine_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_melonwine_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_melonwine;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_melonwine_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added melonwine to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_melonwine;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+  
+  
+lrd_brewery_add_lrd_applewine_slot1:
+  TriggerConditions:
+  - holding{m=lrd_applewine} orelsecast lrd_brewery_add_lrd_pumpkinwine_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_applewine_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_applewine;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_applewine_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added applewine to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_applewine;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+  
+  
+lrd_brewery_add_lrd_pumpkinwine_slot1:
+  TriggerConditions:
+  - holding{m=lrd_pumpkinwine} orelsecast lrd_brewery_add_lrd_sweetvermouth_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_pumpkinwine_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_pumpkinwine;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_pumpkinwine_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added pumpkinwine to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_pumpkinwine;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+  
+  
+lrd_brewery_add_lrd_sweetvermouth_slot1:
+  TriggerConditions:
+  - holding{m=lrd_sweetvermouth} orelsecast lrd_brewery_add_lrd_dryvermouth_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_sweetvermouth_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_sweetvermouth;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_sweetvermouth_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added sweetvermouth to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_sweetvermouth;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+  
+  
+lrd_brewery_add_lrd_dryvermouth_slot1:
+  TriggerConditions:
+  - holding{m=lrd_dryvermouth} orelsecast lrd_brewery_add_lrd_melonvermouth_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_dryvermouth_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_dryvermouth;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_dryvermouth_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added dryvermouth to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_dryvermouth;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+  
+  
+lrd_brewery_add_lrd_melonvermouth_slot1:
+  TriggerConditions:
+  - holding{m=lrd_melonvermouth} orelsecast lrd_brewery_add_lrd_applevermouth_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_melonvermouth_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_melonvermouth;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_melonvermouth_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added melonvermouth to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_melonvermouth;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+  
+  
+lrd_brewery_add_lrd_applevermouth_slot1:
+  TriggerConditions:
+  - holding{m=lrd_applevermouth} orelsecast lrd_brewery_add_lrd_pumpkinvermouth_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_applevermouth_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_applevermouth;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_applevermouth_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added applevermouth to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_applevermouth;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+  
+  
+  
+  
+lrd_brewery_add_lrd_pumpkinvermouth_slot1:
+  TriggerConditions:
+  - holding{m=lrd_pumpkinvermouth} orelsecast lrd_brewery_add_lrd_applecider_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_pumpkinvermouth_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_pumpkinvermouth;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_pumpkinvermouth_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added pumpkinvermouth to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_pumpkinvermouth;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+  
+  
+  
+  
+lrd_brewery_add_lrd_applecider_slot1:
+  TriggerConditions:
+  - holding{m=lrd_applecider} orelsecast lrd_brewery_add_lrd_meloncider_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_applecider_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_applecider;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_applecider_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added applecider to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_applecider;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+  
+  
+  
+  
+lrd_brewery_add_lrd_meloncider_slot1:
+  TriggerConditions:
+  - holding{m=lrd_meloncider} orelsecast lrd_brewery_add_lrd_sweetberrycider_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_meloncider_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_meloncider;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_meloncider_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added meloncider to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_meloncider;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+  
+  
+  
+lrd_brewery_add_lrd_sweetberrycider_slot1:
+  TriggerConditions:
+  - holding{m=lrd_sweetberrycider} orelsecast lrd_brewery_add_lrd_applebrandy_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_sweetberrycider_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_sweetberrycider;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_sweetberrycider_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added sweetberrycider to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_sweetberrycider;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+  
+  
+  
+lrd_brewery_add_lrd_applebrandy_slot1:
+  TriggerConditions:
+  - holding{m=lrd_applebrandy} orelsecast lrd_brewery_add_lrd_melonbrandy_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_applebrandy_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_applebrandy;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_applebrandy_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added applebrandy to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_applebrandy;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+  
+  
+  
+lrd_brewery_add_lrd_melonbrandy_slot1:
+  TriggerConditions:
+  - holding{m=lrd_melonbrandy} orelsecast lrd_brewery_add_lrd_sweetberrybrandy_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_melonbrandy_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_melonbrandy;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_melonbrandy_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added melonbrandy to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_melonbrandy;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+  
+  
+  
+lrd_brewery_add_lrd_sweetberrybrandy_slot1:
+  TriggerConditions:
+  - holding{m=lrd_sweetberrybrandy} orelsecast lrd_brewery_add_lrd_netherwartwine_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_sweetberrybrandy_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_sweetberrybrandy;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_sweetberrybrandy_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added sweetberrybrandy to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_sweetberrybrandy;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+  
+  
+  
+lrd_brewery_add_lrd_netherwartwine_slot1:
+  TriggerConditions:
+  - holding{m=lrd_netherwartwine} orelsecast lrd_brewery_add_lrd_gin_unfiltered_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_netherwartwine_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_netherwartwine;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_netherwartwine_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added netherwartwine to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_netherwartwine;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+  
+  
+  
+lrd_brewery_add_lrd_gin_unfiltered_slot1:
+  TriggerConditions:
+  - holding{m=lrd_gin_unfiltered} orelsecast lrd_brewery_add_lrd_gin_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_gin_unfiltered_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_gin_unfiltered;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_gin_unfiltered_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added gin_unfiltered to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_gin_unfiltered;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+  
+  
+  
+lrd_brewery_add_lrd_gin_slot1:
+  TriggerConditions:
+  - holding{m=lrd_gin} orelsecast lrd_brewery_add_lrd_cavegin_unfiltered_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_gin_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_gin;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_gin_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added gin to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_gin;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+  
+  
+  
+lrd_brewery_add_lrd_cavegin_unfiltered_slot1:
+  TriggerConditions:
+  - holding{m=lrd_cavegin_unfiltered} orelsecast lrd_brewery_add_lrd_cavegin_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_cavegin_unfiltered_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_cavegin_unfiltered;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_cavegin_unfiltered_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added cavegin_unfiltered to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_cavegin_unfiltered;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+  
+  
+  
+lrd_brewery_add_lrd_cavegin_slot1:
+  TriggerConditions:
+  - holding{m=lrd_cavegin} orelsecast lrd_brewery_add_lrd_tequila_unfiltered_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_cavegin_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_cavegin;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_cavegin_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added cavegin to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_cavegin;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+  
+  
+  
+lrd_brewery_add_lrd_tequila_unfiltered_slot1:
+  TriggerConditions:
+  - holding{m=lrd_tequila_unfiltered} orelsecast lrd_brewery_add_lrd_tequila_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_tequila_unfiltered_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_tequila_unfiltered;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_tequila_unfiltered_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added tequila_unfiltered to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_tequila_unfiltered;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+  
+  
+  
+lrd_brewery_add_lrd_tequila_slot1:
+  TriggerConditions:
+  - holding{m=lrd_tequila} orelsecast lrd_brewery_add_lrd_torchedwhiskey_wort_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_tequila_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_tequila;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_tequila_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added tequila to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_tequila;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+  
+  
+  
+lrd_brewery_add_lrd_torchedwhiskey_wort_slot1:
+  TriggerConditions:
+  - holding{m=lrd_torchedwhiskey_wort} orelsecast lrd_brewery_add_lrd_torchedwhiskey_unfiltered_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_torchedwhiskey_wort_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_torchedwhiskey_wort;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_torchedwhiskey_wort_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added torchedwhiskey_wort to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_torchedwhiskey_wort;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+  
+  
+  
+lrd_brewery_add_lrd_torchedwhiskey_unfiltered_slot1:
+  TriggerConditions:
+  - holding{m=lrd_torchedwhiskey_unfiltered} orelsecast lrd_brewery_add_lrd_torchedwhiskey_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_torchedwhiskey_unfiltered_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_torchedwhiskey_unfiltered;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_torchedwhiskey_unfiltered_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added torchedwhiskey_unfiltered to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_torchedwhiskey_unfiltered;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+  
+  
+  
+lrd_brewery_add_lrd_torchedwhiskey_slot1:
+  TriggerConditions:
+  - holding{m=lrd_torchedwhiskey} orelsecast lrd_brewery_add_lrd_absinthe_unfiltered_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_torchedwhiskey_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_torchedwhiskey;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_torchedwhiskey_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added torchedwhiskey to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_torchedwhiskey;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+  
+  
+  
+lrd_brewery_add_lrd_absinthe_unfiltered_slot1:
+  TriggerConditions:
+  - holding{m=lrd_absinthe_unfiltered} orelsecast lrd_brewery_add_lrd_absinthe_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_absinthe_unfiltered_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_absinthe_unfiltered;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_absinthe_unfiltered_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added absinthe_unfiltered to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_absinthe_unfiltered;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+  
+  
+  
+lrd_brewery_add_lrd_absinthe_slot1:
+  TriggerConditions:
+  - holding{m=lrd_absinthe} orelsecast lrd_brewery_add_lrd_rum_unfiltered_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_absinthe_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_absinthe;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_absinthe_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added absinthe to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_absinthe;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+  
+  
+  
+lrd_brewery_add_lrd_rum_unfiltered_slot1:
+  TriggerConditions:
+  - holding{m=lrd_rum_unfiltered} orelsecast lrd_brewery_add_lrd_rum_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_rum_unfiltered_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_rum_unfiltered;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_rum_unfiltered_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added rum_unfiltered to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_rum_unfiltered;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+  
+  
+  
+lrd_brewery_add_lrd_rum_slot1:
+  TriggerConditions:
+  - holding{m=lrd_rum} orelsecast lrd_brewery_add_lrd_bourbon_wort_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_rum_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_rum;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_rum_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added rum to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_rum;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+  
+  
+  
+lrd_brewery_add_lrd_bourbon_wort_slot1:
+  TriggerConditions:
+  - holding{m=lrd_bourbon_wort} orelsecast lrd_brewery_add_lrd_bourbon_unfiltered_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_bourbon_wort_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_bourbon_wort;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_bourbon_wort_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added bourbon_wort to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_bourbon_wort;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+  
+  
+  
+lrd_brewery_add_lrd_bourbon_unfiltered_slot1:
+  TriggerConditions:
+  - holding{m=lrd_bourbon_unfiltered} orelsecast lrd_brewery_add_lrd_bourbon_slot1
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_bourbon_unfiltered_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_bourbon_unfiltered;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_bourbon_unfiltered_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added bourbon_unfiltered to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_bourbon_unfiltered;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+  
+  
+  
+lrd_brewery_add_lrd_bourbon_slot1:
+  TriggerConditions:
+  - holding{m=lrd_bourbon}
+  Conditions:
+  - varequals{var=caster.slot1;val=empty} orelsecast lrd_brewery_add_lrd_bourbon_slot2
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  - state{s=interact} @self
+  - setvar{var=caster.slot1;val=lrd_bourbon;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+lrd_brewery_add_lrd_bourbon_slot2:
+  Skills:
+  - gcd{ticks=10}
+  - sound{s=littleroom_brewerypack:boiler_use;v=0;sc=HOSTILE;pitch=<random.float.0.4to0.7>} @self ?mythicmobtype{t=lrd_boiler}
+  - sound{s=littleroom_brewerypack:fermenter_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_fermenter}
+  - sound{s=littleroom_brewerypack:distiller_use;v=2;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self ?mythicmobtype{t=lrd_distiller}
+  #- message{m="added bourbon to slot 2"} @trigger
+  - state{s=interact} @self
+  - setvar{var=caster.slot2;val=lrd_bourbon;type=STRING} @self
+  - consumeslot{} @trigger
+  #- message{m="&6DEBUG<&co> Slot1<&co> <caster.var.slot1>";cd=1} @everyone
+  #- message{m="&6DEBUG<&co> Slot2<&co> <caster.var.slot2>";cd=1} @everyone
+
+  
+  

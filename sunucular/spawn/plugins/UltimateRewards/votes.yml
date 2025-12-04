@@ -1,0 +1,40 @@
+#
+#     _     _ _       _                            ______                               _
+#    (_)   (_) |  _  (_)              _           (_____ \                             | |
+#    | |   | |_| |_|_| |___  _____ _| |_ _____    _____) )_____ _ _  _ _ _____  ____ __| |  ___
+#    | |   | | (_   _) |    \(____ (_   _) ___ |  |  __  /| ___ |  |  | (____ |/ ___) _  |/___)
+#    | |___| | | | |_| | | | / /_\_ | | |_| ____| | |  \ \|____|  |  | / /_\ | |  ( (_| |___ |
+#    \_____/ \_) \__)_|_|_|_\_|  |_|  \__)_____)  |_|   |_|_____)\___/\_|  |_|_|   \____(___/
+#
+#   Voting Configuration
+#
+
+# Enable vote handling and vote command
+enabled: true
+
+# Determines whether incoming votes should be
+# logged in the console for monitoring purposes.
+log-incoming-votes: true
+
+# Specifies whether votes should only be counted
+# when the player is online.
+count-only-when-online: false
+# If it is set to false, it will proceed
+# the vote even for unregistered players.
+count-before-first-join: true
+
+# Enables a per-vote reward system, allowing for
+# customized rewards.
+enable-per-vote-rewards: true
+
+announce-received-vote: true
+received-vote-announcement:
+- '&b&lULTIMATEREWARDS&8 ► &7Player %player% has voted for our server on %service%'
+
+per-vote-rewards:
+  example:
+    permission: ultimaterewards.vote.example
+    required-slots: '1'
+    actions:
+    - '[console] say %player% has voted for server!'
+    - '[console] give %player% emerald 1'

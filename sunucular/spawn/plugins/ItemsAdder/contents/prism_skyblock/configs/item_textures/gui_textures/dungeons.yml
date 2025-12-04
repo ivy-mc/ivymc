@@ -1,0 +1,46 @@
+info:
+  namespace: prism_skyblock
+items:
+
+  dungeons-labofhorrorportrait:
+    enabled: true
+    resource:
+      generate: false
+      material: STRING
+      model_id: 28
+      model_path: gui_textures/dungeons/labofhorror_portrait
+  dungeons-masterlabofhorrorportrait:
+    enabled: true
+    resource:
+      generate: false
+      material: STRING
+      model_id: 29
+      model_path: gui_textures/dungeons/master_labofhorror_portrait
+  dungeons-normalmode:
+    enabled: true
+    resource:
+      generate: false
+      material: GOLD_NUGGET
+      model_id: 1
+      model_path: gui_textures/dungeons/normal_mode
+  dungeons-normalmodepressed:
+    enabled: true
+    resource:
+      generate: false
+      material: GOLD_NUGGET
+      model_id: 2
+      model_path: gui_textures/dungeons/normal_mode_pressed
+  dungeons-mastermode:
+    enabled: true
+    resource:
+      generate: false
+      material: GOLD_NUGGET
+      model_id: 3
+      model_path: gui_textures/dungeons/master_mode
+  dungeons-mastermodepressed:
+    enabled: true
+    resource:
+      generate: false
+      material: GOLD_NUGGET
+      model_id: 4
+      model_path: gui_textures/dungeons/master_mode_pressed

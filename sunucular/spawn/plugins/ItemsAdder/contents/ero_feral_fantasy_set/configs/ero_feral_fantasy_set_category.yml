@@ -1,0 +1,21 @@
+info:
+    namespace: ero_feral_fantasy_set
+categories:
+    ero_feral_fantasy_set:
+        name: Feral Fantasy Set
+        enabled: true
+        icon: ero_feral_fantasy_set:ero_feral_fantasy_wolf_tail
+        permission: ia.menu.ero_feral_fantasy_set
+        items:
+        - ero_feral_fantasy_set:ero_feral_fantasy_bear_ears
+        - ero_feral_fantasy_set:ero_feral_fantasy_bear_tail
+        - ero_feral_fantasy_set:ero_feral_fantasy_cat_ears
+        - ero_feral_fantasy_set:ero_feral_fantasy_cat_tail
+        - ero_feral_fantasy_set:ero_feral_fantasy_fox_ears
+        - ero_feral_fantasy_set:ero_feral_fantasy_fox_tail
+        - ero_feral_fantasy_set:ero_feral_fantasy_rabbit_ears
+        - ero_feral_fantasy_set:ero_feral_fantasy_rabbit_tail
+        - ero_feral_fantasy_set:ero_feral_fantasy_tiger_ears
+        - ero_feral_fantasy_set:ero_feral_fantasy_tiger_tail
+        - ero_feral_fantasy_set:ero_feral_fantasy_wolf_ears
+        - ero_feral_fantasy_set:ero_feral_fantasy_wolf_tail

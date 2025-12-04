@@ -1,0 +1,30 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 94.55.236.139
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1763402784967
+  login: 1763402180596
+money: '0'
+last-account-name: bambii
+logoutlocation:
+  world: c59af994-31af-4629-ac32-df01c6e1e106
+  world-name: world
+  x: 1.776809658928266
+  y: 71.0
+  z: 0.778192435225971
+  yaw: 37.62713623046875
+  pitch: 28.199914932250977

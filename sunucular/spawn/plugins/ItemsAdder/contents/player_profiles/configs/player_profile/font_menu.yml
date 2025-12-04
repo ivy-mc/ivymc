@@ -1,0 +1,87 @@
+info:
+  namespace: profile
+font_images:
+  b1:
+    show_in_gui: false
+    suggest_in_command: false
+    path: "fonts/black.png"
+    symbol: ""
+    y_position: -5000
+    scale_ratio: 5
+  b3:
+    show_in_gui: false
+    suggest_in_command: false
+    path: "fonts/pixel_split.png"
+    symbol: ""
+    y_position: -32768
+    scale_ratio: -3
+  b4:
+    show_in_gui: false
+    suggest_in_command: false
+    path: "fonts/pixel_split.png"
+    symbol: ""
+    y_position: -32678
+    scale_ratio: -4
+  b5:
+    show_in_gui: false
+    suggest_in_command: false
+    path: "fonts/pixel_split.png"
+    symbol: ""
+    y_position: -32768
+    scale_ratio: -5
+  b6:
+    show_in_gui: false
+    suggest_in_command: false
+    path: "fonts/pixel_split.png"
+    symbol: ""
+    y_position: -32768
+    scale_ratio: -6
+  b7:
+    show_in_gui: false
+    suggest_in_command: false
+    path: "fonts/pixel_split.png"
+    symbol: ""
+    y_position: -32768
+    scale_ratio: -7
+  b8:
+    show_in_gui: false
+    suggest_in_command: false
+    path: "fonts/pixel_split.png"
+    symbol: ""
+    y_position: -32768
+    scale_ratio: -8
+  b9:
+    show_in_gui: false
+    suggest_in_command: false
+    path: "fonts/pixel_split.png"
+    symbol: ""
+    y_position: -32768
+    scale_ratio: -9
+  b10:
+    show_in_gui: false
+    suggest_in_command: false
+    path: "fonts/pixel_split.png"
+    symbol: ""
+    y_position: -32768
+    scale_ratio: -10
+  b18:
+    show_in_gui: false
+    suggest_in_command: false
+    path: "fonts/pixel_split.png"
+    symbol: ""
+    y_position: -32768
+    scale_ratio: -18
+  b34:
+    show_in_gui: false
+    suggest_in_command: false
+    path: "fonts/pixel_split.png"
+    symbol: ""
+    y_position: -32768
+    scale_ratio: -34
+  b66:
+    show_in_gui: false
+    suggest_in_command: false
+    path: "fonts/pixel_split.png"
+    symbol: ""
+    y_position: -32768
+    scale_ratio: -66

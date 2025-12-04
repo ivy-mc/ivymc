@@ -1,0 +1,249 @@
+
+open_command: fishcodex2
+
+size: 54
+
+menu_title: '&f%img_offset_-8%%img_fish_codex%'
+
+open_requirement:
+  requirements:
+    permission:
+      type: has permission
+      permission: deluxemenus.admin
+      deny_commands:
+        - '[message] &cYou don''t have permission to do that!'
+
+items:
+  'crab':
+    material: itemsadder-crab
+    slot: 10
+    display_name: "&fCrab"
+    lore:
+      - "&7ᴛʏᴘᴇ: &aᴏᴠᴇʀᴡᴏʀʟᴅ"
+      - ""
+      - "&7ʙɪᴏᴍᴇ: &fʀɪᴠᴇʀ"
+      - "&7ꜱɪᴢᴇ: &f10-25ᴄᴍ"
+
+  'clam':
+    material: itemsadder-clam
+    slot: 11
+    display_name: "&fClam"
+    lore:
+      - "&7ᴛʏᴘᴇ: &aᴏᴠᴇʀᴡᴏʀʟᴅ"
+      - ""
+      - "&7ʙɪᴏᴍᴇ: &fʀɪᴠᴇʀ"
+      - "&7ꜱɪᴢᴇ: &f5-15ᴄᴍ"
+
+  'amphipod':
+    material: itemsadder-amphipod
+    slot: 12
+    display_name: "&fAmphipod"
+    lore:
+      - "&7ᴛʏᴘᴇ: &aᴏᴠᴇʀᴡᴏʀʟᴅ"
+      - ""
+      - "&7ʙɪᴏᴍᴇ: &fʀɪᴠᴇʀ"
+      - "&7ꜱɪᴢᴇ: &f1-3ᴄᴍ"
+  'wahoo':
+    material: itemsadder-wahoo
+    slot: 13
+    display_name: "&fWahoo"
+    lore:
+      - "&7ᴛʏᴘᴇ: &aᴏᴠᴇʀᴡᴏʀʟᴅ"
+      - ""
+      - "&7ʙɪᴏᴍᴇ: &fᴏᴄᴇᴀɴ"
+      - "&7ꜱɪᴢᴇ: &f100-150ᴄᴍ"
+
+  'tuna':
+    material: itemsadder-tuna
+    slot: 14
+    display_name: "&fTuna"
+    lore:
+      - "&7ᴛʏᴘᴇ: &aᴏᴠᴇʀᴡᴏʀʟᴅ"
+      - ""
+      - "&7ʙɪᴏᴍᴇ: &fᴏᴄᴇᴀɴ"
+      - "&7ꜱɪᴢᴇ: &f200-250ᴄᴍ"
+
+  'sword_fish':
+    material: itemsadder-sword_fish
+    slot: 15
+    display_name: "&fSword Fish"
+    lore:
+      - "&7ᴛʏᴘᴇ: &aᴏᴠᴇʀᴡᴏʀʟᴅ"
+      - ""
+      - "&7ʙɪᴏᴍᴇ: &fᴏᴄᴇᴀɴ"
+      - "&7ꜱɪᴢᴇ: &f200-300ᴄᴍ"
+
+  'snook':
+    material: itemsadder-snook
+    slot: 16
+    display_name: "&fSnook"
+    lore:
+      - "&7ᴛʏᴘᴇ: &aᴏᴠᴇʀᴡᴏʀʟᴅ"
+      - ""
+      - "&7ʙɪᴏᴍᴇ: &fᴏᴄᴇᴀɴ"
+      - "&7ꜱɪᴢᴇ: &f50-90ᴄᴍ"
+
+  'snapper':
+    material: itemsadder-snapper
+    slot: 19
+    display_name: "&fSnapper"
+    lore:
+      - "&7ᴛʏᴘᴇ: &aᴏᴠᴇʀᴡᴏʀʟᴅ"
+      - ""
+      - "&7ʙɪᴏᴍᴇ: &fᴏᴄᴇᴀɴ"
+      - "&7ꜱɪᴢᴇ: &f40-60ᴄᴍ"
+  'redfish':
+    material: itemsadder-redfish
+    slot: 20
+    display_name: "&fRedfish"
+    lore:
+      - "&7ᴛʏᴘᴇ: &aᴏᴠᴇʀᴡᴏʀʟᴅ"
+      - ""
+      - "&7ʙɪᴏᴍᴇ: &fᴏᴄᴇᴀɴ"
+      - "&7ꜱɪᴢᴇ: &f50-90ᴄᴍ"
+  'marlin':
+    material: itemsadder-marlin
+    slot: 21
+    display_name: "&fMarlin"
+    lore:
+      - "&7ᴛʏᴘᴇ: &aᴏᴠᴇʀᴡᴏʀʟᴅ"
+      - ""
+      - "&7ʙɪᴏᴍᴇ: &fᴏᴄᴇᴀɴ"
+      - "&7ꜱɪᴢᴇ: &f200-300ᴄᴍ"
+  'grouper':
+    material: itemsadder-grouper
+    slot: 22
+    display_name: "&fGrouper"
+    lore:
+      - "&7ᴛʏᴘᴇ: &aᴏᴠᴇʀᴡᴏʀʟᴅ"
+      - ""
+      - "&7ʙɪᴏᴍᴇ: &fᴏᴄᴇᴀɴ"
+      - "&7ꜱɪᴢᴇ: &f50-100ᴄᴍ"
+  'barracuda':
+    material: itemsadder-barracuda
+    slot: 23
+    display_name: "&fBarracuda"
+    lore:
+      - "&7ᴛʏᴘᴇ: &aᴏᴠᴇʀᴡᴏʀʟᴅ"
+      - ""
+      - "&7ʙɪᴏᴍᴇ: &fᴏᴄᴇᴀɴ"
+      - "&7ꜱɪᴢᴇ: &f60-100ᴄᴍ"
+  'viper_fish':
+    material: itemsadder-viper_fish
+    slot: 24
+    display_name: "&fViper Fish"
+    lore:
+      - "&7ᴛʏᴘᴇ: &aᴏᴠᴇʀᴡᴏʀʟᴅ"
+      - ""
+      - "&7ʙɪᴏᴍᴇ: &fᴏᴄᴇᴀɴ"
+      - "&7ꜱɪᴢᴇ: &f20-35ᴄᴍ"
+  'vampire_squid':
+    material: itemsadder-vampire_squid
+    slot: 25
+    display_name: "&fVampire Squid"
+    lore:
+      - "&7ᴛʏᴘᴇ: &aᴏᴠᴇʀᴡᴏʀʟᴅ"
+      - ""
+      - "&7ʙɪᴏᴍᴇ: &fᴏᴄᴇᴀɴ"
+      - "&7ꜱɪᴢᴇ: &f25-30ᴄᴍ"
+  'lanternfish':
+    material: itemsadder-lanternfish
+    slot: 28
+    display_name: "&fLanternfish"
+    lore:
+      - "&7ᴛʏᴘᴇ: &aᴏᴠᴇʀᴡᴏʀʟᴅ"
+      - ""
+      - "&7ʙɪᴏᴍᴇ: &fᴏᴄᴇᴀɴ"
+      - "&7ꜱɪᴢᴇ: &f5-15ᴄᴍ"
+  'gulper_eel':
+    material: itemsadder-gulper_eel
+    slot: 29
+    display_name: "&fGulper Eel"
+    lore:
+      - "&7ᴛʏᴘᴇ: &aᴏᴠᴇʀᴡᴏʀʟᴅ"
+      - ""
+      - "&7ʙɪᴏᴍᴇ: &fᴏᴄᴇᴀɴ"
+      - "&7ꜱɪᴢᴇ: &f80-100ᴄᴍ"
+  'giant_isopod':
+    material: itemsadder-giant_isopod
+    slot: 30
+    display_name: "&fGiant Isopod"
+    lore:
+      - "&7ᴛʏᴘᴇ: &aᴏᴠᴇʀᴡᴏʀʟᴅ"
+      - ""
+      - "&7ʙɪᴏᴍᴇ: &fᴏᴄᴇᴀɴ"
+      - "&7ꜱɪᴢᴇ: &f19-36ᴄᴍ"
+  'dumbo_octopus':
+    material: itemsadder-dumbo_octopus
+    slot: 31
+    display_name: "&fDumbo Octopus"
+    lore:
+      - "&7ᴛʏᴘᴇ: &aᴏᴠᴇʀᴡᴏʀʟᴅ"
+      - ""
+      - "&7ʙɪᴏᴍᴇ: &fᴏᴄᴇᴀɴ"
+      - "&7ꜱɪᴢᴇ: &f20-30ᴄᴍ"
+  'dragon_fish':
+    material: itemsadder-dragon_fish
+    slot: 32
+    display_name: "&fDragon Fish"
+    lore:
+      - "&7ᴛʏᴘᴇ: &aᴏᴠᴇʀᴡᴏʀʟᴅ"
+      - ""
+      - "&7ʙɪᴏᴍᴇ: &fᴏᴄᴇᴀɴ"
+      - "&7ꜱɪᴢᴇ: &f15-25ᴄᴍ"
+  'blobfish':
+    material: itemsadder-blobfish
+    slot: 33
+    display_name: "&fBlobfish"
+    lore:
+      - "&7ᴛʏᴘᴇ: &aᴏᴠᴇʀᴡᴏʀʟᴅ"
+      - ""
+      - "&7ʙɪᴏᴍᴇ: &fᴏᴄᴇᴀɴ"
+      - "&7ꜱɪᴢᴇ: &f25-30ᴄᴍ"
+  'barreleye_fish':
+    material: itemsadder-barreleye_fish
+    slot: 34
+    display_name: "&fBarreleye Fish"
+    lore:
+      - "&7ᴛʏᴘᴇ: &aᴏᴠᴇʀᴡᴏʀʟᴅ"
+      - ""
+      - "&7ʙɪᴏᴍᴇ: &fᴏᴄᴇᴀɴ"
+      - "&7ꜱɪᴢᴇ: &f12-15ᴄᴍ"
+  'close':
+    material: itemsadder-invisible_item
+    slots:
+      - 40
+    display_name: "&fClose"
+    left_click_commands:
+    - '[close]'
+    - '[sound] ENTITY_ITEM_PICKUP'
+    right_click_commands:
+    - '[close]'
+    - '[sound] ENTITY_ITEM_PICKUP'
+  'next':
+    material: itemsadder-invisible_item
+    slots:
+      - 41
+      - 42
+    display_name: "&fNext page"
+    left_click_commands:
+    - '[openguimenu] fish_codex_3'
+    - '[sound] ENTITY_ITEM_PICKUP'
+    right_click_commands:
+    - '[openguimenu] fish_codex_3'
+    - '[sound] ENTITY_ITEM_PICKUP'
+  'previous':
+    material: itemsadder-invisible_item
+    slots:
+      - 39
+      - 38
+    display_name: "&fPrevious page"
+    left_click_commands:
+    - '[openguimenu] fish_codex'
+    - '[sound] ENTITY_ITEM_PICKUP'
+    right_click_commands:
+    - '[openguimenu] fish_codex'
+    - '[sound] ENTITY_ITEM_PICKUP'
+sweet: true
+
+#ImbDVVUoRWYuFjYhhXeah1NFRVYx82VhNDbYF2MkNDZuR2RaZTW5YmY0pWNFd2diFUa5FDN

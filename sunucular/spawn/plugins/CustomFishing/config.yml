@@ -1,0 +1,390 @@
+config-version: "38"
+debug: false
+metrics: true
+update-checker: true
+force-locale: "en"
+mechanics:
+  mechanic-requirements:
+    world_requirement:
+      type: "!world"
+      value:
+      - "blacklist_world"
+  skip-game-requirements:
+    or_requirement:
+      type: "||"
+      value:
+        bedrock_requirement:
+          type: "is-bedrock-player"
+          value: true
+  auto-fishing-requirements:
+    impossible_requirement:
+      type: "impossible"
+  global-effects:
+    effect_1:
+      type: "conditional"
+      conditions:
+        competition:
+          ongoing: true
+          id:
+          - "weekend_competition"
+      effects:
+        effect_1:
+          type: "wait-time-multiplier"
+          value: 0.85
+  global-events:
+    hook: {}
+    bait: {}
+    loot:
+      new_size_record:
+        conditional_size_record_action:
+          type: "conditional"
+          value:
+            conditions:
+              has-stats: true
+            actions:
+              actionbar_action:
+                type: "actionbar"
+                value: "<#FFD700>[New Record]</#FFD700> <#FFFFF0>You caught a(n) {nick} measuring <#FFA500>{size_formatted}cm</#FFA500> long!</#FFFFF0> <#C0C0C0>(Previous record: {previous_record_formatted}cm)</#C0C0C0>"
+              sound_action:
+                type: "sound"
+                value:
+                  key: "minecraft:block.note_block.cow_bell"
+                  source: "player"
+                  volume: 1
+                  pitch: 1
+              delayed_sound:
+                type: "delay"
+                value:
+                  delay: 2
+                  actions:
+                    sound_action:
+                      type: "sound"
+                      value:
+                        key: "minecraft:block.note_block.bell"
+                        source: "player"
+                        volume: 1
+                        pitch: 1
+      success:
+        conditional_size_info_action:
+          type: "conditional"
+          value:
+            conditions:
+              has-size: true
+              has-stats: true
+            actions:
+              actionbar_action:
+                type: "actionbar"
+                value: "<gray>You caught a(n) {nick} measuring <#F5F5F5>{size_formatted}cm</#F5F5F5> long!</gray> <#C0C0C0>(Best record: {record_formatted}cm)</#C0C0C0>"
+        title_action:
+          type: "random-title"
+          value:
+            titles:
+            - "<green>GG!</green>"
+            - "<green>Good Job!</green>"
+            subtitles:
+            - "You caught a(n) {nick}"
+            - "Whoa! Nice catch!"
+            - "Oh {nick}, here we go!"
+            - "Let's see what it is!"
+            fade-in: 20
+            stay: 30
+            fade-out: 10
+          chance: 1.0
+      failure:
+        title_action:
+          type: "random-title"
+          value:
+            titles:
+            - "<red>Stay focused!</red>"
+            - "<red>What a pity!</red>"
+            - "<red>Try again next time!</red>"
+            - "<red>Bad luck!</red>"
+            subtitles:
+            - "The fish got away..."
+            fade-in: 20
+            stay: 30
+            fade-out: 10
+          chance: 1.0
+    rod:
+      land:
+        priority_action:
+          type: "priority"
+          value:
+            priority_1:
+              conditions:
+                in-lava: true
+              actions:
+                fake_item_action:
+                  type: "fake-item"
+                  value:
+                    duration: 35
+                    position: "other"
+                    item: "lava_effect"
+                    use-item-display: true
+            priority_2:
+              conditions:
+                in-water: true
+              actions:
+                fake_item_action:
+                  type: "fake-item"
+                  value:
+                    duration: 35
+                    position: "other"
+                    item: "water_effect"
+                    use-item-display: true
+  global-loot-property:
+    show-in-fishfinder: true
+    disable-stat: false
+    disable-game: false
+    instant-game: false
+  fishing-bag:
+    enable: true
+    bag-title: "<blue>{player}'s Fishing Bag</blue>"
+    whitelist-items:
+    - "fishing_rod"
+    can-store-loot: false
+    can-store-rod: true
+    can-store-bait: true
+    can-store-hook: true
+    can-store-util: true
+    collect-requirements:
+      permission: "fishingbag.collectloot"
+    collect-actions:
+      sound_action:
+        type: "sound"
+        value:
+          key: "minecraft:item.armor.equip_leather"
+          source: "player"
+          volume: 1
+          pitch: 1
+      hologram_action:
+        type: "hologram"
+        value:
+          duration: 40
+          text: "{nick} <#B0E0E6><b>has been stored in the bag</#B0E0E6>"
+          position: "other"
+          y: 1
+    full-actions:
+      conditional_action:
+        type: "conditional"
+        value:
+          conditions:
+            condition_1:
+              type: "cooldown"
+              value:
+                key: "fishing_bag_full_notice"
+                time: 60000
+          actions:
+            message_action:
+              type: "message"
+              value: "<#EEE8AA>[Fishing Bag]</#EEE8AA> Your fishing bag is full."
+  market:
+    title: "<gradient:#A52A2A:#800000:#A52A2A>Fish Market</gradient>"
+    limitation:
+      enable: true
+      earnings: "10000" # Expressions can be used here
+    earnings-multiplier: 1
+    layout:
+    - "AAAAAAAAC"
+    - "AIIIIIIIA"
+    - "AIIIIIIIA"
+    - "AIIIIIIIA"
+    - "AAAABAAAA"
+    price-formula: "{base} + {bonus} * {size}"
+    allow-bundle-requirements:
+      impossible_requirement:
+        type: "impossible"
+    allow-shulker-box-requirements:
+      impossible_requirement:
+        type: "impossible"
+    item-price:
+      COD: 10
+      PUFFERFISH: 10
+      SALMON: 10
+      TROPICAL_FISH: 10
+      PAPER:999: 5
+    item-slot:
+      symbol: "I"
+      allow-items-with-no-price: true
+    sell-all-icons:
+      symbol: "S"
+      fishingbag: true
+      allow-icon:
+        material: "IRON_BLOCK"
+        display:
+          name: "<#00CED1><b>● <!b>Sell the fish"
+          lore:
+          - "<font:uniform><gradient:#E6E6FA:#48D1CC:#E6E6FA>You will earn <green>{money_formatted} coins</green> from the fish in your inventory and bag</gradient></font>"
+        action:
+          sound_action:
+            type: "sound"
+            value:
+              key: "minecraft:block.amethyst_block.place"
+              source: "player"
+              volume: 1
+              pitch: 1
+          message_action:
+            type: "message"
+            value: "You earned {money_formatted} coins from the fish! You can still earn {rest_formatted} more coins from the market today."
+          money_action:
+            type: "give-money"
+            value: "{money}"
+      deny-icon:
+        material: "REDSTONE_BLOCK"
+        display:
+          name: "<red><b>● <!b>Trade Denied"
+          lore:
+          - "<font:uniform><gradient:#E6E6FA:red:#E6E6FA>No items available to sell!</gradient></font>"
+        action:
+          sound_action:
+            type: "sound"
+            value:
+              key: "minecraft:entity.villager.no"
+              source: "player"
+              volume: 1
+              pitch: 1
+      limit-icon:
+        material: "REDSTONE_BLOCK"
+        display:
+          name: "<red><b>● <!b>Trade Denied"
+          lore:
+          - "<font:uniform><gradient:#E6E6FA:red:#E6E6FA>The total value exceeds the daily limit for earnings!</gradient></font>"
+        action:
+          sound_action:
+            type: "sound"
+            value:
+              key: "minecraft:block.anvil.land"
+              source: "player"
+              volume: 1
+              pitch: 1
+    sell-icons:
+      symbol: "B"
+      allow-icon:
+        material: "IRON_BLOCK"
+        display:
+          name: "<#00CED1><b>● <!b>Sell the fish"
+          lore:
+          - "<font:uniform><gradient:#E6E6FA:#48D1CC:#E6E6FA>You will earn <green>{money_formatted} coins</green> from the fish</gradient></font>"
+        action:
+          sound_action:
+            type: "sound"
+            value:
+              key: "minecraft:block.amethyst_block.place"
+              source: "player"
+              volume: 1
+              pitch: 1
+          message_action:
+            type: "message"
+            value: "You earned {money_formatted} coins from the fish! You can still earn {rest_formatted} more coins from the market today."
+          money_action:
+            type: "give-money"
+            value: "{money}"
+      deny-icon:
+        material: "REDSTONE_BLOCK"
+        display:
+          name: "<red><b>● <!b>Trade Denied"
+          lore:
+          - "<font:uniform><gradient:#E6E6FA:red:#E6E6FA>No items available to sell!</gradient></font>"
+        action:
+          sound_action:
+            type: "sound"
+            value:
+              key: "minecraft:entity.villager.no"
+              source: "player"
+              volume: 1
+              pitch: 1
+      limit-icon:
+        material: "REDSTONE_BLOCK"
+        display:
+          name: "<red><b>● <!b>Trade Denied"
+          lore:
+          - "<font:uniform><gradient:#E6E6FA:red:#E6E6FA>The total value exceeds the daily limit for earnings!</gradient></font>"
+        action:
+          sound_action:
+            type: "sound"
+            value:
+              key: "minecraft:block.anvil.land"
+              source: "player"
+              volume: 1
+              pitch: 1
+    decorative-icons:
+      glass-pane:
+        symbol: "A"
+        material: "BLACK_STAINED_GLASS_PANE"
+        display:
+          name: " "
+        components:
+          minecraft:hide_tooltip: {}
+      close-icon:
+        symbol: "C"
+        material: "RED_STAINED_GLASS_PANE"
+        display:
+          name: "<red>Close"
+        action:
+          action_1:
+            type: "close-inv"
+  fishing-wait-time:
+    override-vanilla: false
+    min-wait-time: 100
+    max-wait-time: 600
+    final-min-wait-time: 50
+    final-max-wait-time: 1200
+  lava-fishing:
+    enable: true
+    min-wait-time: 100
+    max-wait-time: 600
+    final-min-wait-time: 50
+    final-max-wait-time: 1200
+  void-fishing:
+    enable: true
+    min-wait-time: 100
+    max-wait-time: 600
+    final-min-wait-time: 50
+    final-max-wait-time: 1200
+  size:
+    restricted-size-range: true
+  competition:
+    redis-ranking: false
+    server-group: "default"
+    placeholder-limit: 3
+  multiple-loot-spawn-delay: 4
+  totem:
+    allow-multiple-type: true
+    allow-same-type: false
+  bait-animation: true
+other-settings:
+  anti-auto-fishing-mod: false
+  legacy-color-code-support: true
+  event-priority: "NORMAL"
+  data-saving-interval: 600
+  log-data-saving: true
+  lock-data: true
+  placeholder-register:
+    '{date}': "%server_time_yyyy-MM-dd-HH:mm:ss%"
+    '{yaw}': "%player_yaw%"
+  item-detection-order:
+  - "CustomFishing"
+  - "vanilla"
+  block-detection-order:
+  - "vanilla"
+  custom-durability-format:
+  - ""
+  - "<gray>Durability</gray><white>: {dur} <gray>/</gray> {max}</white>"
+  offset-characters:
+    font: "customfishing:offset_chars"
+    '1': ""
+    '2': ""
+    '4': ""
+    '8': ""
+    '16': ""
+    '32': ""
+    '64': ""
+    '128': ""
+    '-1': ""
+    '-2': ""
+    '-4': ""
+    '-8': ""
+    '-16': ""
+    '-32': ""
+    '-64': ""
+    '-128': ""

@@ -1,0 +1,5 @@
+_DEFAULT_:
+  tagprefix: '%luckperms_prefix% '
+  tabsuffix: '%luckperms_suffix% '
+  tagsuffix: '%luckperms_suffix% '
+  tabprefix: '%luckperms_prefix% '

@@ -1,0 +1,51 @@
+info:
+  namespace: v0id
+
+font_images:
+  empty:
+    path: "ah/icons/empty.png"
+    y_position: -32768
+    scale_ratio: -10
+    symbol: ᵩ  
+  auction:
+    path: ah/icons/auction
+    y_position: 8
+    scale_ratio: 9
+    symbol: お
+########### PAGES ###########
+
+  ah:
+    path: "ah/auctionhouse.png"
+    scale_ratio: 256
+    y_position: 24
+    symbol: か
+  myauctions:
+    path: "ah/myauctions.png"
+    scale_ratio: 256
+    y_position: 24
+    symbol: き
+  expireditems:
+    path: "ah/expireditems.png"
+    scale_ratio: 256
+    y_position: 24
+    symbol: く
+  confirmpurchase:
+    path: "ah/confirmpurchase.png"
+    scale_ratio: 256
+    y_position: 24
+    symbol: け
+  bidding:
+    path: "ah/bidding.png"
+    scale_ratio: 256
+    y_position: 24
+    symbol: こ
+
+items:
+  air:
+    enabled: true
+    resource:
+      generate: true
+      model_id: 9991
+      material: GOLD_INGOT
+      textures:
+      - ah/icons/air

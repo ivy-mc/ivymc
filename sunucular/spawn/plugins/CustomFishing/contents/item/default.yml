@@ -1,0 +1,1274 @@
+amphipod:
+amphipod:
+  custom-model-data: 485215
+  display:
+    lore:
+    - <gray>Caught from River biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Amphipod
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - river
+  material: cod
+  price:
+    base: 1
+    bonus: 0.2
+  size: 1~3
+angelfish:
+  custom-model-data: 485208
+  display:
+    lore:
+    - <gray>Caught from Warm Ocean biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Angelfish
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - warm_ocean
+  material: cod
+  price:
+    base: 5
+    bonus: 1.0
+  size: 20~35
+anglerfish:
+  custom-model-data: 485235
+  display:
+    lore:
+    - <gray>Caught from Deep Ocean biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Anglerfish
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - deep_ocean
+  material: cod
+  price:
+    base: 20
+    bonus: 4.0
+  size: 20~30
+barracuda:
+  custom-model-data: 485224
+  display:
+    lore:
+    - <gray>Caught from Ocean biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Barracuda
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - ocean
+  material: cod
+  price:
+    base: 80
+    bonus: 16.0
+  size: 60~100
+barreleye_fish:
+  custom-model-data: 485234
+  display:
+    lore:
+    - <gray>Caught from Deep Ocean biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Barreleye Fish
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - deep_ocean
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 12~15
+bass:
+  custom-model-data: 485200
+  display:
+    lore:
+    - <gray>Caught from River biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Bass
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - river
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 30~60
+blobfish:
+  custom-model-data: 485233
+  display:
+    lore:
+    - <gray>Caught from Deep Ocean biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Blobfish
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - deep_ocean
+  material: cod
+  price:
+    base: 70
+    bonus: 14.0
+  size: 25~30
+butterflyfish:
+  custom-model-data: 485207
+  display:
+    lore:
+    - <gray>Caught from Warm Ocean biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Butterflyfish
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - warm_ocean
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 12~22
+carp:
+  custom-model-data: 485199
+  display:
+    lore:
+    - <gray>Caught from River biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Carp
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - river
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 40~80
+catfish:
+  custom-model-data: 485198
+  display:
+    lore:
+    - <gray>Caught from River biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Catfish
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - river
+  material: cod
+  price:
+    base: 25
+    bonus: 5.0
+  size: 60~100
+clam:
+  custom-model-data: 485214
+  display:
+    lore:
+    - <gray>Caught from River biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Clam
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - river
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 5~15
+crab:
+  custom-model-data: 485213
+  display:
+    lore:
+    - <gray>Caught from River biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Crab
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - river
+  material: cod
+  price:
+    base: 15
+    bonus: 3.0
+  size: 10~25
+crayfish:
+  custom-model-data: 485212
+  display:
+    lore:
+    - <gray>Caught from River biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Crayfish
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - river
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 7~15
+damsel_fish:
+  custom-model-data: 485206
+  display:
+    lore:
+    - <gray>Caught from Warm Ocean biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Damsel Fish
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - warm_ocean
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 6~12
+dragon_fish:
+  custom-model-data: 485232
+  display:
+    lore:
+    - <gray>Caught from Deep Ocean biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Dragon Fish
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - deep_ocean
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 15~25
+dumbo_octopus:
+  custom-model-data: 485231
+  display:
+    lore:
+    - <gray>Caught from Deep Ocean biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Dumbo Octopus
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - deep_ocean
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 20~30
+freshwater_sponge:
+  custom-model-data: 485211
+  display:
+    lore:
+    - <gray>Caught from River biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Freshwater Sponge
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - river
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 2~10
+giant_isopod:
+  custom-model-data: 485230
+  display:
+    lore:
+    - <gray>Caught from Deep Ocean biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Giant Isopod
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - deep_ocean
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 19~36
+grouper:
+  custom-model-data: 485223
+  display:
+    lore:
+    - <gray>Caught from Ocean biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Grouper
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - ocean
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 50~100
+gulper_eel:
+  custom-model-data: 485229
+  display:
+    lore:
+    - <gray>Caught from Deep Ocean biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Gulper Eel
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - deep_ocean
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 80~100
+herring:
+  custom-model-data: 485197
+  display:
+    lore:
+    - <gray>Caught from Ocean biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Herring
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - ocean
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 25~35
+lanternfish:
+  custom-model-data: 485228
+  display:
+    lore:
+    - <gray>Caught from Deep Ocean biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Lanternfish
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - deep_ocean
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 5~15
+lion_fish:
+  custom-model-data: 485205
+  display:
+    lore:
+    - <gray>Caught from Warm Ocean biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Lion Fish
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - warm_ocean
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 25~38
+mackerel:
+  custom-model-data: 485196
+  display:
+    lore:
+    - <gray>Caught from Ocean biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Mackerel
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - ocean
+  material: cod
+  price:
+    base: 8
+    bonus: 1.6
+  size: 30~50
+marlin:
+  custom-model-data: 485222
+  display:
+    lore:
+    - <gray>Caught from Ocean biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Marlin
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - ocean
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 200~300
+moray_eel:
+  custom-model-data: 485204
+  display:
+    lore:
+    - <gray>Caught from Warm Ocean biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Moray Eel
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - warm_ocean
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 60~100
+mussel:
+  custom-model-data: 485210
+  display:
+    lore:
+    - <gray>Caught from River biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Mussel
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - river
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 5~10
+parrotfish:
+  custom-model-data: 485203
+  display:
+    lore:
+    - <gray>Caught from Warm Ocean biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Parrotfish
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - warm_ocean
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 30~50
+perch:
+  custom-model-data: 485195
+  display:
+    lore:
+    - <gray>Caught from River biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Perch
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - river
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 20~35
+pike:
+  custom-model-data: 485194
+  display:
+    lore:
+    - <gray>Caught from River biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Pike
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - river
+  material: cod
+  price:
+    base: 20
+    bonus: 4.0
+  size: 40~55
+redfish:
+  custom-model-data: 485221
+  display:
+    lore:
+    - <gray>Caught from Ocean biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Redfish
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - ocean
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 50~90
+sardine:
+  custom-model-data: 485193
+  display:
+    lore:
+    - <gray>Caught from Ocean biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Sardine
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - ocean
+  material: cod
+  price:
+    base: 2
+    bonus: 0.4
+  size: 15~25
+snail:
+  custom-model-data: 485209
+  display:
+    lore:
+    - <gray>Caught from River biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Snail
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - river
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 2~6
+snapper:
+  custom-model-data: 485220
+  display:
+    lore:
+    - <gray>Caught from Ocean biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Snapper
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - ocean
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 40~60
+snook:
+  custom-model-data: 485219
+  display:
+    lore:
+    - <gray>Caught from Ocean biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Snook
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - ocean
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 50~90
+surgeonfish:
+  custom-model-data: 485202
+  display:
+    lore:
+    - <gray>Caught from Warm Ocean biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Surgeonfish
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - warm_ocean
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 15~30
+sword_fish:
+  custom-model-data: 485218
+  display:
+    lore:
+    - <gray>Caught from Ocean biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Sword Fish
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - ocean
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 200~300
+trigger_fish:
+  custom-model-data: 485201
+  display:
+    lore:
+    - <gray>Caught from Warm Ocean biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Trigger Fish
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - warm_ocean
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 20~35
+trout:
+  custom-model-data: 485192
+  display:
+    lore:
+    - <gray>Caught from River biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Trout
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - river
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 30~50
+tuna:
+  custom-model-data: 485217
+  display:
+    lore:
+    - <gray>Caught from Ocean biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Tuna
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - ocean
+  material: cod
+  price:
+    base: 1000
+    bonus: 200.0
+  size: 200~250
+vampire_squid:
+  custom-model-data: 485227
+  display:
+    lore:
+    - <gray>Caught from Deep Ocean biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Vampire Squid
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - deep_ocean
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 25~30
+vanilla:
+  disable-stat: true
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 1~7
+  price:
+    base: 10
+    bonus: 2.0
+  show-in-fishfinder: false
+  size: 12~33
+viper_fish:
+  custom-model-data: 485225
+  display:
+    lore:
+    - <gray>Caught from Deep Ocean biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Viper Fish
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - deep_ocean
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 20~35
+wahoo:
+  custom-model-data: 485216
+  display:
+    lore:
+    - <gray>Caught from Ocean biome.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Wahoo
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - ocean
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 100~150
+ashmaw:
+  custom-model-data: 485236
+  display:
+    lore:
+    - <gray>Caught from Nether.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Ashmaw
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - loots_in_lava
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 60~90
+soulfin:
+  custom-model-data: 485237
+  display:
+    lore:
+    - <gray>Caught from Nether.
+    - '<white>size: {size_formatted}cm'
+    name: <white>Soulfin
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - loots_in_lava
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 150~200
+blightscale:
+  custom-model-data: 485238
+  display:
+    lore:
+    - <gray>ᴄᴀᴜɢʜᴛ ꜰʀᴏᴍ <red>ɴᴇᴛʜᴇʀ
+    - '<gray>ꜱɪᴢᴇ: <white>{size_formatted}ᴄᴍ'
+    name: <white>Blightscale
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - loots_in_lava
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 70~110
+bone_dart:
+  custom-model-data: 485239
+  display:
+    lore:
+    - <gray>ᴄᴀᴜɢʜᴛ ꜰʀᴏᴍ <red>ɴᴇᴛʜᴇʀ
+    - '<gray>ꜱɪᴢᴇ: <white>{size_formatted}ᴄᴍ'
+    name: <white>Bone Dart
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - loots_in_lava
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 25~40
+cinder_pike:
+  custom-model-data: 485240
+  display:
+    lore:
+    - <gray>ᴄᴀᴜɢʜᴛ ꜰʀᴏᴍ <red>ɴᴇᴛʜᴇʀ
+    - '<gray>ꜱɪᴢᴇ: <white>{size_formatted}ᴄᴍ'
+    name: <white>Cinder Pike
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - loots_in_lava
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 80~120
+ember_carp:
+  custom-model-data: 485241
+  display:
+    lore:
+    - <gray>ᴄᴀᴜɢʜᴛ ꜰʀᴏᴍ <red>ɴᴇᴛʜᴇʀ
+    - '<gray>ꜱɪᴢᴇ: <white>{size_formatted}ᴄᴍ'
+    name: <white>Ember Carp
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - loots_in_lava
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 40~70
+glowsnap:
+  custom-model-data: 485242
+  display:
+    lore:
+    - <gray>ᴄᴀᴜɢʜᴛ ꜰʀᴏᴍ <red>ɴᴇᴛʜᴇʀ
+    - '<gray>ꜱɪᴢᴇ: <white>{size_formatted}ᴄᴍ'
+    name: <white>Glowsnap
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - loots_in_lava
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 30~50
+glowtail:
+  custom-model-data: 485243
+  display:
+    lore:
+    - <gray>ᴄᴀᴜɢʜᴛ ꜰʀᴏᴍ <red>ɴᴇᴛʜᴇʀ
+    - '<gray>ꜱɪᴢᴇ: <white>{size_formatted}ᴄᴍ'
+    name: <white>Glowtail
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - loots_in_lava
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 20~35
+hellpuffer:
+  custom-model-data: 485244
+  display:
+    lore:
+    - <gray>ᴄᴀᴜɢʜᴛ ꜰʀᴏᴍ <red>ɴᴇᴛʜᴇʀ
+    - '<gray>ꜱɪᴢᴇ: <white>{size_formatted}ᴄᴍ'
+    name: <white>Hellpuffer
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - loots_in_lava
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 25~45
+hellstripe:
+  custom-model-data: 485245
+  display:
+    lore:
+    - <gray>ᴄᴀᴜɢʜᴛ ꜰʀᴏᴍ <red>ɴᴇᴛʜᴇʀ
+    - '<gray>ꜱɪᴢᴇ: <white>{size_formatted}ᴄᴍ'
+    name: <white>Hellstripe
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - loots_in_lava
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 50~80
+lava_lantern:
+  custom-model-data: 485246
+  display:
+    lore:
+    - <gray>ᴄᴀᴜɢʜᴛ ꜰʀᴏᴍ <red>ɴᴇᴛʜᴇʀ
+    - '<gray>ꜱɪᴢᴇ: <white>{size_formatted}ᴄᴍ'
+    name: <white>Lava Lantern
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - loots_in_lava
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 35~55
+magma_belly:
+  custom-model-data: 485247
+  display:
+    lore:
+    - <gray>ᴄᴀᴜɢʜᴛ ꜰʀᴏᴍ <red>ɴᴇᴛʜᴇʀ
+    - '<gray>ꜱɪᴢᴇ: <white>{size_formatted}ᴄᴍ'
+    name: <white>Magma Belly
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - loots_in_lava
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 50~80
+nether_ray:
+  custom-model-data: 485248
+  display:
+    lore:
+    - <gray>ᴄᴀᴜɢʜᴛ ꜰʀᴏᴍ <red>ɴᴇᴛʜᴇʀ
+    - '<gray>ꜱɪᴢᴇ: <white>{size_formatted}ᴄᴍ'
+    name: <white>Nether Ray
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - loots_in_lava
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 80~120
+rustfin:
+  custom-model-data: 485249
+  display:
+    lore:
+    - <gray>ᴄᴀᴜɢʜᴛ ꜰʀᴏᴍ <red>ɴᴇᴛʜᴇʀ
+    - '<gray>ꜱɪᴢᴇ: <white>{size_formatted}ᴄᴍ'
+    name: <white>Rustfin
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - loots_in_lava
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 25~40
+spore_jelly:
+  custom-model-data: 485250
+  display:
+    lore:
+    - <gray>ᴄᴀᴜɢʜᴛ ꜰʀᴏᴍ <red>ɴᴇᴛʜᴇʀ
+    - '<gray>ꜱɪᴢᴇ: <white>{size_formatted}ᴄᴍ'
+    name: <white>Spore Jelly
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - loots_in_lava
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 15~25
+warped_eel:
+  custom-model-data: 485251
+  display:
+    lore:
+    - <gray>ᴄᴀᴜɢʜᴛ ꜰʀᴏᴍ <red>ɴᴇᴛʜᴇʀ
+    - '<gray>ꜱɪᴢᴇ: <white>{size_formatted}ᴄᴍ'
+    name: <white>Warped Eel
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - loots_in_lava
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 60~90
+moltenjaw:
+  custom-model-data: 485252
+  display:
+    lore:
+    - <gray>ᴄᴀᴜɢʜᴛ ꜰʀᴏᴍ <red>ɴᴇᴛʜᴇʀ
+    - '<gray>ꜱɪᴢᴇ: <white>{size_formatted}ᴄᴍ'
+    name: <white>Moltenjaw
+  events:
+    success:
+      action_mending:
+        chance: 1.0
+        type: mending
+        value: 5
+  group:
+  - no_star
+  - loots_in_lava
+  material: cod
+  price:
+    base: 10
+    bonus: 2.0
+  size: 25~55

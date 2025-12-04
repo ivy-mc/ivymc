@@ -1,0 +1,31 @@
+info:
+  namespace: prism_skyblock
+font_images:
+  
+  enchantrarity-common:
+    symbol: ꂺ
+    path: labels/enchant_rarity/common.png
+    y_position: 7
+    scale_ratio: 7
+    permission: somerandom.perm
+
+  enchantrarity-rare:
+    symbol: ꂻ
+    path: labels/enchant_rarity/rare.png
+    y_position: 7
+    scale_ratio: 7
+    permission: somerandom.perm
+
+  enchantrarity-legendary:
+    symbol: ꂼ
+    path: labels/enchant_rarity/legendary.png
+    y_position: 7
+    scale_ratio: 7
+    permission: somerandom.perm
+
+  enchantrarity-fabled:
+    symbol: ꂽ
+    path: labels/enchant_rarity/fabled.png
+    y_position: 7
+    scale_ratio: 7
+    permission: somerandom.perm

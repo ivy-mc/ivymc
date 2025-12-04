@@ -1,0 +1,9 @@
+info:
+  namespace: rpghuds
+huds:
+  money:
+    enabled: true
+    show:
+      auto: true
+      underwater: false
+    type: CUSTOM

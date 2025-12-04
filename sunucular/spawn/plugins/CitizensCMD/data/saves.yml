@@ -1,0 +1,131 @@
+npc-data:
+  npc-0:
+    cooldown: 0
+    right-click-commands:
+    - '[console] dm open all %p%'
+    left-click-commands:
+    - '[console] int start rtp %p%'
+    price: 0
+    permission: bukkit.command.playsound
+  npc-13:
+    cooldown: 0
+    right-click-commands: []
+    left-click-commands:
+    - '[console] int start kasaci %p%'
+    price: 0
+  npc-2:
+    cooldown: 0
+    right-click-commands: []
+    left-click-commands:
+    - '[console] int start kozmetikci %p%'
+    price: 0
+  npc-1:
+    cooldown: 0
+    right-click-commands: []
+    left-click-commands:
+    - '[console] int start petci %p%'
+    price: 0
+  npc-7:
+    cooldown: 0
+    right-click-commands:
+    - '[console] shop %p% n-tarim'
+    left-click-commands:
+    - '[console] int start ciftci %p%'
+    price: 0
+  npc-14:
+    cooldown: 0
+    right-click-commands:
+    - '[console] shop %p% n-mob_loot'
+    left-click-commands:
+    - '[console] int start savasci %p%'
+    price: 0
+  npc-4:
+    cooldown: 0
+    right-click-commands:
+    - '[player] bank'
+    left-click-commands:
+    - '[console] int start bankaci %p%'
+    price: 0
+  npc-3:
+    cooldown: 0
+    right-click-commands: []
+    left-click-commands:
+    - '[console] int start barmen %p%'
+    price: 0
+  npc-10:
+    cooldown: 0
+    right-click-commands:
+    - '[console] shop %p% n-odunlar'
+    left-click-commands:
+    - '[console] int start oduncu %p%'
+    price: 0
+  npc-11:
+    cooldown: 0
+    right-click-commands:
+    - '[player] bp'
+    left-click-commands:
+    - '[console] int start battlepass %p%'
+    price: 0
+  npc-12:
+    cooldown: 0
+    right-click-commands: []
+    left-click-commands:
+    - '[console] int start buyucu %p%'
+    price: 0
+  npc-16:
+    cooldown: 0
+    right-click-commands:
+    - '[console] ajpk start %p%'
+    left-click-commands:
+    - '[console] int start parkur %p%'
+    price: 0
+  npc-6:
+    cooldown: 0
+    right-click-commands:
+    - '[player] auctionhouse'
+    left-click-commands: []
+    price: 0
+  npc-17:
+    cooldown: 0
+    right-click-commands:
+    - '[console] dm open meslek %p%'
+    left-click-commands:
+    - '[console] int start meslek %p%'
+    price: 0
+  npc-15:
+    cooldown: 0
+    right-click-commands:
+    - '[console] shop %p% n-bloklar'
+    left-click-commands: []
+    price: 0
+  npc-8:
+    cooldown: 0
+    right-click-commands:
+    - '[console] shop %p% n-maden'
+    left-click-commands: []
+    price: 0
+  npc-18:
+    cooldown: 0
+    right-click-commands:
+    - '[console] shop %p% n-yiyecekler'
+    left-click-commands:
+    - '[console] int start garson %p%'
+    price: 0
+  npc-9:
+    cooldown: 0
+    right-click-commands:
+    - '[console] shop %p% n-baliklar'
+    left-click-commands: []
+    price: 0
+  npc-19:
+    cooldown: 0
+    right-click-commands:
+    - '[console] shop %p% n-boyalar'
+    left-click-commands: []
+    price: 0
+  npc-20:
+    cooldown: 0
+    right-click-commands:
+    - '[console] shop %p% n-cesitli'
+    left-click-commands: []
+    price: 0

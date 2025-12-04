@@ -1,0 +1,31 @@
+info:
+  namespace: profile
+font_images:
+  profile_prefix:
+    permission: "profile_prefix.admin"
+    show_in_gui: false
+    path: "fonts/profile_prefix.png"
+    scale_ratio: 10
+    y_position: -30
+  profile_prefix_chat:
+    permission: "profile_prefix_chat.admin"
+    show_in_gui: false
+    path: "fonts/profile_prefix.png"
+    scale_ratio: 8
+    y_position: 8
+  profile_gui:
+    permission: "profile_prefix_chat.admin"
+    show_in_gui: false
+    suggest_in_command: false
+    path: "fonts/profile_gui.png"
+    suggest_in_command: false
+    y_position: 81
+    scale_ratio: 255
+  profile_status:
+    permission: "profile_prefix_chat.admin"
+    show_in_gui: false
+    suggest_in_command: false
+    path: "fonts/status.png"
+    suggest_in_command: false
+    y_position: 22
+    scale_ratio: 255

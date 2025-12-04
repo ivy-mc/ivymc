@@ -1,0 +1,287 @@
+#
+# Example config of an advent calendar.
+#
+# Decides if rewards will be claimable.
+enabled: true
+#
+# Each type of reward has different specifications.
+# All currently supported types can be found on:
+# https://ultimaterewards.athelion.eu/
+#
+type: advent_calendar
+#
+# Reward tag
+#
+tag: Advent Calendar
+# Set active month
+month: DECEMBER
+starting-day: 1
+ending-day: 24
+# Display the quantity of items
+# based on the day of the month.
+show-amount-as-days: true
+# Allow recursive claiming
+recursive-claiming: true
+# Players with this permission
+# can claim recursively
+recursive-claiming-permission: adventcalendar.recursive
+# Decides if the menu should be closed after
+# claiming the reward
+# (rewrites the global setting from config.yml)
+close-after-claiming: false
+# Notifies players that the reward is currently available
+live-reminder-enabled: true
+#
+# (Optional) Permission which player must have to be
+# able to obtain this reward.
+#
+permission: ultimaterewards.exampleAdventCalendar
+#
+# NOTE THAT ITEM & SOUND NAMES ARE SLIGHTLY DIFFERENT BETWEEN <1.12 & 1.13< VERSIONS!
+# SO MAKE SURE YOU ARE USING VALID ITEM NAMES (DEFAULT ONES ARE USED FROM 1.13+ VERSIONS)
+# OTHERWISE, THEY WILL BE REPLACED BY STONE IF AN INVALID NAME IS USED.
+#
+# When the player can claim this reward,
+# it will be shown as this:
+#
+# %lore% will be replaced with each day's lore
+# defined at the bottom of the page.
+available-item: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjczYjg3NjliNDYxZTg2NWNiODVkMGUwNWEzNDhjYzQxMmVjNzAxYjhmY2E5OWRkNWQ0NjRjOWUyN2Y5YjQ0MCJ9fX0=
+available-display-name: '&a&lADVENT CALENDAR #%day%'
+available-lore:
+  - ' '
+  - '%lore%'
+  - ' '
+  - '&b► Ready to be claimed'
+# When the player can't claim this reward right now,
+# it will be shown as this:
+unavailable-item: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTIyYTFjNjYyNjc0MGExMTkxZDA1MjA5NWE4ZTZhZWI1NmY5OGIzODZkMmZmZTg4N2NmOTMzNmU2YjE5YzljYiJ9fX0=
+unavailable-display-name: '&c&lADVENT CALENDAR #%day%'
+unavailable-lore:
+  - ' '
+  - '%lore%'
+  - ' '
+  - '&c ► %day%.%month%. was claimed'
+# The next day will be marked, and
+# it will be shown as this:
+upcoming-item: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmQ3Mjc1OWRiZmIzYWQ2Y2MwNGUxM2UzYjM5MDViZjRiMjU4OWE3MTVjNzBkODQ2MjdhNzE2ZDczYmViMDBmNCJ9fX0=
+upcoming-display-name: '&8&lADVENT CALENDAR #%day%'
+upcoming-lore:
+  - ' '
+  - '%lore%'
+  - ' '
+  - '&7► This reward will be'
+  - '&7  available on %day%.%month%.'
+# The claimed day will be shown as this:
+claimed-item: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzMyOGRjZGUxNzNiZWZmOWYzZjQxYjkyMzIxM2ZjMWJiNzY3ODk2N2NjYjJlZGU3YTdjZjQwYjE4MzZiMWE3MyJ9fX0=
+claimed-display-name: '&7&lADVENT CALENDAR #%day%'
+claimed-lore:
+  - '&7 This calendar day'
+  - '&7 has already passed!'
+#
+# When the specified month does not
+# match the current month, this setting appears.
+#
+inactive-month-item: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTE4OWYzNDdmNDI0NTBjZDJhMmU5YjhhNTM5ODgwN2QyOGM3ZjQyNTRiZDk5YThhNDk5Y2U1NDM1MzIwOTU1In19fQ==
+inactive-month-display-name: "&6&lADVENT CALENDAR #%day%"
+inactive-month-lore:
+  - ' '
+  - '&e ► Reward will be available'
+  - '&e   on %day%.%month%.'
+#
+# When the player doesn't have the reward's permission,
+# the following properties will be shown.
+#
+no-permission-item: BARRIER
+no-permission-display-name: "&c&l&mADVENT CALENDAR #%day%"
+no-permission-lore:
+  - "&c ✕ Locked, requires"
+  - "&c   %permission% permission"
+#
+# A bonus reward will be granted to players
+# who claim their rewards every day in the calendar.
+# Will be claimed automatically.
+#
+bonus-reward:
+  - "[broadcast] &a%player% completed whole advent calendar and received bonus!"
+  - "[console] give %player% diamond 16"
+#
+# Note that the rewards (actions) are only illustrative,
+# and you can edit as you wish
+#
+# 1: # first day of month
+#   actions: # List of actions executed after claiming a reward
+#     - <| list of actions |>
+# 2: # second day
+#    <| another reward configuration |>
+#
+days:
+  1:
+    lore:
+      - '&7Contains:'
+      - '&f 1x Coal'
+    actions:
+      - "[console] give %player% coal 1"
+      - "[subtitle] &aObtained 1st day!"
+  2:
+    lore:
+      - '&7Contains:'
+      - '&f 1x Iron Ingot'
+    actions:
+      - "[console] give %player% iron_ingot 1"
+      - "[subtitle] &aObtained 2nd day!"
+  3:
+    lore:
+      - '&7Contains:'
+      - '&f 1x Gold Ingot'
+    actions:
+      - "[console] give %player% gold_ingot 1"
+      - "[subtitle] &aObtained 3rd day!"
+  4:
+    lore:
+      - '&7Contains:'
+      - '&f 1x Diamond'
+    actions:
+      - "[console] give %player% diamond 1"
+      - "[subtitle] &aObtained 4th day!"
+  5:
+    lore:
+      - '&7Contains:'
+      - '&f 1x Coal'
+    actions:
+      - "[console] give %player% coal 1"
+      - "[subtitle] &aObtained 5th day!"
+  6:
+    lore:
+      - '&7Contains:'
+      - '&f 1x Iron Ingot'
+    actions:
+      - "[console] give %player% iron_ingot 1"
+      - "[subtitle] &aObtained 6th day!"
+  7:
+    lore:
+      - '&7Contains:'
+      - '&f 1x Gold Ingot'
+    actions:
+      - "[console] give %player% gold_ingot 1"
+      - "[subtitle] &aObtained 7th day!"
+  8:
+    lore:
+      - '&7Contains:'
+      - '&f 1x Diamond'
+    actions:
+      - "[console] give %player% diamond 1"
+      - "[subtitle] &aObtained 8th day!"
+  9:
+    lore:
+      - '&7Contains:'
+      - '&f 1x Coal'
+    actions:
+      - "[console] give %player% coal 1"
+      - "[subtitle] &aObtained 9th day!"
+  10:
+    lore:
+      - '&7Contains:'
+      - '&f 1x Iron Ingot'
+    actions:
+      - "[console] give %player% iron_ingot 1"
+      - "[subtitle] &aObtained 10th day!"
+  11:
+    lore:
+      - '&7Contains:'
+      - '&f 1x Gold Ingot'
+    actions:
+      - "[console] give %player% gold_ingot 1"
+      - "[subtitle] &aObtained 11st day!"
+  12:
+    lore:
+      - '&7Contains:'
+      - '&f 1x Diamond'
+    actions:
+      - "[console] give %player% diamond 1"
+      - "[subtitle] &aObtained 12nd day!"
+  13:
+    lore:
+      - '&7Contains:'
+      - '&f 1x Coal'
+    actions:
+      - "[console] give %player% coal 1"
+      - "[subtitle] &aObtained 13rd day!"
+  14:
+    lore:
+      - '&7Contains:'
+      - '&f 1x Iron Ingot'
+    actions:
+      - "[console] give %player% iron_ingot 1"
+      - "[subtitle] &aObtained 14th day!"
+  15:
+    lore:
+      - '&7Contains:'
+      - '&f 1x Gold Ingot'
+    actions:
+      - "[console] give %player% gold_ingot 1"
+      - "[subtitle] &aObtained 15th day!"
+  16:
+    lore:
+      - '&7Contains:'
+      - '&f 1x Diamond'
+    actions:
+      - "[console] give %player% diamond 1"
+      - "[subtitle] &aObtained 16th day!"
+  17:
+    lore:
+      - '&7Contains:'
+      - '&f 1x Coal'
+    actions:
+      - "[console] give %player% coal 1"
+      - "[subtitle] &aObtained 17th day!"
+  18:
+    lore:
+      - '&7Contains:'
+      - '&f 1x Iron Ingot'
+    actions:
+      - "[console] give %player% iron_ingot 1"
+      - "[subtitle] &aObtained 18th day!"
+  19:
+    lore:
+      - '&7Contains:'
+      - '&f 1x Gold Ingot'
+    actions:
+      - "[console] give %player% gold_ingot 1"
+      - "[subtitle] &aObtained 19th day!"
+  20:
+    lore:
+      - '&7Contains:'
+      - '&f 1x Diamond'
+    actions:
+      - "[console] give %player% diamond 1"
+      - "[subtitle] &aObtained 20th day!"
+  21:
+    lore:
+      - '&7Contains:'
+      - '&f 1x Coal'
+    actions:
+      - "[console] give %player% coal 1"
+      - "[subtitle] &aObtained 21st day!"
+  22:
+    lore:
+      - '&7Contains:'
+      - '&f 1x Iron Ingot'
+    actions:
+      - "[console] give %player% iron_ingot 1"
+      - "[subtitle] &aObtained 22nd day!"
+  23:
+    lore:
+      - '&7Contains:'
+      - '&f 1x Gold Ingot'
+    actions:
+      - "[console] give %player% gold_ingot 1"
+      - "[subtitle] &aObtained 23rd day!"
+  24:
+    lore:
+      - '&7Contains:'
+      - '&f 16x Netherite Ingots'
+    actions:
+      - "[console] give %player% netherite_ingot 16"
+      - "[firework]"
+      - "[subtitle] &aObtained 24th day!"

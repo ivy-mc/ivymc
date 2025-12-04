@@ -1,0 +1,55 @@
+cosmetics:
+  ero_feral_fantasy_cosmetics_bear_ears:
+    display_name: Feral Fantasy Bear Ears
+    enabled: true
+    type: HAT
+    model:
+      gui: potion:9925040
+      normal: potion:9925040
+    dye:
+      enabled: false
+  ero_feral_fantasy_cosmetics_cat_ears:
+    display_name: Feral Fantasy Cat Ears
+    enabled: true
+    type: HAT
+    model:
+      gui: potion:9925045
+      normal: potion:9925045
+    dye:
+      enabled: false
+  ero_feral_fantasy_cosmetics_fox_ears:
+    display_name: Feral Fantasy Fox Ears
+    enabled: true
+    type: HAT
+    model:
+      gui: potion:9925050
+      normal: potion:9925050
+    dye:
+      enabled: false
+  ero_feral_fantasy_cosmetics_rabbit_ears:
+    display_name: Feral Fantasy Rabbit Ears
+    enabled: true
+    type: HAT
+    model:
+      gui: potion:9925055
+      normal: potion:9925055
+    dye:
+      enabled: false
+  ero_feral_fantasy_cosmetics_tiger_ears:
+    display_name: Feral Fantasy Tiger Ears
+    enabled: true
+    type: HAT
+    model:
+      gui: potion:9925060
+      normal: potion:9925060
+    dye:
+      enabled: false
+  ero_feral_fantasy_cosmetics_wolf_ears:
+    display_name: Feral Fantasy Wolf Ears
+    enabled: true
+    type: HAT
+    model:
+      gui: potion:9925065
+      normal: potion:9925065
+    dye:
+      enabled: false

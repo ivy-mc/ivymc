@@ -1,0 +1,296 @@
+balloon-yellow:
+  Type: PIG
+  Healt: 20
+  Options:
+    Despawn: false
+    PreventOtherDrops: true
+    PreventRenaming: true
+    PreventTransformation: true
+    Silent: false
+    MovementSpeed: 0.1
+  AIGoalSelectors:
+  - clear
+  Skills:
+  - model{m=balloon-yellow;d=false;drive=true} @self ~onSpawnorload 
+  - bindHitbox{mid=balloon-yellow;p=ob_hitbox_ballon;t=hitbox_balloons} @self ~onSpawn
+  - drop{i=balloon-yellow} @self ~onDeath
+  - mountmodel{d=true;m=flying} @trigger ~onInteract
+
+balloon-white:
+  Type: PIG
+  Healt: 20
+  Options:
+    Despawn: false
+    PreventOtherDrops: true
+    PreventRenaming: true
+    PreventTransformation: true
+    Silent: false
+    MovementSpeed: 0.1
+    Silent: true
+  AIGoalSelectors:
+  - clear
+  Skills:
+  - model{m=balloon-white;d=false;drive=true} @self ~onSpawnorload 
+  - bindHitbox{mid=balloon-white;p=ob_hitbox_ballon;t=hitbox_balloons} @self ~onSpawn
+  - drop{i=balloon-white} @self ~onDeath
+  - mountmodel{d=true;m=flying} @trigger ~onInteract
+
+balloon-red:
+  Type: PIG
+  Healt: 20
+  Options:
+    Despawn: false
+    PreventOtherDrops: true
+    PreventRenaming: true
+    PreventTransformation: true
+    Silent: false
+    MovementSpeed: 0.1
+    Silent: true
+  AIGoalSelectors:
+  - clear
+  Skills:
+  - model{m=balloon-red;d=false;drive=true} @self ~onSpawnorload 
+  - bindHitbox{mid=balloon-red;p=ob_hitbox_ballon;t=hitbox_balloons} @self ~onSpawn
+  - drop{i=balloon-red} @self ~onDeath
+  - mountmodel{d=true;m=flying} @trigger ~onInteract
+
+balloon-purple:
+  Type: PIG
+  Healt: 20
+  Options:
+    Despawn: false
+    PreventOtherDrops: true
+    PreventRenaming: true
+    PreventTransformation: true
+    Silent: false
+    MovementSpeed: 0.1
+    Silent: true
+  AIGoalSelectors:
+  - clear
+  Skills:
+  - model{m=balloon-purple;d=false;drive=true} @self ~onSpawnorload 
+  - bindHitbox{mid=balloon-purple;p=ob_hitbox_ballon;t=hitbox_balloons} @self ~onSpawn
+  - drop{i=balloon-purple} @self ~onDeath
+  - mountmodel{d=true;m=flying} @trigger ~onInteract
+
+balloon-pink:
+  Type: PIG
+  Healt: 20
+  Options:
+    Despawn: false
+    PreventOtherDrops: true
+    PreventRenaming: true
+    PreventTransformation: true
+    Silent: false
+    MovementSpeed: 0.1
+    Silent: true
+  AIGoalSelectors:
+  - clear
+  Skills:
+  - model{m=balloon-pink;d=false;drive=true} @self ~onSpawnorload 
+  - bindHitbox{mid=balloon-pink;p=ob_hitbox_ballon;t=hitbox_balloons} @self ~onSpawn
+  - drop{i=balloon-pink} @self ~onDeath
+  - mountmodel{d=true;m=flying} @trigger ~onInteract
+
+balloon-orange:
+  Type: PIG
+  Healt: 20
+  Options:
+    Despawn: false
+    PreventOtherDrops: true
+    PreventRenaming: true
+    PreventTransformation: true
+    Silent: false
+    MovementSpeed: 0.1
+    Silent: true
+  AIGoalSelectors:
+  - clear
+  Skills:
+  - model{m=balloon-orange;d=false;drive=true} @self ~onSpawnorload 
+  - bindHitbox{mid=balloon-orange;p=ob_hitbox_ballon;t=hitbox_balloons} @self ~onSpawn
+  - drop{i=balloon-orange} @self ~onDeath
+  - mountmodel{d=true;m=flying} @trigger ~onInteract
+
+balloon-lightpink:
+  Type: PIG
+  Healt: 20
+  Options:
+    Despawn: false
+    PreventOtherDrops: true
+    PreventRenaming: true
+    PreventTransformation: true
+    Silent: false
+    MovementSpeed: 0.1
+    Silent: true
+  AIGoalSelectors:
+  - clear
+  Skills:
+  - model{m=balloon-lightpink;d=false;drive=true} @self ~onSpawnorload 
+  - bindHitbox{mid=balloon-lightpink;p=ob_hitbox_ballon;t=hitbox_balloons} @self ~onSpawn
+  - drop{i=balloon-lightpink} @self ~onDeath
+  - mountmodel{d=true;m=flying} @trigger ~onInteract
+
+balloon-lightblue:
+  Type: PIG
+  Healt: 20
+  Options:
+    Despawn: false
+    PreventOtherDrops: true
+    PreventRenaming: true
+    PreventTransformation: true
+    Silent: false
+    MovementSpeed: 0.1
+    Silent: true
+  AIGoalSelectors:
+  - clear
+  Skills:
+  - model{m=balloon-lightblue;d=false;drive=true} @self ~onSpawnorload 
+  - bindHitbox{mid=balloon-lightblue;p=ob_hitbox_ballon;t=hitbox_balloons} @self ~onSpawn
+  - drop{i=balloon-lightblue} @self ~onDeath
+  - mountmodel{d=true;m=flying} @trigger ~onInteract
+
+balloon-green:
+  Type: PIG
+  Healt: 20
+  Options:
+    Despawn: false
+    PreventOtherDrops: true
+    PreventRenaming: true
+    PreventTransformation: true
+    Silent: false
+    MovementSpeed: 0.1
+    Silent: true
+  AIGoalSelectors:
+  - clear
+  Skills:
+  - model{m=balloon-green;d=false;drive=true} @self ~onSpawnorload 
+  - bindHitbox{mid=balloon-green;p=ob_hitbox_ballon;t=hitbox_balloons} @self ~onSpawn
+  - drop{i=balloon-green} @self ~onDeath
+  - mountmodel{d=true;m=flying} @trigger ~onInteract
+
+balloon-gray:
+  Type: PIG
+  Healt: 20
+  Options:
+    Despawn: false
+    PreventOtherDrops: true
+    PreventRenaming: true
+    PreventTransformation: true
+    Silent: false
+    MovementSpeed: 0.1
+    Silent: true
+  AIGoalSelectors:
+  - clear
+  Skills:
+  - model{m=balloon-gray;d=false;drive=true} @self ~onSpawnorload 
+  - bindHitbox{mid=balloon-gray;p=ob_hitbox_ballon;t=hitbox_balloons} @self ~onSpawn
+  - drop{i=balloon-gray} @self ~onDeath
+  - mountmodel{d=true;m=flying} @trigger ~onInteract
+
+balloon-darkgreen:
+  Type: PIG
+  Healt: 20
+  Options:
+    Despawn: false
+    PreventOtherDrops: true
+    PreventRenaming: true
+    PreventTransformation: true
+    Silent: false
+    MovementSpeed: 0.1
+    Silent: true
+  AIGoalSelectors:
+  - clear
+  Skills:
+  - model{m=balloon-darkgreen;d=false;drive=true} @self ~onSpawnorload 
+  - bindHitbox{mid=balloon-darkgreen;p=ob_hitbox_ballon;t=hitbox_balloons} @self ~onSpawn
+  - drop{i=balloon-darkgreen} @self ~onDeath
+  - mountmodel{d=true;m=flying} @trigger ~onInteract
+
+balloon-darkgray:
+  Type: PIG
+  Healt: 20
+  Options:
+    Despawn: false
+    PreventOtherDrops: true
+    PreventRenaming: true
+    PreventTransformation: true
+    Silent: false
+    MovementSpeed: 0.1
+    Silent: true
+  AIGoalSelectors:
+  - clear
+  Skills:
+  - model{m=balloon-darkgray;d=false;drive=true} @self ~onSpawnorload 
+  - bindHitbox{mid=balloon-darkgray;p=ob_hitbox_ballon;t=hitbox_balloons} @self ~onSpawn
+  - drop{i=balloon-darkgray} @self ~onDeath
+  - mountmodel{d=true;m=flying} @trigger ~onInteract
+
+balloon-brown:
+  Type: PIG
+  Healt: 20
+  Options:
+    Despawn: false
+    PreventOtherDrops: true
+    PreventRenaming: true
+    PreventTransformation: true
+    Silent: false
+    MovementSpeed: 0.1
+    Silent: true
+  AIGoalSelectors:
+  - clear
+  Skills:
+  - model{m=balloon-brown;d=false;drive=true} @self ~onSpawnorload 
+  - bindHitbox{mid=balloon-brown;p=ob_hitbox_ballon;t=hitbox_balloons} @self ~onSpawn
+  - drop{i=balloon-brown} @self ~onDeath
+  - mountmodel{d=true;m=flying} @trigger ~onInteract
+
+balloon-blue:
+  Type: PIG
+  Healt: 20
+  Options:
+    Despawn: false
+    PreventOtherDrops: true
+    PreventRenaming: true
+    PreventTransformation: true
+    Silent: false
+    MovementSpeed: 0.1
+    Silent: true
+  AIGoalSelectors:
+  - clear
+  Skills:
+  - model{m=balloon-blue;d=false;drive=true} @self ~onSpawnorload 
+  - bindHitbox{mid=balloon-blue;p=ob_hitbox_ballon;t=hitbox_balloons} @self ~onSpawn
+  - drop{i=balloon-blue} @self ~onDeath
+  - mountmodel{d=true;m=flying} @trigger ~onInteract
+
+balloon-black:
+  Type: PIG
+  Healt: 20
+  Options:
+    Despawn: false
+    PreventOtherDrops: true
+    PreventRenaming: true
+    PreventTransformation: true
+    Silent: false
+    MovementSpeed: 0.1
+    Silent: true
+  AIGoalSelectors:
+  - clear
+  Skills:
+  - model{m=balloon-black;d=false;drive=true} @self ~onSpawnorload 
+  - bindHitbox{mid=balloon-black;p=ob_hitbox_ballon;t=hitbox_balloons} @self ~onSpawn
+  - drop{i=balloon-black} @self ~onDeath
+  - mountmodel{d=true;m=flying} @trigger ~onInteract
+
+
+hitbox_balloons:
+  Type: VEX
+  Health: 999
+  Options:
+    NoAI: true
+    Despawn: false
+    PreventOtherDrops: true
+    PreventRenaming: true
+    PreventTransformation: true
+    Silent: true
+#gEOrh0c4FGW2lEauR3VltWeVpXTSxWVVpEcsRFWkFjVoFzaU5UbMV1bzYTUBt0VJFmWOVnM

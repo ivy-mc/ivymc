@@ -1,0 +1,102 @@
+info:
+  namespace: prism_skyblock
+items:
+  
+  raw_cobalt:
+    display_name: "Raw Cobalt"
+    enabled: true   
+    resource:
+      generate: true
+      material: RAW_IRON
+      model_id: 1
+      textures:
+      - item_texture/ore/raw_cobalt.png
+    mmoitem:
+      type: MATERIAL
+      id: RAW_COBALT
+  cobalt-ingot:
+    enabled: true   
+    resource:
+      generate: true
+      material: RAW_IRON
+      model_id: 2
+      textures:
+      - item_texture/ore/cobalt_ingot.png
+
+  raw_mithril:
+    display_name: "Raw Mithril"
+    enabled: true   
+    resource:
+      generate: true
+      material: RAW_IRON
+      model_id: 3
+      textures:
+      - item_texture/ore/raw_mithril.png
+    mmoitem:
+      type: MATERIAL
+      id: RAW_MITHRIL
+  mithril-ingot:
+    enabled: true   
+    resource:
+      generate: true
+      material: RAW_IRON
+      model_id: 4
+      textures:
+      - item_texture/ore/mithril_ingot.png
+
+  raw_soulsteel:
+    display_name: "Raw Soulsteel"
+    enabled: true   
+    resource:
+      generate: true
+      material: RAW_IRON
+      model_id: 7
+      textures:
+      - item_texture/ore/raw_soulsteel.png
+    mmoitem:
+      type: MATERIAL
+      id: RAW_SOULSTEEL
+  soulsteel-ingot:
+    enabled: true   
+    resource:
+      generate: true
+      material: RAW_IRON
+      model_id: 8
+      textures:
+      - item_texture/ore/soulsteel_ingot.png
+
+  soul-netherite-ingot:
+    enabled: true   
+    resource:
+      generate: true
+      material: RAW_IRON
+      model_id: 9
+      textures:
+      - item_texture/ore/soul_netherite_ingot.png
+
+  gilded-netherite-ingot:
+    enabled: true   
+    resource:
+      generate: true
+      material: RAW_IRON
+      model_id: 10
+      textures:
+      - item_texture/ore/gilded_netherite_ingot.png
+
+  warden-ingot:
+    enabled: true   
+    resource:
+      generate: true
+      material: RAW_IRON
+      model_id: 11
+      textures:
+      - item_texture/ore/warden_ingot.png
+
+  hextech-ingot:
+    enabled: true   
+    resource:
+      generate: true
+      material: RAW_IRON
+      model_id: 12
+      textures:
+      - item_texture/ore/hextech_ingot.png

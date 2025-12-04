@@ -1,0 +1,62 @@
+#--[################################################################]
+#--[##################### GENERAL INFORMATION ######################]
+#--[################################################################]
+
+# NOTE: PlaceholderAPI placeholders are now supported for this file in [DailyRewards+ V1.0.9 and above]!
+# Multiple internal placeholders can be added to the below messages to enhance your text, these include:
+# <playerName> ~ The name of the player the message is being sent too
+# <nextRewardTime> ~ The time until the player can claim their next reward [Format: % Hours, % Minutes, % Seconds]
+# <playerRewardStreak> ~ The players current Daily Reward streak
+
+# To get new lines when writing, simply incorporate the two characters: \n into your message
+# If you have any questions you can always get support at: https://discord.gg/9jyHhUepaG
+
+
+
+#################################################################
+#################### General Plugin Messages ####################
+#################################################################
+
+# Sent when players don't have permission to execute a command
+NoPermission: "&o&cOops... &r&cYou don't have permission to use that command."
+
+# Sent to remind a player to claim their Daily Reward
+RewardReminderMessage: "&aYou have a Daily Reward waiting to be claimed!\n&nClick Here&a To claim your reward!"
+
+
+#################################################################
+##################### Reward Claim Messages #####################
+#################################################################
+
+# Sent when a player claims a Daily Reward
+RewardClaim: "&aYou have claimed your daily reward, Check back tomorrow to continue your streak!"
+
+# Sent when a player claims a Daily Reward and receives additional rewards due to having the required permission node
+# (Only sent once, even if multiple exclusive rewards are sent)
+# This message is a substitute for RewardClaim
+BonusRewardMessage: "&aYou have claimed your daily reward and received &6Bonus Rewards&a! \nCheck back tomorrow to continue your streak!"
+
+# Sent when a player attempts to claim a daily reward however it is not ready to claim yet
+RewardNotReady: "&o&cOops... &r&cYou can't claim that reward yet,\nWait <nextRewardTime>!"
+
+# Sent when a player does not have enough play time to claim a reward
+# The placeholder <playTimeRemaining> may be used here to specify the users current play time
+NotEnoughPlaytime: "&o&cOops... &r&cYou don't have enough play-time to claim daily rewards,\nWait <playTimeRemaining>!"
+
+# The time format used to represent the next available reward
+NextRewardTime:
+  RewardTime: "&#EE3E38<hours> &#EE3E38ʜᴏᴜʀѕ(ѕ)"
+  AvailableNow: "Available Now!"
+
+# The time format used to represent how long a player still needs to play to get their next daily reward
+PlayTime:
+  Remaining: "&7<hours> &cHour(s)"
+
+
+#################################################################
+###################### Daily Reward Chests ######################
+#################################################################
+
+# Sent when a player attempts to use a daily reward chest that somebody else is currently using
+ChestInUse: "&cThis daily reward chest is currently in use, Try again in a few seconds!"
+#e533b8bddc26436aba5e09962bdf824d

@@ -1,0 +1,7 @@
+pluginVersion: 1
+regionsN: 1
+regions:
+  '0':
+    regionName: balon
+    eventType: enter
+    command: 'dm open all $player '

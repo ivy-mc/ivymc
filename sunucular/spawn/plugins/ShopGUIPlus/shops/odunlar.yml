@@ -1,0 +1,1066 @@
+odunlar:
+  name: "&fᵩᵖ"
+  fillItem:
+    material: PAPER
+    model: 7548
+    name: "&f"
+  items:
+    1:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵳ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Bloklar kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop bloklar
+      slot: 0
+      page: 1
+    2:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵷ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Mineraller & Cevherler"
+          - "#C0C0C0kategorisindeki tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop maden
+      slot: 1
+      page: 1
+    3:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵹ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Mob Düşüşleri kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop mob_drop
+      slot: 2
+      page: 1
+    4:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵶ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Yiyecekler kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop yiyecekler
+      slot: 3
+      page: 1
+    5:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵵ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Tarım kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop tarim
+      slot: 4
+      page: 1
+    6:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵴ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Boyalar kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop boyalar
+      slot: 5
+      page: 1
+    7:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵺ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Redstone kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop odunlar
+      slot: 6
+      page: 1
+    8:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵻ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Spawner kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop baliklar
+      slot: 7
+      page: 1
+    9:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵸ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Çeşitli kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop cesitli
+      slot: 8
+      page: 1
+    10:
+      type: special
+      special: BALANCE
+      slot: 49
+      page: 1
+    11:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵳ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Bloklar kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop bloklar
+      slot: 0
+      page: 2
+    12:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵷ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Mineraller & Cevherler"
+          - "#C0C0C0kategorisindeki tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop maden
+      slot: 1
+      page: 2
+    13:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵹ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Mob Düşüşleri kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop mob_drop
+      slot: 2
+      page: 2
+    14:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵶ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Yiyecekler kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop yiyecekler
+      slot: 3
+      page: 2
+    15:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵵ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Tarım kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop tarim
+      slot: 4
+      page: 2
+    16:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵴ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Boyalar kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop boyalar
+      slot: 5
+      page: 2
+    17:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵺ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Redstone kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop odunlar
+      slot: 6
+      page: 2
+    18:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵻ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Spawner kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop baliklar
+      slot: 7
+      page: 2
+    19:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵸ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Çeşitli kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop cesitli
+      slot: 8
+      page: 2
+    20:
+      type: special
+      special: BALANCE
+      slot: 49
+      page: 2
+    21:
+      type: item
+      item:
+        material: OAK_LOG
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 18
+      page: 1
+    22:
+      type: item
+      item:
+        material: OAK_WOOD
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 19
+      page: 1
+    23:
+      type: item
+      item:
+        material: OAK_PLANKS
+        quantity: 1
+      buyPrice: 2
+      sellPrice: 0.09
+      slot: 20
+      page: 1
+    24:
+      type: item
+      item:
+        material: OAK_SAPLING
+        quantity: 1
+      buyPrice: 50
+      sellPrice: 0.5
+      slot: 21
+      page: 1
+    25:
+      type: item
+      item:
+        material: SPRUCE_LOG
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 22
+      page: 1
+    26:
+      type: item
+      item:
+        material: SPRUCE_WOOD
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 23
+      page: 1
+    27:
+      type: item
+      item:
+        material: SPRUCE_PLANKS
+        quantity: 1
+      buyPrice: 2
+      sellPrice: 0.09
+      slot: 24
+      page: 1
+    28:
+      type: item
+      item:
+        material: SPRUCE_SAPLING
+        quantity: 1
+      buyPrice: 50
+      sellPrice: 0.5
+      slot: 25
+      page: 1
+    29:
+      type: item
+      item:
+        material: BIRCH_LOG
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 26
+      page: 1
+    30:
+      type: item
+      item:
+        material: BIRCH_WOOD
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 27
+      page: 1
+    31:
+      type: item
+      item:
+        material: BIRCH_PLANKS
+        quantity: 1
+      buyPrice: 2
+      sellPrice: 0.09
+      slot: 28
+      page: 1
+    32:
+      type: item
+      item:
+        material: BIRCH_SAPLING
+        quantity: 1
+      buyPrice: 50
+      sellPrice: 0.5
+      slot: 29
+      page: 1
+    33:
+      type: item
+      item:
+        material: JUNGLE_LOG
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 30
+      page: 1
+    34:
+      type: item
+      item:
+        material: JUNGLE_WOOD
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 31
+      page: 1
+    35:
+      type: item
+      item:
+        material: JUNGLE_PLANKS
+        quantity: 1
+      buyPrice: 2
+      sellPrice: 0.09
+      slot: 32
+      page: 1
+    36:
+      type: item
+      item:
+        material: JUNGLE_SAPLING
+        quantity: 1
+      buyPrice: 50
+      sellPrice: 0.5
+      slot: 33
+      page: 1
+    37:
+      type: item
+      item:
+        material: ACACIA_LOG
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 34
+      page: 1
+    38:
+      type: item
+      item:
+        material: ACACIA_WOOD
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 35
+      page: 1
+    39:
+      type: item
+      item:
+        material: ACACIA_PLANKS
+        quantity: 1
+      buyPrice: 2
+      sellPrice: 0.09
+      slot: 36
+      page: 1
+    40:
+      type: item
+      item:
+        material: ACACIA_SAPLING
+        quantity: 1
+      buyPrice: 50
+      sellPrice: 0.5
+      slot: 37
+      page: 1
+    41:
+      type: item
+      item:
+        material: DARK_OAK_LOG
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 38
+      page: 1
+    42:
+      type: item
+      item:
+        material: DARK_OAK_WOOD
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 39
+      page: 1
+    43:
+      type: item
+      item:
+        material: DARK_OAK_PLANKS
+        quantity: 1
+      buyPrice: 2
+      sellPrice: 0.09
+      slot: 40
+      page: 1
+    44:
+      type: item
+      item:
+        material: DARK_OAK_SAPLING
+        quantity: 1
+      buyPrice: 50
+      sellPrice: 0.5
+      slot: 41
+      page: 1
+    45:
+      type: item
+      item:
+        material: MANGROVE_LOG
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 42
+      page: 1
+    46:
+      type: item
+      item:
+        material: MUDDY_MANGROVE_ROOTS
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 43
+      page: 1
+    47:
+      type: item
+      item:
+        material: MANGROVE_PLANKS
+        quantity: 1
+      buyPrice: 2
+      sellPrice: 0.09
+      slot: 44
+      page: 1
+    48:
+      type: item
+      item:
+        material: MANGROVE_PROPAGULE
+        quantity: 1
+      buyPrice: 50
+      sellPrice: 0.5
+      slot: 18
+      page: 2
+    49:
+      type: item
+      item:
+        material: WARPED_STEM
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 19
+      page: 2
+    50:
+      type: item
+      item:
+        material: WARPED_HYPHAE
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 20
+      page: 2
+    51:
+      type: item
+      item:
+        material: WARPED_PLANKS
+        quantity: 1
+      buyPrice: 2
+      sellPrice: 0.09
+      slot: 21
+      page: 2
+    52:
+      type: item
+      item:
+        material: WARPED_FUNGUS
+        quantity: 1
+      buyPrice: 50
+      sellPrice: 0.5
+      slot: 22
+      page: 2
+    53:
+      type: item
+      item:
+        material: CRIMSON_STEM
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 23
+      page: 2
+    54:
+      type: item
+      item:
+        material: CRIMSON_HYPHAE
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 24
+      page: 2
+    55:
+      type: item
+      item:
+        material: CRIMSON_PLANKS
+        quantity: 1
+      buyPrice: 2
+      sellPrice: 0.09
+      slot: 25
+      page: 2
+    56:
+      type: item
+      item:
+        material: CRIMSON_FUNGUS
+        quantity: 1
+      buyPrice: 50
+      sellPrice: 0.5
+      slot: 26
+      page: 2
+    57:
+      type: item
+      item:
+        material: CHERRY_LOG
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 27
+      page: 2
+    58:
+      type: item
+      item:
+        material: CHERRY_WOOD
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 28
+      page: 2
+    59:
+      type: item
+      item:
+        material: CHERRY_PLANKS
+        quantity: 1
+      buyPrice: 2
+      sellPrice: 0.09
+      slot: 29
+      page: 2
+    60:
+      type: item
+      item:
+        material: CHERRY_SAPLING
+        quantity: 1
+      buyPrice: 50
+      sellPrice: 0.5
+      slot: 30
+      page: 2
+    61:
+      type: item
+      item:
+        material: STRIPPED_OAK_LOG
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 31
+      page: 2
+    62:
+      type: item
+      item:
+        material: STRIPPED_OAK_WOOD
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 32
+      page: 2
+    63:
+      type: item
+      item:
+        material: STRIPPED_SPRUCE_LOG
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 33
+      page: 2
+    64:
+      type: item
+      item:
+        material: STRIPPED_SPRUCE_WOOD
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 34
+      page: 2
+    65:
+      type: item
+      item:
+        material: STRIPPED_BIRCH_LOG
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 35
+      page: 2
+    66:
+      type: item
+      item:
+        material: STRIPPED_BIRCH_WOOD
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 36
+      page: 2
+    67:
+      type: item
+      item:
+        material: STRIPPED_JUNGLE_LOG
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 37
+      page: 2
+    68:
+      type: item
+      item:
+        material: STRIPPED_JUNGLE_WOOD
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 38
+      page: 2
+    69:
+      type: item
+      item:
+        material: STRIPPED_ACACIA_LOG
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 39
+      page: 2
+    70:
+      type: item
+      item:
+        material: STRIPPED_ACACIA_WOOD
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 40
+      page: 2
+    71:
+      type: item
+      item:
+        material: STRIPPED_DARK_OAK_LOG
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 41
+      page: 2
+    72:
+      type: item
+      item:
+        material: STRIPPED_DARK_OAK_WOOD
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 42
+      page: 2
+    73:
+      type: item
+      item:
+        material: STRIPPED_MANGROVE_LOG
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 43
+      page: 2
+    74:
+      type: item
+      item:
+        material: STRIPPED_MANGROVE_WOOD
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 44
+      page: 2
+    75:
+      type: item
+      item:
+        material: STRIPPED_WARPED_STEM
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 18
+      page: 3
+    76:
+      type: item
+      item:
+        material: STRIPPED_WARPED_HYPHAE
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 19
+      page: 3
+    77:
+      type: item
+      item:
+        material: STRIPPED_CRIMSON_STEM
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 20
+      page: 3
+    78:
+      type: item
+      item:
+        material: STRIPPED_CRIMSON_HYPHAE
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 21
+      page: 3
+    79:
+      type: item
+      item:
+        material: STRIPPED_CHERRY_LOG
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 22
+      page: 3
+    80:
+      type: item
+      item:
+        material: STRIPPED_CHERRY_WOOD
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 23
+      page: 3
+    81:
+      type: item
+      item:
+        material: STRIPPED_BAMBOO_BLOCK
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 24
+      page: 3
+    82:
+      type: item
+      item:
+        material: BAMBOO_BLOCK
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 25
+      page: 3
+    83:
+      type: item
+      item:
+        material: BAMBOO_PLANKS
+        quantity: 1
+      buyPrice: 10
+      sellPrice: 0.35
+      slot: 26
+      page: 3
+    84:
+      type: item
+      item:
+        material: BAMBOO_MOSAIC
+        quantity: 1
+      buyPrice: 15
+      sellPrice: 0.5
+      slot: 27
+      page: 3
+    85:
+      type: item
+      item:
+        material: BAMBOO
+        quantity: 1
+      buyPrice: 5
+      sellPrice: 0.1
+      slot: 28
+      page: 3
+    86:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵳ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Bloklar kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop bloklar
+      slot: 0
+      page: 3
+    87:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵷ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Mineraller & Cevherler"
+          - "#C0C0C0kategorisindeki tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop maden
+      slot: 1
+      page: 3
+    88:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵹ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Mob Düşüşleri kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop mob_drop
+      slot: 2
+      page: 3
+    89:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵶ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Yiyecekler kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop yiyecekler
+      slot: 3
+      page: 3
+    90:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵵ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Tarım kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop tarim
+      slot: 4
+      page: 3
+    91:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵴ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Boyalar kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop boyalar
+      slot: 5
+      page: 3
+    92:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵺ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Redstone kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop odunlar
+      slot: 6
+      page: 3
+    93:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵻ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Spawner kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop baliklar
+      slot: 7
+      page: 3
+    94:
+      type: dummy
+      item:
+        material: PAPER
+        model: 7548
+        quantity: 1
+        name: "&fᵸ"
+        lore:
+          - "#C0C0C0"
+          - "#C0C0C0Çeşitli kategorisindeki"
+          - "#C0C0C0tüm eşyaları göster."
+          - "#C0C0C0"
+          - "&fᵤ #8B93AFᴛıᴋʟᴀ ᴠᴇ ɢöʀüɴᴛüʟᴇ"
+      commandsOnClick:
+      - shop cesitli
+      slot: 8
+      page: 3
+    95:
+      type: special
+      special: BALANCE
+      slot: 49
+      page: 3

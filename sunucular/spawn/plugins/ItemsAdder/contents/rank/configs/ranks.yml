@@ -1,0 +1,192 @@
+info:
+  namespace: rank
+font_images:
+  admin:
+    permission: "rank.admin"
+    show_in_gui: true
+    suggest_in_command: false
+    path: "admin.png"
+    scale_ratio: 9
+    y_position: 8
+  mod:
+    permission: "rank.admin"
+    show_in_gui: true
+    suggest_in_command: false
+    path: "mod.png"
+    scale_ratio: 9
+    y_position: 8
+  rehber:
+    permission: "rank.admin"
+    show_in_gui: true
+    suggest_in_command: false
+    path: "rehber.png"
+    scale_ratio: 9
+    y_position: 8
+  senyor:
+    permission: "rank.admin"
+    show_in_gui: true
+    suggest_in_command: false
+    path: "senyor.png"
+    scale_ratio: 9
+    y_position: 8
+  soylu:
+    permission: "rank.admin"
+    show_in_gui: true
+    suggest_in_command: false
+    path: "soylu.png"
+    scale_ratio: 9
+    y_position: 8
+  asil:
+    permission: "rank.admin"
+    show_in_gui: true
+    suggest_in_command: false
+    path: "asil.png"
+    scale_ratio: 9
+    y_position: 8
+  cirak:
+    permission: "rank.admin"
+    show_in_gui: true
+    suggest_in_command: false
+    path: "cirak.png"
+    scale_ratio: 9
+    y_position: 8
+  oyuncu:
+    permission: "rank.admin"
+    show_in_gui: true
+    suggest_in_command: false
+    path: "oyuncu.png"
+    scale_ratio: 9
+    y_position: 8
+  balikci:
+    permission: "rank.admin"
+    show_in_gui: true
+    suggest_in_command: false
+    path: "balikci.png"
+    scale_ratio: 9
+    y_position: 8
+  bankaci:
+    permission: "rank.admin"
+    show_in_gui: true
+    suggest_in_command: false
+    path: "bankaci.png"
+    scale_ratio: 9
+    y_position: 8
+  barmen:
+    permission: "rank.admin"
+    show_in_gui: true
+    suggest_in_command: false
+    path: "barmen.png"
+    scale_ratio: 9
+    y_position: 8
+  battlepass:
+    permission: "rank.admin"
+    show_in_gui: true
+    suggest_in_command: false
+    path: "battlepass.png"
+    scale_ratio: 9
+    y_position: 8
+  boyaci:
+    permission: "rank.admin"
+    show_in_gui: true
+    suggest_in_command: false
+    path: "boyaci.png"
+    scale_ratio: 9
+    y_position: 8
+  buyucu:
+    permission: "rank.admin"
+    show_in_gui: true
+    suggest_in_command: false
+    path: "buyucu.png"
+    scale_ratio: 9
+    y_position: 8
+  ciftci:
+    permission: "rank.admin"
+    show_in_gui: true
+    suggest_in_command: false
+    path: "ciftci.png"
+    scale_ratio: 9
+    y_position: 8
+  garson:
+    permission: "rank.admin"
+    show_in_gui: true
+    suggest_in_command: false
+    path: "garson.png"
+    scale_ratio: 9
+    y_position: 8
+  kasaci:
+    permission: "rank.admin"
+    show_in_gui: true
+    suggest_in_command: false
+    path: "kasaci.png"
+    scale_ratio: 9
+    y_position: 8
+  kasif:
+    permission: "rank.admin"
+    show_in_gui: true
+    suggest_in_command: false
+    path: "kasif.png"
+    scale_ratio: 9
+    y_position: 8
+  kozmetikci:
+    permission: "rank.admin"
+    show_in_gui: true
+    suggest_in_command: false
+    path: "kozmetikci.png"
+    scale_ratio: 9
+    y_position: 8
+  madenci:
+    permission: "rank.admin"
+    show_in_gui: true
+    suggest_in_command: false
+    path: "madenci.png"
+    scale_ratio: 9
+    y_position: 8
+  oduncu:
+    permission: "rank.admin"
+    show_in_gui: true
+    suggest_in_command: false
+    path: "oduncu.png"
+    scale_ratio: 9
+    y_position: 8
+  patron:
+    permission: "rank.admin"
+    show_in_gui: true
+    suggest_in_command: false
+    path: "patron.png"
+    scale_ratio: 9
+    y_position: 8
+  savasci:
+    permission: "rank.admin"
+    show_in_gui: true
+    suggest_in_command: false
+    path: "savasci.png"
+    scale_ratio: 9
+    y_position: 8
+  tuccar:
+    permission: "rank.admin"
+    show_in_gui: true
+    suggest_in_command: false
+    path: "tuccar.png"
+    scale_ratio: 9
+    y_position: 8
+  veteriner:
+    permission: "rank.admin"
+    show_in_gui: true
+    suggest_in_command: false
+    path: "veteriner.png"
+    scale_ratio: 9
+    y_position: 8
+  yapi_market:
+    permission: "rank.admin"
+    show_in_gui: true
+    suggest_in_command: false
+    path: "yapi_market.png"
+    scale_ratio: 9
+    y_position: 8
+  parkur:
+    permission: "rank.admin"
+    show_in_gui: true
+    suggest_in_command: false
+    path: "parkur.png"
+    scale_ratio: 9
+    y_position: 8

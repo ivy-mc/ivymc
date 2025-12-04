@@ -1,0 +1,63 @@
+info:
+  namespace: warden_set
+items:
+  warden_sword:
+    display_name: Warden Sword
+    permission: warden_sword
+    durability:
+      max_custom_durability: 1800
+    resource:
+      material: DIAMOND_SWORD
+      generate: true
+      textures:                  
+      - item/warden/warden_sword
+  warden_pickaxe:
+    display_name: Warden Pickaxe
+    permission: warden_pickaxe
+    durability:
+      max_custom_durability: 1800
+    resource:
+      material: DIAMOND_PICKAXE
+      generate: true
+      textures:
+      - item/warden/warden_pickaxe
+  warden_axe:
+    display_name: Warden Axe
+    permission: warden_axe
+    durability:
+      max_custom_durability: 1800
+    resource:
+      material: DIAMOND_AXE
+      generate: true
+      textures:
+      - item/warden/warden_axe
+  warden_shovel:
+    display_name: Warden Shovel
+    permission: warden_shovel
+    durability:
+      max_custom_durability: 1800
+    resource:
+      material: DIAMOND_SHOVEL
+      generate: true
+      textures:
+      - item/warden/warden_shovel
+  warden_hoe:
+    display_name: Warden Hoe
+    permission: warden_hoe
+    durability:
+      max_custom_durability: 1800
+    resource:
+      material: DIAMOND_HOE
+      generate: true
+      textures:
+      - item/warden/warden_hoe
+  warden_bow:
+    display_name: Warden Bow
+    permission: warden_bow
+    durability:
+      max_custom_durability: 1800
+    resource:
+      material: BOW
+      generate: true
+      textures:
+      - item/warden/warden_bow

@@ -1,0 +1,20 @@
+info:
+  namespace: nii_medievalpack
+
+items:
+  medievalpack_bag:
+    display_name: "Bag"
+    permission: medievalpack.decoration_blocks.medievalpack_bag
+    resource:
+      generate: false
+      material: BARRIER
+      model_path: blocks/decoration_blocks/medievalpack_bag
+    behaviours:
+      furniture:
+        fixed_rotation: false
+        small: false
+        solid: true
+        placeable_on:
+          floor: true
+          ceiling: true
+          walls: true

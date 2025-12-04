@@ -1,0 +1,103 @@
+{
+    "providers": [
+        {
+         "type": "bitmap",
+         "file": "icons:toast/volume_alpha.png",
+         "ascent": 14,
+         "height": 22,
+         "chars": [
+            "\uDBB9\uDC07"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "icons:toast/volume_beta.png",
+            "ascent": 14,
+            "height": 22,
+            "chars": [
+                "\uDBB9\uDC08"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "icons:toast/axolotl.png",
+            "ascent": 14,
+            "height": 22,
+            "chars": [
+                "\uDBB9\uDC09"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "icons:toast/dragon_fish.png",
+            "ascent": 14,
+            "height": 22,
+            "chars": [
+                "\uDBB9\uDC0A"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "icons:toast/shuniji.png",
+            "ascent": 14,
+            "height": 22,
+            "chars": [
+                "\uDBB9\uDC0B"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "icons:toast/nether_update.png",
+            "ascent": 14,
+            "height": 22,
+            "chars": [
+                "\uDBB9\uDC0C"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "icons:toast/caves_cliffs.png",
+            "ascent": 14,
+            "height": 22,
+            "chars": [
+                "\uDBB9\uDC0D"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "icons:toast/the_wild_update.png",
+            "ascent": 14,
+            "height": 22,
+            "chars": [
+                "\uDBB9\uDC0E"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "icons:toast/trails_tales.png",
+            "ascent": 14,
+            "height": 22,
+            "chars": [
+                "\uDBB9\uDC0F"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "icons:toast/tricky_trials.png",
+            "ascent": 14,
+            "height": 22,
+            "chars": [
+                "\uDBB9\uDC10"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "icons:toast/chase_the_skies.png",
+            "ascent": 14,
+            "height": 22,
+            "chars": [
+                "\uDBB9\uDC11"
+            ]
+        }
+    ]
+}

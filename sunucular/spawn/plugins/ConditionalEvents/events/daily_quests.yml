@@ -1,0 +1,83 @@
+# Events:
+  rookie:
+    type: repetitive
+    repetitive_time: 20
+    conditions:
+      - '%odailyquests_total% == 0'
+    one_time: true
+    actions:
+      default:
+      - 'message: #7ed359You have achieved the Rookie Badge! GG'
+      - 'console_command: lp user %player% meta set badge Rookie'
+  beginner:
+    type: repetitive
+    repetitive_time: 20
+    conditions:
+      - '%odailyquests_total% == 10'
+    one_time: true
+    actions:
+      default:
+      - 'message: #7ed359You have achieved the Beginner Badge! GG'
+      - 'console_command: lp user %player% meta set badge Beginner'
+  advanced:
+    type: repetitive
+    repetitive_time: 20
+    conditions:
+      - '%odailyquests_total% == 30'
+    one_time: true
+    actions:
+      default:
+      - 'message: #7ed359You have achieved the Advanced Badge! GG'
+      - 'console_command: lp user %player% meta set badge Advanced'
+  pro:
+    type: repetitive
+    repetitive_time: 20
+    conditions:
+      - '%odailyquests_total% == 50'
+    one_time: true
+    actions:
+      default:
+      - 'message: #7ed359You have achieved the Pro Badge! GG'
+      - 'console_command: lp user %player% meta set badge Pro'
+  expert:
+    type: repetitive
+    repetitive_time: 20
+    conditions:
+      - '%odailyquests_total% == 75'
+    one_time: true
+    actions:
+      default:
+      - 'message: #7ed359You have achieved the Expert Badge! GG'
+      - 'console_command: lp user %player% meta set badge Expert'
+  skilled:
+    type: repetitive
+    repetitive_time: 20
+    conditions:
+      - '%odailyquests_total% == 100'
+    one_time: true
+    actions:
+      default:
+      - 'message: #7ed359You have achieved the Skilled Badge! GG'
+      - 'console_command: lp user %player% meta set badge Skilled'
+  legend:
+    type: repetitive
+    repetitive_time: 20
+    conditions:
+      - '%odailyquests_total% == 150'
+    one_time: true
+    actions:
+      default:
+      - 'message: #7ed359You have achieved the Legend of Quests Badge! GG'
+      - 'console_command: lp user %player% meta set badge Legend'
+  master:
+    type: repetitive
+    repetitive_time: 20
+    conditions:
+      - '%odailyquests_total% == 200'
+    one_time: true
+    actions:
+      default:
+      - 'message: #7ed359You have achieved the Master Of Quests Badge! GG'
+      - 'console_command: lp user %player% meta set badge Master'
+#81d5836c452464f5d2242b6aa9d527f1
+# eyJ1c2VyLW5hbWUiOiJiYWhveiIsInVzZXItaWQiOiI2MjY0IiwiZGF0ZSI6IjIwMjUtMTAtMjMgMjA6MDAiLCJzaXRlIjoiaHR0cHM6Ly9nbGVha3MucHJvIn0=

@@ -1,0 +1,536 @@
+info:
+  namespace: bc
+recipes:
+  crafting_table:
+    candlesconce_iron:
+      permission: bc.sconce
+      enabled: true
+      pattern:
+      - FFF
+      - YYY
+      - III
+      ingredients:
+        I: GOLD_INGOT
+        F: GOLD_NUGGET
+        Y: CANDLE
+      result:
+        item: bc:candlesconce_iron
+        amount: 1
+    candlesconce_silver:
+      permission: bc.sconce
+      enabled: true
+      pattern:
+      - FFF
+      - YYY
+      - III
+      ingredients:
+        I: GOLD_INGOT
+        F: GOLD_NUGGET
+        Y: CANDLE
+      result:
+        item: bc:candlesconce_silver
+        amount: 1
+    candlesconce_gold:
+      permission: bc.sconce
+      enabled: true
+      pattern:
+      - FFF
+      - YYY
+      - III
+      ingredients:
+        I: GOLD_INGOT
+        F: GOLD_NUGGET
+        Y: CANDLE
+      result:
+        item: bc:candlesconce_gold
+        amount: 1
+    candlesconce_ironblue:
+      permission: bc.sconce
+      enabled: true
+      pattern:
+      - FFF
+      - YYY
+      - III
+      ingredients:
+        I: GOLD_INGOT
+        F: GOLD_NUGGET
+        Y: BLUE_CANDLE
+      result:
+        item: bc:candlesconce_ironblue
+        amount: 1
+    candlesconce_silverblue:
+      permission: bc.sconce
+      enabled: true
+      pattern:
+      - FFF
+      - YYY
+      - III
+      ingredients:
+        I: GOLD_INGOT
+        F: GOLD_NUGGET
+        Y: BLUE_CANDLE
+      result:
+        item: bc:candlesconce_silverblue
+        amount: 1
+    candlesconce_goldblue:
+      permission: bc.sconce
+      enabled: true
+      pattern:
+      - FFF
+      - YYY
+      - III
+      ingredients:
+        I: GOLD_INGOT
+        F: GOLD_NUGGET
+        Y: BLUE_CANDLE
+      result:
+        item: bc:candlesconce_goldblue
+        amount: 1
+    candlesconce_ironred:
+      permission: bc.sconce
+      enabled: true
+      pattern:
+      - FFF
+      - YYY
+      - III
+      ingredients:
+        I: GOLD_INGOT
+        F: GOLD_NUGGET
+        Y: RED_CANDLE
+      result:
+        item: bc:candlesconce_ironred
+        amount: 1
+    candlesconce_silverred:
+      permission: bc.sconce
+      enabled: true
+      pattern:
+      - FFF
+      - YYY
+      - III
+      ingredients:
+        I: GOLD_INGOT
+        F: GOLD_NUGGET
+        Y: RED_CANDLE
+      result:
+        item: bc:candlesconce_silverred
+        amount: 1
+    candlesconce_goldred:
+      permission: bc.sconce
+      enabled: true
+      pattern:
+      - FFF
+      - YYY
+      - III
+      ingredients:
+        I: GOLD_INGOT
+        F: GOLD_NUGGET
+        Y: RED_CANDLE
+      result:
+        item: bc:candlesconce_goldred
+        amount: 1
+    tall:
+      permission: bc.table
+      enabled: true
+      pattern:
+      - IXI
+      - FIF
+      - YYY
+      ingredients:
+        I: CANDLE
+        F: IRON_NUGGET
+        Y: IRON_INGOT
+      result:
+        item: bc:tall
+        amount: 1
+    tallcyan:
+      permission: bc.table
+      enabled: true
+      pattern:
+      - IXI
+      - FIF
+      - YYY
+      ingredients:
+        I: CYAN_CANDLE
+        F: IRON_NUGGET
+        Y: IRON_INGOT
+      result:
+        item: bc:tallcyan
+        amount: 1
+    tallpink:
+      permission: bc.table
+      enabled: true
+      pattern:
+      - IXI
+      - FIF
+      - YYY
+      ingredients:
+        I: PINK_CANDLE
+        F: IRON_NUGGET
+        Y: IRON_INGOT
+      result:
+        item: bc:tallpink
+        amount: 1
+    tallpurple:
+      permission: bc.table
+      enabled: true
+      pattern:
+      - IXI
+      - FIF
+      - YYY
+      ingredients:
+        I: PURPLE_CANDLE
+        F: IRON_NUGGET
+        Y: IRON_INGOT
+      result:
+        item: bc:tallpurple
+        amount: 1
+    tallgray:
+      permission: bc.table
+      enabled: true
+      pattern:
+      - IXI
+      - FIF
+      - YYY
+      ingredients:
+        I: LIGHT_GRAY_CANDLE
+        F: IRON_NUGGET
+        Y: IRON_INGOT
+      result:
+        item: bc:tallgray
+        amount: 1
+    tallor:
+      permission: bc.table
+      enabled: true
+      pattern:
+      - IXI
+      - FIF
+      - YYY
+      ingredients:
+        I: ORANGE_CANDLE
+        F: IRON_NUGGET
+        Y: IRON_INGOT
+      result:
+        item: bc:tallor
+        amount: 1
+    tallmag:
+      permission: bc.table
+      enabled: true
+      pattern:
+      - IXI
+      - FIF
+      - YYY
+      ingredients:
+        I: MAGENTA_CANDLE
+        F: IRON_NUGGET
+        Y: IRON_INGOT
+      result:
+        item: bc:tallmag
+        amount: 1
+    shortcrimson:
+      permission: bc.table
+      enabled: true
+      pattern:
+      - XXX
+      - IFI
+      - YYY
+      ingredients:
+        I: CANDLE
+        F: GOLD_NUGGET
+        Y: STRIPPED_CRIMSON_STEM
+      result:
+        item: bc:shortcrimson
+        amount: 1
+    shortwarped:
+      permission: bc.table
+      enabled: true
+      pattern:
+      - XXX
+      - IFI
+      - YYY
+      ingredients:
+        I: CANDLE
+        F: GOLD_NUGGET
+        Y: STRIPPED_WARPED_STEM
+      result:
+        item: bc:shortwarped
+        amount: 1
+    shortbee:
+      permission: bc.table
+      enabled: true
+      pattern:
+      - XXX
+      - IFI
+      - YYY
+      ingredients:
+        I: YELLOW_CANDLE
+        F: GOLD_NUGGET
+        Y: HONEYCOMB
+      result:
+        item: bc:shortbee
+        amount: 1
+    shortskel:
+      permission: bc.table
+      enabled: true
+      pattern:
+      - XXX
+      - IFI
+      - YYY
+      ingredients:
+        I: WHITE_CANDLE
+        F: IRON_NUGGET
+        Y: BONE
+      result:
+        item: bc:shortskel
+        amount: 1
+    pump:
+      permission: bc.table
+      enabled: true
+      pattern:
+      - XXX
+      - FIF
+      - YYY
+      ingredients:
+        I: YELLOW_CANDLE
+        F: ORANGE_CANDLE
+        Y: PUMPKIN
+      result:
+        item: bc:pump
+        amount: 1
+    melon:
+      permission: bc.table
+      enabled: true
+      pattern:
+      - XXX
+      - FIF
+      - YYY
+      ingredients:
+        I: GREEN_CANDLE
+        F: LIME_CANDLE
+        Y: MELON
+      result:
+        item: bc:melon
+        amount: 1
+    shortcreep:
+      permission: bc.table
+      enabled: true
+      pattern:
+      - XXX
+      - IFI
+      - YYY
+      ingredients:
+        I: GREEN_CANDLE
+        F: GOLD_NUGGET
+        Y: GUNPOWDER
+      result:
+        item: bc:shortcreep
+        amount: 1
+    ylcandle_four_candles:
+      permission: bc.table
+      enabled: true
+      pattern:
+      - IXI
+      - IFI
+      - YYY
+      ingredients:
+        I: YELLOW_CANDLE
+        F: GOLD_NUGGET
+        Y: IRON_NUGGET
+      result:
+        item: bc:ylcandle_four_candles
+        amount: 1
+    grcandle_four_candles:
+      permission: bc.table
+      enabled: true
+      pattern:
+      - IXI
+      - IFI
+      - YYY
+      ingredients:
+        I: GREEN_CANDLE
+        F: GOLD_NUGGET
+        Y: IRON_NUGGET
+      result:
+        item: bc:grcandle_four_candles
+        amount: 1
+    gracandle_four_candles:
+      permission: bc.table
+      enabled: true
+      pattern:
+      - IXI
+      - IFI
+      - YYY
+      ingredients:
+        I: GRAY_CANDLE
+        F: GOLD_NUGGET
+        Y: IRON_NUGGET
+      result:
+        item: bc:gracandle_four_candles
+        amount: 1
+    rdcandle_four_candles:
+      permission: bc.table
+      enabled: true
+      pattern:
+      - IXI
+      - IFI
+      - YYY
+      ingredients:
+        I: RED_CANDLE
+        F: GOLD_NUGGET
+        Y: IRON_NUGGET
+      result:
+        item: bc:rdcandle_four_candles
+        amount: 1
+    lbcandle_four_candles:
+      permission: bc.table
+      enabled: true
+      pattern:
+      - IXI
+      - IFI
+      - YYY
+      ingredients:
+        I: LIGHT_BLUE_CANDLE
+        F: GOLD_NUGGET
+        Y: IRON_NUGGET
+      result:
+        item: bc:lbcandle_four_candles
+        amount: 1
+    whcandle_four_candles:
+      permission: bc.table
+      enabled: true
+      pattern:
+      - IXI
+      - IFI
+      - YYY
+      ingredients:
+        I: WHITE_CANDLE
+        F: GOLD_NUGGET
+        Y: IRON_NUGGET
+      result:
+        item: bc:whcandle_four_candles
+        amount: 1
+    candle_four_candles:
+      permission: bc.table
+      enabled: true
+      pattern:
+      - IXI
+      - IFI
+      - YYY
+      ingredients:
+        I: CANDLE
+        F: GOLD_NUGGET
+        Y: IRON_NUGGET
+      result:
+        item: bc:candle_four_candles
+        amount: 1
+    shortsculk:
+      permission: bc.table
+      enabled: true
+      pattern:
+      - XXX
+      - IFI
+      - YYY
+      ingredients:
+        I: CANDLE
+        F: GOLD_NUGGET
+        Y: SCULK
+      result:
+        item: bc:shortsculk
+        amount: 1
+    shortmush:
+      permission: bc.table
+      enabled: true
+      pattern:
+      - XXX
+      - IFI
+      - YYY
+      ingredients:
+        I: CANDLE
+        F: GOLD_NUGGET
+        Y: RED_MUSHROOM_BLOCK
+      result:
+        item: bc:shortmush
+        amount: 1
+    torchblk:
+      permission: bc.sconce
+      enabled: true
+      pattern:
+      - XFX
+      - XYX
+      - III
+      ingredients:
+        I: SMOOTH_STONE_SLAB
+        F: GOLD_NUGGET
+        Y: BLACK_CANDLE
+      result:
+        item: bc:torchblk
+        amount: 1
+    torchwht:
+      permission: bc.sconce
+      enabled: true
+      pattern:
+      - XFX
+      - XYX
+      - III
+      ingredients:
+        I: SMOOTH_STONE_SLAB
+        F: GOLD_NUGGET
+        Y: WHITE_CANDLE
+      result:
+        item: bc:torchwht
+        amount: 1
+    torchbl:
+      permission: bc.sconce
+      enabled: true
+      pattern:
+      - XFX
+      - XYX
+      - III
+      ingredients:
+        I: SMOOTH_STONE_SLAB
+        F: GOLD_NUGGET
+        Y: BLUE_CANDLE
+      result:
+        item: bc:torchbl
+        amount: 1
+    torchpu:
+      permission: bc.sconce
+      enabled: true
+      pattern:
+      - XFX
+      - XYX
+      - III
+      ingredients:
+        I: SMOOTH_STONE_SLAB
+        F: GOLD_NUGGET
+        Y: PURPLE_CANDLE
+      result:
+        item: bc:torchpu
+        amount: 1
+    torchlm:
+      permission: bc.sconce
+      enabled: true
+      pattern:
+      - XFX
+      - XYX
+      - III
+      ingredients:
+        I: SMOOTH_STONE_SLAB
+        F: GOLD_NUGGET
+        Y: LIME_CANDLE
+      result:
+        item: bc:torchlm
+        amount: 1
+    torchrd:
+      permission: bc.sconce
+      enabled: true
+      pattern:
+      - XFX
+      - XYX
+      - III
+      ingredients:
+        I: SMOOTH_STONE_SLAB
+        F: GOLD_NUGGET
+        Y: RED_CANDLE
+      result:
+        item: bc:torchrd
+        amount: 1

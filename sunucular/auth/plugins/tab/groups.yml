@@ -1,0 +1,5 @@
+_DEFAULT_:
+  tabprefix: "%vault_prefix% "
+  tagprefix: "%vault_prefix% "    
+  tabsuffix: "%vault_suffix%"    
+  tagsuffix: "%vault_suffix%"

@@ -1,0 +1,35 @@
+_dataver: 600
+Preview:
+  Enabled: false
+  Id: default
+Animation:
+  Enabled: false
+  Id: default
+ItemProvider:
+  Tag:
+    Value: '{components:{"minecraft:custom_data":{itemsadder:{id:"elite_crates_wind_chest",namespace:"elitecreatures"}},"minecraft:custom_model_data":{floats:[10021.0f]},"minecraft:custom_name":{color:"white",italic:0b,text:"Wind Chest"},"minecraft:item_name":{color:"white",italic:0b,text:"Wind Chest"}},count:1,id:"minecraft:paper"}'
+    DataVersion: 4438
+  Type: VANILLA
+Name: <b><gradient:#00CFFF:#23FFE7:#2CFF76:#00FF75>Pᴏsᴇɪᴅᴏɴ Kᴀsᴀsɪ</gradient></b>
+Description: []
+ItemStackable: true
+Permission_Required: false
+Opening:
+  Cooldown: 0
+Key:
+  Required: false
+  Ids:
+  - mvp_key
+Block:
+  Positions:
+  - -8,71,-7,world
+  Pushback:
+    Enabled: false
+  Hologram:
+    Enabled: true
+    Template: poseidon
+    Y_Offset: 1.0
+  Effect:
+    Model: spiral
+    Particle:
+      Name: GLOW

@@ -1,0 +1,48 @@
+info:
+  namespace: prism_skyblock
+items:
+  
+  trade-accepted:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 59
+      textures:
+      - interface/gui_textures/trade/accepted
+
+  trade-waiting:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 60
+      textures:
+      - interface/gui_textures/trade/waiting
+
+  trade-coins:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 61
+      textures:
+      - interface/gui_textures/trade/coins
+
+  trade-cancel:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 62
+      textures:
+      - interface/gui_textures/trade/cancel
+
+  trade-alert:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 63
+      textures:
+      - interface/gui_textures/trade/alert

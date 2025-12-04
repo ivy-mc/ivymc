@@ -1,0 +1,64 @@
+﻿#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+# tier 1 base alcohol effects #
+lrd_brewery_drink_alc_1:
+  Skills:
+  - potion{type=INSTANT_HEALTH;duration=1;level=0;p=false;icon=false}
+  - potion{type=ABSORPTION;duration=240;level=0;p=false;icon=false}
+  - potion{type=NAUSEA;duration=120;level=1;p=false;icon=false}
+  - potion{type=HUNGER;duration=120;level=0;p=false;icon=false}
+  - Aura{auraName=brewery_alc_1;onTick=lrd_brewery_alc_1_tick;interval=40;duration=240} @self
+  
+lrd_brewery_alc_1_tick:
+  Skills:
+  - sound{s=littleroom_brewerypack:hiccup;v=0.5;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self .5
+  
+# tier 2 base alcohol effects #
+lrd_brewery_drink_alc_2:
+  Skills:  
+  - potion{type=INSTANT_HEALTH;duration=1;level=1;p=false;icon=false}
+  - potion{type=NAUSEA;duration=240;level=0;p=false;icon=false}
+  - potion{type=HUNGER;duration=240;level=1;p=false;icon=false}
+  - potion{type=ABSORPTION;duration=480;level=1;p=false;icon=false}
+  - Aura{auraName=brewery_alc_2;onTick=lrd_brewery_alc_2_tick;interval=40;duration=240} @self
+  
+lrd_brewery_alc_2_tick:
+  Skills:
+  - sound{s=littleroom_brewerypack:hiccup;v=0.5;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self .65
+  - velocity{m=add;x=<random.float.-0.01to0.01>;y=0;z=<random.float.-0.01to0.01>;repeat=40;repeati=1} @self{conditions=[ - onground true]}
+
+# tier 3 base alcohol effects #
+lrd_brewery_drink_alc_3:
+  Skills:
+  - potion{type=INSTANT_HEALTH;duration=1;level=1;p=false;icon=false}
+  - potion{type=ABSORPTION;duration=480;level=2;p=false;icon=false}
+  - potion{type=DARKNESS;duration=240;level=0;p=false;icon=false}
+  - potion{type=NAUSEA;duration=480;level=0;p=false;icon=false}
+  - potion{type=HUNGER;duration=240;level=1;p=false;icon=false}
+  - Aura{auraName=brewery_alc_1;onTick=lrd_brewery_alc_3_tick;interval=40;duration=480} @self
+  
+lrd_brewery_alc_3_tick:
+  Skills:
+  - sound{s=littleroom_brewerypack:hiccup;v=0.5;sc=HOSTILE;pitch=<random.float.0.9to1.1>} @self .75
+  - velocity{m=add;x=<random.float.-0.015to0.015>;y=0;z=<random.float.-0.015to0.015>;repeat=40;repeati=1} @self{conditions=[ - onground true]}
+
+# tea base effects #
+
+lrd_brewery_tea_drink:
+  Skills:
+  - potion{type=SATURATION;duration=2;level=0;p=false;icon=false}
+  
+# bad drink #
+
+lrd_brewery_drink_ingredient:
+  Skills:
+  - Aura{auraName=lrd_brewery_drink_ingredient;onTick=lrd_brewery_drink_ingredient_tick;interval=60;duration=480} @self
+  - potion{type=WEAKNESS;duration=240;level=4;p=false;icon=false}
+  - potion{type=DARKNESS;duration=240;level=1;p=false;icon=false}
+  - potion{type=HUNGER;duration=240;level=4;p=false;icon=false}
+  
+lrd_brewery_drink_ingredient_tick:
+  Skills:
+  - velocity{m=add;x=<random.float.-0.015to0.015>;y=0;z=<random.float.-0.015to0.015>;repeat=40;repeati=1} @self{conditions=[ - onground true]}

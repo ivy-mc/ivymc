@@ -1,0 +1,7 @@
+# Whether the web panel and web sockets are enabled.
+enabled: true
+panel:
+  enabled: false
+websocket:
+  # The port of the websocket server. Make sure this port is open.
+  port: 9092

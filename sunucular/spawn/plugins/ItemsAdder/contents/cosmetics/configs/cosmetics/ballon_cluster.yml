@@ -1,0 +1,12 @@
+info:
+  namespace: cosmetics
+entities:
+  ballon_cluster:
+    display_name: "ballon_cluster"
+    type: ARMOR_STAND
+    model_folder: entity/ballon_cluster
+    speed:
+      movement: 0.0
+      flying: 0.0
+    max_health: 1
+    shadow: false

@@ -1,0 +1,12 @@
+info:
+  namespace: prism_skyblock
+items:
+  
+  scroll-divine_intervention:
+    enabled: true   
+    resource:
+      generate: true
+      material: BLACK_DYE
+      textures:
+      - item_texture/scrolls/scroll_of_divine_intervention.png
+      model_id: 1

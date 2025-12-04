@@ -1,0 +1,15 @@
+shift-rc-open-profile: true
+messages:
+  player-profile-not-public: '&4The profile of the player you are trying to access
+    is private.'
+  profile-mode-toggle:
+    private: '&cYour profile is now private, no one but you will be able to see it!'
+    public: '&aNow your profile is public, everyone can see it.'
+database:
+  type: sqlite
+  host: 127.0.0.1
+  port: '3306'
+  user: root
+  password: password
+  table: players
+  database_name: playerprofile

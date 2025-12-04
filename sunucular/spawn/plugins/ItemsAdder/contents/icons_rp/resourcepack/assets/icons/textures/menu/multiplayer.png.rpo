@@ -1,0 +1,8 @@
+{
+  "condition": "addons.menu_style.default",
+  "fallbacks": [
+    "assets/simple_icons/textures/menu/multiplayer.png",
+    "assets/small_icons/textures/menu/multiplayer.png",
+    "assets/small_simple_icons/textures/menu/multiplayer.png"
+  ]
+}

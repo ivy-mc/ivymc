@@ -1,0 +1,101 @@
+info:
+  namespace: prism_skyblock
+items:
+  
+  material-keyfragment:
+    enabled: true   
+    resource:
+      generate: true
+      material: WHITE_DYE
+      textures:
+      - item_texture/materials/key_fragment.png
+      model_id: 1
+  material-labsample:
+    enabled: true   
+    resource:
+      generate: true
+      material: WHITE_DYE
+      textures:
+      - item_texture/materials/lab_sample.png
+      model_id: 2
+  material-hextechcrystal:
+    enabled: true   
+    resource:
+      generate: true
+      material: WHITE_DYE
+      textures:
+      - item_texture/materials/hextech_crystal.png
+      model_id: 3
+  material-infectedflesh:
+    enabled: true   
+    resource:
+      generate: true
+      material: WHITE_DYE
+      textures:
+      - item_texture/materials/infected_flesh.png
+      model_id: 4
+  material-sludge:
+    enabled: true   
+    resource:
+      generate: true
+      material: WHITE_DYE
+      textures:
+      - item_texture/materials/sludge.png
+      model_id: 5
+  material-swordhandle:
+    enabled: true   
+    resource:
+      generate: true
+      material: WHITE_DYE
+      textures:
+      - item_texture/materials/sword_handle.png
+      model_id: 6
+  material-stardust:
+    enabled: true   
+    resource:
+      generate: true
+      material: WHITE_DYE
+      textures:
+      - item_texture/materials/stardust.png
+      model_id: 7
+  material-stardust_locked:
+    enabled: true   
+    resource:
+      generate: true
+      material: WHITE_DYE
+      textures:
+      - item_texture/materials/stardust_locked.png
+      model_id: 8
+
+  material-undecipheredcommonancientbook:
+    enabled: true   
+    resource:
+      generate: true
+      material: LAPIS_LAZULI
+      textures:
+      - item_texture/materials/undeciphered_common_ancient_book.png
+      model_id: 1
+  material-undecipheredrareancientbook:
+    enabled: true   
+    resource:
+      generate: true
+      material: LAPIS_LAZULI
+      textures:
+      - item_texture/materials/undeciphered_rare_ancient_book.png
+      model_id: 2
+  material-undecipheredlegendaryancientbook:
+    enabled: true   
+    resource:
+      generate: true
+      material: LAPIS_LAZULI
+      textures:
+      - item_texture/materials/undeciphered_legendary_ancient_book.png
+      model_id: 3
+  material-undecipheredfabledancientbook:
+    enabled: true   
+    resource:
+      generate: true
+      material: LAPIS_LAZULI
+      textures:
+      - item_texture/materials/undeciphered_fabled_ancient_book.png
+      model_id: 4

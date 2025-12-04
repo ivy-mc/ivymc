@@ -1,0 +1,8 @@
+info:
+  namespace: ia_various_configs
+minecraft_lang_overwrite:
+  Inventory:
+    entries:
+      "container.inventory": ""
+    languages:
+      - ALL

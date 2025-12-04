@@ -1,0 +1,34 @@
+info:
+  namespace: nii_medievalpack
+categories:
+  decoration_blocks:
+    enabled: true
+    skip_if_already: false
+    icon: nii_medievalpack:medievalpack_backpack
+    name: "Medieval Decoration Blocks"
+    permission: ia.menu.seecategory.medievalpack_decoration_blocks
+    items:
+      - nii_medievalpack:medievalpack_ale
+      - nii_medievalpack:medievalpack_backpack
+      - nii_medievalpack:medievalpack_bag
+      - nii_medievalpack:medievalpack_baner
+      - nii_medievalpack:medievalpack_bed_1
+      - nii_medievalpack:medievalpack_bed_2
+      - nii_medievalpack:medievalpack_bed_3
+      - nii_medievalpack:medievalpack_bench
+      - nii_medievalpack:medievalpack_big_lamp
+      - nii_medievalpack:medievalpack_camping_tant
+      - nii_medievalpack:medievalpack_cart
+      - nii_medievalpack:medievalpack_cooking_craft_station
+      - nii_medievalpack:medievalpack_defensive_structure
+      - nii_medievalpack:medievalpack_defensive_structure_1
+      - nii_medievalpack:medievalpack_drying_place
+      - nii_medievalpack:medievalpack_firewood_bundle
+      - nii_medievalpack:medievalpack_mage_backpack
+      - nii_medievalpack:medievalpack_mini_barrel
+      - nii_medievalpack:medievalpack_provision
+      - nii_medievalpack:medievalpack_scroll
+      - nii_medievalpack:medievalpack_travel_bag
+      - nii_medievalpack:medievalpack_travel_chest
+      - nii_medievalpack:medievalpack_washing_place
+      - nii_medievalpack:medievalpack_work_place

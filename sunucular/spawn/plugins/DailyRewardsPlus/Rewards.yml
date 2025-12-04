@@ -1,0 +1,481 @@
+#---------------------------------------------------------------- EXAMPLE REWARD---------------------------------------------------------------------------------#
+Day Example:
+  # The name of the reward
+  RewardName: "Daily Reward!"
+
+  # The icon for the reward, Input a Minecraft NameSpaced ID, ![IT HAS TO BE A NAMESPACED ID]! {NameSpaced ID Examples: DIAMOND_SWORD, OAK_PLANKS, STONE_HOE etc} ~ A quick google search can help find the NameSpaced ID that you need!
+  RewardIcon: "SUNFLOWER"
+
+  # The commands used to issue the reward, <playername> can be used as a placeholder to specify the users name who claimed
+  # To add more commands just create another line and include - ""
+  # (As shown below)
+  RewardCommands:
+    - "eco give <playerName> 5000"
+    - "give <playerName> Diamond 1"
+
+  # This is an [OPTIONAL] field. If you include this within any day, it will override the original Messages.yml RewardClaim message
+  RewardMessage: "You have claimed a special reward!"
+
+  # This is for extra information
+  Extras:
+    # Enchanted represents whether the GUI item should appear enchanted or not
+    Enchanted: false
+    # GUI position relates to the position in the GUI (0 = Top Left, 53 = bottom right) numbers increase across and down the rows
+    # We recommend leaving these to preserve the original GUI shape, causing errors here can stop the plugin from working correctly!
+    GUI Position: 1
+    # The page that the icon is located on, this must be within the range of the total number of GUI pages (declared in the Config.yml)
+    # If the Page number is not within the pre-determined range, the icon will not be visible at all.
+    # If this field is not included, the reward day will default to Page 1
+    GUI Page: 1
+
+
+# This config file contains a default of 30 days of rewards. You may copy/delete fields to ensure that your server has more or less rewards.
+# Not filling out days will not remove the day, but instead default the day to not giving out any reward
+# The built-in placeholder <playerName> can be used in the RewardCommand section of the day to specify the player who redeems the rewards in game name
+
+# If you have any questions you can always get support at: https://discord.gg/9jyHhUepaG
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------#
+
+
+
+Day 1:
+  RewardName: "&#58A527$&f10,000 - &f1х ᴠᴏᴛᴇ ᴋᴇʏ - &f5 ᴅɪᴀᴍᴏɴᴅѕ"
+  RewardCommands:
+    - ""
+  RewardIcon: BRICK:40004
+  Extras:
+    Enchanted: false
+    GUI Position: 19
+    GUI Page: 1
+
+Day 2:
+  RewardName: "&f1000x ᴄʟᴀɪᴍ ʙʟᴏᴄᴋѕ - &#9E60C21x Spawner - &#EA9C062х ᴍʏᴛʜɪᴄ ᴋᴇʏѕ/ (VIP Pass)"
+  RewardCommands:
+    - ""
+  RewardIcon: BRICK:40004
+  FutureReward: BRICK:40004
+  Extras:
+    Enchanted: false
+    GUI Position: 20
+    GUI Page: 1
+
+Day 3:
+  RewardName: "&#EA9C06ѕᴘᴇᴄɪᴀʟ ᴋɪᴛ - &#EA9C061х ʟᴇɢᴇɴᴅᴀʀʏ ᴋᴇʏ - &#EA9C062х ʟᴇɢᴇɴᴅᴀʀʏ ᴋᴇʏѕ (VIP Pass)"
+  RewardCommands:
+    - ""
+  RewardIcon: BRICK:40005
+  FutureReward: BRICK:40005
+  Extras:
+    Enchanted: false
+    GUI Position: 21
+    GUI Page: 1
+
+Day 4:
+  RewardName: "&#58A527$&f15,000 - &#9E60C21x ᴍʏᴛʜɪᴄ ᴋᴇʏ"
+  RewardCommands:
+    - ""
+  RewardIcon: BRICK:40004
+  FutureReward: BRICK:40004
+  Extras:
+    Enchanted: false
+    GUI Position: 22
+    GUI Page: 1
+
+Day 5:
+  RewardName: "&f10 ᴅɪᴀᴍᴏɴᴅѕ - &f10 ᴇᴍᴇʀᴀʟᴅѕ"
+  RewardCommands:
+    - ""
+  RewardIcon:
+  FutureReward: 
+  Extras:
+    Enchanted: false
+    GUI Position: 23
+    GUI Page: 1
+
+Day 6:
+  RewardName: "&f1х ᴠᴏᴛᴇ ᴋᴇʏ - &f10 ᴅɪᴀᴍᴏɴᴅѕ"
+  RewardCommands:
+    - ""
+  RewardIcon: ""
+  Extras:
+    Enchanted: false
+    GUI Position: 24
+    GUI Page: 1
+
+Day 7:
+  RewardName: "&#58A527$&f20,000 - &#EA9C061х ʟᴇɢᴇɴᴅᴀʀʏ ᴋᴇʏ"
+  RewardCommands:
+    - ""
+  RewardIcon: ""
+  FutureReward: BRICK:40005
+  Extras:
+    Enchanted: false
+    GUI Position: 25
+    GUI Page: 1
+
+Day 8:
+  RewardName: "&f2000x ᴄʟᴀɪᴍ ʙʟᴏᴄᴋѕ - &f1х ᴠᴏᴛᴇ ᴋᴇʏ - &f10 ᴅɪᴀᴍᴏɴᴅѕ"
+  RewardCommands:
+    - ""
+  RewardIcon: ""
+  Extras:
+    Enchanted: false
+    GUI Position: 28
+    GUI Page: 1
+
+Day 9:
+  RewardName: "&f2х ᴠᴏᴛᴇ ᴋᴇʏs - &f20 ᴇᴍᴇʀᴀʟᴅѕ"
+  RewardCommands:
+    - ""
+  RewardIcon: ""
+  Extras:
+    Enchanted: false
+    GUI Position: 29
+    GUI Page: 1
+
+Day 10:
+  RewardName: "&#9E60C21x ᴍʏᴛʜɪᴄ ᴋᴇʏ"
+  RewardCommands:
+    - ""
+  RewardIcon: BRICK:40004   ### This is a custom item of type: BRICK - You set this using /daily edit
+  FutureReward: BRICK:40004
+  Extras:
+    Enchanted: false
+    GUI Position: 30
+    GUI Page: 1
+
+Day 11:
+  RewardName: "&f2х ᴠᴏᴛᴇ ᴋᴇʏs - &f5 ɴᴇᴛʜᴇʀɪᴛᴇ ɪɴɢᴏᴛѕ"
+  RewardCommands:
+    - ""
+  RewardIcon: ""
+  Extras:
+    Enchanted: false
+    GUI Position: 31
+    GUI Page: 1
+
+Day 12:
+  RewardName: "&#EA9C061х ʟᴇɢᴇɴᴅᴀʀʏ ᴋᴇʏ"
+  RewardCommands:
+    - ""
+  RewardIcon: BRICK:40005
+  FutureReward: BRICK:40005
+  Extras:
+    Enchanted: false
+    GUI Position: 32
+    GUI Page: 1
+
+Day 13:
+  RewardName: "&f2х ᴠᴏᴛᴇ ᴋᴇʏs - &f15 ᴇᴍᴇʀᴀʟᴅѕ"
+  RewardCommands:
+    - ""
+  RewardIcon: ""
+  Extras:
+    Enchanted: false
+    GUI Position: 33
+    GUI Page: 1
+
+Day 14:
+  RewardName: "&#EA9C06ѕᴘᴇᴄɪᴀʟ ᴡᴇᴀᴘᴏɴ - &#EA9C061х ʟᴇɢᴇɴᴅᴀʀʏ ᴋᴇʏ"
+  RewardCommands:
+    - ""
+  RewardIcon: BRICK:40005
+  FutureReward: BRICK:40005
+  Extras:
+    Enchanted: false
+    GUI Position: 34
+    GUI Page: 1
+
+Day 15:
+  RewardName: "&f2х ᴠᴏᴛᴇ ᴋᴇʏs - &f5 ɴᴇᴛʜᴇʀɪᴛᴇ ɪɴɢᴏᴛѕ"
+  RewardCommands:
+    - ""
+  RewardIcon: ""
+  Extras:
+    Enchanted: false
+    GUI Position: 37
+    GUI Page: 1
+
+Day 16:
+  RewardName: "&#9E60C21x ᴍʏᴛʜɪᴄ ᴋᴇʏ"
+  RewardCommands:
+    - ""
+  RewardIcon: BRICK:40004   ### This is a custom item of type: BRICK - You set this using /daily edit
+  FutureReward: BRICK:40004
+  Extras:
+    Enchanted: false
+    GUI Position: 38
+    GUI Page: 1
+
+Day 17:
+  RewardName: "&f2х ᴠᴏᴛᴇ ᴋᴇʏs - &f15 ᴇᴍᴇʀᴀʟᴅѕ"
+  RewardCommands:
+    - ""
+  RewardIcon: ""
+  Extras:
+    Enchanted: false
+    GUI Position: 39
+    GUI Page: 1
+
+Day 18:
+  RewardName: "&#9E60C21x ᴍʏᴛʜɪᴄ ᴋᴇʏ"
+  RewardCommands:
+    - ""
+  RewardIcon: BRICK:40004   ### This is a custom item of type: BRICK - You set this using /daily edit
+  FutureReward: BRICK:40004
+  Extras:
+    Enchanted: false
+    GUI Position: 40
+    GUI Page: 1
+
+Day 19:
+  RewardName: "&f2х ᴠᴏᴛᴇ ᴋᴇʏs - &fѕᴘᴇᴄɪᴀʟ ᴋɪᴛ"
+  RewardCommands:
+    - ""
+  RewardIcon: ""
+  Extras:
+    Enchanted: false
+    GUI Position: 41
+    GUI Page: 1
+
+Day 20:
+  RewardName: "&f1х ᴠᴏᴛᴇ ᴋᴇʏs - &f5 ɴᴇᴛʜᴇʀɪᴛᴇ ɪɴɢᴏᴛѕ"
+  RewardCommands:
+    - ""
+  RewardIcon: ""
+  Extras:
+    Enchanted: false
+    GUI Position: 42
+    GUI Page: 1
+
+Day 21:
+  RewardName: "&#EA9C061х ʟᴇɢᴇɴᴅᴀʀʏ ᴋᴇʏ"
+  RewardCommands:
+    - ""
+  RewardIcon: BRICK:40005
+  FutureReward: BRICK:40005
+  Extras:
+    Enchanted: false
+    GUI Position: 43
+    GUI Page: 1
+
+Day 22:
+  RewardName: "&f2х ᴠᴏᴛᴇ ᴋᴇʏs - &f5 ɴᴇᴛʜᴇʀɪᴛᴇ ɪɴɢᴏᴛѕ"
+  RewardCommands:
+    - ""
+  RewardIcon: ""
+  Extras:
+    Enchanted: false
+    GUI Position: 19
+    GUI Page: 2
+
+Day 23:
+  RewardName: "&f2х ᴠᴏᴛᴇ ᴋᴇʏs - &f5 ɴᴇᴛʜᴇʀɪᴛᴇ ɪɴɢᴏᴛѕ"
+  RewardCommands:
+    - ""
+  RewardIcon: BRICK:40004
+  FutureReward: BRICK:40004
+  Extras:
+    Enchanted: false
+    GUI Position: 20
+    GUI Page: 2
+
+Day 24:
+  RewardName: "&f2х ᴠᴏᴛᴇ ᴋᴇʏs - &f5 ɴᴇᴛʜᴇʀɪᴛᴇ ɪɴɢᴏᴛѕ"
+  RewardCommands:
+    - ""
+  RewardIcon: ""
+  Extras:
+    Enchanted: false
+    GUI Position: 21
+    GUI Page: 2
+
+Day 25:
+  RewardName: "&f2х ᴠᴏᴛᴇ ᴋᴇʏs - &f5 ɴᴇᴛʜᴇʀɪᴛᴇ ɪɴɢᴏᴛѕ"
+  RewardCommands:
+    - ""
+  RewardIcon: ""
+  Extras:
+    Enchanted: false
+    GUI Position: 22
+    GUI Page: 2
+
+Day 26:
+  RewardName: "&f2х ᴠᴏᴛᴇ ᴋᴇʏs - &f5 ɴᴇᴛʜᴇʀɪᴛᴇ ɪɴɢᴏᴛѕ"
+  RewardCommands:
+    - ""
+  RewardIcon: BRICK:40004
+  FutureReward: BRICK:40004
+  Extras:
+    Enchanted: false
+    GUI Position: 23
+    GUI Page: 2
+
+Day 27:
+  RewardName: "&f2х ᴠᴏᴛᴇ ᴋᴇʏs - &f5 ɴᴇᴛʜᴇʀɪᴛᴇ ɪɴɢᴏᴛѕ"
+  RewardCommands:
+    - ""
+  RewardIcon: ""
+  Extras:
+    Enchanted: false
+    GUI Position: 24
+    GUI Page: 2
+
+Day 28:
+  RewardName: "&fѕᴘᴇᴄɪᴀʟ ᴋɪᴛ"
+  RewardCommands:
+    - ""
+  RewardIcon: BRICK:40005
+  FutureReward: BRICK:40005
+  Extras:
+    Enchanted: false
+    GUI Position: 25
+    GUI Page: 2
+
+Day 29:
+  RewardName: "&#9E60C21x ᴍʏᴛʜɪᴄ ᴋᴇʏ"
+  RewardCommands:
+    - ""
+  RewardIcon: BRICK:40004
+  FutureReward: BRICK:40004
+  Extras:
+    Enchanted: false
+    GUI Position: 28
+    GUI Page: 2
+
+Day 30:
+  RewardName: "&f2х ᴠᴏᴛᴇ ᴋᴇʏs"
+  RewardCommands:
+    - ""
+  RewardIcon: ""
+  Extras:
+    Enchanted: false
+    GUI Position: 29
+    GUI Page: 2
+
+Day 31:
+  RewardName: "&#EA9C06ѕᴘᴇᴄɪᴀʟ ᴡᴇᴀᴘᴏɴ - &#9E60C23x ᴍʏᴛʜɪᴄ ᴋᴇʏs - &#EA9C062х ʟᴇɢᴇɴᴅᴀʀʏ ᴋᴇʏs"
+  RewardCommands:
+    - ""
+  RewardIcon: BRICK:40005
+  FutureReward: BRICK:40005
+  Extras:
+    Enchanted: false
+    GUI Position: 30
+    GUI Page: 2
+
+# Day 32:
+#   RewardName: ""
+#   RewardCommands:
+#     - ""
+#   RewardIcon: ""
+#   Extras:
+#     Enchanted: false
+#     GUI Position: 31
+#     GUI Page: 2
+
+# Day 33:
+#   RewardName: ""
+#   RewardCommands:
+#     - ""
+#   RewardIcon: ""
+#   Extras:
+#     Enchanted: false
+#     GUI Position: 32
+#     GUI Page: 2
+
+# Day 34:
+#   RewardName: ""
+#   RewardCommands:
+#     - ""
+#   RewardIcon: ""
+#   Extras:
+#     Enchanted: false
+#     GUI Position: 33
+#     GUI Page: 2
+
+# Day 35:
+#   RewardName: ""
+#   RewardCommands:
+#     - ""
+#   RewardIcon: ""
+#   Extras:
+#     Enchanted: false
+#     GUI Position: 34
+#     GUI Page: 2
+
+# Day 36:
+#   RewardName: ""
+#   RewardCommands:
+#     - ""
+#   RewardIcon: ""
+#   Extras:
+#     Enchanted: false
+#     GUI Position: 37
+#     GUI Page: 2
+
+# Day 37:
+#   RewardName: ""
+#   RewardCommands:
+#     - ""
+#   RewardIcon: ""
+#   Extras:
+#     Enchanted: false
+#     GUI Position: 38
+#     GUI Page: 2
+
+# Day 38:
+#   RewardName: ""
+#   RewardCommands:
+#     - ""
+#   RewardIcon: ""
+#   Extras:
+#     Enchanted: false
+#     GUI Position: 39
+#     GUI Page: 2
+
+# Day 39:
+#   RewardName: ""
+#   RewardCommands:
+#     - ""
+#   RewardIcon: ""
+#   Extras:
+#     Enchanted: false
+#     GUI Position: 40
+#     GUI Page: 2
+
+# Day 40:
+#   RewardName: ""
+#   RewardCommands:
+#     - ""
+#   RewardIcon: ""
+#   Extras:
+#     Enchanted: false
+#     GUI Position: 41
+#     GUI Page: 2
+
+# Day 41:
+#   RewardName: ""
+#   RewardCommands:
+#     - ""
+#   RewardIcon: ""
+#   Extras:
+#     Enchanted: false
+#     GUI Position: 42
+#     GUI Page: 2
+
+# Day 42:
+#   RewardName: ""
+#   RewardCommands:
+#     - ""
+#   RewardIcon: ""
+#   Extras:
+#     Enchanted: false
+#     GUI Position: 43
+#     GUI Page: 2
+
+# Need more rewards? No problem!
+# Just Copy-Paste one of the previous reward fields and adjust the Day [Number] to the subsequent day.
+# If you need any support with this, reach out in our Discord Support Server! (https://discord.gg/9jyHhUepaG)
+
+#e533b8bddc26436aba5e09962bdf824d

@@ -1,0 +1,83 @@
+menu-title: ':offset_-32::bp_quest_overview:'
+menu-rows: 2
+week-slots:
+  slots: '1...7' 
+menu:
+  '9':
+    item:
+      material: 'gold_nugget'
+      customModelData: 500
+      name: '&ePrevious Page &7(Click)'
+      lore:
+        - ''
+        - '&7&o(( Click to go to the previous page ))'
+    actions:
+      - '[menu](page = 1) {portal}' 
+      - '[menu](page ! 1) {previous-page}' 
+  '10':
+    item:
+      material: 'gold_nugget'
+      customModelData: 500
+      name: '&ePrevious Page &7(Click)'
+      lore:
+        - ''
+        - '&7&o(( Click to go to the previous page ))'
+    actions:
+      - '[menu](page = 1) {portal}' 
+      - '[menu](page ! 1) {previous-page}'
+  '11':
+    item:
+      material: 'gold_nugget'
+      customModelData: 500
+      name: '&ePrevious Page &7(Click)'
+      lore:
+        - ''
+        - '&7&o(( Click to go to the previous page ))'
+    actions:
+      - '[menu](page = 1) {portal}' 
+      - '[menu](page ! 1) {previous-page}'
+  '15':
+    item:
+      material: 'gold_nugget'
+      customModelData: 500
+      name: '&eDaily Quests &7(%daily_time_left%)'
+    actions:
+      - '[menu] {daily-quests}'
+  '16':
+    item:
+      material: 'gold_nugget'
+      customModelData: 500
+      name: '&eDaily Quests &7(%daily_time_left%)'
+    actions:
+      - '[menu] {daily-quests}'
+  '17':
+    item:
+      material: 'gold_nugget'
+      customModelData: 500
+      name: '&eDaily Quests &7(%daily_time_left%)'
+    actions:
+      - '[menu] {daily-quests}'
+static-items:
+  week-item:
+    material: 'gold_nugget'
+    customModelData: 505
+    name: '&eWeek %week% &7(%status%&7)'
+    lore:
+      - ''
+      - '&7&o(( Click to view quests ))'
+  locked-week-item:
+    material: 'gold_nugget'
+    customModelData: 506
+    name: '&eWeek %week% &7(%status%&7)'
+    lore:
+      - ''
+      - '&7&o(( Click to view quests ))'
+  requires-previous-completion-item: 
+    material: 'gold_nugget'
+    customModelData: 506
+    name: '&eWeek %week% &7(%status%&7)'
+    lore:
+      - ''
+      - '&7&o(( Click to view quests ))'
+
+# 22815VDIUM9EXJ

@@ -1,0 +1,12 @@
+info:
+  namespace: medieval_bank
+
+font_images:
+  banks_ui:
+    show_in_gui: true
+    suggest_in_command: false
+    path: "banks.png"
+    y_position: 25
+    ascent: 16
+    height: 256
+    scale_ratio: 256

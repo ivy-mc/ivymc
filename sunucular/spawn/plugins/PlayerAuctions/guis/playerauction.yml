@@ -1,0 +1,235 @@
+# PlayerAuctions by Olzie-12
+# https://www.spigotmc.org/resources/83073
+# We also have a discord server for help: https://olziedev.com/discord or check docs https://docs.olziedev.com/projects/playerauctions
+# Also if you find any bugs be happy to report them I will fix them :)
+# Made with love
+
+pauction:
+  # Should we enable the gui?
+  enabled: true
+  # What is the name of the gui?
+  name: "playerauctions"
+  # The title of the gui (Can use color codes) the variable "[category]" will only work if it is enabled.
+  title: "&fᵩか"
+  # What is the size of this GUI? (multiples of 9 can only go up to 54)
+  size: 54
+  # What are the actions when this menu is opened up?
+  open-actions: []
+  # What are the actions when this menu is closed?
+  close-actions: []
+  # should /ah open the gui? if so you just do /ah open (if enabled)
+  override-pauction: true
+  # Should the page items be removed if there is page for that button. E.g. you're on page 0, it won't show the previous item.
+  # You can also put an item where this page item is, and it'll only show if the page item isn't there.
+  show-needed-page-items: false
+  # Should the menu just instantly cancel the auction and collect the item for the player?
+  cancel-collect: false
+  # What are the blacklisted slots that auctions will not appear in the GUI?
+  # This is useful if you want to add empty slots in the middle of the GUI instead of having an item there instead.
+  blacklisted-slots:
+    - 0
+    - 1
+    - 2 
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 16
+    - 18
+    - 25
+    - 27
+    - 34
+    - 36
+    - 43
+    - 45
+    - 46
+    - 48
+    - 49
+    - 51
+    - 52
+    - 53
+
+  # Searching for auctions through the GUI
+  search:
+    # Should the feature be enabled?
+    # You will need ProtocolLib for this to work.
+    enabled: true
+    # What is the title for the inventory?
+    title: "&fᵩか"
+    # What are the premade lines in the sign? %search% is the variable they have to enter the auction in.
+    lines:
+      - "%search%"
+      - "----------------"
+      - "Please enter a"
+      - "search result."
+    # This is the sign material that will be used for the search. This is only allowed to be a sign.
+    material: OAK_SIGN
+
+    item:
+      material: GOLD_INGOT
+      custom-model-data: 9991
+      name: "&6 "
+      lore:
+        - "&e                sᴇᴀʀᴄʜ"
+        - "&7ʏᴏᴜ ᴄᴀɴ sᴇᴀʀᴄʜ ғᴏʀ ᴀᴜᴄᴛɪᴏɴs ʙʏ:"
+        - "&7ɪᴛᴇᴍ ɴᴀᴍᴇ/ɪᴛᴇᴍ ᴛʏᴘᴇ"
+        - "&7ᴀᴜᴄᴛɪᴏɴ ɪᴅ"
+        - "&f "
+        - "&f "
+        - "&7  Click to search for an auction"
+        - "&7                                   &7"
+      slot: 35
+      amount: 1
+      glowing: false
+
+  # Preview an item's contents.
+  preview:
+    # Should we enable the gui?
+    enabled: true
+    # What is the name of the gui?
+    name: "preview"
+    # What is the title of the inventory?
+    title: "&b&lPreview"
+    # The variable "[preview]" will display the message below if the auction can be previewed.
+    preview: "&eRight click&b to preview contents."
+    # The variable "[preview]" will display the message below if the actuin cannot be previewed.
+    no-preview: ""
+
+  icon:
+    price-per-item: "([price_item] per item)"
+    none-price-per-item: ""
+    enchants-entry: "&d[enchant] [level]\n"
+    no-enchants-entry: "&cNone"
+    repair-cost: "&bRepair Cost: &e[repair_cost] XP"
+    no-repair-cost: ""
+
+    item-flags:
+      - "HIDE_ATTRIBUTES"
+    name: ""
+    lore:
+      - "[lore]"
+      - "&7&m                                  &7"
+      - " "
+      - "&f ▪ &bsᴇʟʟᴇʀ: &f[seller]"
+      - "&f ▪ &bᴘʀɪᴄᴇ: &f[price] [price_item]"
+      - "&f ▪ &bᴇxᴘɪʀᴇs ɪɴ: &f[expire]"
+      - "[repair_cost]"
+      - " "
+      - "&f ▪ &aᴄʟɪᴄᴋ ᴛᴏ ᴘᴜʀᴄʜᴀsᴇ."
+      - "&7&m                                  &7"
+      - "&b[delauction]"
+
+    lore-bidding:
+      - "[lore]"
+      - "&7&m                                  &7"
+      - " "
+      - "&f ▪ &6sᴇʟʟᴇʀ: &f[seller]"
+      - "&f ▪ &6ʜɪɢʜᴇsᴛ ʙɪᴅᴅᴇʀ: &f[bidder]"
+      - "&f ▪ &6ᴄᴜʀʀᴇɴᴛ ʙɪᴅ: &f[price]"
+      - "&f ▪ &6ᴇxᴘɪʀᴇs ɪɴ: &f[expire]"
+      - " "
+      - "&f ▪ &aᴄʟɪᴄᴋ ᴛᴏ ᴏғғᴇʀ ᴀ ʙɪᴅ."
+      - "&7&m                                  &7"
+      - "&b[delauction]"
+    # The variable "[delauction]" will display the message below if they do have permission to cancel the auction.
+    del-auction: "&eShift+Right&b to cancel this auction.\n[preview]"
+    # The variable "[delauction]" will display the message below if they don't have permission to cancel the auction.
+    del-not-auction: "[preview]"
+    # What are the commands that are ran when a player clicks on an auction?
+    commands: []
+
+  clickable-items:
+    next-page:
+      # This is the name of the next page item
+      # If you wish to disable any of these please set them the material to "AIR"
+      name: "&6 "
+      material: GOLD_INGOT
+      custom-model-data: 9991
+      data: 0
+      lore:
+        - '&3           ɴᴇxᴛ ᴘᴀɢᴇ'
+        - '&7   Click to go to next page   '
+        - '&7                                &7'
+      slot: 50
+      amount: 1
+      glowing: false
+      # These only work if the skull is a PLAYER_HEAD and the data is 3!
+      #texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWE0ZjY4YzhmYjI3OWU1MGFiNzg2ZjlmYTU0Yzg4Y2E0ZWNmZTFlYjVmZDVmMGMzOGM1NGM5YjFjNzIwM2Q3YSJ9fX0= - Skull texture
+      #owner: Next - Skull owner
+    previous-page:
+      name: "&6 "
+      material: GOLD_INGOT
+      custom-model-data: 9991
+      data: 0
+      lore:
+        - "&3        ᴘʀᴇᴠɪᴏᴜs ᴘᴀɢᴇ"
+        - "&7   Click to go to next page   "
+        - "&7 "    
+      slot: 47
+      amount: 1
+      glowing: false
+    category-swapper:
+      # If you have enabled the category GUI then this item wil appear into the main GUI.
+      material: GOLD_INGOT
+      custom-model-data: 9991
+      data: 0
+      name: "&6 "
+      lore:
+        - "&e        ᴄᴀᴛᴇɢᴏʀɪᴇs"
+        - "&f "
+        - "&7%categories%"       
+        - "&f "
+        - "&7   ʀɪɢʜᴛ ᴄʟɪᴄᴋ &7ᴛᴏ ɢᴏ ᴜᴘ"
+        - "&7   ʟᴇғᴛ ᴄʟɪᴄᴋ &7ᴛᴏ ɢᴏ ᴅᴏᴡɴ"
+        - '&7                                 &7'
+      slot: 44
+      amount: 1
+      glowing: false
+      current-category: "&e%category%"
+      other-category: "&d%category%"
+    myauctions:
+      # If you have enabled the my auctions GUI then this item wil appear into the main GUI.
+      material: GOLD_INGOT
+      custom-model-data: 9991
+      name: "&6 "
+      lore:
+        - "&a        ᴍʏ ᴀᴜᴄᴛɪᴏɴs"
+        - "&7   Click to open auctions"
+        - '&7                                 &7'
+      slot: 8
+      amount: 1
+      glowing: false
+    sort:
+      material: GOLD_INGOT
+      custom-model-data: 9991
+      data: 0
+      name: "&6   "
+      lore:
+        - "&5             sᴏʀᴛ"
+        - "&7    In a specific format"
+        - '&7                                 &7'
+        - "&5ᴄᴜʀʀᴇɴᴛ: &f%sort%"
+      slot: 26
+      amount: 1
+      glowing: false
+
+  items:
+    1:
+      name: "&6 "
+      lore:
+      - "&6            ᴇxᴘɪʀᴇᴅ ɪᴛᴇᴍs"
+      - "&7    Click to open expired items    "
+      - '&7                                   &7'
+      material: GOLD_INGOT
+      custom-model-data: 9991
+      slot:
+      - 17
+      amount: 1
+      left-commands:
+      - "[player] auctionhouse open expiredauctions"
+      right-commands:
+      - "[player] auctionhouse open expiredauctions"
+

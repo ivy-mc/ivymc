@@ -1,0 +1,916 @@
+﻿#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+lrd_barstool:
+  Id: ink_sac
+  Display: '&fStool'
+  Type: FURNITURE
+  Model: 27561
+  Furniture:
+    Material: ink_sac
+    Model: 27561
+    Health: 3
+    Hitbox:
+      Height: 1
+      Width: 1
+    CanRotate: false
+    Dropself: true
+    Placement: FLOOR
+    Seats:
+    - 0,1,0,0,0
+    Barriers:
+    - 0,0,0
+
+
+
+### MACHINES ###
+
+
+lrd_boiler:
+  Id: pig_spawn_egg
+  Display: '&fboiler'
+  Model: 27561
+  NBT:
+    MYTHIC_EGG: lrd_boiler
+  Skills:
+  - CancelEvent{sync=true} @self ~onShoot
+
+lrd_fermenter:
+  Id: pig_spawn_egg
+  Display: '&ffermenter'
+  Model: 27562
+  NBT:
+    MYTHIC_EGG: lrd_fermenter
+  Skills:
+  - CancelEvent{sync=true} @self ~onShoot
+
+lrd_distiller:
+  Id: pig_spawn_egg
+  Display: '&fdistiller'
+  Model: 27563
+  NBT:
+    MYTHIC_EGG: lrd_distiller
+  Skills:
+  - CancelEvent{sync=true} @self ~onShoot
+        
+        
+### BEVVIES ###
+
+lrd_tea:
+  Id: potion
+  Display: '&fTea'
+  Model: 27561
+  Skills:
+  - skill{s=lrd_brewery_tea_drink} @self ~onConsume
+  - consumeslot{} @self ~onConsume
+
+lrd_tea_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Tea Recipe
+  Pages:
+  - "Oak Leaves in the boiler for 2 minutes"
+
+  
+
+
+lrd_blacktea:
+  Id: potion
+  Display: '&fBlack Tea'
+  Model: 27562
+  Skills:
+  - skill{s=lrd_brewery_tea_drink} @self ~onConsume
+  - consumeslot{} @self ~onConsume
+
+lrd_blacktea_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Black Tea Recipe
+  Pages:
+  - "Dark Oak Leaves in the boiler for 2 minutes"
+
+
+
+lrd_greentea:
+  Id: potion
+  Display: '&fGreen Tea'
+  Model: 27563
+  Skills:
+  - skill{s=lrd_brewery_tea_drink} @self ~onConsume
+  - consumeslot{} @self ~onConsume
+
+lrd_greentea_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Green Tea Recipe
+  Pages:
+  - skill{s=lrd_brewery_tea_drink} @self ~onConsume
+  - "Spruce Leaves in the boiler for 2 minutes"
+
+
+
+lrd_oolongtea:
+  Id: potion
+  Display: '&fOolong Tea'
+  Model: 27564
+  Skills:
+  - skill{s=lrd_brewery_tea_drink} @self ~onConsume
+  - consumeslot{} @self ~onConsume
+
+lrd_oolongtea_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Oolong Tea Recipe
+  Pages:
+  - skill{s=lrd_brewery_tea_drink} @self ~onConsume
+  - "Azalea Leaves in the boiler for 2 minutes"
+
+
+
+lrd_chai:
+  Id: potion
+  Display: '&fChai'
+  Model: 27565
+  Skills:
+  - skill{s=lrd_brewery_tea_drink} @self ~onConsume
+  - consumeslot{} @self ~onConsume
+
+lrd_chai_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Chai Recipe
+  Pages:
+  - "Mangrove Leaves in the boiler for 2 minutes"
+
+
+
+lrd_herbaltea:
+  Id: potion
+  Display: '&fHerbal Tea'
+  Model: 27566
+  Skills:
+  - skill{s=lrd_brewery_tea_drink} @self ~onConsume
+  - consumeslot{} @self ~onConsume
+
+lrd_herbatea_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Herbal Tea Recipe
+  Pages:
+  - "Birch Leaves in the boiler for 2 minutes"
+  
+  
+
+lrd_rooibostea:
+  Id: potion
+  Display: '&fRooibos Tea'
+  Model: 27567
+  Skills:
+  - skill{s=lrd_brewery_tea_drink} @self ~onConsume
+  - consumeslot{} @self ~onConsume
+
+lrd_rooibostea_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Rooibos Tea Recipe
+  Pages:
+  - skill{s=lrd_brewery_tea_drink} @self ~onConsume
+  - "Jungle Leaves in the boiler for 2 minutes"
+  
+  
+
+lrd_whitetea:
+  Id: potion
+  Display: '&fWhite Tea'
+  Model: 27568
+  Skills:
+  - skill{s=lrd_brewery_tea_drink} @self ~onConsume
+  - consumeslot{} @self ~onConsume
+
+lrd_whitetea_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>White Tea Recipe
+  Pages:
+  - "Acacia Leaves in the boiler for 2 minutes"
+  
+  
+
+lrd_blossomtea:
+  Id: potion
+  Display: '&fBlossom Tea'
+  Model: 27569
+  Skills:
+  - skill{s=lrd_brewery_tea_drink} @self ~onConsume
+  - consumeslot{} @self ~onConsume
+
+lrd_blossomtea_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Blossom Tea Recipe
+  Pages:
+  - "Cherry Leaves in the boiler for 2 minutes"
+  
+  
+
+lrd_lilactea:
+  Id: potion
+  Display: '&fLilac Tea'
+  Model: 275610
+  Skills:
+  - skill{s=lrd_brewery_tea_drink} @self ~onConsume
+  - consumeslot{} @self ~onConsume
+
+lrd_lilactea_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Lilac Tea Recipe
+  Pages:
+  - "Lilac in the boiler for 2 minutes"
+  
+  
+
+lrd_rosehiptea:
+  Id: potion
+  Display: '&fRosehip Tea'
+  Model: 275611
+  Skills:
+  - skill{s=lrd_brewery_tea_drink} @self ~onConsume
+  - consumeslot{} @self ~onConsume
+
+lrd_rosehiptea_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Rosehip Tea Recipe
+  Pages:
+  - "Rose Bush in the boiler for 2 minutes"
+  
+
+lrd_withertea:
+  Id: potion
+  Display: '&fWither Tea'
+  Model: 275612
+  Skills:
+  - skill{s=lrd_brewery_tea_drink} @self ~onConsume
+  - consumeslot{} @self ~onConsume
+
+lrd_withertea_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Wither Tea Recipe
+  Pages:
+  - "Wither Rose in the boiler for 2 minutes"
+  
+
+lrd_dandeliontea:
+  Id: potion
+  Display: '&fDandelion Tea'
+  Model: 275613
+  Skills:
+  - skill{s=lrd_brewery_tea_drink} @self ~onConsume
+  - consumeslot{} @self ~onConsume
+
+lrd_dandeliontea_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Dandelion Tea Recipe
+  Pages:
+  - "Dandelion in the boiler for 2 minutes"
+  
+  
+  
+
+lrd_wheatbeer_wort:
+  Id: potion
+  Display: '&fWheatbeer Wort'
+  Model: 275614
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_ingredient} @self ~onConsume
+
+lrd_wheatbeer_unfiltered:
+  Id: potion
+  Display: '&fUnfiltered Wheatbeer'
+  Model: 275615
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_ingredient} @self ~onConsume
+
+lrd_wheatbeer:
+  Id: potion
+  Display: '&fWheatbeer'
+  Model: 275616
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_alc_1} @self ~onConsume
+
+lrd_wheatbeer_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Wheatbeer Recipe
+  Pages:
+  - "Wheat and Sugar in the boiler for 1 minute"
+  - "Wheatbeer Wort in the fermenter for 2 minutes"
+  - "Unfiltered Wheatbeer in the distiller for 2 minutes"
+  
+  
+  
+
+lrd_meadowmead_wort:
+  Id: potion
+  Display: '&fMeadowMead Wort'
+  Model: 275614
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_ingredient} @self ~onConsume
+
+lrd_meadowmead_unfiltered:
+  Id: potion
+  Display: '&fUnfiltered MeadowMead'
+  Model: 275615
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_ingredient} @self ~onConsume
+
+lrd_meadowmead:
+  Id: potion
+  Display: '&fMeadowMead'
+  Model: 275617
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_alc_1} @self ~onConsume
+
+lrd_meadowmead_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>MeadowMead Recipe
+  Pages:
+  - "Wheat and Honey in the boiler for 1 minute"
+  - "MeadowMead Wort in the fermenter for 2 minutes"
+  - "Unfiltered MeadowMead in the distiller for 2 minutes"
+  
+  
+  
+  
+
+lrd_moonshine_wort:
+  Id: potion
+  Display: '&fMoonshine Mash'
+  Model: 275614
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_ingredient} @self ~onConsume
+
+lrd_moonshine_unfiltered:
+  Id: potion
+  Display: '&fUndistilled Moonshine'
+  Model: 275615
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_ingredient} @self ~onConsume
+
+lrd_moonshine:
+  Id: potion
+  Display: '&fMoonshine'
+  Model: 275618
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_alc_2} @self ~onConsume
+
+lrd_moonshine_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Moonshine Recipe
+  Pages:
+  - "Wheat and Sugarcane in the boiler for 2 minutes"
+  - "Moonshine Mash in the fermenter for 5 minutes"
+  - "Undistilled Moonshine in the distiller for 5 minutes"
+  
+  
+
+lrd_potatovodka_wort:
+  Id: potion
+  Display: '&fVodka Mash'
+  Model: 275614
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_ingredient} @self ~onConsume
+
+lrd_potatovodka_unfiltered:
+  Id: potion
+  Display: '&fFermented Potato Vodka Mash'
+  Model: 275615
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_ingredient} @self ~onConsume
+
+lrd_potatovodka:
+  Id: potion
+  Display: '&fPotato Vodka'
+  Model: 275619
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_alc_2} @self ~onConsume
+
+lrd_potatovodka_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Potato Vodka Recipe
+  Pages:
+  - "Potato and Sugar in the boiler for 3 minutes"
+  - "Potato Vodka Mash in the fermenter for 4 minutes"
+  - "Fermented Potato Vodka Mash in the distiller for 4 minutes"
+  
+  
+
+lrd_applevodka_unfiltered:
+  Id: potion
+  Display: '&fFermented Apple Vodka Mash'
+  Model: 275615
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_ingredient} @self ~onConsume
+
+lrd_applevodka:
+  Id: potion
+  Display: '&fApple Vodka'
+  Model: 275620
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_alc_2} @self ~onConsume
+
+lrd_applevodka_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Apple Vodka Recipe
+  Pages:
+  - "Apple and Potato Vodka Mash in the fermenter for 4 minutes"
+  - "Fermented Apple Vodka Mash in the distiller for 4 minutes"
+  
+  
+  
+  
+
+lrd_redwine:
+  Id: potion
+  Display: '&fRed Wine'
+  Model: 275621
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_alc_1} @self ~onConsume
+
+lrd_redwine_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Red Wine Recipe
+  Pages:
+  - "Sweetberries and Sugar in the fermenter for 5 minutes"
+
+lrd_whitewine:
+  Id: potion
+  Display: '&fWhite Wine'
+  Model: 275622
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_alc_1} @self ~onConsume
+
+lrd_whitewine_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>White Wine Recipe
+  Pages:
+  - "Glowberries and Sugar in the fermenter for 5 minutes"
+  
+  
+
+lrd_melonwine:
+  Id: potion
+  Display: '&fMelon Wine'
+  Model: 275623
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_alc_1} @self ~onConsume
+
+lrd_melonwine_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Melon Wine Recipe
+  Pages:
+  - "Melon Slice and Sugar in the fermenter for 5 minutes"
+  
+  
+
+lrd_applewine:
+  Id: potion
+  Display: '&fApple Wine'
+  Model: 275624
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_alc_1} @self ~onConsume
+
+lrd_applewine_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Apple Wine Recipe
+  Pages:
+  - "Apple and Sugar in the fermenter for 5 minutes"
+  
+  
+
+lrd_pumpkinwine:
+  Id: potion
+  Display: '&fPumpkin Wine'
+  Model: 275625
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_alc_1} @self ~onConsume
+
+lrd_pumpkinwine_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Pumpkin Wine Recipe
+  Pages:
+  - "Pumpkin and Sugar in the fermenter for 5 minutes"
+  
+  
+
+lrd_sweetvermouth:
+  Id: potion
+  Display: '&fSweet Vermouth'
+  Model: 275626
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_alc_2} @self ~onConsume
+
+lrd_sweetvermouth_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Sweet Vermouth Recipe
+  Pages:
+  - "Red Wine in the distiller for 5 minutes"
+  
+  
+
+
+lrd_dryvermouth:
+  Id: potion
+  Display: '&fDry Vermouth'
+  Model: 275627
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_alc_2} @self ~onConsume
+
+lrd_dryvermouth_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Dry Vermouth Recipe
+  Pages:
+  - "White Wine in the distiller for 5 minutes"
+  
+  
+
+
+lrd_melonvermouth:
+  Id: potion
+  Display: '&fMelon Vermouth'
+  Model: 275628
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_alc_2} @self ~onConsume
+
+lrd_melonvermouth_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Melon Vermouth Recipe
+  Pages:
+  - "Melon Wine in the distiller for 5 minutes"
+  
+  
+
+
+lrd_applevermouth:
+  Id: potion
+  Display: '&fApple Vermouth'
+  Model: 275629
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_alc_2} @self ~onConsume
+
+lrd_applevermouth_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Apple Vermouth Recipe
+  Pages:
+  - "Apple Wine in the distiller for 5 minutes"
+  
+  
+
+
+lrd_pumpkinvermouth:
+  Id: potion
+  Display: '&fPumpkin Vermouth'
+  Model: 275630
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_alc_2} @self ~onConsume
+
+lrd_pumpkinvermouth_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Pumpkin Vermouth Recipe
+  Pages:
+  - "Pumpkin Wine in the distiller for 5 minutes"
+  
+  
+
+
+lrd_applecider:
+  Id: potion
+  Display: '&fApple Cider'
+  Model: 275631
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_alc_2} @self ~onConsume
+
+lrd_applecider_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Apple Cider Recipe
+  Pages:
+  - "Apple and Wheat in the fermenter for 4 minutes"
+  
+  
+
+lrd_meloncider:
+  Id: potion
+  Display: '&fMelon Cider'
+  Model: 275632
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_alc_2} @self ~onConsume
+
+lrd_meloncider_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Melon Cider Recipe
+  Pages:
+  - "Melon Slice and Wheat in the fermenter for 4 minutes"
+  
+  
+
+
+lrd_sweetberrycider:
+  Id: potion
+  Display: '&fSweetberry Cider'
+  Model: 275633
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_alc_2} @self ~onConsume
+
+lrd_sweetberrycider_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Sweetberry Cider Recipe
+  Pages:
+  - "Sweetberries and Wheat in the fermenter for 4 minutes"
+  
+  
+
+
+lrd_applebrandy:
+  Id: potion
+  Display: '&fApple Brandy'
+  Model: 275634
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_alc_2} @self ~onConsume
+
+lrd_applebrandy_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Apple Brandy Recipe
+  Pages:
+  - "Apple Cider in the distiller for 10 minutes"
+  
+  
+
+
+lrd_melonbrandy:
+  Id: potion
+  Display: '&fMelon Brandy'
+  Model: 275635
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_alc_2} @self ~onConsume
+
+lrd_melonbrandy_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Melon Brandy Recipe
+  Pages:
+  - "Melon Cider in the distiller for 10 minutes"
+  
+  
+
+
+lrd_sweetberrybrandy:
+  Id: potion
+  Display: '&fSweetberry Brandy'
+  Model: 275636
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_alc_2} @self ~onConsume
+
+lrd_sweetberrybrandy_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Sweetberry Brandy Recipe
+  Pages:
+  - "Sweetberry Cider in the distiller for 10 minutes"
+  
+  
+
+
+lrd_netherwartwine:
+  Id: potion
+  Display: '&fNetherwart Wine'
+  Model: 275637
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_alc_1} @self ~onConsume
+
+lrd_netherwartwine_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Netherwart Wine Recipe
+  Pages:
+  - "Netherwart and Sugar in the fermenter for 5 minutes"
+  
+  
+
+
+lrd_tequila_unfiltered:
+  Id: potion
+  Display: '&fUndistilled Tequila'
+  Model: 275615
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_ingredient} @self ~onConsume
+
+lrd_tequila:
+  Id: potion
+  Display: '&fTequila'
+  Model: 275638
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_alc_2} @self ~onConsume
+
+lrd_tequila_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Tequila Recipe
+  Pages:
+  - "Cactus and Sugar in the fermenter for 10 minutes"
+  - "Undistilled Tequila in the distiller for 5 minutes"
+  
+  
+
+
+lrd_torchedwhiskey_wort:
+  Id: potion
+  Display: '&fTorched Whiskey Wash'
+  Model: 275614
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_ingredient} @self ~onConsume
+
+lrd_torchedwhiskey_unfiltered:
+  Id: potion
+  Display: '&fUndistilled Torched Whiskey'
+  Model: 275615
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_ingredient} @self ~onConsume
+
+lrd_torchedwhiskey:
+  Id: potion
+  Display: '&fTorched Whiskey'
+  Model: 275639
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_alc_2} @self ~onConsume
+
+lrd_tequila_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Tequila Recipe
+  Pages:
+  - "Torchflower and Sugar in the boiler for 4 minutes"
+  - "Torched Whiskey Wash in the fermenter for 10 minutes"
+  - "Undistilled Torched Whiskey in the distiller for 2 minutes"
+  
+  
+
+
+
+lrd_gin_unfiltered:
+  Id: potion
+  Display: '&fUndistilled Gin'
+  Model: 275615
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_ingredient} @self ~onConsume
+
+lrd_gin:
+  Id: potion
+  Display: '&fGin'
+  Model: 275640
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_alc_2} @self ~onConsume
+
+lrd_gin_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Gin Recipe
+  Pages:
+  - "Sweetberries and Potato Vodka Mash in the fermenter for 5 minutes"
+  - "Unfiltered Gin in the distiller for 10 minutes"
+  
+  
+
+
+lrd_cavegin_unfiltered:
+  Id: potion
+  Display: '&fUndistilled Cave Gin'
+  Model: 275615
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_ingredient} @self ~onConsume
+
+lrd_cavegin:
+  Id: potion
+  Display: '&fCave Gin'
+  Model: 275641
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_alc_2} @self ~onConsume
+
+lrd_cavegin_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Cave Gin Recipe
+  Pages:
+  - "Glowberries and Potato Vodka Mash in the fermenter for 5 minutes"
+  - "Unfiltered Cave Gin in the distiller for 10 minutes"
+  
+  
+
+
+lrd_absinthe_unfiltered:
+  Id: potion
+  Display: '&fUndistilled Absinthe'
+  Model: 275615
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_ingredient} @self ~onConsume
+
+lrd_absinthe:
+  Id: potion
+  Display: '&fAbsinthe'
+  Model: 275642
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_alc_3} @self ~onConsume
+
+lrd_absinthe_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Absinthe Recipe
+  Pages:
+  - "Sugar Cane and Warped Roots in the fermenter for 15 minutes"
+  - "Undistilled Absinthe in the distiller for 15 minutes"
+  
+  
+
+
+lrd_rum_unfiltered:
+  Id: potion
+  Display: '&fUnfiltered Rum'
+  Model: 275615
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_ingredient} @self ~onConsume
+
+lrd_rum:
+  Id: potion
+  Display: '&fRum'
+  Model: 275643
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_alc_3} @self ~onConsume
+
+lrd_rum_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Rum Recipe
+  Pages:
+  - "Sugar Cane and Wheat in the fermenter for 10 minutes"
+  - "Unfiltered Rum in the distiller for 5 minutes"
+  
+  
+
+
+lrd_bourbon_wort:
+  Id: potion
+  Display: '&fBourbon Mash'
+  Model: 275614
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_ingredient} @self ~onConsume
+
+lrd_bourbon_unfiltered:
+  Id: potion
+  Display: '&fBourbon Wash'
+  Model: 275615
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_ingredient} @self ~onConsume
+
+lrd_bourbon:
+  Id: potion
+  Display: '&fBourbon'
+  Model: 275644
+  Skills:
+  - consumeslot{} @self ~onConsume
+  - skill{s=lrd_brewery_drink_alc_3} @self ~onConsume
+
+lrd_bourbon_recipe:
+  Id: WRITTEN_BOOK
+  Title: <green>Bourbon Recipe
+  Pages:
+  - "Sugar and Wheatseeds in the fermenter for 10 minutes"
+  - "Bourbon Mash in the fermenter for 10 minutes"
+  - "Bourbon Wash in the distiller for 10 minutes"
+  
+  

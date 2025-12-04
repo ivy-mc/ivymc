@@ -1,0 +1,33 @@
+info:
+  namespace: "rtp"
+font_images:
+  all:
+    path: "all.png"
+    y_position: 47
+  miningend:
+    path: "miningend.png"
+    y_position: 62
+  miningnether:
+    path: "miningnether.png"
+    y_position: 62
+  netherend:
+    path: "netherend.png"
+    y_position: 62
+  overminingend:
+    path: "overminingend.png"
+    y_position: 62
+  overminingnether:
+    path: "overminingnether.png"
+    y_position: 62
+  overnetherend:
+    path: "overnetherend.png"
+    y_position: 62
+  overend:
+    path: "overend.png"
+    y_position: 62
+  overmining:
+    path: "overmining.png"
+    y_position: 62
+  overnether:
+    path: "overnether.png"
+    y_position: 62

@@ -1,0 +1,12 @@
+info:
+  namespace: rtp
+items:
+  blank:
+    display_name: ' '
+    permission: blank
+    resource:
+      material: PAPER
+      generate: true
+      model_id: 10023
+      textures: 
+      - rtp:item/blank

@@ -1,0 +1,6 @@
+{
+  "condition": "!menus.pack_frame",
+  "fallbacks": [
+    "assets/icons/textures/menu/resource_pack_frame.png"
+  ]
+}

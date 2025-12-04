@@ -1,0 +1,361 @@
+# # ==============================================================
+#                        HARD QUESTS FILE
+# ==============================================================
+# Quests must be numbered and increment from 1 to 1.
+# Please be attentive to the indentation and respect the scheme.
+# This could cause several bugs.
+# ==============================================================
+# AVAILABLE QUESTS TYPES:
+# [ BREAK , PLACE , CRAFT , PICKUP , LAUNCH , CONSUME ]
+# Type LAUNCH only affects : ENDER_PEARL, EGG, ARROW.
+# Type CONSUME only affects : potions, food, milk-buckets.
+# ==============================================================
+# AVAILABLE REWARDS TYPES :
+# [ COMMAND , EXP , MONEY , POINTS ]
+# ==============================================================
+# More tips available on Wiki :
+# https://ordwenplugins.gitbook.io/odailyquests/
+# Need help ? https://discord.gg/Q8sw5KFvqg
+# For more affected objects or types, please make suggestion.
+# ==============================================================
+quests:
+  1:
+    name: "&8[#99adceᴍɪɴɪɴɢ&8] &fᴛɪᴍᴇ ᴛᴏ ᴜᴘɢʀᴀᴅᴇ"    
+    menu_item: itemsadder:daily_quest:hard_quest
+    use_placeholders: true
+    description:
+      - "&8ᴛɪᴇʀ: ʜᴀʀᴅ"
+      - ""
+      - "&fᴏʙᴊᴇᴄᴛɪᴠᴇ:"
+      - " #a5d0e9Go to the &fNether #a5d0e9and"
+      - " #a5d0e9mine &f8 #a5d0e9Ancient Debris."
+      - ""
+      - "#dc3333ᴇxᴘɪʀᴇs ɪɴ: %odailyquests_drawIn%"
+      - ""
+      - "&fʀᴇᴡᴀʀᴅ:"
+      - " &8• &f800 #ffc919Money"
+    quest_type: BREAK
+    required_item: ANCIENT_DEBRIS
+    required_amount: 8
+    reward:
+      reward_type: MONEY
+      amount: 800
+    required_worlds:
+    - world_nether
+  2:
+    name: "&8[&cᴄᴏᴍʙᴀᴛ&8] &fᴀǫᴜᴀᴍᴀɴ"
+    menu_item: itemsadder:daily_quest:hard_quest
+    use_placeholders: true
+    description:
+      - "&8ᴛɪᴇʀ: ʜᴀʀᴅ"
+      - ""
+      - "&fᴏʙᴊᴇᴄᴛɪᴠᴇ:"
+      - " #a5d0e9Find an &fOcean Monument #a5d0e9and"
+      - " #a5d0e9kill &f8 #a5d0e9Guardians."
+      - ""
+      - "#dc3333ᴇxᴘɪʀᴇs ɪɴ: %odailyquests_drawIn%"
+      -  ""
+      - "&fʀᴇᴡᴀʀᴅ:"
+      - " &8• &f800 #ffc919Money"
+    quest_type: KILL
+    required_entity: GUARDIAN
+    required_amount: 8
+    reward:
+      reward_type: MONEY
+      amount: 800
+  3:
+    name: "&8[&cᴄᴏᴍʙᴀᴛ&8] &fᴘʀᴏᴛᴇᴄᴛɪᴏɴ ᴏғ ᴛʜᴇ ᴠɪʟʟᴀɢᴇ"
+    menu_item: itemsadder:daily_quest:hard_quest
+    use_placeholders: true
+    description:
+      - "&8ᴛɪᴇʀ: ʜᴀʀᴅ"
+      - ""
+      - "&fᴏʙᴊᴇᴄᴛɪᴠᴇ:"
+      - " #a5d0e9Find a &fPillager Outpost #a5d0e9and"
+      - " #a5d0e9kill &f10 #a5d0e9Pillagers."
+      - ""
+      - "#dc3333ᴇxᴘɪʀᴇs ɪɴ: %odailyquests_drawIn%"
+      - ""
+      - "&fʀᴇᴡᴀʀᴅ:"
+      - " &8• &f800 #ffc919Money"
+    quest_type: KILL
+    required_entity: PILLAGER
+    required_amount: 10
+    reward:
+      reward_type: MONEY
+      amount: 800
+  4:
+    name: "&8[#dba664ᴄʀᴀғᴛɪɴɢ&8] &fᴛᴏᴏ ᴄᴏʟᴅ"
+    menu_item: itemsadder:daily_quest:hard_quest
+    use_placeholders: true
+    description:
+      - "&8ᴛɪᴇʀ: ʜᴀʀᴅ"
+      - ""
+      - "&fᴏʙᴊᴇᴄᴛɪᴠᴇ:"
+      - " #a5d0e9Find a &fCrafting Table #a5d0e9and"
+      - " #a5d0e9craft &f6 #a5d0e9Blue Ice."
+      - ""
+      - "#dc3333ᴇxᴘɪʀᴇs ɪɴ: %odailyquests_drawIn%"
+      - ""
+      - "&fʀᴇᴡᴀʀᴅ:"
+      - " &8• &f800 #ffc919Money"
+    quest_type: CRAFT
+    required_item: BLUE_ICE
+    required_amount: 6
+    reward:
+      reward_type: MONEY
+      amount: 800
+  5:
+    name: "&8[&cᴄᴏᴍʙᴀᴛ&8] &fᴛʜᴇ ᴅᴇsᴛʀᴏʏᴇʀ"
+    menu_item: itemsadder:daily_quest:hard_quest
+    use_placeholders: true
+    description:
+      - "&8ᴛɪᴇʀ: ʜᴀʀᴅ"
+      - ""
+      - "&fᴏʙᴊᴇᴄᴛɪᴠᴇ:"
+      - " #a5d0e9Build a &fWither Boss"
+      - " #a5d0e9and &fkill #a5d0e9it."
+      - ""
+      - "#dc3333ᴇxᴘɪʀᴇs ɪɴ: %odailyquests_drawIn%"
+      - ""
+      - "&fʀᴇᴡᴀʀᴅ:"
+      - " &8• &f800 #ffc919Money"
+    quest_type: KILL
+    required_entity: WITHER
+    required_amount: 1
+    reward:
+      reward_type: MONEY
+      amount: 800
+  6:
+    name: "&8[&cᴄᴏᴍʙᴀᴛ&8] &fᴛʜᴇ ʟᴏʀᴅ ᴏғ ᴅᴀʀᴋɴᴇss"
+    menu_item: itemsadder:daily_quest:hard_quest
+    use_placeholders: true
+    description:
+      - "&8ᴛɪᴇʀ: ʜᴀʀᴅ"
+      - ""
+      - "&fᴏʙᴊᴇᴄᴛɪᴠᴇ:"
+      - " #a5d0e9Go to the &fAncient City"
+      - " #a5d0e9and kill &f1 #a5d0e9Warden."
+      - ""
+      - "#dc3333ᴇxᴘɪʀᴇs ɪɴ: %odailyquests_drawIn%"
+      - ""
+      - "&fʀᴇᴡᴀʀᴅ:"
+      - " &8• &f800 #ffc919Money"
+    quest_type: KILL
+    required_entity: WARDEN
+    required_amount: 1
+    reward:
+      reward_type: MONEY
+      amount: 800
+  7:
+    name: "&8[&cᴄᴏᴍʙᴀᴛ&8] &fᴡɪᴢᴀʀᴅ ᴘɪʟʟᴀɢᴇʀ"    
+    menu_item: itemsadder:daily_quest:hard_quest
+    use_placeholders: true
+    description:
+      - "&8ᴛɪᴇʀ: ʜᴀʀᴅ"
+      - ""
+      - "&fᴏʙᴊᴇᴄᴛɪᴠᴇ:"
+      - " #a5d0e9Find an &fEvoker"
+      - " #a5d0e9and &fkill #a5d0e9it"
+      - ""
+      - "#dc3333ᴇxᴘɪʀᴇs ɪɴ: %odailyquests_drawIn%"
+      - ""
+      - "&fʀᴇᴡᴀʀᴅ:"
+      - " &8• &f800 #ffc919Money"
+    quest_type: KILL
+    required_entity: EVOKER
+    required_amount: 1
+    reward:
+      reward_type: MONEY
+      amount: 800
+  8:
+    name: "&8[&cᴄᴏᴍʙᴀᴛ&8] &fʜᴜɴᴛɪɴɢ ᴛʜᴇ ʀᴀᴠᴀɢᴇʀ"    
+    menu_item: itemsadder:daily_quest:hard_quest
+    use_placeholders: true
+    description:
+      - "&8ᴛɪᴇʀ: ʜᴀʀᴅ"
+      - ""
+      - "&fᴏʙᴊᴇᴄᴛɪᴠᴇ:"
+      - " #a5d0e9Find an &fRavager"
+      - " #a5d0e9and &fkill #a5d0e9it"
+      - ""
+      - "#dc3333ᴇxᴘɪʀᴇs ɪɴ: %odailyquests_drawIn%"
+      - ""
+      - "&fʀᴇᴡᴀʀᴅ:"
+      - " &8• &f800 #ffc919Money"
+    quest_type: KILL
+    required_entity: RAVAGER
+    required_amount: 1
+    reward:
+      reward_type: MONEY
+      amount: 800
+  9:
+    name: "&8[#dba664ᴄʀᴀғᴛɪɴɢ&8] &fᴋᴀʙᴏᴏᴍ"
+    menu_item: itemsadder:daily_quest:hard_quest
+    use_placeholders: true
+    description:
+      - "&8ᴛɪᴇʀ: ʜᴀʀᴅ"
+      - ""
+      - "&fᴏʙᴊᴇᴄᴛɪᴠᴇ:"
+      - " #a5d0e9Find a &fCrafting Table #a5d0e9and"
+      - " #a5d0e9craft &f16 #a5d0e9TNT."
+      - ""
+      - "#dc3333ᴇxᴘɪʀᴇs ɪɴ: %odailyquests_drawIn%"
+      - ""
+      - "&fʀᴇᴡᴀʀᴅ:"
+      - " &8• &f800 #ffc919Money"
+    quest_type: CRAFT
+    required_item: TNT
+    required_amount: 16
+    reward:
+      reward_type: MONEY
+      amount: 800
+  10:
+    name: "&8[#dba664ᴄʀᴀғᴛɪɴɢ&8] &fɪᴛ's ɴᴏᴛ ᴛʜᴇ ᴇɴᴅ"    
+    menu_item: itemsadder:daily_quest:hard_quest
+    use_placeholders: true
+    description:
+      - "&8ᴛɪᴇʀ: ʜᴀʀᴅ"
+      - ""
+      - "&fᴏʙᴊᴇᴄᴛɪᴠᴇ:"
+      - " #a5d0e9Find a &fCrafting Table #a5d0e9and"
+      - " #a5d0e9craft &f4 #a5d0e9End Crystals."
+      - ""
+      - "#dc3333ᴇxᴘɪʀᴇs ɪɴ: %odailyquests_drawIn%"
+      - ""
+      - "&fʀᴇᴡᴀʀᴅ:"
+      - " &8• &f800 #ffc919Money"
+    quest_type: CRAFT
+    required_item: END_CRYSTAL
+    required_amount: 4
+    reward:
+      reward_type: MONEY
+      amount: 800
+  11:
+    name: "&8[#99adceᴍɪɴɪɴɢ&8] &fᴅᴏɴ'ᴛ ᴍɪɴᴇ ᴍᴇ"
+    menu_item: itemsadder:daily_quest:hard_quest
+    use_placeholders: true
+    description:
+      - "&8ᴛɪᴇʀ: ʜᴀʀᴅ"
+      - ""
+      - "&fᴏʙᴊᴇᴄᴛɪᴠᴇ:"
+      - " #a5d0e9Go to a &fCave #a5d0e9and"
+      - " #a5d0e9mine &f3 #a5d0e9Sculk Sensor."
+      - ""
+      - "#dc3333ᴇxᴘɪʀᴇs ɪɴ: %odailyquests_drawIn%"
+      - ""
+      - "&fʀᴇᴡᴀʀᴅ:"
+      - " &8• &f800 #ffc919Money"
+    quest_type: BREAK
+    required_item: SCULK_SENSOR
+    required_amount: 3
+    reward:
+      reward_type: MONEY
+      amount: 800
+  12:
+    name: "&8[#99adceᴍɪɴɪɴɢ&8] &fʙᴜsɪɴᴇss ᴍᴀɴ"    
+    menu_item: itemsadder:daily_quest:hard_quest
+    use_placeholders: true
+    description:
+      - "&8ᴛɪᴇʀ: ʜᴀʀᴅ"
+      - ""
+      - "&fᴏʙᴊᴇᴄᴛɪᴠᴇ:"
+      - " #a5d0e9Go to a &fCave #a5d0e9and"
+      - " #a5d0e9mine &f12 #a5d0e9Emerald Ore."
+      - ""
+      - "#dc3333ᴇxᴘɪʀᴇs ɪɴ: %odailyquests_drawIn%"
+      - ""
+      - "&fʀᴇᴡᴀʀᴅ:"
+      - " &8• &f800 #ffc919Money"
+    quest_type: BREAK
+    required_item: EMERALD_ORE
+    required_amount: 12
+    reward:
+      reward_type: MONEY
+      amount: 800
+  13:
+    name: "&8[#dba664ᴄʀᴀғᴛɪɴɢ&8] &fᴘᴏʀᴛᴀʙʟᴇ sᴛᴏʀᴀɢᴇ"
+    menu_item: itemsadder:daily_quest:hard_quest
+    use_placeholders: true
+    description:
+      - "&8ᴛɪᴇʀ: ʜᴀʀᴅ"
+      - ""
+      - "&fᴏʙᴊᴇᴄᴛɪᴠᴇ:"
+      - " #a5d0e9Find a &fCrafting Table #a5d0e9and"
+      - " #a5d0e9craft &f1 #a5d0e9Shulker Box."
+      - ""
+      - "#dc3333ᴇxᴘɪʀᴇs ɪɴ: %odailyquests_drawIn%"
+      - ""
+      - "&fʀᴇᴡᴀʀᴅ:"
+      - " &8• &f800 #ffc919Money"
+    quest_type: CRAFT
+    required_item: SHULKER_BOX
+    required_amount: 1
+    reward:
+      reward_type: MONEY
+      amount: 800
+  14:
+    name: "&8[#99adceᴍɪɴɪɴɢ&8] &fᴍɪɴɪɴɢ ғᴏʀ ᴛʀᴏᴜʙʟᴇ"
+    menu_item: itemsadder:daily_quest:hard_quest
+    use_placeholders: true
+    description:
+      - "&8ᴛɪᴇʀ: ʜᴀʀᴅ"
+      - ""
+      - "&fᴏʙᴊᴇᴄᴛɪᴠᴇ:"
+      - " #a5d0e9Go to a &fCave #a5d0e9and"
+      - " #a5d0e9mine &f3 #a5d0e9Reinforced Deepslate."
+      - ""
+      - "#dc3333ᴇxᴘɪʀᴇs ɪɴ: %odailyquests_drawIn%"
+      - ""
+      - "&fʀᴇᴡᴀʀᴅ:"
+      - " &8• &f800 #ffc919Money"
+    quest_type: BREAK
+    required_item: REINFORCED_DEEPSLATE
+    required_amount: 3
+    reward:
+      reward_type: MONEY
+      amount: 800
+  15:
+    name: "&8[#99adceᴍɪɴɪɴɢ&8] &fɴᴏᴛ ᴅᴇᴇᴘsʟᴀᴛᴇ"
+    menu_item: itemsadder:daily_quest:hard_quest
+    use_placeholders: true
+    description:
+      - "&8ᴛɪᴇʀ: ʜᴀʀᴅ"
+      - ""
+      - "&fᴏʙᴊᴇᴄᴛɪᴠᴇ:"
+      - " #a5d0e9Go to a &fCave #a5d0e9and"
+      - " #a5d0e9mine &f16 #a5d0e9Diamond Ore."
+      - ""
+      - "#dc3333ᴇxᴘɪʀᴇs ɪɴ: %odailyquests_drawIn%"
+      - ""
+      - "&fʀᴇᴡᴀʀᴅ:"
+      - " &8• &f800 #ffc919Money"
+    quest_type: BREAK
+    required_item: DIAMOND_ORE
+    required_amount: 16
+    reward:
+      reward_type: MONEY
+      amount: 800
+  16:
+    name: "&8[&cᴄᴏᴍʙᴀᴛ&8] &fᴛʜᴇ ᴅᴀʀᴋ ᴋɴɪɢʜᴛs"    
+    menu_item: itemsadder:daily_quest:hard_quest
+    use_placeholders: true
+    description:
+      - "&8ᴛɪᴇʀ: ʜᴀʀᴅ"
+      - ""
+      - "&fᴏʙᴊᴇᴄᴛɪᴠᴇ:"
+      - " #a5d0e9Go to the &fNether #a5d0e9and"
+      - " #a5d0e9kill &f8 #a5d0e9Wither Skeleton."
+      - ""
+      - "#dc3333ᴇxᴘɪʀᴇs ɪɴ: %odailyquests_drawIn%"
+      -  ""
+      - "&fʀᴇᴡᴀʀᴅ:"
+      - " &8• &f800 #ffc919Money"
+    quest_type: KILL
+    required_entity: WITHER_SKELETON
+    required_amount: 8
+    reward:
+      reward_type: MONEY
+      amount: 800
+#81d5836c452464f5d2242b6aa9d527f1
+# eyJ1c2VyLW5hbWUiOiJiYWhveiIsInVzZXItaWQiOiI2MjY0IiwiZGF0ZSI6IjIwMjUtMTAtMjMgMjA6MDAiLCJzaXRlIjoiaHR0cHM6Ly9nbGVha3MucHJvIn0=

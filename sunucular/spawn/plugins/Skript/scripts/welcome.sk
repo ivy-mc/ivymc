@@ -1,0 +1,11 @@
+on join:
+	if {resourcepackfirst.%player%} is not set:
+		wait 0 second
+		if player is online:
+			send title "" to player for 500 second with fade in 0.5 second and fade out 0 second #"" (You need to get this from Itemsadder/storage/font_images_unicode_cache.yml open and CTRL+F find blackbg and take the icon.)
+			wait 0.7 seconds
+			execute console command "dm execute %player% [openguimenu] welcome"
+			wait 0.1 second
+			send title "&r" to player for 1 second with fade in 0 second
+			set {resourcepackfirst.%player%} to "done"
+			stop	

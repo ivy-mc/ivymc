@@ -1,0 +1,236 @@
+# Nachricht, wenn der Rucksack aus der Datenbank geladen wird (nach Spielerinteraktion)
+backpack-loading: "#eb0000Rucksack wird geladen..."
+# Nachricht, wenn der Rucksack geladen wurde
+backpack-loaded: "&fDer Rucksack wurde geladen"
+# Nachricht, wenn der Rucksack aktualisiert wird und der Spieler versucht, ihn zu öffnen
+backpack-updating: "&fAktualisierung des Rucksacks läuft"
+# Nachricht, wenn der Rucksack nicht geladen werden konnte
+backpack-loading-error: "&cProblem beim Laden des Rucksacks aufgetreten"
+# Wenn ein Spieler versucht, einen Rucksack zu öffnen, der von einem anderen Spieler verwendet wird
+backpack-is-used-by-another-player: "&cDer Rucksack wird von einem anderen Spieler verwendet"
+
+# Nachricht, wenn der Administrator das Crafting ändert
+backpack-crafting-change: "&aDas Crafting des Rucksacks wurde geändert"
+# Nachricht, wenn ein Spieler versucht, das Crafting zu ändern, wenn es leer ist oder dasselbe wie zuvor ist
+backpack-crafting-cannot-change: "&cDas Crafting des Rucksacks kann nicht geändert werden, vielleicht ist es leer oder dasselbe wie zuvor"
+# Nachricht, wenn der Administrator die Crafting-Änderungen abbricht
+backpack-crafting-change-cancelled: "&cÄnderungen am Rucksack-Crafting wurden abgebrochen"
+
+# Nachricht nachdem der Rucksack durch die Rucksackansicht des Spielers hinzugefügt wurde
+# %player% Name des Rucksackbesitzers
+backpack-added-inventory: "&6Spieler-Rucksack hinzugefügt&8: &f%player% &6zu Ihrem Inventar"
+
+# Wenn ein Spieler keine Berechtigungen hat
+command-no-permissions: "&4Sie haben keine Berechtigung, diesen Befehl zu verwenden"
+# Wenn ein Spieler eine Abklingzeit hat
+cooldown-message: "#eb0000Sie müssen warten, bevor Sie es erneut verwenden können"
+# Wenn ein Spieler nicht berechtigt ist, einen Rucksack zu öffnen
+backpack-no-permission-use: "&4Sie haben keine Berechtigung, den Rucksack zu öffnen"
+# Wenn der Rucksack des Spielers (durch Befehl) wieder aufgeladen wird
+loading-in-progress: "&6Laden läuft... bitte warten Sie einen Moment"
+# Wenn die Rucksäcke der Spieler nicht geladen werden konnten
+players-backpack-not-loaded: "&cDie Rucksäcke der Spieler konnten nicht geladen werden"
+# Wenn der Spieler keinen Rucksack hat
+player-not-created-backpacks: "&7Dieser Spieler hat noch keine Rucksäcke erstellt"
+# Wenn der Spieler offline ist
+# %player% > Spielername
+player-is-offline: "&7Spieler&8: &f%player% &7ist offline"
+
+# Nachricht, wenn ein Spieler versucht, mehr als einen Rucksack zu haben (nur wenn die Option in der Konfiguration auf true gesetzt ist: Grenze-Rucksack-pro-Inventar)
+one-backpack-per-inventory: "&cSie können nur einen Rucksack tragen"
+
+# Nachricht, wenn ein Spieler versucht, mehr Rucksäcke als x(limit-backpack-per-inventory-amount) zu haben (nur wenn die Option in der Konfiguration auf true gesetzt ist: limit-backpack-per-inventory).
+multiple-backpack-per-inventory: "&cDu kannst nur %amount% Rucksäcke tragen"
+
+
+# Meldung, wenn der Spieler versucht, einen Gegenstand in den Container zu legen, obwohl dieser verschlossen ist
+blocked-backpack-insert-message: "&cSie können diesen Artikel nicht hier abstellen!"
+
+# Nachricht beim Laden des Resourcepacks Leer lassen, wenn keine Nachricht erscheinen soll
+resourcepack-loaded: "&6Resourcepack wurde geladen"
+# Meldung, wenn das Resourcepack nicht geladen werden kann Leer lassen, wenn keine Meldung erscheinen soll
+resourcepack-failed-load: "&6Resourcepack konnte nicht geladen werden"
+
+# Meldung, wenn der Befehl nur für den Spieler gilt
+command-only-player: "&cDieses Argument kann nur von einem Spieler verwendet werden!"
+# Meldung, wenn der Befehl nur für die Konsole bestimmt ist
+command-only-console: "&cDieses Argument kann nur von einer Konsole verwendet werden!"
+
+# Meldung, wenn uuid ungültig ist
+invalid-uuid: "&cFalsche UUID"
+
+# Meldung, wenn die Position gesperrt wurde, %item% ist der Name des Materials
+item-has-blocked: "&6Der Artikel wurde gesperrt&8: &f%item%"
+
+# Meldung, wenn eine Position bereits gesperrt ist
+item-already-blocked: "&cPosten bereits gesperrt&8: &f%item%"
+
+# Meldung, wenn das Material gesperrt wurde, %item% ist der Name des Materials
+material-has-blocked: "&6Das Material wurde gesperrt&8: &f%material%"
+# Meldung, wenn das angegebene Material bereits gesperrt ist
+material-already-blocked: "&cMaterial bereits gesperrt&8: &f%material%"
+# Meldung, wenn gegebenes Material falsch ist
+invalid-material: "&cUngültiger Materialname&8: &f%material%"
+# Meldung, wenn der Spieler leere Hände hat
+empty-hand: "&cSie müssen etwas in der Hand haben"
+
+# Meldung, wenn Rucksacktier falsch ist, %tier% ist der angegebene Wert
+invalid-backpack-tier: "&cUngültiger Rucksack Tier&8: &f%tier%"
+
+# Meldung, wenn ein Spieler einen Rucksack hinzufügt, %tier% ist die Stufe des Rucksacks
+backpack-added: "&6Rucksack&8: &f%tier% &6Hinzufügen"
+
+# Meldung, wenn ein Rucksack zu einem Spieler hinzugefügt wurde, %tier% ist die Stufe des Rucksacks, %player% ist der Name des Spielers
+backpack-added-player: "&6Rucksack&8: &f%tier% &6Hinzufügen zu Spieler&8: &f%player%"
+# Meldung, wenn ein Rucksack der angegebenen Stufe nicht gefunden wurde
+backpack-tier-not-found: "&cRucksack&8: &f%tier% &cnicht gefunden"
+
+# Meldung, wenn noch keine Spieler Rucksäcke erstellt haben oder etwas schief gelaufen ist
+players-not-created-backpacks: "&cKein Spieler hat bisher einen Rucksack erstellt oder es ist etwas schief gelaufen"
+
+# Meldung beim Auftreten eines unerwarteten Fehlers
+unexpected-error: "&cWährend der Ausführung des Befehls ist ein unerwarteter Fehler aufgetreten, überprüfen Sie die Konsole auf Fehler."
+
+# Meldung, wenn Resourcepack mit Befehl neu geladen wird
+resourcepack-reloaded: "&6Resourcepack wurde aktualisiert und mit allen Spielern neu geladen"
+
+# Eine Meldung, wenn ein Spieler versucht, einen Gegenstand in einen Rucksack zu legen, der nicht erlaubt ist Typ FILTERED
+filtered-backpack-item-not-allowed: "&cDu kannst diesen Gegenstand nicht in diesen Rucksack packen"
+
+# Meldung, wenn ein Spieler versucht, auf eine Schaltfläche in einem Menü zu klicken, und diese eine Abklingzeit hat
+button-cooldown: "&cSie müssen eine weitere &f%time% &Sekunden warten, bevor Sie erneut klicken"
+
+# Meldung, wenn jemand anderes die erlaubten Artikel für diesen Rucksack bereits bearbeitet hat
+allowed-items-gui-has-editor: "&cJemand ist bereits dabei, die erlaubten Gegenstände für diesen Rucksack zu bearbeiten"
+
+# Meldung, wenn die Benutzeroberfläche der zulässigen Elemente nicht geöffnet werden kann
+allowed-items-could-open: "&cErlaubte Elemente können nicht geöffnet werden. Überprüfen Sie die Konsole und die Konfiguration dieses Rucksacks, um zu sehen, ob sie korrekt sind."
+
+# Nachricht, wenn der Spieler nicht der Besitzer des Rucksacks ist
+not-owner: "&cDu bist nicht der Besitzer dieses Rucksacks!"
+
+# Meldung, wenn ein Spieler versucht, einen Rucksack mit einem nicht leeren Behälter zu erstellen.
+crafting.blocked-filled-container: "&4Du kannst nicht mit gefüllten Behältern craften!"
+
+# GUI-Konfiguration
+#
+# Leitfaden für bedingte Operatoren:
+# Dieses Plugin unterstützt bedingte Ausdrücke in Text mit diesen Formaten:
+#
+# STANDARD-BEDINGUNGEN: %[(Bedingung)Text]%
+#    - Zeigt 'Text' wenn die Bedingung wahr ist, sonst nichts
+#    - Verwendet für: Paginierung, optionale Elemente
+#
+# TERNÄRE BEDINGUNGEN: %[(Bedingung)wahrer_Text ~: falscher_Text]%
+#    - Zeigt 'wahrer_Text' wenn die Bedingung wahr ist, sonst 'falscher_Text'
+#    - Verwendet ~: als Trenner um Konflikte mit Doppelpunkten im Text zu vermeiden
+#    - Verwendet für: Status-Indikatoren, Typ-Wechsel
+#
+# BEISPIELE AUS DIESER KONFIGURATION:
+#   Paginierung: "%[(max_pages > 1)&cSeite&8: &6%page% &8/ &7%max_pages%]%"
+#   Handwerk-Status: "%[(isCraftable == true)&8[&2&l✔&8] ~: &8[&c&l❌&8]]%"
+#   Aktivieren/Deaktivieren: "%[(isCraftable == true)deaktivieren ~: aktivieren]%"
+#   Typ-Wechsel: "%[(type == DEFAULT)GEFILTERT ~: STANDARD]%"
+#
+# OPERATOREN IN DIESER KONFIGURATION VERWENDET:
+#   >  (größer als)        Beispiel: max_pages > 1
+#   == (gleich)            Beispiel: isCraftable == true, type == DEFAULT
+gui:
+  # Format des Titels der erlaubten Gegenstände GUI
+  allowed-items-gui: "&cErlaubte Gegenstände&8: &f%size% &cRucksack-Stufe&8: &f%tier% %[(max_pages > 1)&cSeite&8: &6%page% &8/ &7%max_pages%]%"
+
+  # Hauptbenutzeroberfläche für Rucksack-Einstellungen
+  backpack-settings-main:
+    title: "&6Stufe&8: &f%tier% &6Rucksack-Einstellungen"
+    buttons:
+      # Handwerk bearbeiten Schaltfläche
+      edit-crafting-button:
+        display-name: "&2Klicken um Handwerk zu ändern"
+        lore:
+          - "&fKann hergestellt werden&8: %[(isCraftable == true)&8[&2&l✔&8] ~: &8[&c&l❌&8]]%"
+          - " "
+          - "&7Klick &f&lLINKSKLICK &7Um Handwerk zu bearbeiten"
+          - "&7Klick &f&lSHIFT + RECHTSKLICK &7um die Fähigkeit einen Rucksack herzustellen zu %[(isCraftable == true)deaktivieren ~: aktivieren]%"
+
+      # Erlaubte Gegenstände Schaltfläche
+      allowed-items-button:
+        display-name: "&2Klicken um erlaubte Gegenstände zu bearbeiten"
+        lore:
+          - "&7Aktuell erlaubte Gegenstände für diesen Rucksack sind&8: &c%size%"
+          - " "
+          - "&7Klick &f&lLINKSKLICK &7Um die GUI mit erlaubten Gegenständen zu öffnen"
+          - " "
+          - "&8Beinhaltet diese Gegenstände wenn der Rucksack den Typ &fGEFILTERT &8hat"
+
+      # Rucksack-Typ ändern Schaltfläche
+      change-backpack-type-button:
+        display-name: "&2Klicken um Rucksack-Typ zu bearbeiten"
+        lore:
+          - "&7Der aktuelle Typ des Rucksacks ist&8: &c%type%"
+          - " "
+          - "&7Klick &f&lLINKSKLICK &7Um den Typ zu ändern zu&8: &f%[(type == DEFAULT)GEFILTERT ~: STANDARD]%"
+
+  # Rucksack Handwerk wählen GUI
+  backpack-chose-crafting-gui:
+    title: "#0047F7Wählen Sie welchen Rucksack Sie das Handwerk ändern möchten"
+    buttons:
+      select-backpack-button:
+        lore:
+          - "&fKann hergestellt werden&8: %[(isCraftable == true)&8[&2&l✔&8] ~: &8[&c&l❌&8]]%"
+
+  # Spieler-Rucksäcke GUI
+  player-backpacks-gui:
+    title: "&cSpieler-Rucksäcke&8: &f%playerName% %[(max_pages > 1)&cSeite&8: &6%page% &8/ &7%max_pages%]%"
+    hover-text:
+      - "&8▪ &fRucksack-Besitzer&f: &6%owner%"
+      - "&8▪ &fLetztes Update&f: &a%lastUpdated%"
+      - "&8▪ &fLetzter Spieler&f: &a%lastPlayer%"
+      - "&8▪ &fRucksack-ID&f: &a%backpackUUID%"
+
+  # Spieler-Rucksack GUI Info
+  player-backpack-gui-info:
+    displayName: "&6%playerName%"
+    lore:
+      - "&fBesessene Rucksäcke&8: &6%amount%"
+      - "&7Klick &f&lLINKSKLICK &7Um das Spieler-Rucksäcke Menü zu öffnen"
+
+  # Alle Rucksäcke GUI
+  all-backpack-gui:
+    title: "&cAlle Spieler mit Rucksäcken&8: &f%size% %[(max_pages > 1)&cSeite&8: &6%page% &8/ &7%max_pages%]%"
+
+  # Handwerk bearbeiten GUI
+  crafting-edit-gui:
+    title: "#194d33Sie ändern das Handwerk %crafting%"
+
+# NBT-Gegenstände Konfiguration
+nbt:
+  nbt-item:
+    displayName: "&fBenutzerdefinierter NBT-Gegenstand"
+    lore:
+      - "&8» &7Plugin-Name&8: &f%plugin%"
+      - "&8» &7Namensraum&8: &f%namespace%"
+      - "&8» &7Namensraum-Wert: &f%value%"
+
+items:
+  # Datenbank-Rucksack-Informationsanzeige
+  # Verwendet beim Anzeigen von Rucksack-Details in Admin-/Datenbankschnittstellen
+  database-backpack-info:
+    lore:
+      - "&8▪ &fRucksack-Besitzer&8: &6%owner%"        # Zeigt wer diesen Rucksack besitzt
+      - "&8▪ &fId&8: &7%backpackUUID%"               # Eindeutige Kennung für den Rucksack
+      - "&8▪ &fLetztes Update&8: &a%lastUpdate%"     # Wann der Rucksack zuletzt geändert wurde
+      - "&8▪ &fLetzter Spieler&8: &a%lastPlayer%"    # Letzter Spieler der damit interagiert hat
+      - " "                                      # Leere Zeile für Abstand
+      - "&7Klick &f&lLINKSKLICK &7Um den Rucksack zu öffnen"  # Linksklick-Aktion
+      - "&7Klick &f&lRECHTSKLICK &8&l+ &f&lSHIFT &7Um einen Rucksack zu Ihrem Inventar hinzuzufügen"  # Rechtsklick + Shift Aktion
+
+  database-backpack-no-settings:
+    display-name: "&c⚠ Nicht konfigurierter Rucksack"
+    lore:
+      - "&8▪ &fBesitzer&8: &6%owner%"
+      - "&8▪ &fID&8: &7%backpackUUID%"
+      - "&8▪ &fLetztes Update&8: &a%lastUpdate%"
+      - "&8▪ &fLetzter Spieler&8: &a%lastPlayer%"
+      - " "
+      - "&c⚠ &7Fehlende Stufen-Einstellungen&8: &e%tier%"
+      - "&c⚠ &7Rucksack benötigt Konfiguration"

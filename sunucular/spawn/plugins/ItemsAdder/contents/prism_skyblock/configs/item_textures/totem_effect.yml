@@ -1,0 +1,20 @@
+info:
+  namespace: prism_skyblock
+items:
+  
+  totem-divineintervention:
+    enabled: true
+    resource:
+      generate: true
+      material: TOTEM_OF_UNDYING
+      model_id: 1
+      textures:
+      - labels/innate_icons/divine_intervention.png
+  totem-ascend:
+    enabled: true
+    resource:
+      generate: true
+      material: TOTEM_OF_UNDYING
+      model_id: 2
+      textures:
+      - interface/totem_effect/ascend.png

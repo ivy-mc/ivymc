@@ -1,0 +1,93 @@
+info:
+  namespace: prism_skyblock
+items:
+  
+  islandchest-chest:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 22
+      textures:
+      - interface/gui_textures/island/chest
+
+  islandchest-lockedchest:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 23
+      textures:
+      - interface/gui_textures/island/lockedchest
+
+  island-next:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 24
+      textures:
+      - interface/gui_textures/island/next
+
+  island-back:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 25
+      textures:
+      - interface/gui_textures/island/back
+
+  island-home:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 26
+      textures:
+      - interface/gui_textures/island/home
+
+  island-sortworth:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 27
+      textures:
+      - interface/gui_textures/island/sortworth
+
+  island-sortlevel:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 28
+      textures:
+      - interface/gui_textures/island/sortlevel
+
+  island-sortplayer:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 29
+      textures:
+      - interface/gui_textures/island/sortplayer
+
+  island-sortrating:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 30
+      textures:
+      - interface/gui_textures/island/sortrating
+
+  island-uniquevisitor:
+    enabled: true
+    resource:
+      generate: true
+      material: BOOK
+      model_id: 31
+      textures:
+      - interface/gui_textures/island/uniquevisitor

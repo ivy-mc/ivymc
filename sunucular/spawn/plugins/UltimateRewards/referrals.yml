@@ -1,0 +1,48 @@
+#
+#     _     _ _       _                            ______                               _
+#    (_)   (_) |  _  (_)              _           (_____ \                             | |
+#    | |   | |_| |_|_| |___  _____ _| |_ _____    _____) )_____ _ _  _ _ _____  ____ __| |  ___
+#    | |   | | (_   _) |    \(____ (_   _) ___ |  |  __  /| ___ |  |  | (____ |/ ___) _  |/___)
+#    | |___| | | | |_| | | | / /_\_ | | |_| ____| | |  \ \|____|  |  | / /_\ | |  ( (_| |___ |
+#    \_____/ \_) \__)_|_|_|_\_|  |_|  \__)_____)  |_|   |_|_____)\___/\_|  |_|_|   \____(___/
+#
+#   Referral Configuration
+#
+# Set to false if you want the player to be able to create
+# his own affiliate only having to complete
+# the criteria (permission and referral-create-required-play-time)
+auto-enable-creation-of-a-referral: true
+
+# How much time (in minutes) a player must have played
+# on the server to be able to create his referral.
+referral-create-required-play-time: 600
+
+# How long (in minutes) does the player have to claim
+# the referral (counted from the first connection).
+# Set to 0 to disable it.
+maximum-playtime-for-referred-player: 60
+
+# If the referred player and their affiliated player
+# share the same IP, the referral will not be valid.
+disable-activation-within-same-ip: true
+
+# Enables referral application only if the
+# player is synchronized with the discord
+require-discord-sync: false
+
+# Commands that will be executed when a player activates a referral
+referral-activated-rewards:
+  default:
+    permission: ultimaterewards.referral.default
+    required-slots: 2
+    actions:
+    - '[console] give %player% diamond 1'
+    - '[console] give %player% golden_apple 1'
+
+# Available types:
+#   - CHAT
+#   - ANVIL
+input-type: ANVIL
+# When is ANVIL type selected, specify the item
+# displayed in the slots
+input-item: LEATHER_HELMET

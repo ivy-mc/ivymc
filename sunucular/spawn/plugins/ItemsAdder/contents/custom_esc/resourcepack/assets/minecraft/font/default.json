@@ -1,0 +1,27 @@
+{
+    "providers": [
+
+		{"type": "bitmap", "file": "minecraft:gui/returntogame.png", "ascent": 43, "height": 256, "chars": ["月"]},
+        {"type": "bitmap", "file": "minecraft:gui/disconnect_banner.png", "ascent": 133, "height": 256, "chars": ["思"]},
+
+        {
+            "type": "bitmap",
+            "file": "space.png",
+            "ascent": -32768,
+            "height": -10,
+            "chars": [
+                "⻔"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "space.png",
+            "ascent": -32768,
+            "height": -10,
+            "chars": [
+                "𰁏"
+            ]
+        }
+
+    ]
+}

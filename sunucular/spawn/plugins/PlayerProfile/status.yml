@@ -1,0 +1,28 @@
+default-status: I am a newbie trying to improve.
+menu:
+  title: '&f:profile_status:'
+  items:
+    cancel:
+      slot: 0
+      display: '&c'
+      amount: 1
+      item-adder: air
+      lore:
+      - '     &cDecline'
+      - '&c'
+      unbreakable: false
+      glow: false
+      hide-attributes: true
+      type: CHANGE_STATUS_CANCEL
+    accept:
+      slot: 1
+      display: '&a'
+      item-adder: air
+      amount: 1
+      lore:
+      - '     &aAccept'
+      - ''
+      unbreakable: false
+      glow: false
+      hide-attributes: true
+      type: CHANGE_STATUS_ACCEPT

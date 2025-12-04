@@ -1,0 +1,314 @@
+#
+# Example config of a pickable reward.
+#
+# Decides if rewards will be claimable.
+enabled: true
+#
+# Each type of reward has different specifications.
+# All currently supported types can be found on:
+# https://ultimaterewards.athelion.eu/
+#
+type: pickable_reward
+#
+# Reward tag
+#
+tag: Pickable Reward
+# How many picks the player has available.
+picks: 3
+# When will the reward be available again
+# after claiming.
+cooldown: 24
+# Unit used for cooldown
+unit: hours # So the cooldown is 24 hours
+#
+# Format which will be used to show the
+# general cooldown of this reward.
+#
+cooldown-general-format: "%hours% hours"
+#
+# Format of the cooldown that will be displayed
+# when using the %cooldown% placeholder in reward GUIs.
+#
+cooldown-format: '%hours%:%minutes%:%seconds%'
+# Make the reward available for the player
+# after their first join on the server.
+available-after-first-join: true
+# Notifies players that the reward is currently available
+live-reminder-enabled: true
+# How many free slots should the player have
+# to be able to claim this reward.
+required-slots: 3
+#
+# (Optional) Permission which player must have to be
+# able to obtain this reward.
+#
+permission: ultimaterewards.examplePickableReward
+#
+# NOTE THAT ITEM & SOUND NAMES ARE SLIGHTLY DIFFERENT BETWEEN 1.12 & 1.13 VERSIONS!
+# SO MAKE SURE YOU ARE USING VALID ITEM NAMES (DEFAULT ONES ARE USED FROM 1.13+ VERSIONS)
+# OTHERWISE, THEY WILL BE REPLACED BY STONE IF AN INVALID NAME IS USED.
+#
+# When the player has this permission,
+# the following properties will be shown...
+#
+# When the reward is currently claimable:
+available-item: LIME_STAINED_GLASS_PANE
+available-display-name: '&b&lPICKABLE REWARD'
+available-lore:
+  - ' '
+  - '&7Can contains:'
+  - '&a ✓ Diamond'
+  - '&a ✓ Iron Ingot'
+  - '&a ✓ Coal'
+  - '&a ✓ Netherite Ingot'
+  - '&5 ✓ Mystery Reward'
+  - ' '
+  - '&e► Click to pick &8(%picks% pick(s) remain)'
+# When the reward is under cooldown:
+unavailable-item: RED_STAINED_GLASS_PANE
+unavailable-display-name: "&7&lPICKABLE REWARD"
+unavailable-lore:
+  - '&7Available in:'
+  - '&7%cooldown%'
+# The claimed reward will be shown as this:
+# The preview item will be displayed
+claimed-display-name: '&7&lPICKABLE REWARD'
+claimed-lore:
+  - '&7 Claimed'
+#
+# On the other hand, when the player doesn't have this permission,
+# the following properties will be shown.
+#
+no-permission-item: BARRIER
+no-permission-display-name: "&c&l&mPICKABLE REWARD"
+no-permission-lore:
+  - "&c ✕ Locked, requires"
+  - "&c   %permission% permission"
+#
+# Rewards that will be randomly placed for individual selection of them
+# for individual selection (through menu) of them.
+# All available actions and format examples can be found on
+# https://ultimaterewards.athelion.eu/
+#
+pick-rewards:
+  1:
+    preview-item: COAL
+    display-name: "&8COAL :("
+    lore:
+      - "&7Obtained:"
+      - "&e 1x Coal"
+    actions:
+      - "[console] minecraft:give %player% coal 1"
+  2:
+    preview-item: COAL
+    display-name: "&8COAL :("
+    lore:
+      - "&7Obtained:"
+      - "&e 1x Coal"
+    actions:
+      - "[console] minecraft:give %player% coal 1"
+  3:
+    preview-item: COAL
+    display-name: "&8COAL :("
+    lore:
+      - "&7Obtained:"
+      - "&e 1x Coal"
+    actions:
+      - "[console] minecraft:give %player% coal 1"
+  4:
+    preview-item: COAL
+    display-name: "&8COAL :("
+    lore:
+      - "&7Obtained:"
+      - "&e 1x Coal"
+    actions:
+      - "[console] minecraft:give %player% coal 1"
+  5:
+    preview-item: COAL
+    display-name: "&8COAL :("
+    lore:
+      - "&7Obtained:"
+      - "&e 1x Coal"
+    actions:
+      - "[console] minecraft:give %player% coal 1"
+  6:
+    preview-item: IRON_INGOT
+    display-name: "&7IRONS :/"
+    lore:
+      - "&7Obtained:"
+      - "&e 1x Iron Ingot"
+    actions:
+      - "[console] minecraft:give %player% iron_ingot 1"
+  7:
+    preview-item: IRON_INGOT
+    display-name: "&7IRONS :/"
+    lore:
+      - "&7Obtained:"
+      - "&e 1x Iron Ingot"
+    actions:
+      - "[console] minecraft:give %player% iron_ingot 1"
+  8:
+    preview-item: IRON_INGOT
+    display-name: "&7IRONS :/"
+    lore:
+      - "&7Obtained:"
+      - "&e 1x Iron Ingot"
+    actions:
+      - "[console] minecraft:give %player% iron_ingot 1"
+  9:
+    preview-item: IRON_INGOT
+    display-name: "&7IRONS :/"
+    lore:
+      - "&7Obtained:"
+      - "&e 1x Iron Ingot"
+    actions:
+      - "[console] minecraft:give %player% iron_ingot 1"
+  10:
+    preview-item: IRON_INGOT
+    display-name: "&7IRONS :/"
+    lore:
+      - "&7Obtained:"
+      - "&e 1x Iron Ingot"
+    actions:
+      - "[console] minecraft:give %player% iron_ingot 1"
+  11:
+    preview-item: IRON_INGOT
+    display-name: "&7IRONS :/"
+    lore:
+      - "&7Obtained:"
+      - "&e 1x Iron Ingot"
+    actions:
+      - "[console] minecraft:give %player% iron_ingot 1"
+  12:
+    preview-item: DIAMOND
+    display-name: "&bDIAMONDS!!!"
+    lore:
+      - "&7Obtained:"
+      - "&e 1x Diamond"
+    actions:
+      - "[console] minecraft:give %player% diamond 1"
+  13:
+    preview-item: DIAMOND
+    display-name: "&bDIAMONDS!!!"
+    lore:
+      - "&7Obtained:"
+      - "&e 1x Diamond"
+    actions:
+      - "[console] minecraft:give %player% diamond 1"
+  14:
+    preview-item: DIAMOND
+    display-name: "&bDIAMONDS!!!"
+    lore:
+      - "&7Obtained:"
+      - "&e 1x Diamond"
+    actions:
+      - "[console] minecraft:give %player% diamond 1"
+  15:
+    preview-item: DIAMOND
+    display-name: "&bDIAMONDS!!!"
+    lore:
+      - "&7Obtained:"
+      - "&e 1x Diamond"
+    actions:
+      - "[console] minecraft:give %player% diamond 1"
+  16:
+    preview-item: DIAMOND
+    display-name: "&bDIAMONDS!!!"
+    lore:
+      - "&7Obtained:"
+      - "&e 1x Diamond"
+    actions:
+      - "[console] minecraft:give %player% diamond 1"
+  17:
+    preview-item: DIAMOND
+    display-name: "&bDIAMONDS!!!"
+    lore:
+      - "&7Obtained:"
+      - "&e 1x Diamond"
+    actions:
+      - "[console] minecraft:give %player% diamond 1"
+  18:
+    preview-item: DIAMOND
+    display-name: "&bDIAMONDS!!!"
+    lore:
+      - "&7Obtained:"
+      - "&e 1x Diamond"
+    actions:
+      - "[console] minecraft:give %player% diamond 1"
+  19:
+    preview-item: NETHERITE_INGOT
+    display-name: "&dNETHERITE INGOTS :O"
+    lore:
+      - "&7Obtained:"
+      - "&e 1x Netherite Ingot"
+    actions:
+      - "[console] minecraft:give %player% netherite_ingot 1"
+  20:
+    preview-item: NETHERITE_INGOT
+    display-name: "&dNETHERITE INGOTS :O"
+    lore:
+      - "&7Obtained:"
+      - "&e 1x Netherite Ingot"
+    actions:
+      - "[console] minecraft:give %player% netherite_ingot 1"
+  21:
+    preview-item: NETHERITE_INGOT
+    display-name: "&dNETHERITE INGOTS :O"
+    lore:
+      - "&7Obtained:"
+      - "&e 1x Netherite Ingot"
+    actions:
+      - "[console] minecraft:give %player% netherite_ingot 1"
+  22:
+    preview-item: NETHERITE_INGOT
+    display-name: "&dNETHERITE INGOTS :O"
+    lore:
+      - "&7Obtained:"
+      - "&e 1x Netherite Ingot"
+    actions:
+      - "[console] minecraft:give %player% netherite_ingot 1"
+  23:
+    preview-item: NETHERITE_INGOT
+    display-name: "&dNETHERITE INGOTS :O"
+    lore:
+      - "&7Obtained:"
+      - "&e 1x Netherite Ingot"
+    actions:
+      - "[console] minecraft:give %player% netherite_ingot 1"
+  24:
+    preview-item: TOTEM_OF_UNDYING
+    display-name: "&6TOTEM OF UNDYING"
+    lore:
+      - "&7Obtained:"
+      - "&e 1x Totem of Undying"
+    actions:
+      - "[console] minecraft:give %player% totem_of_undying 1"
+  25:
+    preview-item: TOTEM_OF_UNDYING
+    display-name: "&6TOTEM OF UNDYING"
+    lore:
+      - "&7Obtained:"
+      - "&e 1x Totem of Undying"
+    actions:
+      - "[console] minecraft:give %player% totem_of_undying 1"
+  26:
+    preview-item: TOTEM_OF_UNDYING
+    display-name: "&6TOTEM OF UNDYING"
+    lore:
+      - "&7Obtained:"
+      - "&e 1x Totem of Undying"
+    actions:
+      - "[console] minecraft:give %player% totem_of_undying 1"
+  27:
+    preview-item: FIREWORK
+    display-name: "&5&lMYSTERY REWARD"
+    lore:
+      - "&7Obtained:"
+      - "&d 1x  Spawner"
+      - "&d 64x Experience Bottle"
+      - "&d 16x Enchanted Golden Apple"
+    actions:
+      - "[broadcast] &5Player %player% just received &lMystery Reward&5 from Pickable Reward"
+      - "[console] minecraft:give %player% spawner 1"
+      - "[console] minecraft:give %player% experience_bottle 64"
+      - "[console] minecraft:give %player% enchanted_golden_apple 16"

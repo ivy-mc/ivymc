@@ -1,0 +1,42 @@
+# Burada sohbet biçimlendirmesini yapılandırabilirsiniz.
+# Biçimi atamak için şu izni kullanın: advancedchat.format.<formatAdı>
+
+priority: 1
+
+prefix:
+  text: ''
+  hover:
+    - '%luckperms_prefix% %player_name%<white> Bilgileri:</white>'
+    - '<gray> •<white> Para: <white>%vault_eco_balance_commas%</white>'
+    - '<gray> •<white> Sağlık: <white>%player_health%/%player_max_health% ❤</white></white>'
+    - '<gray> •<white> Seviye: <white>%player_level%</white></white>'
+    - '<gray> •<white> Oynama Süresi: <white>%statistic_hours_played% Saat</white></white>'
+  click: 'SUGGEST_COMMAND:/profile %player_name% '
+
+name:
+  text: "%luckperms_prefix% %player_name%"
+  hover:
+    - '%luckperms_prefix% %player_name%<white> Bilgileri:</white>'
+    - '<gray> •<white> Para: <white>%vault_eco_balance_commas%</white>'
+    - '<gray> •<white> Sağlık: <white>%player_health%/%player_max_health% ❤</white></white>'
+    - '<gray> •<white> Seviye: <white>%player_level%</white></white>'
+    - '<gray> •<white> Oynama Süresi: <white>%statistic_hours_played% Saat</white></white>'
+  click: 'SUGGEST_COMMAND:/profile %player_name% '
+
+suffix:
+  text: '%advancedchat_tag%: '
+  hover:
+    - ''
+  click: ''
+
+chat:
+  text: '%message%'
+  hover:
+    - '<red>%player_name% adlı oyuncuyu bildir'
+  click: 'SUGGEST_COMMAND:/report %player_name%'
+
+# Özelleştirilebilir menzil. 0 olarak ayarlanırsa menzil devre dışı kalır.
+range: 0.0
+
+# Sunucular arası sohbetin kullanılıp kullanılmayacağını belirler.
+crossServer: true

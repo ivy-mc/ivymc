@@ -1,0 +1,30 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 46.196.89.44
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1763231165547
+  login: 1763231145374
+money: '0'
+last-account-name: allahyok
+logoutlocation:
+  world: c59af994-31af-4629-ac32-df01c6e1e106
+  world-name: world
+  x: -37.123202267766096
+  y: 79.19074008328361
+  z: 41.87462935442554
+  yaw: 43.02851486206055
+  pitch: 36.15025329589844

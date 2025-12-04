@@ -1,0 +1,206 @@
+info:
+  namespace: prism_skyblock
+font_images:
+  
+  system-success:
+    symbol: ꀒ
+    path: labels/system/success.png
+    y_position: 7
+    scale_ratio: 7
+    permission: somerandom.perm
+  system-fail:
+    symbol: ꀓ
+    path: labels/system/fail.png
+    y_position: 7
+    scale_ratio: 7
+    permission: somerandom.perm
+  system-npc:
+    symbol: ꀱ
+    path: labels/system/npc.png
+    y_position: 7
+    scale_ratio: 8
+    permission: somerandom.perm
+  system-warning:
+    symbol: ꀶ
+    path: labels/system/warning.png
+    y_position: 7
+    scale_ratio: 7
+    permission: somerandom.perm
+  system-info:
+    symbol: ꀷ
+    path: labels/system/info.png
+    y_position: 7
+    scale_ratio: 7
+    permission: somerandom.perm
+  system-dialogue:
+    symbol: ꁡ
+    path: labels/system/dialogue.png
+    y_position: 8
+    scale_ratio: 9
+    permission: somerandom.perm
+
+  system-leftclick:
+    symbol: ꂀ
+    path: labels/system/left_click.png
+    y_position: 7
+    scale_ratio: 7
+    permission: somerandom.perm
+  system-rightclick:
+    symbol: ꂁ
+    path: labels/system/right_click.png
+    y_position: 7
+    scale_ratio: 7
+    permission: somerandom.perm
+  system-lshift:
+    symbol: ꀍ
+    path: labels/system/lshift.png
+    y_position: 7
+    scale_ratio: 7
+    permission: somerandom.perm
+  system-lshiftclick:
+    symbol: ꂫ
+    path: labels/system/lshift_click.png
+    y_position: 7
+    scale_ratio: 7
+    permission: somerandom.perm
+  system-rshift:
+    symbol: ꂬ
+    path: labels/system/rshift.png
+    y_position: 7
+    scale_ratio: 7
+    permission: somerandom.perm
+  system-rshiftclick:
+    symbol: ꂭ
+    path: labels/system/rshift_click.png
+    y_position: 7
+    scale_ratio: 7
+    permission: somerandom.perm
+
+  elements-hp:
+    symbol: ꂆ
+    path: labels/elements/hp.png
+    y_position: 8
+    scale_ratio: 9
+    permission: somerandom.perm
+  elements-armor:
+    symbol: ꂇ
+    path: labels/elements/armor.png
+    y_position: 8
+    scale_ratio: 9
+    permission: somerandom.perm
+  elements-damage:
+    symbol: ꂈ
+    path: labels/elements/damage.png
+    y_position: 8
+    scale_ratio: 9
+    permission: somerandom.perm
+
+  elements-sword:
+    symbol: ꂯ
+    path: labels/elements/iron_sword.png
+    y_position: 8
+    scale_ratio: 10
+    permission: somerandom.perm
+  elements-bow:
+    symbol: ꂰ
+    path: labels/elements/bow.png
+    y_position: 8
+    scale_ratio: 10
+    permission: somerandom.perm
+  elements-crossbow:
+    symbol: ꂾ
+    path: labels/elements/crossbow.png
+    y_position: 8
+    scale_ratio: 10
+    permission: somerandom.perm
+  elements-elytra:
+    symbol: ꂿ
+    path: labels/elements/elytra.png
+    y_position: 8
+    scale_ratio: 10
+    permission: somerandom.perm
+  elements-fishingrod:
+    symbol: ꃀ
+    path: labels/elements/fishing_rod.png
+    y_position: 8
+    scale_ratio: 10
+    permission: somerandom.perm
+  elements-shield:
+    symbol: ꃁ
+    path: labels/elements/shield.png
+    y_position: 8
+    scale_ratio: 10
+    permission: somerandom.perm
+  elements-trident:
+    symbol: ꃂ
+    path: labels/elements/trident.png
+    y_position: 8
+    scale_ratio: 10
+    permission: somerandom.perm
+  elements-pickaxe:
+    symbol: ꂲ
+    path: labels/elements/iron_pickaxe.png
+    y_position: 8
+    scale_ratio: 10
+    permission: somerandom.perm
+  elements-axe:
+    symbol: ꂳ
+    path: labels/elements/iron_axe.png
+    y_position: 8
+    scale_ratio: 10
+    permission: somerandom.perm
+  elements-hoe:
+    symbol: ꂴ
+    path: labels/elements/iron_hoe.png
+    y_position: 8
+    scale_ratio: 10
+    permission: somerandom.perm
+  elements-shovel:
+    symbol: ꂵ
+    path: labels/elements/iron_shovel.png
+    y_position: 8
+    scale_ratio: 10
+    permission: somerandom.perm
+  elements-helmet:
+    symbol: ꂶ
+    path: labels/elements/iron_helmet.png
+    y_position: 8
+    scale_ratio: 10
+    permission: somerandom.perm
+  elements-chestplate:
+    symbol: ꂷ
+    path: labels/elements/iron_chestplate.png
+    y_position: 8
+    scale_ratio: 10
+    permission: somerandom.perm
+  elements-leggings:
+    symbol: ꂸ
+    path: labels/elements/iron_leggings.png
+    y_position: 8
+    scale_ratio: 10
+    permission: somerandom.perm
+  elements-boots:
+    symbol: ꂹ
+    path: labels/elements/iron_boots.png
+    y_position: 8
+    scale_ratio: 10
+    permission: somerandom.perm
+
+  system-dungeon:
+    symbol: ꁈ
+    path: labels/system/dungeon.png
+    y_position: 7
+    scale_ratio: 7
+    permission: somerandom.perm
+  system-ancient_enchant:
+    symbol: ꁐ
+    path: labels/system/ancient_enchant.png
+    y_position: 8
+    scale_ratio: 10
+    permission: somerandom.perm
+  system-scroll:
+    symbol: ꂞ
+    path: labels/elements/scroll.png
+    y_position: 8
+    scale_ratio: 10
+    permission: somerandom.perm

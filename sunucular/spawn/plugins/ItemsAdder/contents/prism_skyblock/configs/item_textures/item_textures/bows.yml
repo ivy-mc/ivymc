@@ -1,0 +1,75 @@
+info:
+  namespace: prism_skyblock
+items:
+  
+  bow-cobalt:
+    enabled: true   
+    resource:
+      generate: true
+      material: BOW
+      model_id: 1
+      textures:
+      - item_texture/bows/cobalt
+
+  bow-hextech:
+    enabled: true   
+    resource:
+      generate: true
+      material: BOW
+      model_id: 2
+      textures:
+      - item_texture/bows/hextech
+
+  bow-soul:
+    enabled: true   
+    resource:
+      generate: true
+      material: BOW
+      model_id: 3
+      textures:
+      - item_texture/bows/soul
+
+  bow-warden:
+    enabled: true   
+    resource:
+      generate: true
+      material: BOW
+      model_id: 4
+      textures:
+      - item_texture/bows/warden
+
+  bow-soul_netherite:
+    enabled: true   
+    resource:
+      generate: true
+      material: BOW
+      model_id: 5
+      textures:
+      - item_texture/bows/soul_netherite
+
+  bow-gilded_netherite:
+    enabled: true   
+    resource:
+      generate: true
+      material: BOW
+      model_id: 6
+      textures:
+      - item_texture/bows/gilded_netherite
+
+  bow-mithril:
+    enabled: true   
+    resource:
+      generate: true
+      material: BOW
+      model_id: 7
+      textures:
+      - item_texture/bows/mithril
+
+  bow-hextech-ascended:
+    enabled: true   
+    resource:
+      generate: true
+      material: BOW
+      model_id: 8
+      textures:
+      - item_texture/bows/hextech_ascended

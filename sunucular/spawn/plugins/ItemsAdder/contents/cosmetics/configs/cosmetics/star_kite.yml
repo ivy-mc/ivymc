@@ -1,0 +1,12 @@
+info:
+  namespace: cosmetics
+entities:
+  star_kite:
+    display_name: "star_kite"
+    type: ARMOR_STAND
+    model_folder: entity/star_kite
+    speed:
+      movement: 0.0
+      flying: 0.0
+    max_health: 1
+    shadow: false
